@@ -1,0 +1,116 @@
+# Site settings
+title: ISouthRain Blog
+SEOTitle: ISouthRain Blog
+header-img: img/post-bg-desk.jpg
+gmail: isouthrain@gmail.com
+description: "生而无畏，战至终章"
+keyword: "南风窗雨, ISouthRain, ISouthRain Blog, 博客, 个人网站, 互联网, 软件工程, BigData, AI, 计算机, 编程"
+url: "https://ISouthRain.github.io"          # your host, for absolute URL
+#baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+github_repo: "https://github.com/ISouthRain/ISouthRain.github.io.git" # you code repository
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "Hello，I am ISouthRain"
+sidebar-avatar: /img/panda-waving.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar1: /img/grass.png
+
+
+
+# SNS settings
+RSS: false
+weibo_username: ISouthRain
+zhihu_username: ISouthRain
+github_username: ISouthRain
+csdn_username: ISouthRain
+#facebook_username:
+#jianshu_username:
+#twitter_username:
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# 评论系统
+# Disqus（https://disqus.com/）
+# disqus_username:
+
+# Gitalk
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: 844b3d3c71d48a915d63                            #生成的clientID
+  clientSecret: 207ace9e324cacb2dd73915ddf2ed86fa3bcad69    #生成的clientSecret
+  repo: ISouthRain.github.io    #仓库名称
+  owner: ISouthRain    #github用户名
+  admin: ISouthRain
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+
+
+# 统计
+
+# Analytics settings
+# Baidu Analytics
+# ba_track_id:
+
+# Google Analytics
+# ga_track_id:           # Format: UA-xxxxxx-xx
+# ga_domain:   auto             # 默认的是 auto
+
+
+
+
+# Featured Tags
+featured-tags: true                     # 是否使用首页标签
+featured-condition-size: 0              # 相同标签数量大于这个数，才会出现在首页
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+friends: [
+    {
+        title: "哔哩哔哩-品十",
+        href: "https://bilibili.com/"
+    },{
+        title: "Hux Blog",
+        href: "https://huangxuan.me/"
+    },{
+        title: "29DCH Blog",
+        href: "https://29DCH.github.io/"
+    },
+]
+
+navbar-links:
+  Home: "https://ISouthRain.github.io"
+  标签: "https://ISouthRain.github.io/tags/"
+  项目:
+    - Learn markdown: "http://www.markdowntutorial.com/"
+  关于我: "aboutme"
+  搜索: "search"
