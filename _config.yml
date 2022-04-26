@@ -60,8 +60,8 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: 844b3d3c71d48a915d63                            #生成的clientID
-  clientSecret: 207ace9e324cacb2dd73915ddf2ed86fa3bcad69    #生成的clientSecret
+  clientID: 10284953cb3fcb3a1ed8                            #生成的clientID
+  clientSecret: 34132d41e1c0c538cd22dfb521fb259bb32232a1    #生成的clientSecret
   repo: ISouthRain.github.io    #仓库名称
   owner: ISouthRain    #github用户名
   admin: ISouthRain
