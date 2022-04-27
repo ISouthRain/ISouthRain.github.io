@@ -4,14 +4,7 @@
         <link>http://isouthrqin.github.io/</link>
         <description>🎉We come to ISouthRain Blog🎉</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
-            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Mon, 25 Apr 2022 08:36:00 &#43;0800</lastBuildDate>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster>
             <atom:link href="http://isouthrqin.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
-    <title>Pi Network</title>
-    <link>http://isouthrqin.github.io/pinetwork/</link>
-    <pubDate>Mon, 25 Apr 2022 08:36:00 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrqin.github.io/pinetwork/</guid>
-    <description><![CDATA[什么是 Pi Network？ 官方地址 官方解答 Pi Network 是一个区块链项目, 是面向未来 互联网 Web3.0 的一个区块链系统, 人人可参与的，人人享受平等获得的权利！ 个人]]></description>
-</item></channel>
+        </channel>
 </rss>
