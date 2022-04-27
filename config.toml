@@ -1,0 +1,189 @@
+baseURL = "http://isouthrqin.github.io/"
+
+# 网站语言, 仅在这里 CN 大写
+languageCode = "zh-CN"
+# 是否包括中日韩文字
+hasCJKLanguage = true
+# 网站标题
+title = "ISouthRain"
+
+# 更改使用 Hugo 构建网站时使用的默认主题
+theme = "LoveIt"
+
+# =====================================
+# [en, zh-cn, fr, pl, ...] 设置默认的语言
+defaultContentLanguage = "zh-cn"
+
+[languages]
+  [languages.en]
+    weight = 1
+    title = "ISouthRain"
+    languageCode = "en"
+    languageName = "English"
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posts"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Tags"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+      weight = 3
+
+  [languages.zh-cn]
+    weight = 2
+    title = "ISouthRain"
+    # 网站语言, 仅在这里 CN 大写
+    languageCode = "zh-CN"
+    languageName = "简体中文"
+    # 是否包括中日韩文字
+    hasCJKLanguage = true
+    [[languages.zh-cn.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "文章"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.zh-cn.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "标签"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.zh-cn.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "分类"
+      url = "/categories/"
+      title = ""
+      weight = 3
+    [languages.zh-cn.params.search]
+      enable = true
+      # 搜索引擎的类型 ("lunr", "algolia")
+      type = "algolia"
+      # 文章内容最长索引长度
+      contentLength = 4000
+      # 搜索框的占位提示语
+      placeholder = ""
+      # LoveIt 新增 | 0.2.1 最大结果数目
+      maxResultLength = 10
+      # LoveIt 新增 | 0.2.3 结果内容片段长度
+      snippetLength = 50
+      # LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签
+      highlightTag = "em"
+      # LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径
+      absoluteURL = false
+      [languages.zh-cn.params.search.algolia]
+        index = "Hugo"
+        appID = "T83K20E5M4"
+        searchKey = "20115b19e00d97ccd072e0cbe77abf47"
+
+
+# =====================================
+# 网站设置
+[params]
+  # LoveIt 更改 | 0.2.0 LoveIt 主题版本
+  version = "0.2.X"
+  # 网站描述
+  description = "We come to ISouthRain Blog"
+  # 网站关键词
+  keywords = ["Theme", "Hugo", "ISouthRain"]
+  # 网站默认主题样式 ("light", "dark", "auto")
+  defaultTheme = "auto"
+  # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
+  gitRepo = ""
+  # LoveIt 新增 | 0.1.1 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
+  # ("sha256", "sha384", "sha512", "md5")
+  fingerprint = ""
+  # LoveIt 新增 | 0.2.0 日期格式
+  dateFormat = "2006-01-02"
+  # 网站图片, 用于 Open Graph 和 Twitter Cards
+  images = ["/logo.png"]
+
+
+# =====================================
+# LoveIt 更改 | 0.2.0 文章页面配置
+  [params.page]
+    # LoveIt 新增 | 0.2.0 是否在主页隐藏一篇文章
+    hiddenFromHomePage = false
+    # LoveIt 新增 | 0.2.0 是否在搜索结果中隐藏一篇文章
+    hiddenFromSearch = false
+    # LoveIt 新增 | 0.2.0 是否使用 twemoji
+    twemoji = false
+    # 是否使用 lightgallery
+    lightgallery = false
+    # LoveIt 新增 | 0.2.0 是否使用 ruby 扩展语法
+    ruby = true
+    # LoveIt 新增 | 0.2.0 是否使用 fraction 扩展语法
+    fraction = true
+    # LoveIt 新增 | 0.2.0 是否使用 fontawesome 扩展语法
+    fontawesome = true
+    # 是否在文章页面显示原始 Markdown 文档链接
+    linkToMarkdown = true
+    # LoveIt 新增 | 0.2.4 是否在 RSS 中显示全文内容
+    rssFullText = false
+
+# =====================================
+    # LoveIt 更改 | 0.2.0 评论系统设置
+    [params.page.comment]
+      enable = true
+# =====================================
+      # Gitalk 评论系统设置
+      [params.page.comment.gitalk]
+        # LoveIt 新增 | 0.1.1
+        enable = true
+        owner = "ISouthRain"
+        repo = "ISouthRain.github.io"
+        clientId = "10284953cb3fcb3a1ed8"
+	      clientSecret = "34132d41e1c0c538cd22dfb521fb259bb32232a1"
+	      admin = "ISouthRain"
+
+  # LoveIt 新增 | 0.2.0 搜索配置
+#  [params.search]
+#    enable = true
+#    # 搜索引擎的类型 ("lunr", "algolia")
+#    type = "algolia"
+#    # 文章内容最长索引长度
+#    contentLength = 4000
+#    # 搜索框的占位提示语
+#    placeholder = ""
+#    # LoveIt 新增 | 0.2.1 最大结果数目
+#    maxResultLength = 10
+#    # LoveIt 新增 | 0.2.3 结果内容片段长度
+#    snippetLength = 50
+#    # LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签
+#    highlightTag = "em"
+#    # LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径
+#    absoluteURL = false
+#    [params.search.algolia]
+#      index = "Hugo"
+#      appID = "T83K20E5M4"
+#      searchKey = "20115b19e00d97ccd072e0cbe77abf47"
+
+# 用于 Hugo 输出文档的设置
+[outputs]
+  # LoveIt 更改 | 0.2.0
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
