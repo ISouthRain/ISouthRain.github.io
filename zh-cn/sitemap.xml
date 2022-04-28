@@ -11,16 +11,7 @@
                     hreflang="zh-cn"
                     href="http://isouthrain.github.io/about/"
                     /></url><url>
-            <loc>http://isouthrain.github.io/</loc><lastmod>2020-02-02T16:23:32&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="http://isouthrain.github.io/en/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="http://isouthrain.github.io/"
-                    /></url><url>
-            <loc>http://isouthrain.github.io/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://isouthrain.github.io/categories/</loc><lastmod>2022-04-26T23:03:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://isouthrain.github.io/en/categories/"
@@ -29,7 +20,43 @@
                     hreflang="zh-cn"
                     href="http://isouthrain.github.io/categories/"
                     /></url><url>
-            <loc>http://isouthrain.github.io/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://isouthrain.github.io/</loc><lastmod>2022-04-26T23:03:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://isouthrain.github.io/en/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://isouthrain.github.io/"
+                    /></url><url>
+            <loc>http://isouthrain.github.io/pinetwork/</loc><lastmod>2022-04-26T23:03:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://isouthrain.github.io/en/pinetwork/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://isouthrain.github.io/pinetwork/"
+                    /></url><url>
+            <loc>http://isouthrain.github.io/tags/pinetwork/</loc><lastmod>2022-04-26T23:03:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://isouthrain.github.io/en/tags/pinetwork/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://isouthrain.github.io/tags/pinetwork/"
+                    /></url><url>
+            <loc>http://isouthrain.github.io/posts/</loc><lastmod>2022-04-26T23:03:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://isouthrain.github.io/en/posts/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://isouthrain.github.io/posts/"
+                    /></url><url>
+            <loc>http://isouthrain.github.io/tags/</loc><lastmod>2022-04-26T23:03:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://isouthrain.github.io/en/tags/"
@@ -37,4 +64,13 @@
                     rel="alternate"
                     hreflang="zh-cn"
                     href="http://isouthrain.github.io/tags/"
+                    /></url><url>
+            <loc>http://isouthrain.github.io/categories/%E5%8C%BA%E5%9D%97/</loc><lastmod>2022-04-26T23:03:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://isouthrain.github.io/en/categories/%E5%8C%BA%E5%9D%97/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://isouthrain.github.io/categories/%E5%8C%BA%E5%9D%97/"
                     /></url></urlset>
