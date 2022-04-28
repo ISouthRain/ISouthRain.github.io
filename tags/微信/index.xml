@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>微信 - 标签 - ISouthRain</title>
+        <link>http://isouthrain.github.io/tags/%E5%BE%AE%E4%BF%A1/</link>
+        <description>微信 - 标签 - ISouthRain</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sun, 20 Mar 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/%E5%BE%AE%E4%BF%A1/" rel="self" type="application/rss+xml" /><item>
+    <title>Telegram 收发微信消息</title>
+    <link>http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/</link>
+    <pubDate>Sun, 20 Mar 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/</guid>
+    <description><![CDATA[Telegram收发微信消息(可以不需要购买服务器，单纯手机也可以) 📍📍 在开始本教程之前，请你确认你的微信号是否支持网页端登录，如果不支持请]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用) - ISouthRain</title><meta name="Description" content="🎉Wecome to ISouthRain Blog🎉"><meta property="og:title" content="Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)" />
+<meta property="og:description" content="layout: post title: &ldquo;Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)&rdquo; subtitle: &ldquo;Org-protocol 和 Org-protocol-cature-html 插件的使用&rdquo; date: 2022-01-12 author: &ldquo;ISouthRain&rdquo; catalog: true header-img: img/post-bg-hacker.jpg tags: Blog Emacs 前言 Notion 和 Obsidian 都有收集" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/" />
+<meta property="og:image" content="http://isouthrain.github.io/"/>
+<meta property="article:published_time" content="2022-01-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-28T00:00:00+00:00" /><meta property="og:site_name" content="ISouthRain" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://isouthrain.github.io/"/>
+
+<meta name="twitter:title" content="Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)"/>
+<meta name="twitter:description" content="layout: post title: &ldquo;Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)&rdquo; subtitle: &ldquo;Org-protocol 和 Org-protocol-cature-html 插件的使用&rdquo; date: 2022-01-12 author: &ldquo;ISouthRain&rdquo; catalog: true header-img: img/post-bg-hacker.jpg tags: Blog Emacs 前言 Notion 和 Obsidian 都有收集"/>
+<meta name="application-name" content="ISouthRain">
+<meta name="apple-mobile-web-app-title" content="ISouthRain"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/" /><link rel="prev" href="http://isouthrain.github.io/2021-12-31-pinetwork%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/" /><link rel="next" href="http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/isouthrain.github.io\/2022-01-12-org-protocol-capture-html\/"
+        },"genre": "posts","keywords": "Emacs","wordcount":  1088 ,
+        "url": "http:\/\/isouthrain.github.io\/2022-01-12-org-protocol-capture-html\/","datePublished": "2022-01-12T00:00:00+00:00","dateModified": "2022-04-28T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "ISouthRain","logo": "https:\/\/raw.githubusercontent.com\/ISouthRain\/ISouthRain.github.io\/main\/android-chrome-192x192.png"},"author": {
+                "@type": "Person",
+                "name": "ISouthRain"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="ISouthRain"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        data-srcset="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 1.5x, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        title="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png" />ISouthRain</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/2022-01-12-org-protocol-capture-html/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="ISouthRain"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        data-srcset="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 1.5x, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        title="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png" />ISouthRain</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="关于">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/2022-01-12-org-protocol-capture-html/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>ISouthRain</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-12">2022-01-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1088 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#相关链接">相关链接</a>
+      <ul>
+        <li><a href="#效果如下">效果如下</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#配置-org-protocol-capture-html">配置 Org-protocol-capture-html</a></li>
+    <li><a href="#系统安装-org-protocol">系统安装 org-protocol</a>
+      <ul>
+        <li><a href="#windows-用户">Windows 用户👇</a></li>
+        <li><a href="#linux-用户请见--linux-使用-org-protoclhttpskisaragi-hiucomorg-protocol-linux">Linux 用户请见 👉 <a href="https://kisaragi-hiu.com/org-protocol-linux">Linux 使用 org-protocl</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#根据自己使用的浏览器添加书签">根据自己使用的浏览器添加书签</a>
+      <ul>
+        <li><a href="#例如-chrome">例如 Chrome</a>
+          <ul>
+            <li><a href="#在-chrome-新建-书签">在 Chrome 新建 书签</a></li>
+          </ul>
+        </li>
+        <li><a href="#firefox-如下">Firefox 如下</a>
+          <ul>
+            <li><a href="#在-firefox-新建-书签">在 Firefox 新建 书签</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#享受使用-">享受使用 👇</a>
+      <ul>
+        <li><a href="#使用之前">使用之前</a></li>
+        <li><a href="#开始使用">开始使用</a></li>
+      </ul>
+    </li>
+    <li><a href="#如果你有更多的需求-请自己学习-因为网上并没有详细的教程使用-org-protocol-所以才有了本教程">如果你有更多的需求, 请自己学习, 因为网上并没有详细的教程使用 org-protocol 所以才有了本教程</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><hr>
+<p>layout:     post
+title:      &ldquo;Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)&rdquo;
+subtitle:   &ldquo;Org-protocol 和 Org-protocol-cature-html 插件的使用&rdquo;
+date:       2022-01-12
+author:     &ldquo;ISouthRain&rdquo;
+catalog: true
+header-img: img/post-bg-hacker.jpg
+tags:</p>
+<ul>
+<li>Blog</li>
+<li>Emacs</li>
+</ul>
+<hr>
+<h2 id="前言">前言</h2>
+<p><strong>Notion</strong> 和 <strong>Obsidian</strong> 都有收集网页的功能, Org-mode 自然也有, Org-mode 是调用 Org-protocol 协议使用的, 而插件 <code>Org-protocol-capture-html</code> 是其中能使 <code>Org-protocol</code> 收集的网页更加美观和可视化</p>
+<p>因为很多人都不会都不理解 <code>Org-protocol</code> 和怎么去使用, 以及<code>Org-protocol-capture-html</code>, 说得只是怎么用这个插件, 却没有说怎么配置, 所以才有了本教程.</p>
+<h2 id="相关链接">相关链接</h2>
+<ul>
+<li><a href="https://github.com/alphapapa/org-protocol-capture-html" target="_blank" rel="noopener noreffer">Org-protocol-capture-html 官网</a></li>
+<li><a href="https://orgmode.org/manual/Protocols.html" target="_blank" rel="noopener noreffer">Org-protocol 协议官网</a></li>
+</ul>
+<h3 id="效果如下">效果如下</h3>
+<p><code>请自己下载观看，大约7mb</code>👉  <a href="/Attachment/2022-01-12-Org-protocol-capture-html/2022-01-22-14-24-59.mkv" rel="">效果视频</a><br>
+<code>效果动图</code>👉 <a href="/Attachment/2022-01-12-Org-protocol-capture-html/2022-01-22-14-24-59.gif" rel="">效果动图</a><br>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/Attachment/2022-01-12-Org-protocol-capture-html/2022-01-22-14-24-59.gif"
+        data-srcset="/Attachment/2022-01-12-Org-protocol-capture-html/2022-01-22-14-24-59.gif, /Attachment/2022-01-12-Org-protocol-capture-html/2022-01-22-14-24-59.gif 1.5x, /Attachment/2022-01-12-Org-protocol-capture-html/2022-01-22-14-24-59.gif 2x"
+        data-sizes="auto"
+        alt="/Attachment/2022-01-12-Org-protocol-capture-html/2022-01-22-14-24-59.gif"
+        title="效果动图" /></p>
+<h1 id="安装-org-protocol-capture-html">安装 Org-protocol-capture-html</h1>
+<p>这个插件是不需要配置, 直接安装此插件就可以调用</p>
+<p><code>请自己按装此插件</code></p>
+<ul>
+<li>使用 use-package 安装</li>
+<li>手动安装</li>
+</ul>
+<h2 id="配置-org-protocol-capture-html">配置 Org-protocol-capture-html</h2>
+<p>此插件是调用 <code>org-capture</code> 功能, 请自觉检查如下配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Elisp" data-lang="Elisp"><span class="p">(</span><span class="nv">server-start</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">use-package</span> <span class="nv">s</span><span class="p">)</span> <span class="c1">;;依赖</span>
+
+<span class="c1">;; 安装 org-protocol-capture-html </span>
+<span class="c1">;; 如果跟我的不同, 请将下面两行删除</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="s">&#34;~/.emacs.d/plugins/org-protocol-capture-html/&#34;</span><span class="p">)</span> <span class="c1">;;</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol-capture-html</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-capture-templates</span>
+      <span class="o">&#39;</span><span class="p">(</span>
+	 <span class="c1">;;Org-protocol网页收集, 按键 w 调用</span>
+	 <span class="p">(</span><span class="s">&#34;w&#34;</span> <span class="s">&#34;网页收集&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file</span> <span class="s">&#34;~/Org/网页收集.org&#34;</span><span class="p">)</span>
+	 <span class="s">&#34;* [[%:link][%:description]] \n %U \n %:initial \n&#34;</span><span class="p">)</span>
+	<span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="系统安装-org-protocol">系统安装 org-protocol</h2>
+<p><code>如果下面的方法无法安装, 请见官网 👇</code></p>
+<ul>
+<li><a href="https://orgmode.org/worg/org-contrib/org-protocol.html" target="_blank" rel="noopener noreffer">官网安装 org-protocol 教程</a></li>
+</ul>
+<h3 id="windows-用户">Windows 用户👇</h3>
+<ul>
+<li>桌面新建 <code>org-protocol.reg</code> 文件, 使用 记事本 软件打开 , 并将以下👇代码放进去并保存, 然后运行安装并给权限</li>
+<li><code>请把下面的 emacsclientw.exe 路径换成你自己的路径</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">REGEDIT4
+
+[HKEY_CLASSES_ROOT\org-protocol]
+@=&#34;URL:Org Protocol&#34;
+&#34;URL Protocol&#34;=&#34;&#34;
+[HKEY_CLASSES_ROOT\org-protocol\shell]
+[HKEY_CLASSES_ROOT\org-protocol\shell\open]
+[HKEY_CLASSES_ROOT\org-protocol\shell\open\command]
+@=&#34;\&#34;C:\\Programme\\Emacs\\emacs\\bin\\emacsclientw.exe\&#34; \&#34;%1\&#34;&#34;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="linux-用户请见--linux-使用-org-protoclhttpskisaragi-hiucomorg-protocol-linux">Linux 用户请见 👉 <a href="https://kisaragi-hiu.com/org-protocol-linux" target="_blank" rel="noopener noreffer">Linux 使用 org-protocl</a></h3>
+<h2 id="根据自己使用的浏览器添加书签">根据自己使用的浏览器添加书签</h2>
+<p><code>关于 org-protocol-capture-html 对不同的 浏览书签 见</code></p>
+<ul>
+<li><a href="https://github.com/alphapapa/org-protocol-capture-html" target="_blank" rel="noopener noreffer">Org-protocol-capture-html 官网</a></li>
+</ul>
+<h3 id="例如-chrome">例如 Chrome</h3>
+<h4 id="在-chrome-新建-书签">在 Chrome 新建 书签</h4>
+<ol>
+<li>书签名称随便取</li>
+<li>书签地址如下👇</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">javascript</span><span class="o">:</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;org-protocol:///capture-html?template=w&amp;url=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;title=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;[untitled page]&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;body=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">window</span><span class="p">.</span><span class="nx">getSelection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">sel</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">getSelection</span><span class="p">();</span> <span class="k">if</span> <span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;div&#34;</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span><span class="nx">container</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">getRangeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">cloneContents</span><span class="p">());}</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">container</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">&#34;Text&#34;</span><span class="p">)</span> <span class="p">{</span><span class="nx">html</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">createRange</span><span class="p">().</span><span class="nx">htmlText</span><span class="p">;}}</span> <span class="kd">var</span> <span class="nx">relToAbs</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">href</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;a&#34;</span><span class="p">);</span> <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">href</span><span class="p">;</span> <span class="kd">var</span> <span class="nx">abs</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">+</span> <span class="s2">&#34;//&#34;</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">host</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">pathname</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">search</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">hash</span><span class="p">;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span> <span class="k">return</span> <span class="nx">abs</span><span class="p">;};</span> <span class="kd">var</span> <span class="nx">elementTypes</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;img&#39;</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">]];</span> <span class="kd">var</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">html</span><span class="p">;</span> <span class="nx">elementTypes</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elementType</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">elements</span> <span class="o">=</span> <span class="nx">div</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">relToAbs</span><span class="p">(</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">])));}});</span> <span class="k">return</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}());</span>
+
+<span class="nx">javascript</span><span class="o">:</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;org-protocol:///capture-eww-readable?template=w&amp;url=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;title=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;[untitled page]&#34;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="firefox-如下">Firefox 如下</h3>
+<h4 id="在-firefox-新建-书签">在 Firefox 新建 书签</h4>
+<ol>
+<li>书签名称随便取</li>
+<li>书签地址如下👇</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">javascript</span><span class="o">:</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;org-protocol://capture-html?template=w&amp;url=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;title=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;[untitled page]&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;body=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getSelection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">sel</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getSelection</span><span class="p">();</span> <span class="k">if</span> <span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;div&#34;</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span><span class="nx">container</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">getRangeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">cloneContents</span><span class="p">());}</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">container</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">&#34;Text&#34;</span><span class="p">)</span> <span class="p">{</span><span class="nx">html</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">createRange</span><span class="p">().</span><span class="nx">htmlText</span><span class="p">;}}</span> <span class="kd">var</span> <span class="nx">relToAbs</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">href</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;a&#34;</span><span class="p">);</span> <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">href</span><span class="p">;</span> <span class="kd">var</span> <span class="nx">abs</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">+</span> <span class="s2">&#34;//&#34;</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">host</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">pathname</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">search</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">hash</span><span class="p">;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span> <span class="k">return</span> <span class="nx">abs</span><span class="p">;};</span> <span class="kd">var</span> <span class="nx">elementTypes</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;img&#39;</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">]];</span> <span class="kd">var</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">html</span><span class="p">;</span> <span class="nx">elementTypes</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elementType</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">elements</span> <span class="o">=</span> <span class="nx">div</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">relToAbs</span><span class="p">(</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">])));}});</span> <span class="k">return</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}());</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="享受使用-">享受使用 👇</h2>
+<h3 id="使用之前">使用之前</h3>
+<p><code>请把你的 Chrome 或者 Firefox 的 书签 始终可见(比如在你浏览网页选中文字时可以点击你的书签)</code></p>
+<h3 id="开始使用">开始使用</h3>
+<ol>
+<li>打开 Emacs</li>
+<li>使用浏览器浏览网页</li>
+<li>在网页 <code>选择你想收集的文本</code></li>
+<li>点击你刚才新建的书签, 点击确定授权之类的</li>
+<li>回到 Emacs 你会看到你已经收集到的 Capture</li>
+<li>自己记得保存</li>
+<li>你收集到的会 保存到 <code>~/Org/网页收集.org</code> 文件中</li>
+</ol>
+<h2 id="如果你有更多的需求-请自己学习-因为网上并没有详细的教程使用-org-protocol-所以才有了本教程">如果你有更多的需求, 请自己学习, 因为网上并没有详细的教程使用 org-protocol 所以才有了本教程</h2>
+<p><code>祝你使用愉快🤓⚡👉♥️🌹</code></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-04-28</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/" data-title="Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)" data-via="ISouthRain" data-hashtags="Emacs"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/" data-hashtag="Emacs"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/" data-title="Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/" data-title="Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/" data-title="Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/" data-title="Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/" data-title="Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/" data-title="Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/emacs/">Emacs</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2021-12-31-pinetwork%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/" class="prev" rel="prev" title="Pi Network 注册教程"><i class="fas fa-angle-left fa-fw"></i>Pi Network 注册教程</a>
+            <a href="/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/" class="next" rel="next" title="Telegram 收发微信消息">Telegram 收发微信消息<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.68.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/ISouthRain" target="_blank">ISouthRain</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"gitalk":{"admin":["ISouthRain"],"clientID":"10284953cb3fcb3a1ed8","clientSecret":"34132d41e1c0c538cd22dfb521fb259bb32232a1","id":"2022-01-12T00:00:00Z","owner":"ISouthRain","repo":"ISouthRain.github.io","title":"Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"T83K20E5M4","algoliaIndex":"Hugo-zh","algoliaSearchKey":"20115b19e00d97ccd072e0cbe77abf47","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

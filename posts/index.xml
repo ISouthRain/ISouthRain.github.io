@@ -1,0 +1,50 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有文章 - ISouthRain</title>
+        <link>http://isouthrain.github.io/posts/</link>
+        <description>所有文章 | ISouthRain</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sun, 20 Mar 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Telegram 收发微信消息</title>
+    <link>http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/</link>
+    <pubDate>Sun, 20 Mar 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/</guid>
+    <description><![CDATA[Telegram收发微信消息(可以不需要购买服务器，单纯手机也可以) 📍📍 在开始本教程之前，请你确认你的微信号是否支持网页端登录，如果不支持请]]></description>
+</item><item>
+    <title>Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)</title>
+    <link>http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/</link>
+    <pubDate>Wed, 12 Jan 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/</guid>
+    <description><![CDATA[layout: post title: &ldquo;Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)&rdquo; subtitle: &ldquo;Org-protocol 和 Org-protocol-cature-html 插件的使用&rdquo; date: 2022-01-12 author: &ldquo;ISouthRain&rdquo; catalog: true header-img: img/post-bg-hacker.jpg tags: Blog Emacs 前言 Notion 和 Obsidian 都有收集]]></description>
+</item><item>
+    <title>Pi Network 注册教程</title>
+    <link>http://isouthrain.github.io/2021-12-31-pinetwork%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</link>
+    <pubDate>Fri, 31 Dec 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2021-12-31-pinetwork%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</guid>
+    <description><![CDATA[我的邀请码 👉 ISouthRain 👈 官网 App 下载链接👇 (进入官方网站需要科学上网) 官方 Pi App 打开已经安装的 App 开始注册 1. 选择使用 手机号码 注册👇 2. 选择 中国地区+ 86 并填写]]></description>
+</item><item>
+    <title>Vim和Emacs的选择</title>
+    <link>http://isouthrain.github.io/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</link>
+    <pubDate>Mon, 27 Dec 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
+    <description><![CDATA[前言 这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读]]></description>
+</item><item>
+    <title>(Neo)Vim 中英文输入法</title>
+    <link>http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+    <pubDate>Sun, 26 Dec 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
+    <description><![CDATA[概述 使用 Vim 每当我们切换中文输入时都要切换中英文,这非常繁琐还好有Vim 插件了来弥补这个缺点 这个插件就是 ZFVimIM, 这插件支持云输入(云词库), 非常的好]]></description>
+</item><item>
+    <title>Notion,Obsidian,Org-mode,Logseq,RoamResearch,笔记软件的选择</title>
+    <link>http://isouthrain.github.io/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</link>
+    <pubDate>Sat, 25 Dec 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
+    <description><![CDATA[概述 在如今这个时代每个人都需要做笔记，用来记录一些生活琐事，以及一些重要的事情，避免忘记，笔记 好记性不如烂笔头 那么用什么软件记笔记呢?一个好]]></description>
+</item></channel>
+</rss>
