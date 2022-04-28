@@ -2,9 +2,9 @@
     <channel>
         <title>ISouthRain</title>
         <link>http://isouthrain.github.io/</link>
-        <description>Freedom and Peace</description>
+        <description>🎉We come to ISouthRain Blog🎉</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
-            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sun, 02 Feb 2020 16:23:32 &#43;0800</lastBuildDate>
             <atom:link href="http://isouthrain.github.io/index.xml" rel="self" type="application/rss+xml" />
         </channel>
 </rss>

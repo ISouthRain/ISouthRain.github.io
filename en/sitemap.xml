@@ -11,6 +11,15 @@
                     hreflang="en"
                     href="http://isouthrain.github.io/en/about/"
                     /></url><url>
+            <loc>http://isouthrain.github.io/en/</loc><lastmod>2020-02-02T16:23:32&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://isouthrain.github.io/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://isouthrain.github.io/en/"
+                    /></url><url>
             <loc>http://isouthrain.github.io/en/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
@@ -19,15 +28,6 @@
                     rel="alternate"
                     hreflang="en"
                     href="http://isouthrain.github.io/en/categories/"
-                    /></url><url>
-            <loc>http://isouthrain.github.io/en/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://isouthrain.github.io/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://isouthrain.github.io/en/"
                     /></url><url>
             <loc>http://isouthrain.github.io/en/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
