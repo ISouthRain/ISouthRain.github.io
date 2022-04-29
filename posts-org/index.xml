@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts-orgs on ISouthRain</title>
+    <link>http://isouthrain.github.io/posts-org/</link>
+    <description>Recent content in Posts-orgs on ISouthRain</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
+    <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster>
+    <lastBuildDate>Fri, 29 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://isouthrain.github.io/posts-org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>普通人如何使用Emacs</title>
+      <link>http://isouthrain.github.io/posts-org/%E6%99%AE%E9%80%9A%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8emacs/</link>
+      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      <author>isouthrain@gmail.com (ISouthRain)</author>
+      <guid>http://isouthrain.github.io/posts-org/%E6%99%AE%E9%80%9A%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8emacs/</guid>
+      <description>阅读之前 本文的 普通人 指的是 非程序员 为什么编写这编文章? 因为受到了 懒猫 和 Protesilaos Stavrou 影响 Emacs Talk 重量级嘉宾-懒猫 Protesilaos Stavrou 隐居、反内卷，不意味着躺平｜专访202</description>
+    </item>
+    
+  </channel>
+</rss>
