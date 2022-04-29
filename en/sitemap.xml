@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://isouthrain.github.io/en/about/</loc><lastmod>2020-02-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://isouthrain.github.io/en/about/</loc><lastmod>2022-04-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://isouthrain.github.io/about/"
@@ -11,7 +11,7 @@
                     hreflang="en"
                     href="http://isouthrain.github.io/en/about/"
                     /></url><url>
-            <loc>http://isouthrain.github.io/en/</loc><lastmod>2020-02-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://isouthrain.github.io/en/</loc><lastmod>2022-04-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://isouthrain.github.io/"

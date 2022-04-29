@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://isouthrain.github.io/about/</loc><lastmod>2020-02-02T16:23:32&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://isouthrain.github.io/about/</loc><lastmod>2022-04-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://isouthrain.github.io/en/about/"
@@ -11,7 +11,7 @@
                     hreflang="zh-cn"
                     href="http://isouthrain.github.io/about/"
                     /></url><url>
-            <loc>http://isouthrain.github.io/thanks/</loc><lastmod>2020-02-02T16:23:32&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://isouthrain.github.io/thanks/</loc><lastmod>2022-04-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/categories/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
@@ -34,7 +34,6 @@
                     /></url><url>
             <loc>http://isouthrain.github.io/categories/%E6%8A%80%E6%9C%AF/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://isouthrain.github.io/template/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
@@ -44,6 +43,7 @@
                     hreflang="zh-cn"
                     href="http://isouthrain.github.io/"
                     /></url><url>
+            <loc>http://isouthrain.github.io/template/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/tags/telegrambot/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/tags/%E5%BE%AE%E4%BF%A1/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
