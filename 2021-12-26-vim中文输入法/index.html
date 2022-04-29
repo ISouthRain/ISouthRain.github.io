@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>(Neo)Vim 中英文输入法 - ISouthRain</title><meta name="Description" content="🎉Wecome to ISouthRain Blog🎉"><meta property="og:title" content="(Neo)Vim 中英文输入法" />
+<meta property="og:description" content="概述 使用 Vim 每当我们切换中文输入时都要切换中英文,这非常繁琐还好有Vim 插件了来弥补这个缺点 这个插件就是 ZFVimIM, 这插件支持云输入(云词库), 非常的好" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/" />
+<meta property="og:image" content="http://isouthrain.github.io/"/>
+<meta property="article:published_time" content="2021-12-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-28T00:00:00+00:00" /><meta property="og:site_name" content="ISouthRain" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://isouthrain.github.io/"/>
+
+<meta name="twitter:title" content="(Neo)Vim 中英文输入法"/>
+<meta name="twitter:description" content="概述 使用 Vim 每当我们切换中文输入时都要切换中英文,这非常繁琐还好有Vim 插件了来弥补这个缺点 这个插件就是 ZFVimIM, 这插件支持云输入(云词库), 非常的好"/>
+<meta name="application-name" content="ISouthRain">
+<meta name="apple-mobile-web-app-title" content="ISouthRain"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/" /><link rel="prev" href="http://isouthrain.github.io/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/" /><link rel="next" href="http://isouthrain.github.io/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "(Neo)Vim 中英文输入法",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/isouthrain.github.io\/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95\/"
+        },"genre": "posts","keywords": "Vim, Neovim","wordcount":  459 ,
+        "url": "http:\/\/isouthrain.github.io\/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95\/","datePublished": "2021-12-26T00:00:00+00:00","dateModified": "2022-04-28T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "ISouthRain","logo": "https:\/\/raw.githubusercontent.com\/ISouthRain\/ISouthRain.github.io\/main\/android-chrome-192x192.png"},"author": {
+                "@type": "Person",
+                "name": "ISouthRain"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="ISouthRain"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        data-srcset="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 1.5x, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        title="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png" />ISouthRain</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="ISouthRain"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        data-srcset="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 1.5x, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        title="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png" />ISouthRain</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="关于">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">(Neo)Vim 中英文输入法</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>ISouthRain</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-12-26">2021-12-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 459 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#安装-zfvimim">安装 ZFVimIM</a>
+      <ul>
+        <li><a href="#安装必要插件-使用vim-plug-安装">安装必要插件 <strong>使用Vim Plug</strong> 安装</a></li>
+      </ul>
+    </li>
+    <li><a href="#安装后使用">安装后使用</a></li>
+    <li><a href="#如果你觉得好用-希望您能给开发者-买个煎饼httpsgithubcomzsaberlv0zsaberlv0">如果你觉得好用, 希望您能给开发者 <a href="https://github.com/ZSaberLv0/ZSaberLv0">买个煎饼</a></a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="概述">概述</h1>
+<p><strong>使用 Vim 每当我们切换中文输入时都要切换中英文,这非常繁琐还好有Vim 插件了来弥补这个缺点</strong> <br>
+<strong>这个插件就是 <a href="https://github.com/ZSaberLv0/ZFVimIM" target="_blank" rel="noopener noreffer">ZFVimIM</a>, 这插件支持云输入(云词库), 非常的好用, 而且不影响你使用 <em>jk</em> 切换的到 <em>Normal</em> 模式, 配置也非常简单</strong></p>
+<h2 id="安装-zfvimim">安装 ZFVimIM</h2>
+<h3 id="安装必要插件-使用vim-plug-安装">安装必要插件 <strong>使用Vim Plug</strong> 安装</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Plug &#39;ZSaberLv0/ZFVimIM&#39;
+Plug &#39;ZSaberLv0/ZFVimJob&#39; &#34; 可选, 用于提升词库加载性能
+Plug &#39;ZSaberLv0/ZFVimIM_openapi&#39; &#34;云词库
+Plug &#39;ZSaberLv0/ZFVimIM_pinyin&#39; &#34;db文件
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>我是使用 Neovim 以下是我的配置</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&#34; 云词库支持
+let g:ZFVimIM_openapi_enable=1
+
+&#34; 使用本地 db 的配置
+function! s:zfvimim_init() abort
+  let db = ZFVimIM_dbInit({&#39;name&#39; : &#39;中文输入法&#39;})
+  call ZFVimIM_cloudRegister({
+			  \   &#39;mode&#39; : &#39;local&#39;,
+			  \   &#39;dbId&#39; : db[&#39;dbId&#39;],
+			  \   &#39;repoPath&#39; : expand(&#39;~/.config/nvim/plugged/ZFVimIM_pinyin/misc/&#39;), &#34; 词库路径,就是放下面两个文件的路径
+			  \   &#39;dbFile&#39; : &#39;pinyin.txt&#39;, &#34; 词库文件, 相对 repoPath 的路径
+			  \   &#39;dbCountFile&#39; : &#39;pinyin_count.txt&#39;, &#34; 非必须, 词频文件, 相对 repoPath 的路径
+			  \ })
+endfunction
+
+augroup zfvim_conf
+  autocmd!
+  autocmd VimEnter * call s:zfvimim_init()
+augroup END
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="安装后使用">安装后使用</h2>
+<ul>
+<li><code>;;</code> 开启或关闭输入法, <code>;:</code> 切换词库</li>
+<li><code>-</code> 和 <code>=</code> 翻页</li>
+<li><code>空格</code> 和 <code>0~9</code> 选词或组词</li>
+<li><code>[</code> 和 <code>]</code> 快速从词组选字</li>
+<li>输入过程中会自动组自造词, 也可以用 <code>;,</code> 或 <code>:IMAdd</code> 手动添加自造词,
+<code>;.</code> 或 <code>:IMRemove</code> 删除自造词</li>
+<li>觉得好用, 记得给开发者<a href="https://github.com/ZSaberLv0/ZSaberLv0" target="_blank" rel="noopener noreffer">买个煎饼</a>,
+贫穷码农在线乞讨 <code>_(:з」∠)_</code></li>
+</ul>
+<p><strong>更多细节请到官方 <a href="https://github.com/ZSaberLv0/ZFVimIM" target="_blank" rel="noopener noreffer">ZFVimIM</a></strong></p>
+<h2 id="如果你觉得好用-希望您能给开发者-买个煎饼httpsgithubcomzsaberlv0zsaberlv0">如果你觉得好用, 希望您能给开发者 <a href="https://github.com/ZSaberLv0/ZSaberLv0" target="_blank" rel="noopener noreffer">买个煎饼</a></h2>
+<p><strong>开发者不是我本人</strong></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-04-28</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/" data-title="(Neo)Vim 中英文输入法" data-via="ISouthRain" data-hashtags="Vim,Neovim"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/" data-hashtag="Vim"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/" data-title="(Neo)Vim 中英文输入法" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/" data-title="(Neo)Vim 中英文输入法"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/" data-title="(Neo)Vim 中英文输入法"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/" data-title="(Neo)Vim 中英文输入法" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/" data-title="(Neo)Vim 中英文输入法" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/" data-title="(Neo)Vim 中英文输入法"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vim/">Vim</a>,&nbsp;<a href="/tags/neovim/">Neovim</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/" class="prev" rel="prev" title="Notion,Obsidian,Org-mode,Logseq,RoamResearch,笔记软件的选择"><i class="fas fa-angle-left fa-fw"></i>Notion,Obsidian,Org-mode,Logseq,RoamResearch,笔记软件的选择</a>
+            <a href="/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/" class="next" rel="next" title="Vim和Emacs的选择">Vim和Emacs的选择<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.68.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/ISouthRain" target="_blank">ISouthRain</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"title","label":"Comment","lightTheme":"github-light","repo":"ISouthRain/ISouthRain.github.io"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"T83K20E5M4","algoliaIndex":"Hugo-zh","algoliaSearchKey":"20115b19e00d97ccd072e0cbe77abf47","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
