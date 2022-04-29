@@ -10,6 +10,6 @@
     <pubDate>Thu, 28 Apr 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</guid>
-    <description><![CDATA[git push 每次都要输入账号密码? 从此解决 首先配置 Git 个人信息, 依此输入以下两个命令: 配置你的 GitHub 邮箱📬 1 git config --global user.email &#34;你在GitHub注册的邮箱&]]></description>
+    <description><![CDATA[使用以下方法后，git push 再也不用一直输入 账号密码了! git push 每次都要输入账号密码? 从此解决 首先配置 Git 个人信息, 依此输入以下两个命令: 配置你的 GitHub 邮]]></description>
 </item></channel>
 </rss>
