@@ -4,7 +4,14 @@
         <link>http://isouthrain.github.io/tags/emacs/</link>
         <description>Emacs - 标签 - ISouthRain</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
-            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Wed, 12 Jan 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/emacs/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Fri, 29 Apr 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/emacs/" rel="self" type="application/rss+xml" /><item>
+    <title>普通人如何使用Emacs</title>
+    <link>http://isouthrain.github.io/2022-04-29-%E6%99%AE%E9%80%9A%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8emacs/</link>
+    <pubDate>Fri, 29 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-04-29-%E6%99%AE%E9%80%9A%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8emacs/</guid>
+    <description><![CDATA[Emacs 不仅可用于编码， 更可用于生活。 阅读之前 本文的 普通人 指的是 非程序员 为什么编写这编文章? 因为受到了 懒猫 和 Protesilaos Stavrou 影响 Emacs Talk 重量级嘉宾-懒猫 Protesilaos Stavrou 隐居、]]></description>
+</item><item>
     <title>Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)</title>
     <link>http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/</link>
     <pubDate>Wed, 12 Jan 2022 00:00:00 &#43;0000</pubDate>
