@@ -10,13 +10,13 @@
     <pubDate>Fri, 29 Apr 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/</guid>
-    <description><![CDATA[git push 推送/上传到 GitHub git push 输入账号密码后推送不了? 因为 Github 的推送/上传机制改了 之前可以输入 账号密码 就可以 push, 现在只能使用 github token 代替 密码 才能推送/上传 申]]></description>
+    <description><![CDATA[Home git push 推送/上传到 GitHub git push 输入账号密码后推送不了? 因为 Github 的推送/上传机制改了 之前可以输入 账号密码 就可以 push, 现在只能使用 github token 代替 密码 才能推送/上传]]></description>
 </item><item>
     <title>永久免账号密码推送Github</title>
     <link>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</link>
     <pubDate>Thu, 28 Apr 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</guid>
-    <description><![CDATA[使用以下方法后 git push 再也不用一直输入 账号密码了! git push 每次都要输入账号密码? 从此解决 正文👇 首先配置 Git 个人信息 依此输入以下两个命令: 配置你的 GitHub 邮箱]]></description>
+    <description><![CDATA[Home 使用以下方法后 git push 再也不用一直输入 账号密码了! git push 每次都要输入账号密码? 从此解决 正文👇 首先配置 Git 个人信息 依此输入以下两个命令: 配置你的 GitHub 邮]]></description>
 </item></channel>
 </rss>
