@@ -5,6 +5,13 @@
         <description>所有文章 | ISouthRain</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
             <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>伟大公链 Pi Network</title>
+    <link>http://isouthrain.github.io/pinetwork/</link>
+    <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/pinetwork/</guid>
+    <description><![CDATA[Home Pi Network 建立最具包容性点对点支付系统]]></description>
+</item><item>
     <title>Hugo如何置顶文章</title>
     <link>http://isouthrain.github.io/2022-04-30-hugo%E5%A6%82%E4%BD%95%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</link>
     <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
     <description><![CDATA[Home 概述 使用 Vim 每当我们切换中文输入时都要切换中英文,这非常繁琐还好有Vim 插件了来弥补这个缺点 这个插件就是 ZFVimIM, 这插件支持云输入(云词库), 非常的]]></description>
-</item><item>
-    <title>Notion,Obsidian,Org-mode,Logseq,RoamResearch,笔记软件的选择</title>
-    <link>http://isouthrain.github.io/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</link>
-    <pubDate>Sat, 25 Dec 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
-    <description><![CDATA[Home 概述 在如今这个时代每个人都需要做笔记，用来记录一些生活琐事，以及一些重要的事情，避免忘记， 好记性不如烂笔头 那么用什么软件记笔记呢?一个好的]]></description>
 </item></channel>
 </rss>
