@@ -5,6 +5,13 @@
         <description>技术 - 分类 - ISouthRain</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
             <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/categories/%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>Markdown内部连接</title>
+    <link>http://isouthrain.github.io/2022-04-30-markdown%E5%86%85%E9%83%A8%E8%BF%9E%E6%8E%A5/</link>
+    <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-04-30-markdown%E5%86%85%E9%83%A8%E8%BF%9E%E6%8E%A5/</guid>
+    <description><![CDATA[使用方法如下: 1 2 3 &lt;span id = &#34;瞄点&#34;&gt;此处为标志&lt;/span&gt; [跳转至瞄点](#瞄点) 效果如下 效果如下👇]]></description>
+</item><item>
     <title>Markdown折叠列表</title>
     <link>http://isouthrain.github.io/2022-04-30-markdown%E6%8A%98%E5%8F%A0%E5%88%97%E8%A1%A8/</link>
     <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
