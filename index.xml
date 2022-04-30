@@ -19,7 +19,7 @@
     <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-04-30-markdown%E6%8A%98%E5%8F%A0%E5%88%97%E8%A1%A8/</guid>
-    <description><![CDATA[1 2 3 4 5 6 7 8 9 10 11 12 13 14 &lt;details&gt; &lt;summary&gt;这是一个折叠列表&lt;/summary&gt; 折叠内容, 上面空一行 下一行 &lt;details&gt; &l]]></description>
+    <description><![CDATA[方法如下 1 2 3 4 5 6 7 8 9 10 11 12 13 14 &lt;details&gt; &lt;summary&gt;这是一个折叠列表&lt;/summary&gt; 折叠内容, 上面空一行 下一]]></description>
 </item><item>
     <title>如何上传/推送到 Github</title>
     <link>http://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/</link>
