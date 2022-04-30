@@ -2,7 +2,6 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://isouthrain.github.io/pinetwork/</loc><lastmod>2022-04-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/about/</loc><lastmod>2022-04-26T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
@@ -42,9 +41,8 @@
             <loc>http://isouthrain.github.io/tags/hugo/</loc><lastmod>2022-04-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/categories/hugo/</loc><lastmod>2022-04-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/2022-04-30-hugo%E5%A6%82%E4%BD%95%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</loc><lastmod>2022-04-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://isouthrain.github.io/2022-04-30-markdown%E6%8A%98%E5%8F%A0/</loc><lastmod>2022-04-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://isouthrain.github.io/2022-04-30-markdown%E6%8A%98%E5%8F%A0%E5%88%97%E8%A1%A8/</loc><lastmod>2022-04-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/tags/markdwon/</loc><lastmod>2022-04-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://isouthrain.github.io/categories/pinetwork/</loc><lastmod>2022-04-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/posts/</loc><lastmod>2022-04-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/tags/</loc><lastmod>2022-04-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
@@ -76,6 +74,7 @@
             <loc>http://isouthrain.github.io/tags/%E5%BE%AE%E4%BF%A1/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/</loc><lastmod>2022-04-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/2021-12-31-pinetwork%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://isouthrain.github.io/categories/pinetwork/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/tags/neovim/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/tags/vim/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://isouthrain.github.io/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</loc><lastmod>2022-04-28T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>

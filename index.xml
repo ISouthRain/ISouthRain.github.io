@@ -7,13 +7,6 @@
             <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Tue, 26 Apr 2022 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="http://isouthrain.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>伟大公链 Pi Network</title>
-    <link>http://isouthrain.github.io/pinetwork/</link>
-    <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/pinetwork/</guid>
-    <description><![CDATA[Pi Network Pi Network 建立最具包容性点对点支付系统]]></description>
-</item><item>
     <title>Hugo如何置顶文章</title>
     <link>http://isouthrain.github.io/2022-04-30-hugo%E5%A6%82%E4%BD%95%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</link>
     <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
@@ -22,10 +15,10 @@
     <description><![CDATA[Hugo 置顶文章很简单，只需要将以下放在文章头部即可置顶 1 2 3 --- weight: 1 ---]]></description>
 </item><item>
     <title>Markdown折叠列表</title>
-    <link>http://isouthrain.github.io/2022-04-30-markdown%E6%8A%98%E5%8F%A0/</link>
+    <link>http://isouthrain.github.io/2022-04-30-markdown%E6%8A%98%E5%8F%A0%E5%88%97%E8%A1%A8/</link>
     <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-04-30-markdown%E6%8A%98%E5%8F%A0/</guid>
+    <guid>http://isouthrain.github.io/2022-04-30-markdown%E6%8A%98%E5%8F%A0%E5%88%97%E8%A1%A8/</guid>
     <description><![CDATA[1 2 3 4 5 6 7 8 9 10 11 12 13 14 &lt;details&gt; &lt;summary&gt;这是一个折叠列表&lt;/summary&gt; 折叠内容, 上面空一行 下一行 &lt;details&gt; &l]]></description>
 </item><item>
     <title>如何上传/推送到 Github</title>
@@ -76,5 +69,12 @@
     <author>作者</author>
     <guid>http://isouthrain.github.io/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
     <description><![CDATA[前言 这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读]]></description>
+</item><item>
+    <title>(Neo)Vim 中英文输入法</title>
+    <link>http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+    <pubDate>Sun, 26 Dec 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
+    <description><![CDATA[概述 使用 Vim 每当我们切换中文输入时都要切换中英文,这非常繁琐还好有Vim 插件了来弥补这个缺点 这个插件就是 ZFVimIM, 这插件支持云输入(云词库), 非常的好]]></description>
 </item></channel>
 </rss>
