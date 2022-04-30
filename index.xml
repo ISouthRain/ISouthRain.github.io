@@ -12,69 +12,1293 @@
     <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/pinetwork/</guid>
-    <description><![CDATA[Pi Network 建立最具包容性点对点支付系统 Pi Network 是一场加密革命 本文将会持续更新, 直到 Pi Network 成为世界主流交易方式。 Pi和其他货币的最大差异是分发式 它既不属于]]></description>
+    <description><![CDATA[<blockquote>
+<p><strong>Pi Network 建立最具包容性点对点支付系统</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Pi Network 是一场加密革命</strong></p>
+</blockquote>
+<h3 id="本文将会持续更新-直到-pi-network-成为世界主流交易方式"><code>本文将会持续更新, 直到 Pi Network 成为世界主流交易方式。</code></h3>
+<h3 id="pi和其他货币的最大差异是分发式">Pi和其他货币的最大差异是分发式</h3>
+<ul>
+<li><strong><code>它既不属于PoW，也不属于PoS</code></strong></li>
+</ul>
+<h3 id="pi-network-清单">Pi Network🍕 清单</h3>
+<p><span id = "PiNetwork清单">PiNetwork清单</span></p>
+<details>
+<summary>Pi Ntwork 清单 🍕</summary>
+<p><code>邀请码: ISouthRain</code></p>
+<ol>
+<li>
+<p><a href="https://isouthrain.github.io/2021-12-31-pinetwork%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener noreffer">注册Pi Network</a></p>
+</li>
+<li>
+<p><a href="" rel="">创建Pi Network 钱包</a></p>
+</li>
+</ol>
+</details>
+<h3 id="什么是-pi-network">什么是 Pi Network?</h3>
+<ul>
+<li><a href="https://minepi.com" target="_blank" rel="noopener noreffer">官方地址</a></li>
+<li>官网确实简陋, UI 设置那个就的挨骂, 但它完全影响不到 Pi Coin 的伟大, Pi 的技术毋庸置疑</li>
+</ul>
+<h4 id="官方解答">官方解答</h4>
+<ul>
+<li><strong>Pi Network 是一个区块链项目, 是面向未来 <code>互联网 Web3.0</code> 的一个区块链系统, 人人可参与的，人人享受平等获得的权利！</strong></li>
+</ul>
+<h4 id="通俗解答">通俗解答</h4>
+<ul>
+<li>通俗的说就是 <em>加密数字货币</em></li>
+<li>但它不像 <code>比特币</code> <code>以太币</code> 那样需要矿机(or 电脑挖掘), 比特币 以太币 的诞生浪费了大量的电量</li>
+<li>Pi 只需要一台手机即可, 并且它不需要你挂在后台, 因为 Pi 是以时间为单位的, 只要你点击了, 它就会自动在 Pi 服务器上计算</li>
+</ul>
+<h3 id="pi-network-背景">Pi Network 背景</h3>
+<ul>
+<li>Pi Network 是由 斯坦福大学 <code>Nicolas Kokkalis</code> 博士和 <code>范成雕</code> 博士共同创立的.</li>
+<li><a href="https://minepi.com/team" target="_blank" rel="noopener noreffer">博士 介绍</a></li>
+<li>创立于 2019.03.14</li>
+<li>目前全球下载量（根据 Google play + Appke store 下载量统计, 截至 <code>2021-12-28</code>）达 1个亿， 但项目方却说是全球用户量为 3000 万人（因为是官方排除了 <code>违规账号</code>）</li>
+<li>3000万用户已经超过了目前全球币圈的用户！！</li>
+</ul>
+<h2 id="pi-network-愿景目标"><strong>Pi Network 愿景(目标)</strong></h2>
+<ul>
+<li>建立一个 <code>最具包容性点对点支付系统</code></li>
+<li>让人人完全控制自己的钱包(因为放在 <code>银行的钱, 并不真正属于你, 银行随时可以冻结你的余额</code>)</li>
+<li><a href="https://minepi.com/white-paper" target="_blank" rel="noopener noreffer">Pi Network白皮书</a></li>
+</ul>
+<h2 id="pi-network-优势">Pi Network 优势</h2>
+<ul>
+<li>参与人数(目前3300万<code>截至 2022-04-20</code>)</li>
+<li>技术能力(<code>Kyc系统</code> 建立就能证明团队能力的强大)</li>
+<li>交易速度（两秒之内）(btc eth 1-30分钟不等)</li>
+<li>区块的生成速度(目前高于全部其他的加密数字货币项目)</li>
+<li>可监管(其他的全部币种都没这个功能，所以国家打击数字货币，因为那些人偷税漏税)</li>
+<li><em><code>可以说是世界第一</code></em></li>
+</ul>
+<h2 id="pi-总量分配">Pi 总量分配</h2>
+<ul>
+<li>Pi 总量 1000 亿(目前已经挖出为300亿 <code>截至 2022-03-14</code>)</li>
+<li>大概如下分配</li>
+</ul>
+<details>
+<summary>Pi 总量分配图, 图片不清, 建议复制图片链接到浏览器看</summary>
+<p></p>
+</details>
+<h2 id="pi-networkipi-与-比特币btc-和-以太币eth-有什么区别">Pi Networki(Pi) 与 比特币(BTC) 和 以太币(ETH) 有什么区别?</h2>
+<ul>
+<li>首先他们都是 <em>加密数字货币</em></li>
+<li>不同点：
+<ol>
+<li>btc 和 eth 都需要使用 GPU 的大量算力才能挖掘<br>
+Pi 只需要一台手机，每天花一两分钟就可以获得，而不会损耗你的电量，因为他只按时间来算，每个人24小时周期就会重置,任何一台手机都行，因为他只是一个软件，打开软件点击挖掘按钮就会进行采掘，之后关闭软件即可</li>
+<li>btc 和 eth 都需要大量的电力去挖掘(<strong>据统计挖掘btc所耗电量已经为一个小国家一年的电量，网上可查</strong>)</li>
+<li><code>Pi 不需要任何(矿机,显卡)算力支持</code></li>
+<li>Pi 是先有 <code>生态</code> 再开启主网的, 其余全部是相反，价格都是炒出来的，没有生态做基础，在现实没用，特别是btc，eth还好些目前有生态，但是由于eth已经不堪重负(什么是生态？建议你了解为什么手机系统只有 Android 和 iOS), 未来你可以直接使用pi币支付购物，类似现在的淘宝京东(购物对Pi来说完全发挥不了它的作用)，因为pi有生态, 而不需要使用CNY和美元</li>
+</ol>
+</li>
+</ul>
+<h2 id="如何获得-pi-">如何获得 Pi ?</h2>
+<ul>
+<li>跳转到上面的清单  <a href="#PiNetwork%e6%b8%85%e5%8d%95" rel="">PiNetwork清单</a></li>
+</ul>
+<h2 id="免费获得-pi-吗">免费获得 Pi 吗？</h2>
+<ul>
+<li>是的，你不会花费一分钱，叫你花钱获得都是骗子</li>
+</ul>
+<h2 id="目前一天能挖多少">目前一天能挖多少？</h2>
+<ul>
+<li>每天能挖掘获得的都是由人数决定的，达到一定人数之后，获得数量就会变</li>
+<li>目前为止已经历几次减速，现在为 0.0257pi/h一天2个(<code>截至 2022-03-14</code>)</li>
+</ul>
+<h2 id="主网后能流通的会有多少币量">主网后能流通的会有多少币量？</h2>
+<ul>
+<li>由于 <em>锁仓功能</em> 的机制，到时能流通的大概只有20-30亿币量(猜测)</li>
+</ul>
+<h2 id="为什么建议参与">为什么建议参与？</h2>
+<ul>
+<li>Pi 未来价值不菲</li>
+<li>加密货币都是不可增发的(Pi 总量为1000亿)</li>
+<li>当年美元是叫美金的，因为和黄金挂钩，所以全球大部分国家使用美元外汇，但是由于美国现在自己增发了，这就导致小国家要为美元增发买单，同样的钱买不到之前那么多东西, 把它叫做 <code>通货膨胀</code></li>
+<li>未来加密数字货币是趋势</li>
+</ul>
+<h2 id="最后话语">最后话语</h2>
+<ul>
+<li><strong>Pi Network 是一个长期性项目, 至于何时开放主网还没有确定的时间(<code>白皮书说 6.28 或 更久</code>), 在 Pi 这里想短期暴利是不可能的</strong></li>
+<li><strong>大家应该陪伴 Pi 的成长, 现在的 Btc, 未来的 Pi, Pi 注定是要成功的, 大势所趋</strong></li>
+<li>我们现在能看到的, 都是 Pi 的冰山一角, 只有等真正完全主网才能看到Pi的真面目, 大家耐心等待!!</li>
+</ul>
+]]></description>
 </item><item>
     <title>Hugo如何置顶文章</title>
     <link>http://isouthrain.github.io/2022-04-30-hugo%E5%A6%82%E4%BD%95%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</link>
     <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-04-30-hugo%E5%A6%82%E4%BD%95%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</guid>
-    <description><![CDATA[Hugo 置顶文章很简单，只需要将以下放在文章头部即可置顶 1 2 3 --- weight: 1 ---]]></description>
+    <description><![CDATA[<h3 id="hugo-置顶文章很简单只需要将以下放在文章头部即可置顶">Hugo 置顶文章很简单，只需要将以下放在文章头部即可置顶</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">---
+weight: 1
+---
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item><item>
     <title>Markdown语法</title>
     <link>http://isouthrain.github.io/2022-04-30-markdown%E8%AF%AD%E6%B3%95/</link>
     <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-04-30-markdown%E8%AF%AD%E6%B3%95/</guid>
-    <description><![CDATA[粗体 1 **粗体** 斜体 1 *斜体* 粗斜体 1 ***粗斜体*** 粗斜体 1 ***粗斜体*** 链接🔗 1 [备注](链接) 文件链接 1 ![备注](链接) 内部]]></description>
+    <description><![CDATA[<h4 id="粗体">粗体</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">**粗体**
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="斜体">斜体</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">*斜体* 
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="粗斜体">粗斜体</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">***粗斜体***
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="粗斜体-1">粗斜体</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">***粗斜体***
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="链接">链接🔗</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">[<span class="nt">备注</span>](<span class="na">链接</span>) 
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="文件链接">文件链接</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">![<span class="nt">备注</span>](<span class="na">链接</span>)
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="内部文件跳转">内部文件跳转</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;span id = &#34;瞄点&#34;&gt;跳转至瞄点&lt;/span&gt;
+
+[跳转至瞄点](#瞄点)
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="效果如下">效果如下</h5>
+<p><code>效果如下👇</code></p>
+<video poster="效果动图"  width="360" height="240" controls>
+    <source src="/posts/Attachment/2022-04-30-Markdown语法.zh-cn.md/2022-04-30-23-07-03.mp4" type="video/mp4">
+</video>    
+<h4 id="嵌入视频">嵌入视频</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">&lt;video poster=&#34;效果动图&#34;  width=&#34;360&#34; height=&#34;240&#34; controls&gt;
+    &lt;source src=&#34;视频链接链接，支持其他格式，当使用其他格式时，不要替换后面的 video/mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;  
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="折叠列表">折叠列表</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">&lt;details&gt;
+&lt;summary&gt;这是一个折叠列表&lt;/summary&gt;
+
+折叠内容, 上面空一行
+
+下一行
+&lt;details&gt;
+&lt;summary&gt;这是一个嵌套折叠列表&lt;/summary&gt;
+
+嵌套折叠内容, 上面空一行
+
+下一行
+&lt;/details&gt;
+&lt;/details&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="效果如下-1">效果如下</h5>
+<video poster="效果动图"  width="360" height="240" controls>
+    <source src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/posts/Attachment/2022-04-30-Markdown语法.zh-cn.md/折叠列表.mp4" type="video/mp4">
+</video>  
+<h4 id="表格">表格</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">|1   |   2  |   3|
+|:-  |  :-: |  -:|
+|居右| 居中 |居左|
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="代码块">代码块</h4>
+<p>用6个  <strong>`</strong> 包裹</p>
+<h4 id="块状">块状</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="sb">`块状`</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="下划线">下划线</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">&lt;u&gt;下划线&lt;/u&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="删除线">删除线</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">~~删除线~~
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="使用表情">使用表情</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">露营 :tent: 
+
+真好笑 :joy:
+</code></pre></td></tr></table>
+</div>
+</div><p>露营⛺</p>
+<p>真好笑😂</p>
+<p><a href="https://gist.github.com/rxaviers/7360908" target="_blank" rel="noopener noreffer">表情符号码表</a></p>
+]]></description>
 </item><item>
     <title>如何上传/推送到 Github</title>
     <link>http://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/</link>
     <pubDate>Fri, 29 Apr 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/</guid>
-    <description><![CDATA[git push 推送/上传到 GitHub git push 输入账号密码后推送不了? 因为 Github 的推送/上传机制改了 之前可以输入 账号密码 就可以 push, 现在只能使用 github token 代替 密码 才能推送/上传 申]]></description>
+    <description><![CDATA[<h3 id="git-push-推送上传到-github">git push 推送/上传到 GitHub</h3>
+<h3 id="git-push-输入账号密码后推送不了">git push 输入账号密码后推送不了?</h3>
+<p>因为 Github 的推送/上传机制改了<br>
+之前可以输入 账号密码 就可以 push, 现在只能使用 <code>github token</code> 代替  <code>密码</code> 才能推送/上传</p>
+<h3 id="申请-token">申请 token</h3>
+<p><code>Settings</code> &ndash;&gt; <code>Developer settings</code> &ndash;&gt;  <code>Personal access tokens</code> &ndash;&gt;  <code>Generate new token</code></p>
+<ul>
+<li>Note &ndash;&gt; 随便填一个名称</li>
+<li>Expiration &ndash;&gt; 选择该 token 有效期，个人建议如果是使用推送/上传功能，建议选  <code>No expiration</code></li>
+<li>其余 <code>打勾</code> 按照你自己需求，新手建议全部打勾</li>
+<li>Generate token 点击创建</li>
+</ul>
+<h3 id="将你创建刚刚创建-token-复制">将你创建刚刚创建 token 复制</h3>
+<h3 id="再次使用-git-push">再次使用 git push</h3>
+<ul>
+<li>输入你的用户名,回车</li>
+<li>将 token 粘贴上去, 回车</li>
+</ul>
+<h3 id="如果成功-上传推送-请享受">如果成功 上传/推送 ，请享受🎉🎉🎉</h3>
+<h3 id="每次-推送上传-都要输入-账号密码">每次 推送/上传 都要输入 账号密码??</h3>
+<p>如果你不想每次 上传/推送 都要输入 账号密码，可以看我的另一个文章
+每次都要输入账号密码太麻烦了<br>
+👉  <a href="https://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/" target="_blank" rel="noopener noreffer">永久免账号密码 推送/上传 GitHub</a></p>
+<h3 id="faq">FAQ❓</h3>
+<p>如果你遇到了问题，可以在下面评论去提问，基本都会回复的</p>
+]]></description>
 </item><item>
     <title>普通人如何使用Emacs</title>
     <link>http://isouthrain.github.io/2022-04-29-%E6%99%AE%E9%80%9A%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8emacs/</link>
     <pubDate>Fri, 29 Apr 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-04-29-%E6%99%AE%E9%80%9A%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8emacs/</guid>
-    <description><![CDATA[Emacs 不仅可用于编码， 更可用于生活。 Home 阅读之前 本文的 普通人 指的是 非程序员 为什么编写这编文章? 因为受到了 懒猫 和 Protesilaos Stavrou 影响 Emacs Talk 重量级嘉宾-懒猫 Protesilaos Stavrou 隐居]]></description>
+    <description><![CDATA[<blockquote>
+<p>Emacs 不仅可用于编码， 更可用于生活。 <br/></p>
+</blockquote>
+<h2 id="home">Home</h2>
+<h3 id="阅读之前">阅读之前</h3>
+<ul>
+<li>本文的 <strong>普通人</strong> 指的是 <strong>非程序员</strong>  <br/></li>
+<li>为什么编写这编文章? <br/>
+<ul>
+<li>因为受到了 <strong>懒猫</strong> 和 <strong>Protesilaos Stavrou</strong> 影响 <br/>
+<ul>
+<li>Emacs Talk <a href="https://t.co/4JEAB4LThl" target="_blank" rel="noopener noreffer">重量级嘉宾-懒猫</a> <br/></li>
+<li>Protesilaos Stavrou <a href="https://mp.weixin.qq.com/s/VfclpaYjCH8aLh0uMYny1w" target="_blank" rel="noopener noreffer">隐居、反内卷，不意味着躺平｜专访2021年度“杰出新自由软件贡献者”奖得主</a> <br/></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>本文章应该适合新手阅读,因为我定位在了如何使用 <strong>Emacs</strong> <br/></li>
+<li>本文旨在让更多的人(非程序员)使用 Emacs管理自己的生活, Emacs不单限于代码编辑 <br/></li>
+</ul>
+<h3 id="文章适合人群">文章适合人群</h3>
+<ul>
+<li><strong><em>追求自由与和平</em></strong> <br/></li>
+<li>没有写过代码的 <br/></li>
+<li>在寻找一个 <strong>笔记软件</strong> 的用户 <br/></li>
+<li>使用GTD 管理自己的生活 <br/></li>
+</ul>
+<h3 id="安装">安装</h3>
+<ul>
+<li><a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener noreffer">官方网站</a> <br/></li>
+<li><strong>Linux</strong>  <br/>
+<ul>
+<li>
+<p>使用对应的包管理下载, 例如 <strong>Ubuntu</strong> <br/></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install emacs
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li><strong>Windows</strong> <br/>
+<ul>
+<li><a href="http://gnu.mirrors.hoobly.com/emacs/windows/emacs-28/" target="_blank" rel="noopener noreffer">GNU Emacs</a> 选择最新版本 zip 文件, 解压运行 emacs.exe <br/></li>
+</ul>
+</li>
+<li><strong>Mac OSX</strong> <br/>
+<ul>
+<li><a href="https://emacsformacos.com/" target="_blank" rel="noopener noreffer">Mac for Emacs</a> <br/></li>
+</ul>
+</li>
+</ul>
+<h3 id="简单使用">简单使用</h3>
+<ul>
+<li>
+<p>按键说明 <br/></p>
+<ul>
+<li>开头的 <strong>C</strong> 代表 <strong>Ctrl</strong> 按键 <br/></li>
+<li>开头的 <strong>M</strong> 代表 <strong>Alt</strong> 按键 <br/></li>
+</ul>
+</li>
+<li>
+<p>基础按键 <br/></p>
+<ul>
+<li><strong>M + x</strong> 输入命令 <br/></li>
+<li><strong>C + g</strong> 取消所有命令/状态 <br/></li>
+<li><strong>C + n</strong> 即 <strong>Ctrl + n</strong> , 等于 <strong>键盘向下按键</strong> , 解释为 <em>将光标移动到下一行</em> <br/></li>
+<li><strong>C + p</strong> 即 <strong>Ctrl + n</strong> , 等于 <strong>键盘向下按键</strong> , 解释为 <em>将光标移动到下一行</em> <br/></li>
+<li><strong>C + f</strong> 即 <strong>Ctrl + f</strong> , 等于 <strong>键盘向右按键</strong> , 解释为 <em>将光标向右移动一个字母</em> <br/></li>
+<li><strong>C + b</strong> 即 <strong>Ctrl + b</strong> , 等于 <strong>键盘向左按键</strong> , 解释为 <em>将光标向左移动一个字母</em> <br/></li>
+</ul>
+</li>
+<li>
+<p>退出软件 <br/></p>
+<ul>
+<li><strong>C + x</strong> 之后再按 <strong>C + c</strong> <br/></li>
+</ul>
+</li>
+<li>
+<p><em>注意事项</em> <br/></p>
+<ul>
+<li>对于 Emacs 来说, 你的每一个动作都是在执行命令, <strong>例如, 当你按键 <em>C + n</em> 就是在执行 <em>next-line</em> 命令</strong>, 可以使用 M + x 输入 next-line 试试哦! <br/></li>
+</ul>
+</li>
+</ul>
+<h3 id="基本配置">基本配置</h3>
+<ul>
+<li>所有的配置都会放到 init.el <br/></li>
+<li>Linux/Uinx (Mac OSX) <br/>
+<ul>
+<li>创建文件 ~/.emacs.d/init.el <br/></li>
+</ul>
+</li>
+<li>Windows <br/>
+<ul>
+<li>C:/ <br/></li>
+</ul>
+</li>
+</ul>
+<h4 id="简单配置">简单配置</h4>
+<ul>
+<li>
+<p>请将代码复制到 init.el 文件中 <br/></p>
+</li>
+<li>
+<p>显示行号 <br/></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;; ~/.emacs.d/init.el</span>
+<span class="c1">;; ;; 开头为注释</span>
+<span class="c1">;;显示行号</span>
+<span class="p">(</span><span class="nv">global-linum-mode</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>以下为个人的基本配置 <br/></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp">      <span class="c1">;; 设置编码</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">default-buffer-file-coding-system</span> <span class="ss">&#39;utf-8</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">prefer-coding-system</span> <span class="ss">&#39;utf-8</span><span class="p">)</span>
+    
+      <span class="c1">;;显示行号</span>
+<span class="p">(</span><span class="nv">global-linum-mode</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1">;;高亮当前行</span>
+<span class="p">(</span><span class="nv">global-hl-line-mode</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1">;;关闭启动画面</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">inhibit-startup-message</span> <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">toggle-truncate-lines</span> <span class="no">t</span><span class="p">)</span>
+    
+<span class="c1">;;显示时间</span>
+<span class="p">(</span><span class="nv">display-time-mode</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">;; 常显</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">display-time-24hr-format</span> <span class="no">t</span><span class="p">)</span> <span class="c1">;;格式</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">display-time-day-and-date</span> <span class="no">t</span><span class="p">)</span> <span class="c1">;;显示时间、星期、日期</span>
+    
+    
+<span class="c1">;; 关闭启动帮助画面</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">inhibit-splash-screen</span> <span class="mi">1</span><span class="p">)</span>
+    
+<span class="c1">;; 关闭备份文件</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">make-backup-files</span> <span class="no">nil</span><span class="p">)</span>
+    
+<span class="c1">;; 自动加载外部修改的文件</span>
+<span class="p">(</span><span class="nv">global-auto-revert-mode</span> <span class="mi">1</span><span class="p">)</span>
+    
+<span class="c1">;; 关闭自动保存文件</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">auto-save-default</span> <span class="no">t</span><span class="p">)</span>
+<span class="c1">;; 关闭警告声</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">ring-bell-function</span> <span class="ss">&#39;ignore</span><span class="p">)</span>
+    
+<span class="c1">;; 简化yes和no</span>
+<span class="p">(</span><span class="nf">fset</span> <span class="ss">&#39;yes-or-no-p</span> <span class="ss">&#39;y-or-n-p</span><span class="p">)</span>
+    
+    
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>区分系统类型</p>
+<ul>
+<li>以下设置会根据你目前的系统而加载代码, 通常用来区分 windows 和 linux 配置问题 <br/></li>
+</ul>
+ <!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;;不同系统的配置</span>
+<span class="c1">;; Windows</span>
+<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string=</span> <span class="s">&#34;windows-nt&#34;</span> <span class="nv">system-type</span><span class="p">)</span>
+<span class="c1">;; 代码放在这个范围</span>
+<span class="p">)</span>
+<span class="c1">;; Linux</span>
+<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string=</span> <span class="s">&#34;gnu/linux&#34;</span> <span class="nv">system-type</span><span class="p">)</span>
+<span class="c1">;; 代码放在这个范围</span>
+<span class="p">)</span>
+<span class="c1">;; Mac OSX</span>
+<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string=</span> <span class="s">&#34;darwin&#34;</span> <span class="nv">system-type</span><span class="p">)</span>
+<span class="c1">;; 代码放在这个范围</span>
+<span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="安装包">安装包</h3>
+<ul>
+<li>对于 Emacs 原生来说太简陋了, 很难看 <br/></li>
+<li>Emacs 安装扩展包使得更加好看与适用 <br/></li>
+</ul>
+<h4 id="原生安装">原生安装</h4>
+<ul>
+<li>Emacs 自带一个安装扩展包的方法 <br/>
+<ul>
+<li><strong>在此 <em>不解释原生安装包方法</em> , 因为原生安装的方法并不好用,而且一旦安装多软件包的话会影响到 Emacs 的启动速度</strong> <br/></li>
+</ul>
+</li>
+</ul>
+<h4 id="使用-use-package-安装扩展包">使用 Use-package 安装扩展包</h4>
+<!--list-separator-->
+<ul>
+<li>
+<p>配置 Use-package</p>
+<ol>
+<li>
+<p>将以下内容放到你的配置文件中 init.el <br/></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="c1">;; 包开始</span>
+<span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="s">&#34;~/.emacs.d/lisp/&#34;</span><span class="p">)</span>
+        
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;package</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;package-archives</span>
+         <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;melpa&#34;</span> <span class="o">.</span> <span class="s">&#34;https://melpa.org/packages/&#34;</span><span class="p">)</span>
+         <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;melpa-stable&#34;</span> <span class="o">.</span> <span class="s">&#34;https://stable.melpa.org/packages/&#34;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">not</span> <span class="p">(</span><span class="nv">package-installed-p</span> <span class="ss">&#39;use-package</span><span class="p">))</span>
+  <span class="p">(</span><span class="nv">package-refresh-contents</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">package-install</span> <span class="ss">&#39;use-package</span><span class="p">))</span>
+        
+ <span class="c1">;; This is only needed once, near the top of the file</span>
+<span class="p">(</span><span class="nb">eval-when-compile</span>
+    <span class="c1">;; Following line is not needed if use-package.el is in ~/.emacs.d</span>
+    <span class="c1">;;(add-to-list &#39;load-path &#34;~/.emacs.d/plugins/use-package&#34;)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;use-package</span><span class="p">))</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;use-package-ensure</span><span class="p">)</span>
+<span class="c1">;; 自动下载，不需要 :ensure t</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">use-package-always-ensure</span> <span class="no">t</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>下载一个包试试 <br/></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">包名</span><span class="p">)</span><span class="c1">;; 例如 (use-package evil), 就会下载evil包</span>
+<span class="c1">;; 重新启动 Emaccs 就会看到 .emacs.d/elpa 有这个包了</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+</li>
+</ul>
+<h3 id="emacs-键盘的选择">Emacs 键盘的选择</h3>
+<ul>
+<li>如果你是 Vim 用户, 建议安装 <strong>Evil</strong> 这个包, 它会模拟 vim 的键盘操作流程. <br/></li>
+<li>使用 Emacs 原生按键, 这可能 <em>废手指</em> 哈哈哈, 建议将 <strong>Ctrl</strong> 换成 <strong>Caps Lock</strong> , Windows 用户使用 AutoHotkey, 其余类似. <br/></li>
+<li><strong>Meow</strong> 猫态编辑, 有点类似 vim , 但是比 evil 更加的小巧和高效 <br/></li>
+</ul>
+<h4 id="个人推荐键盘">个人推荐键盘</h4>
+<ul>
+<li><strong>Evil</strong> 可能更加使用新手, 推荐去搜索一下 vi 键盘如何使用 <br/>
+<ul>
+<li>传送门 &mdash;&gt;  <a href="https://github.com/chloneda/vim-cheatsheet" target="_blank" rel="noopener noreffer">Vim 速查表</a>   <br/></li>
+</ul>
+</li>
+</ul>
+]]></description>
 </item><item>
     <title>永久免账号密码推送Github</title>
     <link>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</link>
     <pubDate>Thu, 28 Apr 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</guid>
-    <description><![CDATA[使用以下方法后 git push 再也不用一直输入 账号密码了! git push 每次都要输入账号密码? 从此解决 正文👇 首先配置 Git 个人信息 依此输入以下两个命令: 配置你的 GitHub 邮箱]]></description>
+    <description><![CDATA[<h3 id="使用以下方法后">使用以下方法后</h3>
+<h3 id="git-push-再也不用一直输入-账号密码了">git push 再也不用一直输入 账号密码了!</h3>
+<h3 id="git-push-每次都要输入账号密码-从此解决">git push 每次都要输入账号密码? 从此解决</h3>
+<h3 id="正文">正文👇</h3>
+<h3 id="首先配置-git-个人信息">首先配置 Git 个人信息</h3>
+<h4 id="依此输入以下两个命令">依此输入以下两个命令:</h4>
+<h4 id="配置你的-github-邮箱">配置你的 GitHub 邮箱📬</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global user.email <span class="s2">&#34;你在 GitHub 注册的邮箱&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="配置你的-github-用户名">配置你的 GitHub 用户名</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global user.name <span class="s2">&#34;你的 GitHub 用户名&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="输入以下命令后将会保存你-git-push-时登录的信息">输入以下命令后，将会保存你 git push 时登录的信息</h4>
+<h4 id="当下一次-git-push-时就不用再输入登录信息了">当下一次 git push 时就不用再输入登录信息了!</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global credential.helper store
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="如何推送上传到githubhttpsisouthraingithubio2022-04-29-e68ea8e98081github"><a href="https://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/" target="_blank" rel="noopener noreffer">如何推送/上传到GitHub</a></h3>
+<h4 id="faq">FAQ❓</h4>
+<h5 id="由于github已经更改了-git-push-机制">由于GitHub已经更改了 git push 机制</h5>
+<h5 id="git-push-时密码改用-token"><code>git push</code> 时<code>密码改用</code> <code>token</code></h5>
+<h4 id="已完成所有工作-请-git-push-一次试试">已完成所有工作, 请 git push 一次试试</h4>
+<h5 id="如果成功了请享受">如果成功了，请享受🎉🎉🎉</h5>
+]]></description>
 </item><item>
     <title>Telegram 收发微信消息</title>
     <link>http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/</link>
     <pubDate>Sun, 20 Mar 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/</guid>
-    <description><![CDATA[Telegram收发微信消息(可以不需要购买服务器，单纯手机也可以) 📍📍 在开始本教程之前，请你确认你的微信号是否支持网页端登录，如果不支持请]]></description>
+    <description><![CDATA[<h3 id="telegram收发微信消息可以不需要购买服务器单纯手机也可以">Telegram收发微信消息(可以不需要购买服务器，单纯手机也可以)</h3>
+<h3 id="-在开始本教程之前请你确认你的微信号是否支持网页端登录如果不支持请离开">📍📍 在开始本教程之前，请你确认你的微信号是否支持网页端登录，如果不支持请离开</h3>
+<ul>
+<li><a href="https://wx.qq.com/" target="_blank" rel="noopener noreffer">微信网页版入口</a></li>
+<li>也可以试试 先登录 <a href="https://filehelper.weixin.qq.com/" target="_blank" rel="noopener noreffer">微信文件传输助手网页版</a> 再去登录网页版</li>
+</ul>
+<h3 id="概述">概述</h3>
+<p>微信浪费电是大家都知道的，但奈何亲朋好友都在用没法换，只能自己另有他寻了，所以有了本教程。使用TG的好处懂得都懂</p>
+<h5 id="需要使用科学上网才能进行登录android用户直接挂vpn就可以购买服务器的可以使用外国服务器或者国内的服务器给服务器上代理就可以了">需要使用科学上网才能进行登录，Android用户直接挂VPN就可以，购买服务器的可以使用外国服务器，或者国内的服务器给服务器上代理就可以了</h5>
+<hr>
+<hr>
+<p><em><strong>本教程声明</strong></em> Android手机不需要购买服务器<br>
+此教程没有以下功能</p>
+<ul>
+<li>没有朋友圈</li>
+<li>没有红包</li>
+<li>不能发语音（可以收听）</li>
+<li>不能发位置</li>
+<li>类似Web微信</li>
+<li>部分文件、图片、表情等多媒体文件会被网页版微信截断，即收不到任何数据， 尤以表情为甚。因此造成的偶发现象，会提醒用户使用移动客户端查看。</li>
+</ul>
+<h5 id="目前只有ubuntu系统能把功能都实现所以本教程使用ubuntu系统">目前只有Ubuntu系统能把功能都实现，所以本教程使用Ubuntu系统</h5>
+<hr>
+<h5 id="需要一点点linux知识不会也没有关系耐心看跟着做就好了">需要一点点Linux知识，不会也没有关系，耐心看跟着做就好了</h5>
+<hr>
+<h4 id="android用户可以使用termux安装一个ubuntu系统就可以了在ubuntu进行配置就好了很完美了">Android用户可以使用Termux安装一个Ubuntu系统就可以了,在Ubuntu进行配置就好了，很完美了！</h4>
+<h5 id="关于-termux-可以直接去下载完全免费很省电耗电量可以忽略不计">关于 Termux 可以直接去下载，完全免费，很省电，耗电量可以忽略不计</h5>
+<hr>
+<hr>
+<h5 id="termux安装ubuntu">Termux安装Ubuntu</h5>
+<p>更新下软件包：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg update
+</code></pre></td></tr></table>
+</div>
+</div><p>打开软件，输入以下代码按回车：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg install wget openssl-tool proot -y &amp;&amp; hash -r &amp;&amp; wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh &amp;&amp; bash ubuntu.sh
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p>输入以下代码进入Ubuntu系统：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">./start-ubuntu.sh
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h4 id="回到本教程开始搭建tg收发微信消息">回到本教程，开始搭建TG收发微信消息</h4>
+<ol>
+<li>先更新系统软件：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt update &amp;&amp; apt upgrade -y
+</code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>下载必要依赖：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt install ffmpeg python3-pip python3-dev python3-setuptools libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libmagic-dev -y
+</code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>安装EH转发机器人和主从通道:</li>
+</ol>
+<ul>
+<li>安装EFB：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install ehforwarderbot
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>安装TG机器人</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install efb-telegram-master
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>微信端：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install efb-wechat-slave
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="现在做完了服务器工作再去申请一个机器人">现在做完了服务器工作，再去申请一个机器人</h5>
+<ol>
+<li>打开TG搜索 @botfather</li>
+<li>发送 /newbot 创建自已的机器人</li>
+<li>给自已的机器人取个称呼（随便取）</li>
+<li>给自已的机器人取个用户名，必须是以 bot 结尾（例如Wechatbot）注意可能被人取了就另外再打个bot结尾的名称，必须是英文</li>
+<li>创建后你会得到一个API（也可以称 token），复制下来</li>
+<li>配置机器人：</li>
+</ol>
+<ul>
+<li>输入 /setprivacy 发送，选择你的机器人，点Disable</li>
+<li>输入 /setjoingroups 发送，选择你的机器人，点Enable</li>
+<li>输入 /setcommands 发送，选择你的机器人，输入以下内容(全部一起发，不是一条条发)还有其他功能自己可以去摸索:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">link - 将会话绑定到 Telegram 群组
+chat - 生成会话头
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>返回telegram主界面，点放大镜，搜索@userinfobot，进入点开始会得到你的telegram id</li>
+</ul>
+<hr>
+<ol>
+<li>服务器上操作或者Termux操作（Android用户一定要在Ubuntu上操作）</li>
+</ol>
+<ul>
+<li>下载编辑软件vim：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt install vim
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>编辑文件：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">vim ~/.ehforwarderbot/profiles/default/config.yaml
+</code></pre></td></tr></table>
+</div>
+</div><p>进入后点一下键盘 i</p>
+<ul>
+<li>把以下代码复制进去：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">master_channel: blueset.telegram
+slave_channels:
+- blueset.wechat
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>按下键盘的 ESC 再输入英文状态下的 :  输入 wq 后回车，就这样保存文件并退出了</li>
+<li>继续输入：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">vim ~/.ehforwarderbot/profiles/default/blueset.telegram/config.yaml
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>按上面的方法复制一下代码进去：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">token: &#34;机器人的API&#34;
+admins: [用户ID]
+</code></pre></td></tr></table>
+</div>
+</div><p>把上面的 机器人API 和 用户ID 换成你刚才在TG用那两个机器人得到的（符号不要改）</p>
+<hr>
+<h5 id="把-vpn-挂在后台才可以登录">把 VPN 挂在后台才可以登录</h5>
+<h5 id="运行登录你的微信">运行登录你的微信</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-basic" data-lang="basic"><span class="vg">ehforwarderbot</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h5 id="一定要用扫码登录不能用图片导入登录">一定要用扫码登录，不能用图片导入登录</h5>
+]]></description>
 </item><item>
     <title>Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)</title>
     <link>http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/</link>
     <pubDate>Wed, 12 Jan 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/</guid>
-    <description><![CDATA[概述 Notion 和 Obsidian 都有收集网页的功能, Org-mode 自然也有, Org-mode 是调用 Org-protocol 协议使用的, 而插件 Org-protocol-capture-html 是其中能使 Org-protocol 收集的网页更加美观和可视化 因为很多人都不会都不理解 Org-protocol 和怎]]></description>
+    <description><![CDATA[<h2 id="概述">概述</h2>
+<p><strong>Notion</strong> 和 <strong>Obsidian</strong> 都有收集网页的功能, Org-mode 自然也有, Org-mode 是调用 Org-protocol 协议使用的, 而插件 <code>Org-protocol-capture-html</code> 是其中能使 <code>Org-protocol</code> 收集的网页更加美观和可视化</p>
+<p>因为很多人都不会都不理解 <code>Org-protocol</code> 和怎么去使用, 以及<code>Org-protocol-capture-html</code>, 说得只是怎么用这个插件, 却没有说怎么配置, 所以才有了本教程.</p>
+<h2 id="相关链接">相关链接</h2>
+<ul>
+<li><a href="https://github.com/alphapapa/org-protocol-capture-html" target="_blank" rel="noopener noreffer">Org-protocol-capture-html 官网</a></li>
+<li><a href="https://orgmode.org/manual/Protocols.html" target="_blank" rel="noopener noreffer">Org-protocol 协议官网</a></li>
+</ul>
+<h3 id="效果如下">效果如下</h3>
+<p><code>效果如下👇</code> 
+<video poster="效果动图"  width="360" height="240" controls>
+<source src="/posts/Attachment/2022-01-12-Org-protocol-capture-html/2022-01-22-14-24-59.mkv" type="video/mp4">
+</video></p>
+<h1 id="安装-org-protocol-capture-html">安装 Org-protocol-capture-html</h1>
+<p>这个插件是不需要配置, 直接安装此插件就可以调用</p>
+<p><code>请自己按装此插件</code></p>
+<ul>
+<li>使用 use-package 安装</li>
+<li>手动安装</li>
+</ul>
+<h2 id="配置-org-protocol-capture-html">配置 Org-protocol-capture-html</h2>
+<p>此插件是调用 <code>org-capture</code> 功能, 请自觉检查如下配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Elisp" data-lang="Elisp"><span class="p">(</span><span class="nv">server-start</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">use-package</span> <span class="nv">s</span><span class="p">)</span> <span class="c1">;;依赖</span>
+
+<span class="c1">;; 安装 org-protocol-capture-html </span>
+<span class="c1">;; 如果跟我的不同, 请将下面两行删除</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="s">&#34;~/.emacs.d/plugins/org-protocol-capture-html/&#34;</span><span class="p">)</span> <span class="c1">;;</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol-capture-html</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-capture-templates</span>
+      <span class="o">&#39;</span><span class="p">(</span>
+	 <span class="c1">;;Org-protocol网页收集, 按键 w 调用</span>
+	 <span class="p">(</span><span class="s">&#34;w&#34;</span> <span class="s">&#34;网页收集&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file</span> <span class="s">&#34;~/Org/网页收集.org&#34;</span><span class="p">)</span>
+	 <span class="s">&#34;* [[%:link][%:description]] \n %U \n %:initial \n&#34;</span><span class="p">)</span>
+	<span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="系统安装-org-protocol">系统安装 org-protocol</h2>
+<p><code>如果下面的方法无法安装, 请见官网 👇</code></p>
+<ul>
+<li><a href="https://orgmode.org/worg/org-contrib/org-protocol.html" target="_blank" rel="noopener noreffer">官网安装 org-protocol 教程</a></li>
+</ul>
+<h3 id="windows-用户">Windows 用户👇</h3>
+<ul>
+<li>桌面新建 <code>org-protocol.reg</code> 文件, 使用 记事本 软件打开 , 并将以下👇代码放进去并保存, 然后运行安装并给权限</li>
+<li><code>请把下面的 emacsclientw.exe 路径换成你自己的路径</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">REGEDIT4
+
+[HKEY_CLASSES_ROOT\org-protocol]
+@=&#34;URL:Org Protocol&#34;
+&#34;URL Protocol&#34;=&#34;&#34;
+[HKEY_CLASSES_ROOT\org-protocol\shell]
+[HKEY_CLASSES_ROOT\org-protocol\shell\open]
+[HKEY_CLASSES_ROOT\org-protocol\shell\open\command]
+@=&#34;\&#34;C:\\Programme\\Emacs\\emacs\\bin\\emacsclientw.exe\&#34; \&#34;%1\&#34;&#34;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="linux-用户请见--linux-使用-org-protoclhttpskisaragi-hiucomorg-protocol-linux">Linux 用户请见 👉 <a href="https://kisaragi-hiu.com/org-protocol-linux" target="_blank" rel="noopener noreffer">Linux 使用 org-protocl</a></h3>
+<h2 id="根据自己使用的浏览器添加书签">根据自己使用的浏览器添加书签</h2>
+<p><code>关于 org-protocol-capture-html 对不同的 浏览书签 见</code></p>
+<ul>
+<li><a href="https://github.com/alphapapa/org-protocol-capture-html" target="_blank" rel="noopener noreffer">Org-protocol-capture-html 官网</a></li>
+</ul>
+<h3 id="例如-chrome">例如 Chrome</h3>
+<h4 id="在-chrome-新建-书签">在 Chrome 新建 书签</h4>
+<ol>
+<li>书签名称随便取</li>
+<li>书签地址如下👇</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">javascript</span><span class="o">:</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;org-protocol:///capture-html?template=w&amp;url=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;title=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;[untitled page]&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;body=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">window</span><span class="p">.</span><span class="nx">getSelection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">sel</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">getSelection</span><span class="p">();</span> <span class="k">if</span> <span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;div&#34;</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span><span class="nx">container</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">getRangeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">cloneContents</span><span class="p">());}</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">container</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">&#34;Text&#34;</span><span class="p">)</span> <span class="p">{</span><span class="nx">html</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">createRange</span><span class="p">().</span><span class="nx">htmlText</span><span class="p">;}}</span> <span class="kd">var</span> <span class="nx">relToAbs</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">href</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;a&#34;</span><span class="p">);</span> <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">href</span><span class="p">;</span> <span class="kd">var</span> <span class="nx">abs</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">+</span> <span class="s2">&#34;//&#34;</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">host</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">pathname</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">search</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">hash</span><span class="p">;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span> <span class="k">return</span> <span class="nx">abs</span><span class="p">;};</span> <span class="kd">var</span> <span class="nx">elementTypes</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;img&#39;</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">]];</span> <span class="kd">var</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">html</span><span class="p">;</span> <span class="nx">elementTypes</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elementType</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">elements</span> <span class="o">=</span> <span class="nx">div</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">relToAbs</span><span class="p">(</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">])));}});</span> <span class="k">return</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}());</span>
+
+<span class="nx">javascript</span><span class="o">:</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;org-protocol:///capture-eww-readable?template=w&amp;url=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;title=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;[untitled page]&#34;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="firefox-如下">Firefox 如下</h3>
+<h4 id="在-firefox-新建-书签">在 Firefox 新建 书签</h4>
+<ol>
+<li>书签名称随便取</li>
+<li>书签地址如下👇</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">javascript</span><span class="o">:</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;org-protocol://capture-html?template=w&amp;url=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;title=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;[untitled page]&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;body=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getSelection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">sel</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getSelection</span><span class="p">();</span> <span class="k">if</span> <span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;div&#34;</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span><span class="nx">container</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">getRangeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">cloneContents</span><span class="p">());}</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">container</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">&#34;Text&#34;</span><span class="p">)</span> <span class="p">{</span><span class="nx">html</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">createRange</span><span class="p">().</span><span class="nx">htmlText</span><span class="p">;}}</span> <span class="kd">var</span> <span class="nx">relToAbs</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">href</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;a&#34;</span><span class="p">);</span> <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">href</span><span class="p">;</span> <span class="kd">var</span> <span class="nx">abs</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">+</span> <span class="s2">&#34;//&#34;</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">host</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">pathname</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">search</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">hash</span><span class="p">;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span> <span class="k">return</span> <span class="nx">abs</span><span class="p">;};</span> <span class="kd">var</span> <span class="nx">elementTypes</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;img&#39;</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">]];</span> <span class="kd">var</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">html</span><span class="p">;</span> <span class="nx">elementTypes</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elementType</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">elements</span> <span class="o">=</span> <span class="nx">div</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">relToAbs</span><span class="p">(</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">])));}});</span> <span class="k">return</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}());</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="享受使用-">享受使用 👇</h2>
+<h3 id="使用之前">使用之前</h3>
+<p><code>请把你的 Chrome 或者 Firefox 的 书签 始终可见(比如在你浏览网页选中文字时可以点击你的书签)</code></p>
+<h3 id="开始使用">开始使用</h3>
+<ol>
+<li>打开 Emacs</li>
+<li>使用浏览器浏览网页</li>
+<li>在网页 <code>选择你想收集的文本</code></li>
+<li>点击你刚才新建的书签, 点击确定授权之类的</li>
+<li>回到 Emacs 你会看到你已经收集到的 Capture</li>
+<li>自己记得保存</li>
+<li>你收集到的会 保存到 <code>~/Org/网页收集.org</code> 文件中</li>
+</ol>
+<h2 id="如果你有更多的需求-请自己学习-因为网上并没有详细的教程使用-org-protocol-所以才有了本教程">如果你有更多的需求, 请自己学习, 因为网上并没有详细的教程使用 org-protocol 所以才有了本教程</h2>
+<p><code>祝你使用愉快🤓⚡👉♥️🌹</code></p>
+]]></description>
 </item><item>
     <title>Pi Network 注册教程</title>
     <link>http://isouthrain.github.io/2021-12-31-pinetwork%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</link>
     <pubDate>Fri, 31 Dec 2021 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2021-12-31-pinetwork%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B/</guid>
-    <description><![CDATA[我的邀请码 👉 ISouthRain 👈 官网 App 下载链接👇 (进入官方网站需要科学上网) 官方 Pi App 打开已经安装的 App 开始注册 1. 选择使用 手机号码 注册👇 2. 选择 中国地区+ 86 并填写]]></description>
+    <description><![CDATA[<h3 id="我的邀请码--isouthrain-">我的邀请码 👉 ISouthRain 👈</h3>
+<h4 id="官网-app-下载链接-进入官方网站需要科学上网">官网 App 下载链接👇 (<strong>进入官方网站需要科学上网</strong>)</h4>
+<ul>
+<li><a href="https://minepi.com/" target="_blank" rel="noopener noreffer">官方 Pi App</a></li>
+</ul>
+<h3 id="打开已经安装的-app-开始注册">打开已经安装的 App 开始注册</h3>
+<h4 id="1-选择使用-手机号码-注册">1. 选择使用 手机号码 注册👇</h4>
+<p></p>
+<h4 id="2-选择-中国地区-86-并填写自己的手机号码-">2. 选择 中国地区+ 86 并填写自己的手机号码 👇</h4>
+<p></p>
+<h4 id="3-设置你的-密码-忘记的话以后可以找回--">3. 设置你的 <strong>密码</strong> <em>忘记的话以后可以找回</em>  👇</h4>
+<p></p>
+<h4 id="4-设置你的个人信息--注意一定要真名-昵称可以随便起但只能是英文">4. 设置你的个人信息 👇 <strong>注意,一定要真名</strong>, 昵称可以随便起,但只能是英文</h4>
+<p></p>
+<h4 id="5-输入我的邀请码--isouthrain-">5. 输入我的邀请码 👉 ISouthRain 👇</h4>
+<p></p>
+<h4 id="6-跟着提示点击就行了-">6. 跟着提示点击就行了 👇</h4>
+<h5 id="61-步骤1-">6.1. 步骤1 👇</h5>
+<p></p>
+<h5 id="62-步骤2-">6.2. 步骤2 👇</h5>
+<p></p>
+<h5 id="63--步骤3-">6.3.  步骤3 👇</h5>
+<p></p>
+<h5 id="64--步骤4-">6.4.  步骤4 👇</h5>
+<p></p>
+<h5 id="65--步骤5-">6.5.  步骤5 👇</h5>
+<p></p>
+<h5 id="66--步骤6--">6.6.  步骤6  👇</h5>
+<p></p>
+<h5 id="67--步骤7-">6.7.  步骤7 👇</h5>
+<p></p>
+<h5 id="68--步骤8-">6.8.  步骤8 👇</h5>
+<p></p>
+<h5 id="69--步骤9-">6.9.  步骤9 👇</h5>
+<p></p>
+<h5 id="610-步骤10-">6.10. 步骤10 👇</h5>
+<p></p>
+<h3 id="验证你的手机-一定要验证-非常重要-">验证你的手机 (一定要验证, 非常重要) 👇</h3>
+<h4 id="点击左上角的三道杠弹出菜单栏-">点击左上角的三道杠，弹出菜单栏 👇</h4>
+<p></p>
+<h4 id="选择profile项-">选择Profile项 👇</h4>
+<p></p>
+<h4 id="点击-verify-">点击 VERIFY 👇</h4>
+<p></p>
+<h4 id="点击-start-他会自动跳转到-发送短信发送一个号码给官方-">点击 START <em><strong>他会自动跳转到 发送短信，发送一个号码给官方 👇</strong></em></h4>
+<p></p>
+<p></p>
+<p><strong>发送完短信后返回 Pi App</strong></p>
+<h4 id="验证完成--">验证完成  👇</h4>
+<p></p>
+<h4 id="如果你验证不成功可以看一下这个文章--手机号码验证不了httpwwwfangyaoyucom443html">如果你验证不成功，可以看一下这个文章 👉 <a href="http://www.fangyaoyu.com/443.html" target="_blank" rel="noopener noreffer">手机号码验证不了？？</a></h4>
+<h3 id="关于如何-进行挖矿---">关于如何 进行挖矿   👇</h3>
+<p></p>
+<h3 id="更新你的名字非常重要">更新你的名字(非常重要)</h3>
+<ul>
+<li>在主页点击<code>右上角</code>选择你的语言</li>
+<li>点击左上角, 点击 <code>个人资料</code></li>
+<li>点击右上角 <code>更新名字</code></li>
+<li>在 <code>English</code> 你的名字(以 <code>王老五</code> 为例)</li>
+</ul>
+<ol>
+<li>姓: WANG</li>
+<li>名字: LAOWU</li>
+</ol>
+<ul>
+<li>选择下面你的 <code>主语言</code> 为 <code>中文简体</code></li>
+<li>在 <code>中文简体</code> 你的名字(以 <code>王老五</code> 为例)</li>
+</ul>
+<ol>
+<li>姓: 王</li>
+<li>名: 老五</li>
+</ol>
+<ul>
+<li><code>填完记得保存</code></li>
+<li>邮箱,填一个你能收邮件的邮箱</li>
+</ul>
+<h3 id="总结">总结</h3>
+<p><strong>如果你有任何问题可以在下面回复 我基本会回复</strong></p>
+]]></description>
 </item><item>
     <title>Vim和Emacs的选择</title>
     <link>http://isouthrain.github.io/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</link>
     <pubDate>Mon, 27 Dec 2021 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
-    <description><![CDATA[前言 这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读]]></description>
+    <description><![CDATA[<h1 id="前言">前言</h1>
+<p><strong>这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs</strong><br>
+<strong>Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读者根据自己的需求选择 Vim 还是 Emacs</strong></p>
+<h2 id="编辑习惯">编辑习惯</h2>
+<ol>
+<li>
+<p>Vim 在于<strong>按键的组合</strong>,比如你可以配置任何按键组合去触发某些动作,(e.g 你可以在 I 模式 配置 jk 去触发按键 <ESC> 进入 N 模式,然后相当于你没有输入过 jk), 这只是一个例子,反正你能做到全部Vim 能做的,甚至调用插件以及命令.</p>
+</li>
+<li>
+<p>Emacs 做不到上面例子,Emacs 是靠函数触发的或者说你必须 Ctrl+才能实现某些功能(类似Vim 的例子), Emacs 就是一个 Elisp 语言的运行器, 你做的每一个动作都是在触发某个函数(e.g Ctrl+n 触发 next-line 函数将光标移动到下一行)</p>
+</li>
+<li>
+<p>在这一点上显然是 Vim 更方便,因为按键组合真的非常好用,还不影响输入,对于 Emacs 就必须用两个按键同时按下, 这非常麻烦, 所以在按键组合中 <strong>Vim</strong> 有着非常好的优势, 因为 <strong>Emacs</strong> 要按 <strong>Ctrl</strong> 键, 左边小拇指真的难受, 不过 <strong>Emacs</strong> 也有模拟 <strong>Vim</strong> 的插件, 但仅仅是只能模拟控制光标和一些命令, 做不到可以设置按键组合触发某些功能!</p>
+</li>
+</ol>
+<h2 id="vim-和-emacs-设置理念">Vim 和 Emacs 设置理念</h2>
+<ol>
+<li>
+<p>Vim 类似一把短刀, 只做好一件事, 他仅仅是一个编辑器</p>
+</li>
+<li>
+<p>Emacs 类似一个武器库, 可以做非常多的事, 但都不精, Emacs 有时候被人说做是一个 <strong>编辑器系统</strong> 我个人感觉还是挺符合的</p>
+</li>
+<li>
+<p>总之 Emacs 比 Vim 做的事多得多, Emacs 是可以查看图片的, 而且现在 Emacs 已经发展到通过插件可以在Emacs进行网页浏览和播放视频了 [类似 Chrome 那种浏览器 ] (e.g EAF 框架)</p>
+</li>
+</ol>
+<h2 id="emacs-的个人笔记管理">Emacs 的个人笔记管理</h2>
+<ol>
+<li>
+<p>如果你有写笔记的习惯, 那么你一定听说过 Markdown 的语法, <strong>我要说的不是Markdown</strong> 而是Emacs内置的一个笔记系统 Org-mode.</p>
+</li>
+<li>
+<p>Org-mode 只有在 Emacs 有着非常好的体验, 而在其它编辑软件基本无法发挥 org-mode 的强大</p>
+</li>
+<li>
+<p>Org-mode 的表格可以运算, 代码块可以直接进行运行并返回结果, 捕获(Capture)功能, GTD管理系统(比如 日程安排(可以重复提醒), TODO, 计时器, 导出为其它格式)</p>
+</li>
+<li>
+<p>所以说, 如果你打算使用 Emacs 真的非常多优点, org-mode 有点难学习(和设置), 因为使用 org 之前你的会 Emacs 以及 ELisp语言基础</p>
+</li>
+</ol>
+<h2 id="如何选择-vim-和-emacs-">如何选择 Vim 和 Emacs ?</h2>
+<p><strong>如果你需要很多的功能, 建议你选择 Emacs , 因为 Emacs 是可发展的, 以及可以运行图形界面, 使 GUI 功能 在Emacs成为了可能</strong></p>
+<p><strong>Vim 只能查看文本之类的, 图片这些无法处理, 只能通过调用第三方应用才能处理查看</strong>
+<strong>如果你非常需要 GTD 系统之类的, 那么 Emacs 是不二智选, 如果 你只是需要出来文本的,那么Vim更好</strong></p>
+<p><strong>Emacs 如果你使用的非常好, 非常6, 那么你将非常牛逼, 而且我估计你未来时不会再更换编辑器了</strong></p>
+<p>我个人是 Vim &mdash;&gt; Emacs &mdash;&gt; Vim 还是回到了 Vim</p>
+]]></description>
 </item></channel>
 </rss>
