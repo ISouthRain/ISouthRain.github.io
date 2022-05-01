@@ -262,6 +262,15 @@ chomd +x frps
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 服务端配置</span>
@@ -283,6 +292,15 @@ chomd +x frps
 <span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
 <span class="nx">local_port</span> <span class="p">=</span> <span class="mi">8080</span>
 <span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如8080</span>
+<span class="c"># 多端口</span>
+<span class="p">[</span><span class="nx">range</span><span class="err">:</span><span class="nx">Test</span><span class="p">]</span>
+<span class="p">[</span><span class="nx">web</span><span class="p">]</span>
+<span class="nx">type</span> <span class="p">=</span> <span class="nx">http</span>
+<span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
+<span class="nx">local_port</span> <span class="p">=</span> <span class="mi">9000-9010</span>
+<span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如9000</span><span class="mi">-9010</span>
+
+
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="启动-frpc">启动 frpc</h4>
