@@ -4,7 +4,7 @@
         <link>http://isouthrain.github.io/posts/</link>
         <description>所有文章 | ISouthRain</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
-            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sun, 01 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>伟大公链 Pi Network</title>
     <link>http://isouthrain.github.io/pinetwork/</link>
     <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
@@ -126,6 +126,223 @@ Pi 只需要一台手机，每天花一两分钟就可以获得，而不会损�
 <li>我们现在能看到的, 都是 Pi 的冰山一角, 只有等真正完全主网才能看到Pi的真面目, 大家耐心等待!!</li>
 </ul>
 ]]></description>
+</item><item>
+    <title>Frp内网穿透</title>
+    <link>http://isouthrain.github.io/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+    <pubDate>Sun, 01 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+    <description><![CDATA[<h3 id="什么是内网穿透">什么是内网穿透?</h3>
+<p><strong>通俗的说:</strong> 把 <code>局域网</code> 变成 <code>公网</code> 那样可以让外面的人访问</p>
+<h3 id="内网穿透工具">内网穿透工具</h3>
+<ul>
+<li><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreffer">Frp</a></li>
+<li><a href="https://ngrok.com" target="_blank" rel="noopener noreffer">ngrok</a></li>
+<li><a href="https://flynat.51miaole.com" target="_blank" rel="noopener noreffer">蜻蜓映射</a></li>
+<li><a href="https://natapp.cn" target="_blank" rel="noopener noreffer">natapp</a></li>
+<li>以及一些其它的, 不一一列出了, 大家可以上网查查</li>
+<li>推荐大家使用 <code>Frp</code> , 因为免费且开源, 易配置, 简单使用</li>
+</ul>
+<h3 id="frp-为例">Frp 为例</h3>
+<ul>
+<li><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreffer">Frp项目地址</a></li>
+</ul>
+<h3 id="服务器端">服务器端</h3>
+<h4 id="下载-frp">下载 frp</h4>
+<ul>
+<li>
+<p>根据自己的系统下载对于版本</p>
+</li>
+<li>
+<p><a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreffer">Frp地址</a></p>
+</li>
+<li>
+<p>Linux 用户可以使用 <code>wget</code> 工具下载</p>
+<ul>
+<li>例如: wget <a href="https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz">https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="解压">解压</h4>
+<ul>
+<li>tar -zxvf frpxxxxxx.tar.gz</li>
+</ul>
+<h4 id="前往到解压目录">前往到解压目录</h4>
+<ul>
+<li>cd frpxxxxxx</li>
+</ul>
+<h4 id="编辑-frpsini">编辑 frps.ini</h4>
+<ul>
+<li><strong>根据自己情况添加</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">common</span><span class="p">]</span>
+<span class="nx">bind_addr</span> <span class="p">=</span> <span class="mf">0.0</span><span class="p">.</span><span class="mf">0.0</span>
+<span class="c"># frp 监听的端口，默认是7000</span>
+<span class="nx">bind_port</span> <span class="p">=</span> <span class="mi">7000</span>
+<span class="c"># 授权码</span>
+<span class="nx">token</span> <span class="p">=</span> <span class="nx">xxxxx</span>
+
+<span class="c"># frp管理后台端口，请按自己需求更改</span>
+<span class="nx">dashboard_port</span> <span class="p">=</span> <span class="mi">7100</span>
+<span class="c"># frp管理后台用户名和密码</span>
+<span class="nx">dashboard_user</span> <span class="p">=</span> <span class="nx">xxxx</span>
+<span class="nx">dashboard_pwd</span> <span class="p">=</span> <span class="nx">xxxx</span>
+<span class="nx">enable_prometheus</span> <span class="p">=</span> <span class="kc">true</span>
+
+<span class="c"># frp日志配置</span>
+<span class="nx">log_file</span> <span class="p">=</span> <span class="err">/</span><span class="nx">var</span><span class="err">/</span><span class="nx">log</span><span class="err">/</span><span class="nx">frps</span><span class="p">.</span><span class="nx">log</span>
+<span class="nx">log_level</span> <span class="p">=</span> <span class="nx">info</span>
+<span class="nx">log_max_days</span> <span class="p">=</span> <span class="mi">3</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="运行-frps">运行 frps</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Linux 用户</span>
+chomd +x frps
+./frps -c frps.ini
+<span class="c1"># windows用户</span>
+./frps.exe -c frps.ini
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="客户端你的局域网端">客户端(你的局域网端)</h3>
+<ul>
+<li><strong>相同方法下载</strong></li>
+</ul>
+<h4 id="解压后-编辑-frpcini">解压后 编辑 frpc.ini</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 服务端配置</span>
+<span class="p">[</span><span class="nx">common</span><span class="p">]</span>
+<span class="nx">server_addr</span> <span class="p">=</span> <span class="nx">服务器ip</span>
+<span class="c"># 请换成设置的服务器端口</span>
+<span class="nx">server_port</span> <span class="p">=</span> <span class="mi">7000</span>
+<span class="nx">token</span> <span class="p">=</span> <span class="nx">与上面frps</span><span class="p">.</span><span class="nx">ini的相同</span>
+
+<span class="c"># 配置ssh服务</span>
+<span class="p">[</span><span class="nx">ssh</span><span class="p">]</span>
+<span class="nx">type</span> <span class="p">=</span> <span class="nx">tcp</span>
+<span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
+<span class="nx">local_port</span> <span class="p">=</span> <span class="mi">8022</span>
+<span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如8022</span>
+
+<span class="p">[</span><span class="nx">web</span><span class="p">]</span>
+<span class="nx">type</span> <span class="p">=</span> <span class="nx">http</span>
+<span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
+<span class="nx">local_port</span> <span class="p">=</span> <span class="mi">8080</span>
+<span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如8080</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="启动-frpc">启动 frpc</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Linux用户</span>
+./frpc -c frpc.ini
+<span class="c1"># Windows用户</span>
+./frpc.exe -c frpc.ini
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="测试">测试</h3>
+<p><strong>在你的公网端, 进行测试</strong></p>
+<ul>
+<li>例如, 服务器端链接局域网端 ssh</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh -p 端口 root@服务器IP
+<span class="c1"># 例如</span>
+ssh -p <span class="m">8022</span> root@192.13.33.6
+</code></pre></td></tr></table>
+</div>
+</div><p><strong><code>服务器端口必须要开放对应端口</code></strong></p>
+<p><strong>注意, 当你想访问局域网端时, 局域网端口的本地端口一定是开的, 并对应于你设置frpc.ini的端口</strong></p>
+<p><strong>服务器端 frps, 局域网端 frpc, 必须同时开启才可正常使用</strong></p>
+<h3 id="faq">FAQ❓</h3>
+<h4 id="可以让服务器端开机启动-不太麻烦">可以让服务器端开机启动, 不太麻烦</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> frp目录
+mkdir -p /etc/frp
+cp frps.ini /etc/frp
+cp frps /usr/bin
+cp systemd/frps.service /usr/lib/systemd/system/
+systemctl <span class="nb">enable</span> frps
+systemctl start frps
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item><item>
     <title>Hugo如何置顶文章</title>
     <link>http://isouthrain.github.io/2022-04-30-hugo%E5%A6%82%E4%BD%95%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</link>
@@ -1242,61 +1459,6 @@ admins: [用户ID]
 </ul>
 <h3 id="总结">总结</h3>
 <p><strong>如果你有任何问题可以在下面回复 我基本会回复</strong></p>
-]]></description>
-</item><item>
-    <title>Vim和Emacs的选择</title>
-    <link>http://isouthrain.github.io/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</link>
-    <pubDate>Mon, 27 Dec 2021 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
-    <description><![CDATA[<h1 id="前言">前言</h1>
-<p><strong>这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs</strong><br>
-<strong>Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读者根据自己的需求选择 Vim 还是 Emacs</strong></p>
-<h2 id="编辑习惯">编辑习惯</h2>
-<ol>
-<li>
-<p>Vim 在于<strong>按键的组合</strong>,比如你可以配置任何按键组合去触发某些动作,(e.g 你可以在 I 模式 配置 jk 去触发按键 <ESC> 进入 N 模式,然后相当于你没有输入过 jk), 这只是一个例子,反正你能做到全部Vim 能做的,甚至调用插件以及命令.</p>
-</li>
-<li>
-<p>Emacs 做不到上面例子,Emacs 是靠函数触发的或者说你必须 Ctrl+才能实现某些功能(类似Vim 的例子), Emacs 就是一个 Elisp 语言的运行器, 你做的每一个动作都是在触发某个函数(e.g Ctrl+n 触发 next-line 函数将光标移动到下一行)</p>
-</li>
-<li>
-<p>在这一点上显然是 Vim 更方便,因为按键组合真的非常好用,还不影响输入,对于 Emacs 就必须用两个按键同时按下, 这非常麻烦, 所以在按键组合中 <strong>Vim</strong> 有着非常好的优势, 因为 <strong>Emacs</strong> 要按 <strong>Ctrl</strong> 键, 左边小拇指真的难受, 不过 <strong>Emacs</strong> 也有模拟 <strong>Vim</strong> 的插件, 但仅仅是只能模拟控制光标和一些命令, 做不到可以设置按键组合触发某些功能!</p>
-</li>
-</ol>
-<h2 id="vim-和-emacs-设置理念">Vim 和 Emacs 设置理念</h2>
-<ol>
-<li>
-<p>Vim 类似一把短刀, 只做好一件事, 他仅仅是一个编辑器</p>
-</li>
-<li>
-<p>Emacs 类似一个武器库, 可以做非常多的事, 但都不精, Emacs 有时候被人说做是一个 <strong>编辑器系统</strong> 我个人感觉还是挺符合的</p>
-</li>
-<li>
-<p>总之 Emacs 比 Vim 做的事多得多, Emacs 是可以查看图片的, 而且现在 Emacs 已经发展到通过插件可以在Emacs进行网页浏览和播放视频了 [类似 Chrome 那种浏览器 ] (e.g EAF 框架)</p>
-</li>
-</ol>
-<h2 id="emacs-的个人笔记管理">Emacs 的个人笔记管理</h2>
-<ol>
-<li>
-<p>如果你有写笔记的习惯, 那么你一定听说过 Markdown 的语法, <strong>我要说的不是Markdown</strong> 而是Emacs内置的一个笔记系统 Org-mode.</p>
-</li>
-<li>
-<p>Org-mode 只有在 Emacs 有着非常好的体验, 而在其它编辑软件基本无法发挥 org-mode 的强大</p>
-</li>
-<li>
-<p>Org-mode 的表格可以运算, 代码块可以直接进行运行并返回结果, 捕获(Capture)功能, GTD管理系统(比如 日程安排(可以重复提醒), TODO, 计时器, 导出为其它格式)</p>
-</li>
-<li>
-<p>所以说, 如果你打算使用 Emacs 真的非常多优点, org-mode 有点难学习(和设置), 因为使用 org 之前你的会 Emacs 以及 ELisp语言基础</p>
-</li>
-</ol>
-<h2 id="如何选择-vim-和-emacs-">如何选择 Vim 和 Emacs ?</h2>
-<p><strong>如果你需要很多的功能, 建议你选择 Emacs , 因为 Emacs 是可发展的, 以及可以运行图形界面, 使 GUI 功能 在Emacs成为了可能</strong></p>
-<p><strong>Vim 只能查看文本之类的, 图片这些无法处理, 只能通过调用第三方应用才能处理查看</strong>
-<strong>如果你非常需要 GTD 系统之类的, 那么 Emacs 是不二智选, 如果 你只是需要出来文本的,那么Vim更好</strong></p>
-<p><strong>Emacs 如果你使用的非常好, 非常6, 那么你将非常牛逼, 而且我估计你未来时不会再更换编辑器了</strong></p>
-<p>我个人是 Vim &mdash;&gt; Emacs &mdash;&gt; Vim 还是回到了 Vim</p>
 ]]></description>
 </item></channel>
 </rss>
