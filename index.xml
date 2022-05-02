@@ -134,7 +134,7 @@ Pi 只需要一台手机，每天花一两分钟就可以获得，而不会损�
     <pubDate>Mon, 02 May 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-05-02-npm%E5%8D%87%E7%BA%A7/</guid>
-    <description><![CDATA[<h1 id="安装模块-n">安装模块 n</h1>
+    <description><![CDATA[<h2 id="安装模块-n">安装模块 n</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -143,8 +143,8 @@ Pi 只需要一台手机，每天花一两分钟就可以获得，而不会损�
 <pre class="chroma"><code class="language-bash" data-lang="bash">npm install n -g
 </code></pre></td></tr></table>
 </div>
-</div><h1 id="升级-npm-和-nodejs">升级 npm 和 nodejs</h1>
-<h2 id="查看当前-npm-nodejs-版本">查看当前 npm nodejs 版本</h2>
+</div><h2 id="升级-npm-和-nodejs">升级 npm 和 nodejs</h2>
+<h3 id="查看当前-npm-nodejs-版本">查看当前 npm nodejs 版本</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
