@@ -168,10 +168,10 @@ npm install npm@3.3 -g
 </div>]]></description>
 </item><item>
     <title>搭建 TelegramBot RSS 订阅</title>
-    <link>http://isouthrain.github.io/2022-05-02-%E6%90%AD%E5%BB%BAtelegrambotrss/</link>
+    <link>http://isouthrain.github.io/2022-05-02-telegrambotrss/</link>
     <pubDate>Mon, 02 May 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-05-02-%E6%90%AD%E5%BB%BAtelegrambotrss/</guid>
+    <guid>http://isouthrain.github.io/2022-05-02-telegrambotrss/</guid>
     <description><![CDATA[<blockquote>
 <p>妄想逃脱大数据的背叛🤨</p>
 </blockquote>
@@ -229,10 +229,21 @@ npm install npm@3.3 -g
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">https://api.telegra.ph/createAccount?short_name=称呼名&amp;author_name=用户名
 </code></pre></td></tr></table>
 </div>
+</div><h3 id="运行">运行</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">chmod <span class="m">755</span> flowerss-bot
+./flowerss-bot
+</code></pre></td></tr></table>
+</div>
 </div><h3 id="成功了就请享受">成功了就请享受🌝</h3>
 <h3 id="感谢作者大大的开源让我们用上这么好的作品">感谢作者大大的开源，让我们用上这么好的作品🌹</h3>
 <ul>
-<li><a href="https://github.com/indes/flowerss-bot" target="_blank" rel="noopener noreffer">flowerrss-bot</a></li>
+<li><a href="https://github.com/indes/flowerss-bot" target="_blank" rel="noopener noreffer">flowerss-bot</a></li>
 </ul>
 <h3 id="faq">FAQ❓</h3>
 <p><strong>遇到问题可以在下面回复</strong></p>
