@@ -5,7 +5,7 @@
         <description>Telegram - 标签 - ISouthRain</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
             <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Mon, 02 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/telegram/" rel="self" type="application/rss+xml" /><item>
-    <title>搭建 TelegramBot RSS 订阅</title>
+    <title>搭建 Telegram Bot RSS 订阅</title>
     <link>http://isouthrain.github.io/2022-05-02-telegrambotrss/</link>
     <pubDate>Mon, 02 May 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
