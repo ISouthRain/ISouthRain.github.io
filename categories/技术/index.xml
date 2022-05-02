@@ -46,10 +46,10 @@ npm install npm@3.3 -g
 </div>]]></description>
 </item><item>
     <title>搭建 TelegramBot RSS 订阅</title>
-    <link>http://isouthrain.github.io/2022-05-02-telegrambotrssi%E8%AE%A2%E9%98%85/</link>
+    <link>http://isouthrain.github.io/2022-05-02-telegrambotrss/</link>
     <pubDate>Mon, 02 May 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-05-02-telegrambotrssi%E8%AE%A2%E9%98%85/</guid>
+    <guid>http://isouthrain.github.io/2022-05-02-telegrambotrss/</guid>
     <description><![CDATA[<blockquote>
 <p>妄想逃脱大数据的背叛🤨</p>
 </blockquote>
@@ -70,12 +70,50 @@ npm install npm@3.3 -g
 <li>支持 Telegram Instart  view 即时预览</li>
 <li><a href="https://github.com/indes/flowerss-bot" target="_blank" rel="noopener noreffer">flowerrss-bot</a></li>
 </ul>
+<h3 id="下载-flowerss-bot">下载 Flowerss-bot</h3>
+<ul>
+<li><a href="https://github.com/indes/flowerss-bot/releases" target="_blank" rel="noopener noreffer">下载对应版本</a></li>
+</ul>
 <h3 id="获取机器人">获取机器人</h3>
 <ol>
 <li>@BotFather</li>
 <li>/newbot</li>
 <li>随便命名一个 <code>称呼</code></li>
+<li>命名机器人，必须 Bot 或者 _bot 结尾, 例如: MyrssBot</li>
+<li>复制 token</li>
 </ol>
+<h3 id="修改-configynl">修改 config.ynl</h3>
+<ul>
+<li>修改第一行, 将 token 复制进去</li>
+<li>根据自己情况修改需要，默认只需要修改了 token 就可以使用了</li>
+<li><a href="https://flowerss-bot.vercel.app/#/install" target="_blank" rel="noopener noreffer">详细修改</a></li>
+</ul>
+<h3 id="关于使用-telegraph-即使预览">关于使用 Telegraph 即使预览</h3>
+<ul>
+<li>默认获取 token 就可以使用</li>
+<li><a href="https://telegra.ph/api" target="_blank" rel="noopener noreffer">获取方法</a></li>
+<li>Telegtaph 官方机器人 @telegraph</li>
+</ul>
+<h3 id="步骤">步骤</h3>
+<ol>
+<li>关注 Telegraph 机器人</li>
+<li>在浏览器输入, 自动生成 token</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">https://api.telegra.ph/createAccount?short_name=称呼名&amp;author_name=用户名
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="成功了就请享受">成功了就请享受🌝</h3>
+<h3 id="感谢作者大大的开源让我们用上这么好的作品">感谢作者大大的开源，让我们用上这么好的作品🌹</h3>
+<ul>
+<li><a href="https://github.com/indes/flowerss-bot" target="_blank" rel="noopener noreffer">flowerrss-bot</a></li>
+</ul>
+<h3 id="faq">FAQ❓</h3>
+<p><strong>遇到问题可以在下面回复</strong></p>
 ]]></description>
 </item><item>
     <title>Frp内网穿透</title>
