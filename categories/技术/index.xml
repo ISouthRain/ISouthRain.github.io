@@ -67,6 +67,7 @@ npm install npm@3.3 -g
 <li><strong>一个国人开源的 Telegra bot RSS 订阅机器人</strong></li>
 <li>搭建非常简单, 功能非常多</li>
 <li>只需要填写 bot Token 就可以使用</li>
+<li>支持 Telegram Instart  view 即时预览</li>
 <li><a href="https://github.com/indes/flowerss-bot" target="_blank" rel="noopener noreffer">flowerrss-bot</a></li>
 </ul>
 ]]></description>
