@@ -1,0 +1,34 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Telegram - 标签 - ISouthRain</title>
+        <link>http://isouthrain.github.io/tags/telegram/</link>
+        <description>Telegram - 标签 - ISouthRain</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Mon, 02 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/telegram/" rel="self" type="application/rss+xml" /><item>
+    <title>自建 TelegramBot RSS 订阅</title>
+    <link>http://isouthrain.github.io/2022-05-02-telegrambotrss/</link>
+    <pubDate>Mon, 02 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-05-02-telegrambotrss/</guid>
+    <description><![CDATA[<blockquote>
+<p>妄想逃脱大数据的背叛🤨</p>
+</blockquote>
+<h2 id="rss">RSS</h2>
+<ul>
+<li>自己管理自己的订阅，掌控自己的爱好!!</li>
+</ul>
+<h2 id="要求">要求</h2>
+<ul>
+<li>一台海外 VPS</li>
+<li>一点点 Linux 技术</li>
+</ul>
+<h3 id="flowerss-bot">Flowerss-bot</h3>
+<ul>
+<li><strong>一个国人开源的 Telegra bot RSS 订阅机器人</strong></li>
+<li>搭建非常简单, 功能非常多</li>
+<li>只需要填写 bot Token 就可以使用</li>
+<li><a href="https://github.com/indes/flowerss-bot" target="_blank" rel="noopener noreffer">flowerrss-bot</a></li>
+</ul>
+]]></description>
+</item></channel>
+</rss>
