@@ -46,10 +46,10 @@ npm install npm@3.3 -g
 </div>]]></description>
 </item><item>
     <title>搭建 TelegramBot RSS 订阅</title>
-    <link>http://isouthrain.github.io/2022-05-02-telegrambotrss/</link>
+    <link>http://isouthrain.github.io/2022-05-02-telegrambotrssi%E8%AE%A2%E9%98%85/</link>
     <pubDate>Mon, 02 May 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-05-02-telegrambotrss/</guid>
+    <guid>http://isouthrain.github.io/2022-05-02-telegrambotrssi%E8%AE%A2%E9%98%85/</guid>
     <description><![CDATA[<blockquote>
 <p>妄想逃脱大数据的背叛🤨</p>
 </blockquote>
@@ -72,7 +72,9 @@ npm install npm@3.3 -g
 </ul>
 <h3 id="获取机器人">获取机器人</h3>
 <ol>
-<li>@</li>
+<li>@BotFather</li>
+<li>/newbot</li>
+<li>随便命名一个 <code>称呼</code></li>
 </ol>
 ]]></description>
 </item><item>
