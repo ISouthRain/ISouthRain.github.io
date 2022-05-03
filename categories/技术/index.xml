@@ -201,7 +201,7 @@ npm install npm@3.3 -g
 <span class="nx">bind_addr</span> <span class="p">=</span> <span class="mf">0.0</span><span class="p">.</span><span class="mf">0.0</span>
 <span class="c"># frp 监听的端口，默认是7000</span>
 <span class="nx">bind_port</span> <span class="p">=</span> <span class="mi">7000</span>
-<span class="c"># 授权码</span>
+<span class="c"># 授权码, 随便填一个</span>
 <span class="nx">token</span> <span class="p">=</span> <span class="nx">xxxxx</span>
 
 <span class="c"># frp管理后台端口，请按自己需求更改</span>
