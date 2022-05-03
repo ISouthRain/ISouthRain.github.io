@@ -725,364 +725,6 @@ weight: 1
 <p>如果你遇到了问题，可以在下面评论去提问，基本都会回复的</p>
 ]]></description>
 </item><item>
-    <title>普通人如何使用Emacs</title>
-    <link>http://isouthrain.github.io/2022-04-29-%E6%99%AE%E9%80%9A%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8emacs/</link>
-    <pubDate>Fri, 29 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-04-29-%E6%99%AE%E9%80%9A%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8emacs/</guid>
-    <description><![CDATA[<blockquote>
-<p>Emacs 不仅可用于编码， 更可用于生活。 <br/></p>
-</blockquote>
-<h2 id="home">Home</h2>
-<h3 id="阅读之前">阅读之前</h3>
-<ul>
-<li>本文的 <strong>普通人</strong> 指的是 <strong>非程序员</strong>  <br/></li>
-<li>为什么编写这编文章? <br/>
-<ul>
-<li>因为受到了 <strong>懒猫</strong> 和 <strong>Protesilaos Stavrou</strong> 影响 <br/>
-<ul>
-<li>Emacs Talk <a href="https://t.co/4JEAB4LThl" target="_blank" rel="noopener noreffer">重量级嘉宾-懒猫</a> <br/></li>
-<li>Protesilaos Stavrou <a href="https://mp.weixin.qq.com/s/VfclpaYjCH8aLh0uMYny1w" target="_blank" rel="noopener noreffer">隐居、反内卷，不意味着躺平｜专访2021年度“杰出新自由软件贡献者”奖得主</a> <br/></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>本文章应该适合新手阅读,因为我定位在了如何使用 <strong>Emacs</strong> <br/></li>
-<li>本文旨在让更多的人(非程序员)使用 Emacs管理自己的生活, Emacs不单限于代码编辑 <br/></li>
-</ul>
-<h3 id="文章适合人群">文章适合人群</h3>
-<ul>
-<li><strong><em>追求自由与和平</em></strong> <br/></li>
-<li>没有写过代码的 <br/></li>
-<li>在寻找一个 <strong>笔记软件</strong> 的用户 <br/></li>
-<li>使用GTD 管理自己的生活 <br/></li>
-</ul>
-<h3 id="安装">安装</h3>
-<ul>
-<li><a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener noreffer">官方网站</a> <br/></li>
-<li><strong>Linux</strong>  <br/>
-<ul>
-<li>
-<p>使用对应的包管理下载, 例如 <strong>Ubuntu</strong> <br/></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install emacs
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-</li>
-<li><strong>Windows</strong> <br/>
-<ul>
-<li><a href="http://gnu.mirrors.hoobly.com/emacs/windows/emacs-28/" target="_blank" rel="noopener noreffer">GNU Emacs</a> 选择最新版本 zip 文件, 解压运行 emacs.exe <br/></li>
-</ul>
-</li>
-<li><strong>Mac OSX</strong> <br/>
-<ul>
-<li><a href="https://emacsformacos.com/" target="_blank" rel="noopener noreffer">Mac for Emacs</a> <br/></li>
-</ul>
-</li>
-</ul>
-<h3 id="简单使用">简单使用</h3>
-<ul>
-<li>
-<p>按键说明 <br/></p>
-<ul>
-<li>开头的 <strong>C</strong> 代表 <strong>Ctrl</strong> 按键 <br/></li>
-<li>开头的 <strong>M</strong> 代表 <strong>Alt</strong> 按键 <br/></li>
-</ul>
-</li>
-<li>
-<p>基础按键 <br/></p>
-<ul>
-<li><strong>M + x</strong> 输入命令 <br/></li>
-<li><strong>C + g</strong> 取消所有命令/状态 <br/></li>
-<li><strong>C + n</strong> 即 <strong>Ctrl + n</strong> , 等于 <strong>键盘向下按键</strong> , 解释为 <em>将光标移动到下一行</em> <br/></li>
-<li><strong>C + p</strong> 即 <strong>Ctrl + n</strong> , 等于 <strong>键盘向下按键</strong> , 解释为 <em>将光标移动到下一行</em> <br/></li>
-<li><strong>C + f</strong> 即 <strong>Ctrl + f</strong> , 等于 <strong>键盘向右按键</strong> , 解释为 <em>将光标向右移动一个字母</em> <br/></li>
-<li><strong>C + b</strong> 即 <strong>Ctrl + b</strong> , 等于 <strong>键盘向左按键</strong> , 解释为 <em>将光标向左移动一个字母</em> <br/></li>
-</ul>
-</li>
-<li>
-<p>退出软件 <br/></p>
-<ul>
-<li><strong>C + x</strong> 之后再按 <strong>C + c</strong> <br/></li>
-</ul>
-</li>
-<li>
-<p><em>注意事项</em> <br/></p>
-<ul>
-<li>对于 Emacs 来说, 你的每一个动作都是在执行命令, <strong>例如, 当你按键 <em>C + n</em> 就是在执行 <em>next-line</em> 命令</strong>, 可以使用 M + x 输入 next-line 试试哦! <br/></li>
-</ul>
-</li>
-</ul>
-<h3 id="基本配置">基本配置</h3>
-<ul>
-<li>所有的配置都会放到 init.el <br/></li>
-<li>Linux/Uinx (Mac OSX) <br/>
-<ul>
-<li>创建文件 ~/.emacs.d/init.el <br/></li>
-</ul>
-</li>
-<li>Windows <br/>
-<ul>
-<li>C:/ <br/></li>
-</ul>
-</li>
-</ul>
-<h4 id="简单配置">简单配置</h4>
-<ul>
-<li>
-<p>请将代码复制到 init.el 文件中 <br/></p>
-</li>
-<li>
-<p>显示行号 <br/></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;; ~/.emacs.d/init.el</span>
-<span class="c1">;; ;; 开头为注释</span>
-<span class="c1">;;显示行号</span>
-<span class="p">(</span><span class="nv">global-linum-mode</span> <span class="mi">1</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>以下为个人的基本配置 <br/></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp">      <span class="c1">;; 设置编码</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">default-buffer-file-coding-system</span> <span class="ss">&#39;utf-8</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">prefer-coding-system</span> <span class="ss">&#39;utf-8</span><span class="p">)</span>
-    
-      <span class="c1">;;显示行号</span>
-<span class="p">(</span><span class="nv">global-linum-mode</span> <span class="mi">1</span><span class="p">)</span>
-<span class="c1">;;高亮当前行</span>
-<span class="p">(</span><span class="nv">global-hl-line-mode</span> <span class="mi">1</span><span class="p">)</span>
-<span class="c1">;;关闭启动画面</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">inhibit-startup-message</span> <span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">toggle-truncate-lines</span> <span class="no">t</span><span class="p">)</span>
-    
-<span class="c1">;;显示时间</span>
-<span class="p">(</span><span class="nv">display-time-mode</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">;; 常显</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">display-time-24hr-format</span> <span class="no">t</span><span class="p">)</span> <span class="c1">;;格式</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">display-time-day-and-date</span> <span class="no">t</span><span class="p">)</span> <span class="c1">;;显示时间、星期、日期</span>
-    
-    
-<span class="c1">;; 关闭启动帮助画面</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">inhibit-splash-screen</span> <span class="mi">1</span><span class="p">)</span>
-    
-<span class="c1">;; 关闭备份文件</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">make-backup-files</span> <span class="no">nil</span><span class="p">)</span>
-    
-<span class="c1">;; 自动加载外部修改的文件</span>
-<span class="p">(</span><span class="nv">global-auto-revert-mode</span> <span class="mi">1</span><span class="p">)</span>
-    
-<span class="c1">;; 关闭自动保存文件</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">auto-save-default</span> <span class="no">t</span><span class="p">)</span>
-<span class="c1">;; 关闭警告声</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">ring-bell-function</span> <span class="ss">&#39;ignore</span><span class="p">)</span>
-    
-<span class="c1">;; 简化yes和no</span>
-<span class="p">(</span><span class="nf">fset</span> <span class="ss">&#39;yes-or-no-p</span> <span class="ss">&#39;y-or-n-p</span><span class="p">)</span>
-    
-    
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<!--list-separator-->
-<ul>
-<li>
-<p>区分系统类型</p>
-<ul>
-<li>以下设置会根据你目前的系统而加载代码, 通常用来区分 windows 和 linux 配置问题 <br/></li>
-</ul>
- <!--listend-->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;;不同系统的配置</span>
-<span class="c1">;; Windows</span>
-<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string=</span> <span class="s">&#34;windows-nt&#34;</span> <span class="nv">system-type</span><span class="p">)</span>
-<span class="c1">;; 代码放在这个范围</span>
-<span class="p">)</span>
-<span class="c1">;; Linux</span>
-<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string=</span> <span class="s">&#34;gnu/linux&#34;</span> <span class="nv">system-type</span><span class="p">)</span>
-<span class="c1">;; 代码放在这个范围</span>
-<span class="p">)</span>
-<span class="c1">;; Mac OSX</span>
-<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string=</span> <span class="s">&#34;darwin&#34;</span> <span class="nv">system-type</span><span class="p">)</span>
-<span class="c1">;; 代码放在这个范围</span>
-<span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<h3 id="安装包">安装包</h3>
-<ul>
-<li>对于 Emacs 原生来说太简陋了, 很难看 <br/></li>
-<li>Emacs 安装扩展包使得更加好看与适用 <br/></li>
-</ul>
-<h4 id="原生安装">原生安装</h4>
-<ul>
-<li>Emacs 自带一个安装扩展包的方法 <br/>
-<ul>
-<li><strong>在此 <em>不解释原生安装包方法</em> , 因为原生安装的方法并不好用,而且一旦安装多软件包的话会影响到 Emacs 的启动速度</strong> <br/></li>
-</ul>
-</li>
-</ul>
-<h4 id="使用-use-package-安装扩展包">使用 Use-package 安装扩展包</h4>
-<!--list-separator-->
-<ul>
-<li>
-<p>配置 Use-package</p>
-<ol>
-<li>
-<p>将以下内容放到你的配置文件中 init.el <br/></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
-<span class="c1">;; 包开始</span>
-<span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="s">&#34;~/.emacs.d/lisp/&#34;</span><span class="p">)</span>
-        
-<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;package</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;package-archives</span>
-         <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;melpa&#34;</span> <span class="o">.</span> <span class="s">&#34;https://melpa.org/packages/&#34;</span><span class="p">)</span>
-         <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;melpa-stable&#34;</span> <span class="o">.</span> <span class="s">&#34;https://stable.melpa.org/packages/&#34;</span><span class="p">)</span>
-<span class="p">)</span>
-<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">not</span> <span class="p">(</span><span class="nv">package-installed-p</span> <span class="ss">&#39;use-package</span><span class="p">))</span>
-  <span class="p">(</span><span class="nv">package-refresh-contents</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">package-install</span> <span class="ss">&#39;use-package</span><span class="p">))</span>
-        
- <span class="c1">;; This is only needed once, near the top of the file</span>
-<span class="p">(</span><span class="nb">eval-when-compile</span>
-    <span class="c1">;; Following line is not needed if use-package.el is in ~/.emacs.d</span>
-    <span class="c1">;;(add-to-list &#39;load-path &#34;~/.emacs.d/plugins/use-package&#34;)</span>
-<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;use-package</span><span class="p">))</span>
-<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;use-package-ensure</span><span class="p">)</span>
-<span class="c1">;; 自动下载，不需要 :ensure t</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">use-package-always-ensure</span> <span class="no">t</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>下载一个包试试 <br/></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">包名</span><span class="p">)</span><span class="c1">;; 例如 (use-package evil), 就会下载evil包</span>
-<span class="c1">;; 重新启动 Emaccs 就会看到 .emacs.d/elpa 有这个包了</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ol>
-</li>
-</ul>
-<h3 id="emacs-键盘的选择">Emacs 键盘的选择</h3>
-<ul>
-<li>如果你是 Vim 用户, 建议安装 <strong>Evil</strong> 这个包, 它会模拟 vim 的键盘操作流程. <br/></li>
-<li>使用 Emacs 原生按键, 这可能 <em>废手指</em> 哈哈哈, 建议将 <strong>Ctrl</strong> 换成 <strong>Caps Lock</strong> , Windows 用户使用 AutoHotkey, 其余类似. <br/></li>
-<li><strong>Meow</strong> 猫态编辑, 有点类似 vim , 但是比 evil 更加的小巧和高效 <br/></li>
-</ul>
-<h4 id="个人推荐键盘">个人推荐键盘</h4>
-<ul>
-<li><strong>Evil</strong> 可能更加使用新手, 推荐去搜索一下 vi 键盘如何使用 <br/>
-<ul>
-<li>传送门 &mdash;&gt;  <a href="https://github.com/chloneda/vim-cheatsheet" target="_blank" rel="noopener noreffer">Vim 速查表</a>   <br/></li>
-</ul>
-</li>
-</ul>
-]]></description>
-</item><item>
     <title>永久免账号密码推送Github</title>
     <link>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</link>
     <pubDate>Thu, 28 Apr 2022 00:00:00 &#43;0000</pubDate>
@@ -1360,6 +1002,160 @@ admins: [用户ID]
 </span></code></pre></td></tr></table>
 </div>
 </div><h5 id="一定要用扫码登录不能用图片导入登录">一定要用扫码登录，不能用图片导入登录</h5>
+]]></description>
+</item><item>
+    <title>Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)</title>
+    <link>http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/</link>
+    <pubDate>Wed, 12 Jan 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/</guid>
+    <description><![CDATA[<h2 id="概述">概述</h2>
+<p><strong>Notion</strong> 和 <strong>Obsidian</strong> 都有收集网页的功能, Org-mode 自然也有, Org-mode 是调用 Org-protocol 协议使用的, 而插件 <code>Org-protocol-capture-html</code> 是其中能使 <code>Org-protocol</code> 收集的网页更加美观和可视化</p>
+<p>因为很多人都不会都不理解 <code>Org-protocol</code> 和怎么去使用, 以及<code>Org-protocol-capture-html</code>, 说得只是怎么用这个插件, 却没有说怎么配置, 所以才有了本教程.</p>
+<h2 id="相关链接">相关链接</h2>
+<ul>
+<li><a href="https://github.com/alphapapa/org-protocol-capture-html" target="_blank" rel="noopener noreffer">Org-protocol-capture-html 官网</a></li>
+<li><a href="https://orgmode.org/manual/Protocols.html" target="_blank" rel="noopener noreffer">Org-protocol 协议官网</a></li>
+</ul>
+<h3 id="效果如下">效果如下</h3>
+<p><code>效果如下👇</code> 
+<video poster="效果动图"  width="360" height="240" controls>
+<source src="/posts/Attachment/2022-01-12-Org-protocol-capture-html/2022-01-22-14-24-59.mkv" type="video/mp4">
+</video></p>
+<h1 id="安装-org-protocol-capture-html">安装 Org-protocol-capture-html</h1>
+<p>这个插件是不需要配置, 直接安装此插件就可以调用</p>
+<p><code>请自己按装此插件</code></p>
+<ul>
+<li>使用 use-package 安装</li>
+<li>手动安装</li>
+</ul>
+<h2 id="配置-org-protocol-capture-html">配置 Org-protocol-capture-html</h2>
+<p>此插件是调用 <code>org-capture</code> 功能, 请自觉检查如下配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Elisp" data-lang="Elisp"><span class="p">(</span><span class="nv">server-start</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">use-package</span> <span class="nv">s</span><span class="p">)</span> <span class="c1">;;依赖</span>
+
+<span class="c1">;; 安装 org-protocol-capture-html </span>
+<span class="c1">;; 如果跟我的不同, 请将下面两行删除</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="s">&#34;~/.emacs.d/plugins/org-protocol-capture-html/&#34;</span><span class="p">)</span> <span class="c1">;;</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol-capture-html</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-capture-templates</span>
+      <span class="o">&#39;</span><span class="p">(</span>
+	 <span class="c1">;;Org-protocol网页收集, 按键 w 调用</span>
+	 <span class="p">(</span><span class="s">&#34;w&#34;</span> <span class="s">&#34;网页收集&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file</span> <span class="s">&#34;~/Org/网页收集.org&#34;</span><span class="p">)</span>
+	 <span class="s">&#34;* [[%:link][%:description]] \n %U \n %:initial \n&#34;</span><span class="p">)</span>
+	<span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="系统安装-org-protocol">系统安装 org-protocol</h2>
+<p><code>如果下面的方法无法安装, 请见官网 👇</code></p>
+<ul>
+<li><a href="https://orgmode.org/worg/org-contrib/org-protocol.html" target="_blank" rel="noopener noreffer">官网安装 org-protocol 教程</a></li>
+</ul>
+<h3 id="windows-用户">Windows 用户👇</h3>
+<ul>
+<li>桌面新建 <code>org-protocol.reg</code> 文件, 使用 记事本 软件打开 , 并将以下👇代码放进去并保存, 然后运行安装并给权限</li>
+<li><code>请把下面的 emacsclientw.exe 路径换成你自己的路径</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">REGEDIT4
+
+[HKEY_CLASSES_ROOT\org-protocol]
+@=&#34;URL:Org Protocol&#34;
+&#34;URL Protocol&#34;=&#34;&#34;
+[HKEY_CLASSES_ROOT\org-protocol\shell]
+[HKEY_CLASSES_ROOT\org-protocol\shell\open]
+[HKEY_CLASSES_ROOT\org-protocol\shell\open\command]
+@=&#34;\&#34;C:\\Programme\\Emacs\\emacs\\bin\\emacsclientw.exe\&#34; \&#34;%1\&#34;&#34;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="linux-用户请见--linux-使用-org-protoclhttpskisaragi-hiucomorg-protocol-linux">Linux 用户请见 👉 <a href="https://kisaragi-hiu.com/org-protocol-linux" target="_blank" rel="noopener noreffer">Linux 使用 org-protocl</a></h3>
+<h2 id="根据自己使用的浏览器添加书签">根据自己使用的浏览器添加书签</h2>
+<p><code>关于 org-protocol-capture-html 对不同的 浏览书签 见</code></p>
+<ul>
+<li><a href="https://github.com/alphapapa/org-protocol-capture-html" target="_blank" rel="noopener noreffer">Org-protocol-capture-html 官网</a></li>
+</ul>
+<h3 id="例如-chrome">例如 Chrome</h3>
+<h4 id="在-chrome-新建-书签">在 Chrome 新建 书签</h4>
+<ol>
+<li>书签名称随便取</li>
+<li>书签地址如下👇</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">javascript</span><span class="o">:</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;org-protocol:///capture-html?template=w&amp;url=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;title=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;[untitled page]&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;body=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">window</span><span class="p">.</span><span class="nx">getSelection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">sel</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">getSelection</span><span class="p">();</span> <span class="k">if</span> <span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;div&#34;</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span><span class="nx">container</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">getRangeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">cloneContents</span><span class="p">());}</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">container</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">&#34;Text&#34;</span><span class="p">)</span> <span class="p">{</span><span class="nx">html</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">createRange</span><span class="p">().</span><span class="nx">htmlText</span><span class="p">;}}</span> <span class="kd">var</span> <span class="nx">relToAbs</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">href</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;a&#34;</span><span class="p">);</span> <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">href</span><span class="p">;</span> <span class="kd">var</span> <span class="nx">abs</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">+</span> <span class="s2">&#34;//&#34;</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">host</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">pathname</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">search</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">hash</span><span class="p">;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span> <span class="k">return</span> <span class="nx">abs</span><span class="p">;};</span> <span class="kd">var</span> <span class="nx">elementTypes</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;img&#39;</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">]];</span> <span class="kd">var</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">html</span><span class="p">;</span> <span class="nx">elementTypes</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elementType</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">elements</span> <span class="o">=</span> <span class="nx">div</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">relToAbs</span><span class="p">(</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">])));}});</span> <span class="k">return</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}());</span>
+
+<span class="nx">javascript</span><span class="o">:</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;org-protocol:///capture-eww-readable?template=w&amp;url=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;title=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;[untitled page]&#34;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="firefox-如下">Firefox 如下</h3>
+<h4 id="在-firefox-新建-书签">在 Firefox 新建 书签</h4>
+<ol>
+<li>书签名称随便取</li>
+<li>书签地址如下👇</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">javascript</span><span class="o">:</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;org-protocol://capture-html?template=w&amp;url=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;title=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;[untitled page]&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;body=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getSelection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">sel</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getSelection</span><span class="p">();</span> <span class="k">if</span> <span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;div&#34;</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span><span class="nx">container</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">getRangeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">cloneContents</span><span class="p">());}</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">container</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">&#34;Text&#34;</span><span class="p">)</span> <span class="p">{</span><span class="nx">html</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">createRange</span><span class="p">().</span><span class="nx">htmlText</span><span class="p">;}}</span> <span class="kd">var</span> <span class="nx">relToAbs</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">href</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;a&#34;</span><span class="p">);</span> <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">href</span><span class="p">;</span> <span class="kd">var</span> <span class="nx">abs</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">+</span> <span class="s2">&#34;//&#34;</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">host</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">pathname</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">search</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">hash</span><span class="p">;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span> <span class="k">return</span> <span class="nx">abs</span><span class="p">;};</span> <span class="kd">var</span> <span class="nx">elementTypes</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;img&#39;</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">]];</span> <span class="kd">var</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">html</span><span class="p">;</span> <span class="nx">elementTypes</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elementType</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">elements</span> <span class="o">=</span> <span class="nx">div</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">relToAbs</span><span class="p">(</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">])));}});</span> <span class="k">return</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}());</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="享受使用-">享受使用 👇</h2>
+<h3 id="使用之前">使用之前</h3>
+<p><code>请把你的 Chrome 或者 Firefox 的 书签 始终可见(比如在你浏览网页选中文字时可以点击你的书签)</code></p>
+<h3 id="开始使用">开始使用</h3>
+<ol>
+<li>打开 Emacs</li>
+<li>使用浏览器浏览网页</li>
+<li>在网页 <code>选择你想收集的文本</code></li>
+<li>点击你刚才新建的书签, 点击确定授权之类的</li>
+<li>回到 Emacs 你会看到你已经收集到的 Capture</li>
+<li>自己记得保存</li>
+<li>你收集到的会 保存到 <code>~/Org/网页收集.org</code> 文件中</li>
+</ol>
+<h2 id="如果你有更多的需求-请自己学习-因为网上并没有详细的教程使用-org-protocol-所以才有了本教程">如果你有更多的需求, 请自己学习, 因为网上并没有详细的教程使用 org-protocol 所以才有了本教程</h2>
+<p><code>祝你使用愉快🤓⚡👉♥️🌹</code></p>
 ]]></description>
 </item></channel>
 </rss>
