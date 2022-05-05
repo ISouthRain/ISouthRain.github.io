@@ -475,7 +475,7 @@ ALGOLIA_ADMIN_KEY=
       <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
       <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
       <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
-    <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;Hugo-en&#34;</span>
+    <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 根据你创建的 index 名, 例如 Hugo-en</span>
     <span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
     <span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
 
@@ -529,7 +529,7 @@ ALGOLIA_ADMIN_KEY=
       <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
       <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
       <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
-    <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;Hugo-zh&#34;</span>
+    <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 根据你创建的 index 名, 例如 Hugo-zh</span>
     <span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
     <span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
 </code></pre></td></tr></table>
