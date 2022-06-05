@@ -1,0 +1,148 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Neovim - 标签 - ISouthRain</title>
+        <link>http://isouthrain.github.io/tags/neovim/</link>
+        <description>Neovim - 标签 - ISouthRain</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Mon, 27 Dec 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/neovim/" rel="self" type="application/rss+xml" /><item>
+    <title>Vim和Emacs的选择</title>
+    <link>http://isouthrain.github.io/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</link>
+    <pubDate>Mon, 27 Dec 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
+    <description><![CDATA[<h1 id="前言">前言</h1>
+<p><strong>这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs</strong><br>
+<strong>Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读者根据自己的需求选择 Vim 还是 Emacs</strong></p>
+<h2 id="编辑习惯">编辑习惯</h2>
+<ol>
+<li>
+<p>Vim 在于<strong>按键的组合</strong>,比如你可以配置任何按键组合去触发某些动作,(e.g 你可以在 I 模式 配置 jk 去触发按键 <ESC> 进入 N 模式,然后相当于你没有输入过 jk), 这只是一个例子,反正你能做到全部Vim 能做的,甚至调用插件以及命令.</p>
+</li>
+<li>
+<p>Emacs 做不到上面例子,Emacs 是靠函数触发的或者说你必须 Ctrl+才能实现某些功能(类似Vim 的例子), Emacs 就是一个 Elisp 语言的运行器, 你做的每一个动作都是在触发某个函数(e.g Ctrl+n 触发 next-line 函数将光标移动到下一行)</p>
+</li>
+<li>
+<p>在这一点上显然是 Vim 更方便,因为按键组合真的非常好用,还不影响输入,对于 Emacs 就必须用两个按键同时按下, 这非常麻烦, 所以在按键组合中 <strong>Vim</strong> 有着非常好的优势, 因为 <strong>Emacs</strong> 要按 <strong>Ctrl</strong> 键, 左边小拇指真的难受, 不过 <strong>Emacs</strong> 也有模拟 <strong>Vim</strong> 的插件, 但仅仅是只能模拟控制光标和一些命令, 做不到可以设置按键组合触发某些功能!</p>
+</li>
+</ol>
+<h2 id="vim-和-emacs-设置理念">Vim 和 Emacs 设置理念</h2>
+<ol>
+<li>
+<p>Vim 类似一把短刀, 只做好一件事, 他仅仅是一个编辑器</p>
+</li>
+<li>
+<p>Emacs 类似一个武器库, 可以做非常多的事, 但都不精, Emacs 有时候被人说做是一个 <strong>编辑器系统</strong> 我个人感觉还是挺符合的</p>
+</li>
+<li>
+<p>总之 Emacs 比 Vim 做的事多得多, Emacs 是可以查看图片的, 而且现在 Emacs 已经发展到通过插件可以在Emacs进行网页浏览和播放视频了 [类似 Chrome 那种浏览器 ] (e.g EAF 框架)</p>
+</li>
+</ol>
+<h2 id="emacs-的个人笔记管理">Emacs 的个人笔记管理</h2>
+<ol>
+<li>
+<p>如果你有写笔记的习惯, 那么你一定听说过 Markdown 的语法, <strong>我要说的不是Markdown</strong> 而是Emacs内置的一个笔记系统 Org-mode.</p>
+</li>
+<li>
+<p>Org-mode 只有在 Emacs 有着非常好的体验, 而在其它编辑软件基本无法发挥 org-mode 的强大</p>
+</li>
+<li>
+<p>Org-mode 的表格可以运算, 代码块可以直接进行运行并返回结果, 捕获(Capture)功能, GTD管理系统(比如 日程安排(可以重复提醒), TODO, 计时器, 导出为其它格式)</p>
+</li>
+<li>
+<p>所以说, 如果你打算使用 Emacs 真的非常多优点, org-mode 有点难学习(和设置), 因为使用 org 之前你的会 Emacs 以及 ELisp语言基础</p>
+</li>
+</ol>
+<h2 id="如何选择-vim-和-emacs-">如何选择 Vim 和 Emacs ?</h2>
+<p><strong>如果你需要很多的功能, 建议你选择 Emacs , 因为 Emacs 是可发展的, 以及可以运行图形界面, 使 GUI 功能 在Emacs成为了可能</strong></p>
+<p><strong>Vim 只能查看文本之类的, 图片这些无法处理, 只能通过调用第三方应用才能处理查看</strong>
+<strong>如果你非常需要 GTD 系统之类的, 那么 Emacs 是不二智选, 如果 你只是需要出来文本的,那么Vim更好</strong></p>
+<p><strong>Emacs 如果你使用的非常好, 非常6, 那么你将非常牛逼, 而且我估计你未来时不会再更换编辑器了</strong></p>
+<p>我个人是 Vim &mdash;&gt; Emacs &mdash;&gt; Vim 还是回到了 Vim</p>
+]]></description>
+</item><item>
+    <title>(Neo)Vim 中英文输入法</title>
+    <link>http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+    <pubDate>Sun, 26 Dec 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
+    <description><![CDATA[<h1 id="概述">概述</h1>
+<p><strong>使用 Vim 每当我们切换中文输入时都要切换中英文,这非常繁琐还好有Vim 插件了来弥补这个缺点</strong> <br>
+<strong>这个插件就是 <a href="https://github.com/ZSaberLv0/ZFVimIM" target="_blank" rel="noopener noreffer">ZFVimIM</a>, 这插件支持云输入(云词库), 非常的好用, 而且不影响你使用 <em>jk</em> 切换的到 <em>Normal</em> 模式, 配置也非常简单</strong></p>
+<h2 id="安装-zfvimim">安装 ZFVimIM</h2>
+<h3 id="安装必要插件-使用vim-plug-安装">安装必要插件 <strong>使用Vim Plug</strong> 安装</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Plug &#39;ZSaberLv0/ZFVimIM&#39;
+Plug &#39;ZSaberLv0/ZFVimJob&#39; &#34; 可选, 用于提升词库加载性能
+Plug &#39;ZSaberLv0/ZFVimIM_openapi&#39; &#34;云词库
+Plug &#39;ZSaberLv0/ZFVimIM_pinyin&#39; &#34;db文件
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>我是使用 Neovim 以下是我的配置</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&#34; 云词库支持
+let g:ZFVimIM_openapi_enable=1
+
+&#34; 使用本地 db 的配置
+function! s:zfvimim_init() abort
+  let db = ZFVimIM_dbInit({&#39;name&#39; : &#39;中文输入法&#39;})
+  call ZFVimIM_cloudRegister({
+			  \   &#39;mode&#39; : &#39;local&#39;,
+			  \   &#39;dbId&#39; : db[&#39;dbId&#39;],
+			  \   &#39;repoPath&#39; : expand(&#39;~/.config/nvim/plugged/ZFVimIM_pinyin/misc/&#39;), &#34; 词库路径,就是放下面两个文件的路径
+			  \   &#39;dbFile&#39; : &#39;pinyin.txt&#39;, &#34; 词库文件, 相对 repoPath 的路径
+			  \   &#39;dbCountFile&#39; : &#39;pinyin_count.txt&#39;, &#34; 非必须, 词频文件, 相对 repoPath 的路径
+			  \ })
+endfunction
+
+augroup zfvim_conf
+  autocmd!
+  autocmd VimEnter * call s:zfvimim_init()
+augroup END
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="安装后使用">安装后使用</h2>
+<ul>
+<li><code>;;</code> 开启或关闭输入法, <code>;:</code> 切换词库</li>
+<li><code>-</code> 和 <code>=</code> 翻页</li>
+<li><code>空格</code> 和 <code>0~9</code> 选词或组词</li>
+<li><code>[</code> 和 <code>]</code> 快速从词组选字</li>
+<li>输入过程中会自动组自造词, 也可以用 <code>;,</code> 或 <code>:IMAdd</code> 手动添加自造词,
+<code>;.</code> 或 <code>:IMRemove</code> 删除自造词</li>
+<li>觉得好用, 记得给开发者<a href="https://github.com/ZSaberLv0/ZSaberLv0" target="_blank" rel="noopener noreffer">买个煎饼</a>,
+贫穷码农在线乞讨 <code>_(:з」∠)_</code></li>
+</ul>
+<p><strong>更多细节请到官方 <a href="https://github.com/ZSaberLv0/ZFVimIM" target="_blank" rel="noopener noreffer">ZFVimIM</a></strong></p>
+<h2 id="如果你觉得好用-希望您能给开发者-买个煎饼httpsgithubcomzsaberlv0zsaberlv0">如果你觉得好用, 希望您能给开发者 <a href="https://github.com/ZSaberLv0/ZSaberLv0" target="_blank" rel="noopener noreffer">买个煎饼</a></h2>
+<p><strong>开发者不是我本人</strong></p>
+]]></description>
+</item></channel>
+</rss>

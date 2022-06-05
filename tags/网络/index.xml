@@ -1,0 +1,243 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>网络 - 标签 - ISouthRain</title>
+        <link>http://isouthrain.github.io/tags/%E7%BD%91%E7%BB%9C/</link>
+        <description>网络 - 标签 - ISouthRain</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sun, 01 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/%E7%BD%91%E7%BB%9C/" rel="self" type="application/rss+xml" /><item>
+    <title>Frp内网穿透</title>
+    <link>http://isouthrain.github.io/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+    <pubDate>Sun, 01 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+    <description><![CDATA[<h3 id="什么是内网穿透">什么是内网穿透?</h3>
+<p><strong>通俗的说:</strong> 把 <code>局域网</code> 变成 <code>公网</code> 那样可以让外面的人访问</p>
+<h3 id="内网穿透工具">内网穿透工具</h3>
+<ul>
+<li><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreffer">Frp</a></li>
+<li><a href="https://ngrok.com" target="_blank" rel="noopener noreffer">ngrok</a></li>
+<li><a href="https://flynat.51miaole.com" target="_blank" rel="noopener noreffer">蜻蜓映射</a></li>
+<li><a href="https://natapp.cn" target="_blank" rel="noopener noreffer">natapp</a></li>
+<li>以及一些其它的, 不一一列出了, 大家可以上网查查</li>
+<li>推荐大家使用 <code>Frp</code> , 因为免费且开源, 易配置, 简单使用</li>
+</ul>
+<h3 id="frp-为例">Frp 为例</h3>
+<ul>
+<li><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreffer">Frp项目地址</a></li>
+</ul>
+<h3 id="服务器端">服务器端</h3>
+<h4 id="下载-frp">下载 frp</h4>
+<ul>
+<li>
+<p>根据自己的系统下载对于版本</p>
+</li>
+<li>
+<p><a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreffer">Frp地址</a></p>
+</li>
+<li>
+<p>Linux 用户可以使用 <code>wget</code> 工具下载</p>
+<ul>
+<li>例如: wget <a href="https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz">https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="解压">解压</h4>
+<ul>
+<li>tar -zxvf frpxxxxxx.tar.gz</li>
+</ul>
+<h4 id="前往到解压目录">前往到解压目录</h4>
+<ul>
+<li>cd frpxxxxxx</li>
+</ul>
+<h4 id="编辑-frpsini">编辑 frps.ini</h4>
+<ul>
+<li><strong>根据自己情况添加</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">common</span><span class="p">]</span>
+<span class="nx">bind_addr</span> <span class="p">=</span> <span class="mf">0.0</span><span class="p">.</span><span class="mf">0.0</span>
+<span class="c"># frp 监听的端口，默认是7000</span>
+<span class="nx">bind_port</span> <span class="p">=</span> <span class="mi">7000</span>
+<span class="c"># 授权码, 随便填一个</span>
+<span class="nx">token</span> <span class="p">=</span> <span class="nx">xxxxx</span>
+
+<span class="c"># frp管理后台端口，请按自己需求更改</span>
+<span class="nx">dashboard_port</span> <span class="p">=</span> <span class="mi">7100</span>
+<span class="c"># frp管理后台用户名和密码</span>
+<span class="nx">dashboard_user</span> <span class="p">=</span> <span class="nx">xxxx</span>
+<span class="nx">dashboard_pwd</span> <span class="p">=</span> <span class="nx">xxxx</span>
+<span class="nx">enable_prometheus</span> <span class="p">=</span> <span class="kc">true</span>
+
+<span class="c"># frp日志配置</span>
+<span class="nx">log_file</span> <span class="p">=</span> <span class="err">/</span><span class="nx">var</span><span class="err">/</span><span class="nx">log</span><span class="err">/</span><span class="nx">frps</span><span class="p">.</span><span class="nx">log</span>
+<span class="nx">log_level</span> <span class="p">=</span> <span class="nx">info</span>
+<span class="nx">log_max_days</span> <span class="p">=</span> <span class="mi">3</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="运行-frps">运行 frps</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Linux 用户</span>
+chomd +x frps
+./frps -c frps.ini
+<span class="c1"># windows用户</span>
+./frps.exe -c frps.ini
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="客户端你的局域网端">客户端(你的局域网端)</h3>
+<ul>
+<li><strong>相同方法下载</strong></li>
+</ul>
+<h4 id="解压后-编辑-frpcini">解压后 编辑 frpc.ini</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 服务端配置</span>
+<span class="p">[</span><span class="nx">common</span><span class="p">]</span>
+<span class="nx">server_addr</span> <span class="p">=</span> <span class="nx">服务器ip</span>
+<span class="c"># 请换成设置的服务器端口</span>
+<span class="nx">server_port</span> <span class="p">=</span> <span class="mi">7000</span>
+<span class="nx">token</span> <span class="p">=</span> <span class="nx">与上面frps</span><span class="p">.</span><span class="nx">ini的相同</span>
+
+<span class="c"># 配置ssh服务</span>
+<span class="p">[</span><span class="nx">ssh</span><span class="p">]</span>
+<span class="nx">type</span> <span class="p">=</span> <span class="nx">tcp</span>
+<span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
+<span class="nx">local_port</span> <span class="p">=</span> <span class="mi">8022</span>
+<span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如8022</span>
+
+<span class="p">[</span><span class="nx">web</span><span class="p">]</span>
+<span class="nx">type</span> <span class="p">=</span> <span class="nx">http</span>
+<span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
+<span class="nx">local_port</span> <span class="p">=</span> <span class="mi">8080</span>
+<span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如8080</span>
+<span class="c"># 多端口</span>
+<span class="p">[</span><span class="nx">range</span><span class="err">:</span><span class="nx">Test</span><span class="p">]</span>
+<span class="p">[</span><span class="nx">web</span><span class="p">]</span>
+<span class="nx">type</span> <span class="p">=</span> <span class="nx">http</span>
+<span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
+<span class="nx">local_port</span> <span class="p">=</span> <span class="mi">9000-9010</span>
+<span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如9000</span><span class="mi">-9010</span>
+
+
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="启动-frpc">启动 frpc</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Linux用户</span>
+./frpc -c frpc.ini
+<span class="c1"># Windows用户</span>
+./frpc.exe -c frpc.ini
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="测试">测试</h3>
+<p><strong>在你的公网端, 进行测试</strong></p>
+<ul>
+<li>例如, 服务器端链接局域网端 ssh</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh -p 端口 root@服务器IP
+<span class="c1"># 例如</span>
+ssh -p <span class="m">8022</span> root@192.13.33.6
+</code></pre></td></tr></table>
+</div>
+</div><p><strong><code>服务器端口必须要开放对应端口</code></strong></p>
+<p><strong>注意, 当你想访问局域网端时, 局域网端口的本地端口一定是开的, 并对应于你设置frpc.ini的端口</strong></p>
+<p><strong>服务器端 frps, 局域网端 frpc, 必须同时开启才可正常使用</strong></p>
+<h3 id="faq">FAQ❓</h3>
+<h4 id="可以让服务器端开机启动-不太麻烦">可以让服务器端开机启动, 不太麻烦</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> frp目录
+mkdir -p /etc/frp
+cp frps.ini /etc/frp
+cp frps /usr/bin
+cp systemd/frps.service /usr/lib/systemd/system/
+systemctl <span class="nb">enable</span> frps
+systemctl start frps
+</code></pre></td></tr></table>
+</div>
+</div>]]></description>
+</item></channel>
+</rss>

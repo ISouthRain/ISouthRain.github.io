@@ -1,0 +1,197 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Markdwon - 标签 - ISouthRain</title>
+        <link>http://isouthrain.github.io/tags/markdwon/</link>
+        <description>Markdwon - 标签 - ISouthRain</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/markdwon/" rel="self" type="application/rss+xml" /><item>
+    <title>Markdown语法</title>
+    <link>http://isouthrain.github.io/2022-04-30-markdown%E8%AF%AD%E6%B3%95/</link>
+    <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-04-30-markdown%E8%AF%AD%E6%B3%95/</guid>
+    <description><![CDATA[<h4 id="粗体">粗体</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">**粗体**
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="斜体">斜体</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">*斜体* 
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="粗斜体">粗斜体</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">***粗斜体***
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="粗斜体-1">粗斜体</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">***粗斜体***
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="链接">链接🔗</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">[<span class="nt">备注</span>](<span class="na">链接</span>) 
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="文件链接">文件链接</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">![<span class="nt">备注</span>](<span class="na">链接</span>)
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="内部文件跳转">内部文件跳转</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;span id = &#34;瞄点&#34;&gt;跳转至瞄点&lt;/span&gt;
+
+[跳转至瞄点](#瞄点)
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="效果如下">效果如下</h5>
+<p><code>效果如下👇</code></p>
+<video poster="效果动图"  width="360" height="240" controls>
+    <source src="/posts/Attachment/2022-04-30-Markdown语法.zh-cn.md/2022-04-30-23-07-03.mp4" type="video/mp4">
+</video>    
+<h4 id="嵌入视频">嵌入视频</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">&lt;video poster=&#34;效果动图&#34;  width=&#34;360&#34; height=&#34;240&#34; controls&gt;
+    &lt;source src=&#34;视频链接链接，支持其他格式，当使用其他格式时，不要替换后面的 video/mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;  
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="折叠列表">折叠列表</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">&lt;details&gt;
+&lt;summary&gt;这是一个折叠列表&lt;/summary&gt;
+
+折叠内容, 上面空一行
+
+下一行
+&lt;details&gt;
+&lt;summary&gt;这是一个嵌套折叠列表&lt;/summary&gt;
+
+嵌套折叠内容, 上面空一行
+
+下一行
+&lt;/details&gt;
+&lt;/details&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="效果如下-1">效果如下</h5>
+<video poster="效果动图"  width="360" height="240" controls>
+    <source src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/posts/Attachment/2022-04-30-Markdown语法.zh-cn.md/折叠列表.mp4" type="video/mp4">
+</video>  
+<h4 id="表格">表格</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-markdown" data-lang="markdown">|1   |   2  |   3|
+|:-  |  :-: |  -:|
+|居右| 居中 |居左|
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="代码块">代码块</h4>
+<p>用6个  <strong>`</strong> 包裹</p>
+<h4 id="块状">块状</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="sb">`块状`</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="下划线">下划线</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">&lt;u&gt;下划线&lt;/u&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="删除线">删除线</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">~~删除线~~
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="使用表情">使用表情</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">露营 :tent: 
+
+真好笑 :joy:
+</code></pre></td></tr></table>
+</div>
+</div><p>露营⛺</p>
+<p>真好笑😂</p>
+<p><a href="https://gist.github.com/rxaviers/7360908" target="_blank" rel="noopener noreffer">表情符号码表</a></p>
+]]></description>
+</item></channel>
+</rss>

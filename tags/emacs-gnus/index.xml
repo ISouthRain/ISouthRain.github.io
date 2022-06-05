@@ -1,0 +1,131 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Emacs Gnus - 标签 - ISouthRain</title>
+        <link>http://isouthrain.github.io/tags/emacs-gnus/</link>
+        <description>Emacs Gnus - 标签 - ISouthRain</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sat, 04 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/emacs-gnus/" rel="self" type="application/rss+xml" /><item>
+    <title>Emacs Gnus 使用 Gmail</title>
+    <link>http://isouthrain.github.io/2022-06-04-gnus-use-gmail.zh-ch/</link>
+    <pubDate>Sat, 04 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-06-04-gnus-use-gmail.zh-ch/</guid>
+    <description><![CDATA[<h1 id="介绍">介绍</h1>
+<p>Xinetd 是一个互联网多功能的工具, 在此这里只使用它的 <strong>端口转发</strong> 功能<br>
+<strong>端口转发</strong> 是将服务器端口进行数据转接, <code>例如: </code>当你使用服务端口配置好了 <strong>imap.gmail.com + 端口</strong>, 客户端口就可以直接访问 <strong>服务器IP + 端口</strong> 就相当于你访问的是 <strong>imap.gmail.com + 端口</strong> 的数据, 这样就可以避免无法访问gmail</p>
+<h2 id="要求">要求</h2>
+<p>一台可以访问 gmail 的服务器</p>
+<h2 id="安装-xinetd">安装 Xinetd</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">apt install xinetd
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="编辑-xinetd-配置文件-让gmail工作">编辑 Xinetd 配置文件, 让gmail工作</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">vim /etc/xinetd.d/gmail
+</code></pre></td></tr></table>
+</div>
+</div><p><code>/etc/xinetd.d/gmail</code> 文件内容:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># /etc/xinetd.d/gmail
+service imap
+{
+type = UNLISTED
+port = 993
+bind = 0.0.0.0
+socket_type = stream
+wait = no
+user = nobody
+redirect = imap.gmail.com 993
+per_source = UNLIMITED
+cps = 100 2
+}
+service smtp-465
+{
+type = UNLISTED
+port = 465
+bind = 0.0.0.0
+socket_type = stream
+wait = no
+user = nobody
+redirect = smtp.gmail.com 465
+per_source = UNLIMITED
+cps = 100 2
+}
+service smtp-587
+{
+type = UNLISTED
+port = 587
+bind = 0.0.0.0
+socket_type = stream
+wait = no
+user = nobody
+redirect = smtp.gmail.com 587
+per_source = UNLIMITED
+cps = 100 2
+}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="运行服务">运行服务</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">service xinetd start
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="hacker-enjoy">Hacker Enjoy</h3>
+<pre><code>把你的Gnus配置接受服务 `imap.gmail.com` 改成 对应于你的 服务器IP, 发送邮件设置也一样改成你的服务器IP 
+</code></pre>
+]]></description>
+</item></channel>
+</rss>
