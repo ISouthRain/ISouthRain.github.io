@@ -124,7 +124,8 @@ cps = 100 2
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="hacker-enjoy">Hacker Enjoy</h3>
-<pre><code>把你的Gnus配置接受服务 `imap.gmail.com` 改成 对应于你的 服务器IP, 发送邮件设置也一样改成你的服务器IP 
+<pre><code>把你的Gnus配置接受服务 `imap.gmail.com` 改成 对应于你的 服务器IP
+发送邮件设置也一样改成你的服务器IP 
 </code></pre>
 ]]></description>
 </item><item>
