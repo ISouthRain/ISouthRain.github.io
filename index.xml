@@ -7,6 +7,1118 @@
             <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Tue, 26 Apr 2022 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="http://isouthrain.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>普通人如何使用Emacs</title>
+    <link>http://isouthrain.github.io/2022-04-29-how-to-use-emacs/</link>
+    <pubDate>Fri, 29 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-04-29-how-to-use-emacs/</guid>
+    <description><![CDATA[<p>#+D是否为草稿 <br/></p>
+<p>#+Html导出主题 <br/></p>
+<p>#+D置顶文章 1 为置顶 <br/></p>
+<blockquote>
+<p>Emacs 不仅可用于编码， 更可用于生活。 <br/></p>
+</blockquote>
+<h2 id="home">Home</h2>
+<h3 id="阅读之前">阅读之前</h3>
+<ul>
+<li>本文的 <strong>普通人</strong> 指的是 <strong>非程序员</strong>  <br/></li>
+<li>为什么编写这编文章? <br/>
+<ul>
+<li>因为受到了 <strong>Protesilaos Stavrou</strong> 影响 <br/>
+<ul>
+<li>Protesilaos Stavrou <a href="https://mp.weixin.qq.com/s/VfclpaYjCH8aLh0uMYny1w" target="_blank" rel="noopener noreffer">隐居、反内卷，不意味着躺平｜专访2021年度“杰出新自由软件贡献者”奖得主</a> <br/></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>本文章应该适合新手阅读,因为我定位在了 <em>如何使用 <strong>Emacs</strong></em> <br/></li>
+<li>本文旨在让更多的人(非程序员)使用 Emacs 管理自己的生活, Emacs不单限于代码编辑 <br/></li>
+</ul>
+<h3 id="文章适合人群">文章适合人群</h3>
+<ul>
+<li><strong><em>追求自由与和平</em></strong> <br/></li>
+<li>没有写过代码的 <br/></li>
+<li>在寻找一个 <strong>笔记软件</strong> 的用户 <br/></li>
+<li>使用GTD 管理自己的生活 <br/></li>
+</ul>
+<h3 id="安装-emacs">安装 Emacs</h3>
+<ul>
+<li><a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener noreffer">官方网站</a> <br/></li>
+<li><strong>Linux</strong>  <br/>
+<ul>
+<li>使用对应的包管理下载, 例如 <strong>Ubuntu</strong> <br/>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="nv">sudo</span> <span class="nv">apt</span> <span class="nv">install</span> <span class="nv">emacs</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li><strong>Windows</strong> <br/>
+<ul>
+<li><a href="http://gnu.mirrors.hoobly.com/emacs/windows/emacs-28/" target="_blank" rel="noopener noreffer">GNU Emacs</a> 选择最新版本 zip 文件, 解压运行 emacs.exe <br/></li>
+</ul>
+</li>
+<li><strong>Mac OSX</strong> <br/>
+<ul>
+<li><a href="https://emacsformacos.com/" target="_blank" rel="noopener noreffer">Mac for Emacs</a> <br/></li>
+</ul>
+</li>
+</ul>
+<h3 id="简单使用">简单使用</h3>
+<ul>
+<li>
+<p>按键说明 <br/></p>
+<ul>
+<li>开头的 <strong>C</strong> 代表 <strong>Ctrl</strong> 按键 <br/></li>
+<li>开头的 <strong>M</strong> 代表 <strong>Alt</strong> 按键 <br/></li>
+</ul>
+</li>
+<li>
+<p>基础按键 <br/></p>
+<ul>
+<li><strong>M + x</strong> 输入命令 <br/></li>
+<li><strong>C + g</strong> 取消所有命令/状态 <br/></li>
+<li><strong>C + n</strong> 即 <strong>Ctrl + n</strong> , 等于 <strong>键盘向下按键</strong> , 解释为 <em>将光标移动到下一行</em> <br/></li>
+<li><strong>C + p</strong> 即 <strong>Ctrl + n</strong> , 等于 <strong>键盘向下按键</strong> , 解释为 <em>将光标移动到下一行</em> <br/></li>
+<li><strong>C + f</strong> 即 <strong>Ctrl + f</strong> , 等于 <strong>键盘向右按键</strong> , 解释为 <em>将光标向右移动一个字母</em> <br/></li>
+<li><strong>C + b</strong> 即 <strong>Ctrl + b</strong> , 等于 <strong>键盘向左按键</strong> , 解释为 <em>将光标向左移动一个字母</em> <br/></li>
+</ul>
+</li>
+<li>
+<p>退出软件 <br/></p>
+<ul>
+<li><strong>C + x</strong> 之后再按 <strong>C + c</strong> <br/></li>
+</ul>
+</li>
+<li>
+<p><em>注意事项</em> <br/></p>
+<ul>
+<li>对于 Emacs 来说, 你的每一个动作都是在执行命令, <strong>例如, 当你按键 <em>C + n</em> 就是在执行 <em>next-line</em> 命令</strong>, 可以使用 M + x 输入 next-line 试试哦! <br/></li>
+</ul>
+</li>
+</ul>
+<h3 id="emacs-允许用户修改emacs所有的设置">Emacs 允许用户修改Emacs所有的设置</h3>
+<ul>
+<li>Emacs 是真正属于用户自己了, 如果你对Emacs现有的不满意, 自己完全可以设置 <br/></li>
+<li><strong>按照自己的意愿使用Emacs</strong> <br/></li>
+<li>Emacs 拥有的生态甚至已经比肩一个 <strong>系统</strong> 的生态了 <br/></li>
+</ul>
+<h3 id="基本配置">基本配置</h3>
+<ul>
+<li>所有的配置都会放到 init.el <br/></li>
+<li>Linux/Uinx (Mac OSX) <br/>
+<ul>
+<li>~/.emacs.d/init.el <br/></li>
+</ul>
+</li>
+<li>Windows <br/>
+<ul>
+<li>C:\Users\Jack\AppData\Roaming\.emacs.d\init.el <br/></li>
+</ul>
+</li>
+</ul>
+<h4 id="简单配置">简单配置</h4>
+<ul>
+<li>请将代码复制到 init.el 文件中, 修改后重启 Emacs 后生效 <br/></li>
+<li>显示行号 <br/>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;; ~/.emacs.d/init.el</span>
+<span class="c1">;; ;; 开头为注释</span>
+<span class="c1">;;显示行号</span>
+<span class="p">(</span><span class="nv">global-linum-mode</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>以下为个人的基本配置 <br/>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp">      <span class="c1">;; 设置编码</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">default-buffer-file-coding-system</span> <span class="ss">&#39;utf-8</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">prefer-coding-system</span> <span class="ss">&#39;utf-8</span><span class="p">)</span>
+    
+      <span class="c1">;;显示行号</span>
+<span class="p">(</span><span class="nv">global-linum-mode</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1">;;高亮当前行</span>
+<span class="p">(</span><span class="nv">global-hl-line-mode</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1">;;关闭启动画面</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">inhibit-startup-message</span> <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">toggle-truncate-lines</span> <span class="no">t</span><span class="p">)</span>
+    
+<span class="c1">;;显示时间</span>
+<span class="p">(</span><span class="nv">display-time-mode</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">;; 常显</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">display-time-24hr-format</span> <span class="no">t</span><span class="p">)</span> <span class="c1">;;格式</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">display-time-day-and-date</span> <span class="no">t</span><span class="p">)</span> <span class="c1">;;显示时间、星期、日期</span>
+    
+    
+<span class="c1">;; 关闭启动帮助画面</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">inhibit-splash-screen</span> <span class="mi">1</span><span class="p">)</span>
+    
+<span class="c1">;; 备份文件 nil or t</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">make-backup-files</span> <span class="no">nil</span><span class="p">)</span>
+    
+<span class="c1">;; 自动加载外部修改的文件</span>
+<span class="p">(</span><span class="nv">global-auto-revert-mode</span> <span class="mi">1</span><span class="p">)</span>
+    
+<span class="c1">;; 关闭自动保存文件</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">auto-save-default</span> <span class="no">t</span><span class="p">)</span>
+<span class="c1">;; 关闭警告声</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">ring-bell-function</span> <span class="ss">&#39;ignore</span><span class="p">)</span>
+    
+<span class="c1">;; 简化yes和no</span>
+<span class="p">(</span><span class="nf">fset</span> <span class="ss">&#39;yes-or-no-p</span> <span class="ss">&#39;y-or-n-p</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="区分系统类型和gui或者tui界面">区分系统类型和GUI或者TUI界面</h4>
+<ul>
+<li>以下设置会根据你目前的系统而加载代码, 通常用来区分 windows 和 linux 配置路径问题 <br/></li>
+</ul>
+<!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;;不同系统的配置</span>
+<span class="c1">;; Windows</span>
+<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string=</span> <span class="s">&#34;windows-nt&#34;</span> <span class="nv">system-type</span><span class="p">)</span>
+<span class="c1">;; 代码放在这个范围</span>
+<span class="p">)</span>
+<span class="c1">;; Linux</span>
+<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string=</span> <span class="s">&#34;gnu/linux&#34;</span> <span class="nv">system-type</span><span class="p">)</span>
+<span class="c1">;; 代码放在这个范围</span>
+<span class="p">)</span>
+<span class="c1">;; Mac OSX</span>
+<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string=</span> <span class="s">&#34;darwin&#34;</span> <span class="nv">system-type</span><span class="p">)</span>
+<span class="c1">;; 代码放在这个范围</span>
+<span class="p">)</span>
+<span class="c1">;; GUI图形界面或者TUI终端界面</span>
+<span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nv">display-graphic-p</span><span class="p">)</span>
+    <span class="c1">;; GUI 代码放置，多行代码的话用 (progn) 包一下</span>
+    <span class="p">(</span><span class="nb">progn</span> <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;这是GUI读取的配置1&#34;</span><span class="p">)</span>
+           <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;这是GUI读取的配置2&#34;</span><span class="p">)</span>
+           <span class="p">)</span>
+    <span class="c1">;; TUI 代码放置</span>
+    <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;这是TUI 读取的配置1&#34;</span><span class="p">)</span>
+    <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;这是TUI 读取的配置2&#34;</span><span class="p">)</span>
+    <span class="p">)</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="配置管理-请重视此标题-这将在未来帮助你减少大量时间">配置管理, 请重视此标题, 这将在未来帮助你减少大量时间</h3>
+<ul>
+<li>希望用户认真学习一下管理配置, <em>现在即使不会去管理, 但请参看</em> <br/></li>
+<li>你永远不会对你的配置满意, 所以请学习管理你自己的配置 <br/></li>
+<li>新建 ~/.emacs.d/core/init-basic.el 注意路径 <br/>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"> <span class="c1">;; ~/.emacs.d/core/init-basic.el</span>
+<span class="c1">;; 存放你的配置代码</span>
+<span class="c1">;;显示行号</span>
+<span class="p">(</span><span class="nv">global-linum-mode</span> <span class="mi">1</span><span class="p">)</span>
+    
+<span class="p">(</span><span class="nb">provide</span> <span class="ss">&#39;init-basic</span><span class="p">)</span> <span class="c1">;; 必要的, 让文件可以被调用</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>编辑 ~/.emacs.d/init.el <br/>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;; ~/.emacs.d/init.e</span>
+<span class="c1">;; 添加上面要添加进来的文件目录</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="p">(</span><span class="nf">expand-file-name</span> <span class="s">&#34;core&#34;</span> <span class="nv">user-emacs-directory</span><span class="p">))</span> <span class="c1">;; 必要的, 注意路径</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;init-basic</span><span class="p">)</span> <span class="c1">;; 将 ~/.emacs.d/core/init-basic.el 调用</span>
+<span class="c1">;; 这样就可以大胆把你的配置分不同文件管理了, 记得调用就好</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="包安装">包安装</h3>
+<ul>
+<li>对于 Emacs 原生来说太简陋了, 看起来可不太优雅 <br/></li>
+<li>Emacs 安装扩展包使得更加好看与适用 <br/></li>
+</ul>
+<h4 id="原生安装">原生安装</h4>
+<ul>
+<li>Emacs 自带一个安装扩展包的方法 <br/>
+<ul>
+<li><strong>在此 <em>不解释原生安装包方法</em> , 因为原生安装的方法并不好用,而且一旦安装很多软件包的话会影响到 Emacs 的启动速度</strong> <br/></li>
+</ul>
+</li>
+</ul>
+<h4 id="使用-use-package-安装扩展包">使用 Use-package 安装扩展包</h4>
+<!--list-separator-->
+<ul>
+<li>
+<p>配置 Use-package</p>
+<p><strong>有关更多 use-package</strong> 详解请到官方查看 <a href="https://github.com/jwiegley/use-package" target="_blank" rel="noopener noreffer">GitHub - jwiegley/use-package: A use-package declaration for simplifying your&hellip;</a> <br/></p>
+<ul>
+<li>use-package 常用参数 <br/>
+<ul>
+<li><strong>ensure t/nil</strong> ;; t 将会从官方网站下载, nil 从本地下载, 利用 load-path 参数指定目录加载 <br/></li>
+<li><strong>load-path &ldquo;path&rdquo;</strong> ;; 指定包加载路径 <br/></li>
+<li><strong>defer num</strong> ;; <em>num 为数字, 单位为秒, 意思是当 emacs 启动后多少秒再加载这个包, 对于以后减少 Emacs 启动时间非常有用</em> <br/></li>
+<li><strong>init</strong> ;; 加载包前加载 init 的配置 <br/></li>
+<li><strong>config</strong> ;; 加载完包后再加载 config 的配置 <br/></li>
+</ul>
+</li>
+</ul>
+ <!--listend-->
+<ol>
+<li>将以下内容放到你的配置文件中 init.el <br/></li>
+</ol>
+ <!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;package</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;package-archives</span>
+                         <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;melpa&#34;</span> <span class="o">.</span> <span class="s">&#34;https://melpa.org/packages/&#34;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">not</span> <span class="p">(</span><span class="nv">package-installed-p</span> <span class="ss">&#39;use-package</span><span class="p">))</span>
+  <span class="p">(</span><span class="nv">package-refresh-contents</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">package-install</span> <span class="ss">&#39;use-package</span><span class="p">)</span>
+  <span class="p">)</span>
+ <span class="c1">;; This is only needed once, near the top of the file</span>
+<span class="p">(</span><span class="nb">eval-when-compile</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;use-package</span><span class="p">))</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;use-package-ensure</span><span class="p">)</span>
+<span class="c1">;; 自动下载，不需要 :ensure t</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">use-package-always-ensure</span> <span class="no">t</span><span class="p">)</span>
+   
+</code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>下载一个包试试 <br/>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">包名</span><span class="p">)</span>
+<span class="c1">;; 例如 (use-package evil), 就会下载evil包</span>
+<span class="c1">;; 重新启动 Emaccs 就会看到目录 ~/.emacs.d/elpa 有这个包了</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+</li>
+</ul>
+<h3 id="emacs-光标移动选择">Emacs 光标移动选择</h3>
+<ul>
+<li>如果你是 Vim 用户, 建议安装 <strong>Evil</strong> 这个包, 它会模拟 vi 的键盘操作流程. <br/></li>
+<li>使用 Emacs 原生按键, 这可能 <em>废手指</em> 哈哈哈, 建议将 <strong>Ctrl</strong> 换成 <strong>Caps Lock</strong> , Windows 用户使用 <strong>AutoHotkey</strong>, 其余类似. <br/></li>
+<li><strong>Meow</strong> 猫态编辑, 有点类似 vim , 但是比 evil 更加的小巧和高效, <em>不过建议新人先不用这个</em>   <br/></li>
+</ul>
+<h4 id="个人推荐键盘">个人推荐键盘</h4>
+<ul>
+<li><strong>Evil</strong> 可能更加使用新手, 推荐去搜索一下 vi 键盘如何使用 <br/>
+<ul>
+<li>传送门 &mdash;&gt;  <a href="https://github.com/chloneda/vim-cheatsheet" target="_blank" rel="noopener noreffer">Vi 速查表</a>   <br/></li>
+</ul>
+</li>
+</ul>
+<h3 id="美化-emacs">美化 Emacs</h3>
+<h4 id="theme-主题">theme 主题</h4>
+<p>Emacs 只能加载一个主题, 但是可以安装多个主题, 可以在 Emacs 启动后再切换主题, 本文以 monokai 主题为例子 <br/></p>
+<ul>
+<li>monokai <br/>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">monokai</span>
+   <span class="nb">:ensure</span> <span class="no">t</span>
+   <span class="nb">:config</span>
+   <span class="p">(</span><span class="nv">load-theme</span> <span class="ss">&#39;monokai</span> <span class="no">t</span><span class="p">)</span>
+   <span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="mode-line-下方的状态栏美化-以-doom-modeline-为例-还有很多选择">mode-line 下方的状态栏美化, 以 doom-modeline 为例, 还有很多选择</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="c1">;; Modeline</span>
+<span class="p">(</span><span class="nb">use-package</span> <span class="nv">doom-modeline</span>
+<span class="nb">:ensure</span> <span class="no">t</span> <span class="c1">;; 从网上下载</span>
+<span class="nb">:defer</span> <span class="mi">1</span>  <span class="c1">;; 延迟加载</span>
+<span class="c1">;; :init (doom-modeline-mode 1)</span>
+<span class="nb">:config</span>
+<span class="p">(</span><span class="nv">doom-modeline-mode</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">;; If non-nil, cause imenu to see `doom-modeline&#39; declarations.</span>
+<span class="c1">;; This is done by adjusting `lisp-imenu-generic-expression&#39; to</span>
+<span class="c1">;; include support for finding `doom-modeline-def-*&#39; forms.</span>
+<span class="c1">;; Must be set before loading doom-modeline.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-support-imenu</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; How tall the mode-line should be. It&#39;s only respected in GUI.</span>
+<span class="c1">;; If the actual char height is larger, it respects the actual height.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-height</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="c1">;; How wide the mode-line bar should be. It&#39;s only respected in GUI.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-bar-width</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1">;; Whether to use hud instead of default bar. It&#39;s only respected in GUI.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-hud</span> <span class="no">nil</span><span class="p">)</span>
+
+<span class="c1">;; The limit of the window width.</span>
+<span class="c1">;; If `window-width&#39; is smaller than the limit, some information won&#39;t be</span>
+<span class="c1">;; displayed. It can be an integer or a float number. `nil&#39; means no limit.&#34;</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-window-width-limit</span> <span class="mf">0.25</span><span class="p">)</span>
+
+<span class="c1">;; How to detect the project root.</span>
+<span class="c1">;; nil means to use `default-directory&#39;.</span>
+<span class="c1">;; The project management packages have some issues on detecting project root.</span>
+<span class="c1">;; e.g. `projectile&#39; doesn&#39;t handle symlink folders well, while `project&#39; is unable</span>
+<span class="c1">;; to hanle sub-projects.</span>
+<span class="c1">;; You can specify one if you encounter the issue.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-project-detection</span> <span class="ss">&#39;auto</span><span class="p">)</span>
+
+<span class="c1">;; Determines the style used by `doom-modeline-buffer-file-name&#39;.</span>
+<span class="c1">;;</span>
+<span class="c1">;; Given ~/Projects/FOSS/emacs/lisp/comint.el</span>
+<span class="c1">;;   auto =&gt; emacs/lisp/comint.el (in a project) or comint.el</span>
+<span class="c1">;;   truncate-upto-project =&gt; ~/P/F/emacs/lisp/comint.el</span>
+<span class="c1">;;   truncate-from-project =&gt; ~/Projects/FOSS/emacs/l/comint.el</span>
+<span class="c1">;;   truncate-with-project =&gt; emacs/l/comint.el</span>
+<span class="c1">;;   truncate-except-project =&gt; ~/P/F/emacs/l/comint.el</span>
+<span class="c1">;;   truncate-upto-root =&gt; ~/P/F/e/lisp/comint.el</span>
+<span class="c1">;;   truncate-all =&gt; ~/P/F/e/l/comint.el</span>
+<span class="c1">;;   truncate-nil =&gt; ~/Projects/FOSS/emacs/lisp/comint.el</span>
+<span class="c1">;;   relative-from-project =&gt; emacs/lisp/comint.el</span>
+<span class="c1">;;   relative-to-project =&gt; lisp/comint.el</span>
+<span class="c1">;;   file-name =&gt; comint.el</span>
+<span class="c1">;;   buffer-name =&gt; comint.el&lt;2&gt; (uniquify buffer name)</span>
+<span class="c1">;;</span>
+<span class="c1">;; If you are experiencing the laggy issue, especially while editing remote files</span>
+<span class="c1">;; with tramp, please try `file-name&#39; style.</span>
+<span class="c1">;; Please refer to https://github.com/bbatsov/projectile/issues/657.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-buffer-file-name-style</span> <span class="ss">&#39;auto</span><span class="p">)</span>
+
+<span class="c1">;; Whether display icons in the mode-line.</span>
+<span class="c1">;; While using the server mode in GUI, should set the value explicitly.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-icon</span> <span class="p">(</span><span class="nv">display-graphic-p</span><span class="p">))</span>
+
+<span class="c1">;; Whether display the icon for `major-mode&#39;. It respects `doom-modeline-icon&#39;.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-major-mode-icon</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Whether display the colorful icon for `major-mode&#39;.</span>
+<span class="c1">;; It respects `all-the-icons-color-icons&#39;.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-major-mode-color-icon</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Whether display the icon for the buffer state. It respects `doom-modeline-icon&#39;.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-buffer-state-icon</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Whether display the modification icon for the buffer.</span>
+<span class="c1">;; It respects `doom-modeline-icon&#39; and `doom-modeline-buffer-state-icon&#39;.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-buffer-modification-icon</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Whether to use unicode as a fallback (instead of ASCII) when not using icons.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-unicode-fallback</span> <span class="no">nil</span><span class="p">)</span>
+
+<span class="c1">;; Whether display the buffer name.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-buffer-name</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Whether display the minor modes in the mode-line.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-minor-modes</span> <span class="no">nil</span><span class="p">)</span>
+
+<span class="c1">;; If non-nil, a word count will be added to the selection-info modeline segment.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-enable-word-count</span> <span class="no">nil</span><span class="p">)</span>
+
+<span class="c1">;; Major modes in which to display word count continuously.</span>
+<span class="c1">;; Also applies to any derived modes. Respects `doom-modeline-enable-word-count&#39;.</span>
+<span class="c1">;; If it brings the sluggish issue, disable `doom-modeline-enable-word-count&#39; or</span>
+<span class="c1">;; remove the modes from `doom-modeline-continuous-word-count-modes&#39;.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-continuous-word-count-modes</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">markdown-mode</span> <span class="nv">gfm-mode</span> <span class="nv">org-mode</span><span class="p">))</span>
+
+<span class="c1">;; Whether display the buffer encoding.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-buffer-encoding</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Whether display the indentation information.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-indent-info</span> <span class="no">nil</span><span class="p">)</span>
+
+<span class="c1">;; If non-nil, only display one number for checker information if applicable.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-checker-simple-format</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; The maximum number displayed for notifications.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-number-limit</span> <span class="mi">99</span><span class="p">)</span>
+
+<span class="c1">;; The maximum displayed length of the branch name of version control.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-vcs-max-length</span> <span class="mi">12</span><span class="p">)</span>
+
+<span class="c1">;; Whether display the workspace name. Non-nil to display in the mode-line.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-workspace-name</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Whether display the perspective name. Non-nil to display in the mode-line.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-persp-name</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; If non nil the default perspective name is displayed in the mode-line.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-display-default-persp-name</span> <span class="no">nil</span><span class="p">)</span>
+
+<span class="c1">;; If non nil the perspective name is displayed alongside a folder icon.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-persp-icon</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Whether display the `lsp&#39; state. Non-nil to display in the mode-line.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-lsp</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Whether display the GitHub notifications. It requires `ghub&#39; package.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-github</span> <span class="no">nil</span><span class="p">)</span>
+
+<span class="c1">;; The interval of checking GitHub.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-github-interval</span> <span class="p">(</span><span class="nf">*</span> <span class="mi">30</span> <span class="mi">60</span><span class="p">))</span>
+
+<span class="c1">;; Whether display the modal state icon.</span>
+<span class="c1">;; Including `evil&#39;, `overwrite&#39;, `god&#39;, `ryo&#39; and `xah-fly-keys&#39;, etc.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-modal-icon</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Whether display the mu4e notifications. It requires `mu4e-alert&#39; package.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-mu4e</span> <span class="no">nil</span><span class="p">)</span>
+<span class="c1">;; also enable the start of mu4e-alert</span>
+<span class="c1">;; (mu4e-alert-enable-mode-line-display)</span>
+
+<span class="c1">;; Whether display the gnus notifications.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-gnus</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Whether gnus should automatically be updated and how often (set to 0 or smaller than 0 to disable)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-gnus-timer</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">;; Wheter groups should be excludede when gnus automatically being updated.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-gnus-excluded-groups</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;dummy.group&#34;</span><span class="p">))</span>
+
+<span class="c1">;; Whether display the IRC notifications. It requires `circe&#39; or `erc&#39; package.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-irc</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Function to stylize the irc buffer names.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-irc-stylize</span> <span class="ss">&#39;identity</span><span class="p">)</span>
+
+<span class="c1">;; Whether display the environment version.</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-version</span> <span class="no">t</span><span class="p">)</span>
+<span class="c1">;; Or for individual languages</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-enable-python</span> <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-enable-ruby</span> <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-enable-perl</span> <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-enable-go</span> <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-enable-elixir</span> <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-enable-rust</span> <span class="no">t</span><span class="p">)</span>
+
+<span class="c1">;; Change the executables to use for the language version string</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-python-executable</span> <span class="s">&#34;python&#34;</span><span class="p">)</span> <span class="c1">; or `python-shell-interpreter&#39;</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-ruby-executable</span> <span class="s">&#34;ruby&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-perl-executable</span> <span class="s">&#34;perl&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-go-executable</span> <span class="s">&#34;go&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-elixir-executable</span> <span class="s">&#34;iex&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-rust-executable</span> <span class="s">&#34;rustc&#34;</span><span class="p">)</span>
+
+<span class="c1">;; What to display as the version while a new one is being loaded</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-load-string</span> <span class="s">&#34;...&#34;</span><span class="p">)</span>
+
+<span class="c1">;; Hooks that run before/after the modeline version string is updated</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-before-update-env-hook</span> <span class="no">nil</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-after-update-env-hook</span> <span class="no">nil</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="buffer-tab-上方的-tab">buffer-tab, 上方的 tab</h4>
+<ul>
+<li>以 awesome-tab 为例, 下载文件  <a href="https://raw.githubusercontent.com/manateelazycat/awesome-tab/master/awesome-tab.el" target="_blank" rel="noopener noreffer">awesome-tab.el</a> <br/></li>
+<li>并把文件放到 .emacs.d/core/plugins 文件夹 <br/></li>
+</ul>
+<!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="c1">;; awesome-tab 管理 Buffer</span>
+<span class="p">(</span><span class="nb">use-package</span> <span class="nv">awesome-tab</span>
+  <span class="nb">:ensure</span> <span class="no">nil</span>
+  <span class="nb">:defer</span> <span class="mi">2</span>
+  <span class="nb">:load-path</span> <span class="s">&#34;~/.emacs.d/core/plugins&#34;</span> <span class="c1">;; 从次路径加载这个包</span>
+  <span class="nb">:config</span>
+  <span class="p">(</span><span class="nv">awesome-tab-mode</span> <span class="no">t</span><span class="p">)</span>
+<span class="c1">;; 设置标签栏长度</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">awesome-tab-label-fixed-length</span> <span class="mi">14</span><span class="p">)</span>
+<span class="c1">;; 高度</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">awesome-tab-height</span> <span class="mi">150</span><span class="p">)</span>
+<span class="c1">;; 按使用索引排行</span>
+<span class="c1">;; (setq awesome-tab-show-tab-index t)</span>
+<span class="c1">;; 如果使用 helm</span>
+<span class="p">(</span><span class="nv">awesome-tab-build-helm-source</span><span class="p">)</span>
+<span class="c1">;; 隐藏那些buffer</span>
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">awesome-tab-hide-tab</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">name</span> <span class="p">(</span><span class="nf">format</span> <span class="s">&#34;%s&#34;</span> <span class="nv">x</span><span class="p">)))</span>
+    <span class="p">(</span><span class="nb">or</span>
+     <span class="p">(</span><span class="nv">string-prefix-p</span> <span class="s">&#34;*epc&#34;</span> <span class="nv">name</span><span class="p">)</span>
+     <span class="p">(</span><span class="nv">string-prefix-p</span> <span class="s">&#34;*helm&#34;</span> <span class="nv">name</span><span class="p">)</span>
+     <span class="p">(</span><span class="nv">string-prefix-p</span> <span class="s">&#34;*bm-bookmarks*&#34;</span> <span class="nv">name</span><span class="p">)</span>
+     <span class="p">(</span><span class="nv">string-prefix-p</span> <span class="s">&#34;*Compile-Log*&#34;</span> <span class="nv">name</span><span class="p">)</span>
+     <span class="p">(</span><span class="nv">string-prefix-p</span> <span class="s">&#34;*lsp&#34;</span> <span class="nv">name</span><span class="p">)</span>
+     <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">string-prefix-p</span> <span class="s">&#34;magit&#34;</span> <span class="nv">name</span><span class="p">)</span>
+               <span class="p">(</span><span class="nv">not</span> <span class="p">(</span><span class="nv">file-name-extension</span> <span class="nv">name</span><span class="p">)))</span>
+     <span class="p">)))</span>
+
+<span class="c1">;; buffer 群组归类</span>
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">awesome-tab-buffer-groups</span> <span class="p">()</span>
+  <span class="s">&#34;</span><span class="ss">`awesome-tab-buffer-groups&#39;</span><span class="s"> control buffers&#39; group rules.
+</span><span class="s">
+</span><span class="s">Group awesome-tab with mode if buffer is derived from </span><span class="ss">`eshell-mode&#39;</span><span class="s"> </span><span class="ss">`emacs-lisp-mode&#39;</span><span class="s"> </span><span class="ss">`dired-mode&#39;</span><span class="s"> </span><span class="ss">`org-mode&#39;</span><span class="s"> </span><span class="ss">`magit-mode&#39;</span><span class="s">.
+</span><span class="s">All buffer name start with * will group to \&#34;Emacs\&#34;.
+</span><span class="s">Other buffer group by </span><span class="ss">`awesome-tab-get-group-name&#39;</span><span class="s"> with project name.&#34;</span>
+  <span class="p">(</span><span class="nf">list</span>
+   <span class="p">(</span><span class="nb">cond</span>
+    <span class="p">((</span><span class="nb">or</span> <span class="p">(</span><span class="nf">string-equal</span> <span class="s">&#34;*&#34;</span> <span class="p">(</span><span class="nf">substring</span> <span class="p">(</span><span class="nf">buffer-name</span><span class="p">)</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">))</span>
+         <span class="p">(</span><span class="nf">memq</span> <span class="nv">major-mode</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">magit-process-mode</span>
+                            <span class="nv">magit-status-mode</span>
+                            <span class="nv">magit-diff-mode</span>
+                            <span class="nv">magit-log-mode</span>
+                            <span class="nv">magit-file-mode</span>
+                            <span class="nv">magit-blob-mode</span>
+                            <span class="nv">magit-blame-mode</span>
+                            <span class="p">)))</span>
+     <span class="s">&#34;Emacs&#34;</span><span class="p">)</span>
+    <span class="p">((</span><span class="nv">derived-mode-p</span> <span class="ss">&#39;eshell-mode</span><span class="p">)</span>
+     <span class="s">&#34;EShell&#34;</span><span class="p">)</span>
+    <span class="p">((</span><span class="nv">derived-mode-p</span> <span class="ss">&#39;emacs-lisp-mode</span><span class="p">)</span>
+     <span class="s">&#34;Elisp&#34;</span><span class="p">)</span>
+    <span class="p">((</span><span class="nv">derived-mode-p</span> <span class="ss">&#39;dired-mode</span><span class="p">)</span>
+     <span class="s">&#34;Dired&#34;</span><span class="p">)</span>
+    <span class="p">((</span><span class="nf">memq</span> <span class="nv">major-mode</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">org-mode</span> <span class="nv">org-agenda-mode</span> <span class="nv">diary-mode</span><span class="p">))</span>
+     <span class="s">&#34;OrgMode&#34;</span><span class="p">)</span>
+    <span class="p">(</span><span class="no">t</span>
+     <span class="p">(</span><span class="nv">awesome-tab-get-group-name</span> <span class="p">(</span><span class="nf">current-buffer</span><span class="p">))))))</span>
+
+<span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="增强-emacs-搜索功能">增强 Emacs 搜索功能</h3>
+<h4 id="最新三套装">最新三套装</h4>
+<ul>
+<li>vertico 提供一个搜索框架 <br/></li>
+<li>consult 文本搜索 <br/></li>
+<li>orderless 使用无序搜索, 例如你要搜 whoami ，你可以直接 am who <br/></li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>vertico</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">vertico</span>
+  <span class="nb">:defer</span> <span class="mi">3</span>
+  <span class="nb">:ensure</span> <span class="no">t</span>
+  <span class="nb">:config</span>
+  <span class="p">(</span><span class="nv">vertico-mode</span> <span class="no">t</span><span class="p">))</span>
+<span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="c1">;; 每次重启后都有搜索记录</span>
+<span class="p">(</span><span class="nb">use-package</span> <span class="nv">savehist</span>
+  <span class="nb">:defer</span> <span class="mi">3</span>
+  <span class="nb">:ensure</span> <span class="no">nil</span>
+  <span class="nb">:init</span>
+  <span class="p">(</span><span class="nv">savehist-mode</span><span class="p">)</span>
+  <span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>安装后重启 Emacs , 再按 M-x 看看有什么不同 <br/></p>
+</li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>orderless</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="c1">;; ;; Optionally use the `orderless&#39; completion style.</span>
+<span class="p">(</span><span class="nb">use-package</span> <span class="nv">orderless</span>
+  <span class="nb">:defer</span> <span class="mi">3</span>
+  <span class="nb">:init</span>
+  <span class="c1">;; Configure a custom style dispatcher (see the Consult wiki)</span>
+  <span class="c1">;; (setq orderless-style-dispatchers &#39;(+orderless-dispatch)</span>
+  <span class="c1">;;       orderless-component-separator #&#39;orderless-escapable-split-on-space)</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">completion-styles</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">orderless</span> <span class="nv">basic</span><span class="p">)</span>
+        <span class="nv">completion-category-defaults</span> <span class="no">nil</span>
+        <span class="nv">completion-category-overrides</span> <span class="o">&#39;</span><span class="p">((</span><span class="nv">file</span> <span class="p">(</span><span class="nv">styles</span> <span class="nv">partial-completion</span><span class="p">)))))</span>
+   
+<span class="c1">;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="c1">;; ;; A few more useful configurations...</span>
+<span class="p">(</span><span class="nb">use-package</span> <span class="nv">emacs</span>
+  <span class="nb">:defer</span> <span class="mi">3</span>
+  <span class="nb">:ensure</span> <span class="no">nil</span>
+  <span class="nb">:init</span>
+  <span class="c1">;; Add prompt indicator to `completing-read-multiple&#39;.</span>
+  <span class="c1">;; We display [CRM&lt;separator&gt;], e.g., [CRM,] if the separator is a comma.</span>
+  <span class="p">(</span><span class="nb">defun</span> <span class="nv">crm-indicator</span> <span class="p">(</span><span class="nv">args</span><span class="p">)</span>
+    <span class="p">(</span><span class="nf">cons</span> <span class="p">(</span><span class="nf">format</span> <span class="s">&#34;[CRM%s] %s&#34;</span>
+                  <span class="p">(</span><span class="nv">replace-regexp-in-string</span>
+                   <span class="s">&#34;\\`\\[.*?]\\*\\|\\[.*?]\\*\\&#39;&#34;</span> <span class="s">&#34;&#34;</span>
+                   <span class="nv">crm-separator</span><span class="p">)</span>
+                  <span class="p">(</span><span class="nf">car</span> <span class="nv">args</span><span class="p">))</span>
+          <span class="p">(</span><span class="nf">cdr</span> <span class="nv">args</span><span class="p">)))</span>
+  <span class="p">(</span><span class="nv">advice-add</span> <span class="nf">#&#39;</span><span class="nv">completing-read-multiple</span> <span class="nb">:filter-args</span> <span class="nf">#&#39;</span><span class="nv">crm-indicator</span><span class="p">)</span>
+   
+  <span class="c1">;; Do not allow the cursor in the minibuffer prompt</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">minibuffer-prompt-properties</span>
+        <span class="o">&#39;</span><span class="p">(</span><span class="nv">read-only</span> <span class="no">t</span> <span class="nv">cursor-intangible</span> <span class="no">t</span> <span class="nv">face</span> <span class="nf">minibuffer-prompt</span><span class="p">))</span>
+  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;minibuffer-setup-hook</span> <span class="nf">#&#39;</span><span class="nv">cursor-intangible-mode</span><span class="p">)</span>
+   
+  <span class="c1">;; Emacs 28: Hide commands in M-x which do not work in the current mode.</span>
+  <span class="c1">;; Vertico commands are hidden in normal buffers.</span>
+  <span class="c1">;; (setq read-extended-command-predicate</span>
+  <span class="c1">;;       #&#39;command-completion-default-include-p)</span>
+   
+  <span class="c1">;; Enable recursive minibuffers</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">enable-recursive-minibuffers</span> <span class="no">t</span><span class="p">))</span>
+   
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<!--list-separator-->
+<ul>
+<li>
+<p>consult</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
+<span class="c1">;; Search content in the file</span>
+<span class="p">(</span><span class="nb">use-package</span> <span class="nv">consult</span>
+  <span class="nb">:defer</span> <span class="mi">3</span>
+  <span class="nb">:ensure</span> <span class="no">t</span>
+  <span class="nb">:bind</span> <span class="p">(</span><span class="s">&#34;C-s&#34;</span> <span class="o">.</span> <span class="nv">consult-line</span><span class="p">)</span>
+<span class="p">)</span> 
+</code></pre></td></tr></table>
+</div>
+</div><p>安装后打开一个文件, 按 C-s 试试搜索文本 <br/></p>
+</li>
+</ul>
+<h2 id="org-mode-重头戏">Org-mode 重头戏</h2>
+]]></description>
+</item><item>
     <title>Emacs Gnus 使用 Gmail</title>
     <link>http://isouthrain.github.io/2022-06-04-gnus-use-gmail.zh-ch/</link>
     <pubDate>Sat, 04 Jun 2022 00:00:00 &#43;0000</pubDate>
@@ -1145,1118 +2257,6 @@ weight: 1
 👉  <a href="https://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/" target="_blank" rel="noopener noreffer">永久免账号密码 推送/上传 GitHub</a></p>
 <h3 id="faq">FAQ❓</h3>
 <p>如果你遇到了问题，可以在下面评论去提问，基本都会回复的</p>
-]]></description>
-</item><item>
-    <title>普通人如何使用Emacs</title>
-    <link>http://isouthrain.github.io/2022-04-29-how-to-use-emacs/</link>
-    <pubDate>Fri, 29 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-04-29-how-to-use-emacs/</guid>
-    <description><![CDATA[<p>#+是否为草稿 <br/></p>
-<p>#+Html导出主题 <br/></p>
-<p>#+置顶文章 0 为指定 <br/></p>
-<blockquote>
-<p>Emacs 不仅可用于编码， 更可用于生活。 <br/></p>
-</blockquote>
-<h2 id="home">Home</h2>
-<h3 id="阅读之前">阅读之前</h3>
-<ul>
-<li>本文的 <strong>普通人</strong> 指的是 <strong>非程序员</strong>  <br/></li>
-<li>为什么编写这编文章? <br/>
-<ul>
-<li>因为受到了 <strong>Protesilaos Stavrou</strong> 影响 <br/>
-<ul>
-<li>Protesilaos Stavrou <a href="https://mp.weixin.qq.com/s/VfclpaYjCH8aLh0uMYny1w" target="_blank" rel="noopener noreffer">隐居、反内卷，不意味着躺平｜专访2021年度“杰出新自由软件贡献者”奖得主</a> <br/></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>本文章应该适合新手阅读,因为我定位在了 <em>如何使用 <strong>Emacs</strong></em> <br/></li>
-<li>本文旨在让更多的人(非程序员)使用 Emacs 管理自己的生活, Emacs不单限于代码编辑 <br/></li>
-</ul>
-<h3 id="文章适合人群">文章适合人群</h3>
-<ul>
-<li><strong><em>追求自由与和平</em></strong> <br/></li>
-<li>没有写过代码的 <br/></li>
-<li>在寻找一个 <strong>笔记软件</strong> 的用户 <br/></li>
-<li>使用GTD 管理自己的生活 <br/></li>
-</ul>
-<h3 id="安装-emacs">安装 Emacs</h3>
-<ul>
-<li><a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener noreffer">官方网站</a> <br/></li>
-<li><strong>Linux</strong>  <br/>
-<ul>
-<li>使用对应的包管理下载, 例如 <strong>Ubuntu</strong> <br/>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="nv">sudo</span> <span class="nv">apt</span> <span class="nv">install</span> <span class="nv">emacs</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-</li>
-<li><strong>Windows</strong> <br/>
-<ul>
-<li><a href="http://gnu.mirrors.hoobly.com/emacs/windows/emacs-28/" target="_blank" rel="noopener noreffer">GNU Emacs</a> 选择最新版本 zip 文件, 解压运行 emacs.exe <br/></li>
-</ul>
-</li>
-<li><strong>Mac OSX</strong> <br/>
-<ul>
-<li><a href="https://emacsformacos.com/" target="_blank" rel="noopener noreffer">Mac for Emacs</a> <br/></li>
-</ul>
-</li>
-</ul>
-<h3 id="简单使用">简单使用</h3>
-<ul>
-<li>
-<p>按键说明 <br/></p>
-<ul>
-<li>开头的 <strong>C</strong> 代表 <strong>Ctrl</strong> 按键 <br/></li>
-<li>开头的 <strong>M</strong> 代表 <strong>Alt</strong> 按键 <br/></li>
-</ul>
-</li>
-<li>
-<p>基础按键 <br/></p>
-<ul>
-<li><strong>M + x</strong> 输入命令 <br/></li>
-<li><strong>C + g</strong> 取消所有命令/状态 <br/></li>
-<li><strong>C + n</strong> 即 <strong>Ctrl + n</strong> , 等于 <strong>键盘向下按键</strong> , 解释为 <em>将光标移动到下一行</em> <br/></li>
-<li><strong>C + p</strong> 即 <strong>Ctrl + n</strong> , 等于 <strong>键盘向下按键</strong> , 解释为 <em>将光标移动到下一行</em> <br/></li>
-<li><strong>C + f</strong> 即 <strong>Ctrl + f</strong> , 等于 <strong>键盘向右按键</strong> , 解释为 <em>将光标向右移动一个字母</em> <br/></li>
-<li><strong>C + b</strong> 即 <strong>Ctrl + b</strong> , 等于 <strong>键盘向左按键</strong> , 解释为 <em>将光标向左移动一个字母</em> <br/></li>
-</ul>
-</li>
-<li>
-<p>退出软件 <br/></p>
-<ul>
-<li><strong>C + x</strong> 之后再按 <strong>C + c</strong> <br/></li>
-</ul>
-</li>
-<li>
-<p><em>注意事项</em> <br/></p>
-<ul>
-<li>对于 Emacs 来说, 你的每一个动作都是在执行命令, <strong>例如, 当你按键 <em>C + n</em> 就是在执行 <em>next-line</em> 命令</strong>, 可以使用 M + x 输入 next-line 试试哦! <br/></li>
-</ul>
-</li>
-</ul>
-<h3 id="emacs-允许用户修改emacs所有的设置">Emacs 允许用户修改Emacs所有的设置</h3>
-<ul>
-<li>Emacs 是真正属于用户自己了, 如果你对Emacs现有的不满意, 自己完全可以设置 <br/></li>
-<li><strong>按照自己的意愿使用Emacs</strong> <br/></li>
-<li>Emacs 拥有的生态甚至已经比肩一个 <strong>系统</strong> 的生态了 <br/></li>
-</ul>
-<h3 id="基本配置">基本配置</h3>
-<ul>
-<li>所有的配置都会放到 init.el <br/></li>
-<li>Linux/Uinx (Mac OSX) <br/>
-<ul>
-<li>~/.emacs.d/init.el <br/></li>
-</ul>
-</li>
-<li>Windows <br/>
-<ul>
-<li>C:\Users\Jack\AppData\Roaming\.emacs.d\init.el <br/></li>
-</ul>
-</li>
-</ul>
-<h4 id="简单配置">简单配置</h4>
-<ul>
-<li>请将代码复制到 init.el 文件中, 修改后重启 Emacs 后生效 <br/></li>
-<li>显示行号 <br/>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;; ~/.emacs.d/init.el</span>
-<span class="c1">;; ;; 开头为注释</span>
-<span class="c1">;;显示行号</span>
-<span class="p">(</span><span class="nv">global-linum-mode</span> <span class="mi">1</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-<li>以下为个人的基本配置 <br/>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp">      <span class="c1">;; 设置编码</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">default-buffer-file-coding-system</span> <span class="ss">&#39;utf-8</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">prefer-coding-system</span> <span class="ss">&#39;utf-8</span><span class="p">)</span>
-    
-      <span class="c1">;;显示行号</span>
-<span class="p">(</span><span class="nv">global-linum-mode</span> <span class="mi">1</span><span class="p">)</span>
-<span class="c1">;;高亮当前行</span>
-<span class="p">(</span><span class="nv">global-hl-line-mode</span> <span class="mi">1</span><span class="p">)</span>
-<span class="c1">;;关闭启动画面</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">inhibit-startup-message</span> <span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">toggle-truncate-lines</span> <span class="no">t</span><span class="p">)</span>
-    
-<span class="c1">;;显示时间</span>
-<span class="p">(</span><span class="nv">display-time-mode</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">;; 常显</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">display-time-24hr-format</span> <span class="no">t</span><span class="p">)</span> <span class="c1">;;格式</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">display-time-day-and-date</span> <span class="no">t</span><span class="p">)</span> <span class="c1">;;显示时间、星期、日期</span>
-    
-    
-<span class="c1">;; 关闭启动帮助画面</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">inhibit-splash-screen</span> <span class="mi">1</span><span class="p">)</span>
-    
-<span class="c1">;; 备份文件 nil or t</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">make-backup-files</span> <span class="no">nil</span><span class="p">)</span>
-    
-<span class="c1">;; 自动加载外部修改的文件</span>
-<span class="p">(</span><span class="nv">global-auto-revert-mode</span> <span class="mi">1</span><span class="p">)</span>
-    
-<span class="c1">;; 关闭自动保存文件</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">auto-save-default</span> <span class="no">t</span><span class="p">)</span>
-<span class="c1">;; 关闭警告声</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">ring-bell-function</span> <span class="ss">&#39;ignore</span><span class="p">)</span>
-    
-<span class="c1">;; 简化yes和no</span>
-<span class="p">(</span><span class="nf">fset</span> <span class="ss">&#39;yes-or-no-p</span> <span class="ss">&#39;y-or-n-p</span><span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<h4 id="区分系统类型和gui或者tui界面">区分系统类型和GUI或者TUI界面</h4>
-<ul>
-<li>以下设置会根据你目前的系统而加载代码, 通常用来区分 windows 和 linux 配置路径问题 <br/></li>
-</ul>
-<!--listend-->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;;不同系统的配置</span>
-<span class="c1">;; Windows</span>
-<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string=</span> <span class="s">&#34;windows-nt&#34;</span> <span class="nv">system-type</span><span class="p">)</span>
-<span class="c1">;; 代码放在这个范围</span>
-<span class="p">)</span>
-<span class="c1">;; Linux</span>
-<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string=</span> <span class="s">&#34;gnu/linux&#34;</span> <span class="nv">system-type</span><span class="p">)</span>
-<span class="c1">;; 代码放在这个范围</span>
-<span class="p">)</span>
-<span class="c1">;; Mac OSX</span>
-<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string=</span> <span class="s">&#34;darwin&#34;</span> <span class="nv">system-type</span><span class="p">)</span>
-<span class="c1">;; 代码放在这个范围</span>
-<span class="p">)</span>
-<span class="c1">;; GUI图形界面或者TUI终端界面</span>
-<span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nv">display-graphic-p</span><span class="p">)</span>
-    <span class="c1">;; GUI 代码放置，多行代码的话用 (progn) 包一下</span>
-    <span class="p">(</span><span class="nb">progn</span> <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;这是GUI读取的配置1&#34;</span><span class="p">)</span>
-           <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;这是GUI读取的配置2&#34;</span><span class="p">)</span>
-           <span class="p">)</span>
-    <span class="c1">;; TUI 代码放置</span>
-    <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;这是TUI 读取的配置1&#34;</span><span class="p">)</span>
-    <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;这是TUI 读取的配置2&#34;</span><span class="p">)</span>
-    <span class="p">)</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="配置管理-请重视此标题-这将在未来帮助你减少大量时间">配置管理, 请重视此标题, 这将在未来帮助你减少大量时间</h3>
-<ul>
-<li>希望用户认真学习一下管理配置, <em>现在即使不会去管理, 但请参看</em> <br/></li>
-<li>你永远不会对你的配置满意, 所以请学习管理你自己的配置 <br/></li>
-<li>新建 ~/.emacs.d/core/init-basic.el 注意路径 <br/>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"> <span class="c1">;; ~/.emacs.d/core/init-basic.el</span>
-<span class="c1">;; 存放你的配置代码</span>
-<span class="c1">;;显示行号</span>
-<span class="p">(</span><span class="nv">global-linum-mode</span> <span class="mi">1</span><span class="p">)</span>
-    
-<span class="p">(</span><span class="nb">provide</span> <span class="ss">&#39;init-basic</span><span class="p">)</span> <span class="c1">;; 必要的, 让文件可以被调用</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-<li>编辑 ~/.emacs.d/init.el <br/>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;; ~/.emacs.d/init.e</span>
-<span class="c1">;; 添加上面要添加进来的文件目录</span>
-<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="p">(</span><span class="nf">expand-file-name</span> <span class="s">&#34;core&#34;</span> <span class="nv">user-emacs-directory</span><span class="p">))</span> <span class="c1">;; 必要的, 注意路径</span>
-<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;init-basic</span><span class="p">)</span> <span class="c1">;; 将 ~/.emacs.d/core/init-basic.el 调用</span>
-<span class="c1">;; 这样就可以大胆把你的配置分不同文件管理了, 记得调用就好</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<h3 id="包安装">包安装</h3>
-<ul>
-<li>对于 Emacs 原生来说太简陋了, 看起来可不太优雅 <br/></li>
-<li>Emacs 安装扩展包使得更加好看与适用 <br/></li>
-</ul>
-<h4 id="原生安装">原生安装</h4>
-<ul>
-<li>Emacs 自带一个安装扩展包的方法 <br/>
-<ul>
-<li><strong>在此 <em>不解释原生安装包方法</em> , 因为原生安装的方法并不好用,而且一旦安装很多软件包的话会影响到 Emacs 的启动速度</strong> <br/></li>
-</ul>
-</li>
-</ul>
-<h4 id="使用-use-package-安装扩展包">使用 Use-package 安装扩展包</h4>
-<!--list-separator-->
-<ul>
-<li>
-<p>配置 Use-package</p>
-<p><strong>有关更多 use-package</strong> 详解请到官方查看 <a href="https://github.com/jwiegley/use-package" target="_blank" rel="noopener noreffer">GitHub - jwiegley/use-package: A use-package declaration for simplifying your&hellip;</a> <br/></p>
-<ul>
-<li>use-package 常用参数 <br/>
-<ul>
-<li><strong>ensure t/nil</strong> ;; t 将会从官方网站下载, nil 从本地下载, 利用 load-path 参数指定目录加载 <br/></li>
-<li><strong>load-path &ldquo;path&rdquo;</strong> ;; 指定包加载路径 <br/></li>
-<li><strong>defer num</strong> ;; <em>num 为数字, 单位为秒, 意思是当 emacs 启动后多少秒再加载这个包, 对于以后减少 Emacs 启动时间非常有用</em> <br/></li>
-<li><strong>init</strong> ;; 加载包前加载 init 的配置 <br/></li>
-<li><strong>config</strong> ;; 加载完包后再加载 config 的配置 <br/></li>
-</ul>
-</li>
-</ul>
- <!--listend-->
-<ol>
-<li>将以下内容放到你的配置文件中 init.el <br/></li>
-</ol>
- <!--listend-->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;package</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;package-archives</span>
-                         <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;melpa&#34;</span> <span class="o">.</span> <span class="s">&#34;https://melpa.org/packages/&#34;</span><span class="p">)</span>
-<span class="p">)</span>
-<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">not</span> <span class="p">(</span><span class="nv">package-installed-p</span> <span class="ss">&#39;use-package</span><span class="p">))</span>
-  <span class="p">(</span><span class="nv">package-refresh-contents</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">package-install</span> <span class="ss">&#39;use-package</span><span class="p">)</span>
-  <span class="p">)</span>
- <span class="c1">;; This is only needed once, near the top of the file</span>
-<span class="p">(</span><span class="nb">eval-when-compile</span>
-<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;use-package</span><span class="p">))</span>
-<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;use-package-ensure</span><span class="p">)</span>
-<span class="c1">;; 自动下载，不需要 :ensure t</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">use-package-always-ensure</span> <span class="no">t</span><span class="p">)</span>
-   
-</code></pre></td></tr></table>
-</div>
-</div><ol>
-<li>下载一个包试试 <br/>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">包名</span><span class="p">)</span>
-<span class="c1">;; 例如 (use-package evil), 就会下载evil包</span>
-<span class="c1">;; 重新启动 Emaccs 就会看到目录 ~/.emacs.d/elpa 有这个包了</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ol>
-</li>
-</ul>
-<h3 id="emacs-光标移动选择">Emacs 光标移动选择</h3>
-<ul>
-<li>如果你是 Vim 用户, 建议安装 <strong>Evil</strong> 这个包, 它会模拟 vi 的键盘操作流程. <br/></li>
-<li>使用 Emacs 原生按键, 这可能 <em>废手指</em> 哈哈哈, 建议将 <strong>Ctrl</strong> 换成 <strong>Caps Lock</strong> , Windows 用户使用 <strong>AutoHotkey</strong>, 其余类似. <br/></li>
-<li><strong>Meow</strong> 猫态编辑, 有点类似 vim , 但是比 evil 更加的小巧和高效, <em>不过建议新人先不用这个</em>   <br/></li>
-</ul>
-<h4 id="个人推荐键盘">个人推荐键盘</h4>
-<ul>
-<li><strong>Evil</strong> 可能更加使用新手, 推荐去搜索一下 vi 键盘如何使用 <br/>
-<ul>
-<li>传送门 &mdash;&gt;  <a href="https://github.com/chloneda/vim-cheatsheet" target="_blank" rel="noopener noreffer">Vi 速查表</a>   <br/></li>
-</ul>
-</li>
-</ul>
-<h3 id="美化-emacs">美化 Emacs</h3>
-<h4 id="theme-主题">theme 主题</h4>
-<p>Emacs 只能加载一个主题, 但是可以安装多个主题, 可以在 Emacs 启动后再切换主题, 本文以 monokai 主题为例子 <br/></p>
-<ul>
-<li>monokai <br/>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">monokai</span>
-   <span class="nb">:ensure</span> <span class="no">t</span>
-   <span class="nb">:config</span>
-   <span class="p">(</span><span class="nv">load-theme</span> <span class="ss">&#39;monokai</span> <span class="no">t</span><span class="p">)</span>
-   <span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<h4 id="mode-line-下方的状态栏美化-以-doom-modeline-为例-还有很多选择">mode-line 下方的状态栏美化, 以 doom-modeline 为例, 还有很多选择</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span><span class="lnt">102
-</span><span class="lnt">103
-</span><span class="lnt">104
-</span><span class="lnt">105
-</span><span class="lnt">106
-</span><span class="lnt">107
-</span><span class="lnt">108
-</span><span class="lnt">109
-</span><span class="lnt">110
-</span><span class="lnt">111
-</span><span class="lnt">112
-</span><span class="lnt">113
-</span><span class="lnt">114
-</span><span class="lnt">115
-</span><span class="lnt">116
-</span><span class="lnt">117
-</span><span class="lnt">118
-</span><span class="lnt">119
-</span><span class="lnt">120
-</span><span class="lnt">121
-</span><span class="lnt">122
-</span><span class="lnt">123
-</span><span class="lnt">124
-</span><span class="lnt">125
-</span><span class="lnt">126
-</span><span class="lnt">127
-</span><span class="lnt">128
-</span><span class="lnt">129
-</span><span class="lnt">130
-</span><span class="lnt">131
-</span><span class="lnt">132
-</span><span class="lnt">133
-</span><span class="lnt">134
-</span><span class="lnt">135
-</span><span class="lnt">136
-</span><span class="lnt">137
-</span><span class="lnt">138
-</span><span class="lnt">139
-</span><span class="lnt">140
-</span><span class="lnt">141
-</span><span class="lnt">142
-</span><span class="lnt">143
-</span><span class="lnt">144
-</span><span class="lnt">145
-</span><span class="lnt">146
-</span><span class="lnt">147
-</span><span class="lnt">148
-</span><span class="lnt">149
-</span><span class="lnt">150
-</span><span class="lnt">151
-</span><span class="lnt">152
-</span><span class="lnt">153
-</span><span class="lnt">154
-</span><span class="lnt">155
-</span><span class="lnt">156
-</span><span class="lnt">157
-</span><span class="lnt">158
-</span><span class="lnt">159
-</span><span class="lnt">160
-</span><span class="lnt">161
-</span><span class="lnt">162
-</span><span class="lnt">163
-</span><span class="lnt">164
-</span><span class="lnt">165
-</span><span class="lnt">166
-</span><span class="lnt">167
-</span><span class="lnt">168
-</span><span class="lnt">169
-</span><span class="lnt">170
-</span><span class="lnt">171
-</span><span class="lnt">172
-</span><span class="lnt">173
-</span><span class="lnt">174
-</span><span class="lnt">175
-</span><span class="lnt">176
-</span><span class="lnt">177
-</span><span class="lnt">178
-</span><span class="lnt">179
-</span><span class="lnt">180
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
-<span class="c1">;; Modeline</span>
-<span class="p">(</span><span class="nb">use-package</span> <span class="nv">doom-modeline</span>
-<span class="nb">:ensure</span> <span class="no">t</span> <span class="c1">;; 从网上下载</span>
-<span class="nb">:defer</span> <span class="mi">1</span>  <span class="c1">;; 延迟加载</span>
-<span class="c1">;; :init (doom-modeline-mode 1)</span>
-<span class="nb">:config</span>
-<span class="p">(</span><span class="nv">doom-modeline-mode</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="c1">;; If non-nil, cause imenu to see `doom-modeline&#39; declarations.</span>
-<span class="c1">;; This is done by adjusting `lisp-imenu-generic-expression&#39; to</span>
-<span class="c1">;; include support for finding `doom-modeline-def-*&#39; forms.</span>
-<span class="c1">;; Must be set before loading doom-modeline.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-support-imenu</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; How tall the mode-line should be. It&#39;s only respected in GUI.</span>
-<span class="c1">;; If the actual char height is larger, it respects the actual height.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-height</span> <span class="mi">15</span><span class="p">)</span>
-
-<span class="c1">;; How wide the mode-line bar should be. It&#39;s only respected in GUI.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-bar-width</span> <span class="mi">4</span><span class="p">)</span>
-
-<span class="c1">;; Whether to use hud instead of default bar. It&#39;s only respected in GUI.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-hud</span> <span class="no">nil</span><span class="p">)</span>
-
-<span class="c1">;; The limit of the window width.</span>
-<span class="c1">;; If `window-width&#39; is smaller than the limit, some information won&#39;t be</span>
-<span class="c1">;; displayed. It can be an integer or a float number. `nil&#39; means no limit.&#34;</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-window-width-limit</span> <span class="mf">0.25</span><span class="p">)</span>
-
-<span class="c1">;; How to detect the project root.</span>
-<span class="c1">;; nil means to use `default-directory&#39;.</span>
-<span class="c1">;; The project management packages have some issues on detecting project root.</span>
-<span class="c1">;; e.g. `projectile&#39; doesn&#39;t handle symlink folders well, while `project&#39; is unable</span>
-<span class="c1">;; to hanle sub-projects.</span>
-<span class="c1">;; You can specify one if you encounter the issue.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-project-detection</span> <span class="ss">&#39;auto</span><span class="p">)</span>
-
-<span class="c1">;; Determines the style used by `doom-modeline-buffer-file-name&#39;.</span>
-<span class="c1">;;</span>
-<span class="c1">;; Given ~/Projects/FOSS/emacs/lisp/comint.el</span>
-<span class="c1">;;   auto =&gt; emacs/lisp/comint.el (in a project) or comint.el</span>
-<span class="c1">;;   truncate-upto-project =&gt; ~/P/F/emacs/lisp/comint.el</span>
-<span class="c1">;;   truncate-from-project =&gt; ~/Projects/FOSS/emacs/l/comint.el</span>
-<span class="c1">;;   truncate-with-project =&gt; emacs/l/comint.el</span>
-<span class="c1">;;   truncate-except-project =&gt; ~/P/F/emacs/l/comint.el</span>
-<span class="c1">;;   truncate-upto-root =&gt; ~/P/F/e/lisp/comint.el</span>
-<span class="c1">;;   truncate-all =&gt; ~/P/F/e/l/comint.el</span>
-<span class="c1">;;   truncate-nil =&gt; ~/Projects/FOSS/emacs/lisp/comint.el</span>
-<span class="c1">;;   relative-from-project =&gt; emacs/lisp/comint.el</span>
-<span class="c1">;;   relative-to-project =&gt; lisp/comint.el</span>
-<span class="c1">;;   file-name =&gt; comint.el</span>
-<span class="c1">;;   buffer-name =&gt; comint.el&lt;2&gt; (uniquify buffer name)</span>
-<span class="c1">;;</span>
-<span class="c1">;; If you are experiencing the laggy issue, especially while editing remote files</span>
-<span class="c1">;; with tramp, please try `file-name&#39; style.</span>
-<span class="c1">;; Please refer to https://github.com/bbatsov/projectile/issues/657.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-buffer-file-name-style</span> <span class="ss">&#39;auto</span><span class="p">)</span>
-
-<span class="c1">;; Whether display icons in the mode-line.</span>
-<span class="c1">;; While using the server mode in GUI, should set the value explicitly.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-icon</span> <span class="p">(</span><span class="nv">display-graphic-p</span><span class="p">))</span>
-
-<span class="c1">;; Whether display the icon for `major-mode&#39;. It respects `doom-modeline-icon&#39;.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-major-mode-icon</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Whether display the colorful icon for `major-mode&#39;.</span>
-<span class="c1">;; It respects `all-the-icons-color-icons&#39;.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-major-mode-color-icon</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Whether display the icon for the buffer state. It respects `doom-modeline-icon&#39;.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-buffer-state-icon</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Whether display the modification icon for the buffer.</span>
-<span class="c1">;; It respects `doom-modeline-icon&#39; and `doom-modeline-buffer-state-icon&#39;.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-buffer-modification-icon</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Whether to use unicode as a fallback (instead of ASCII) when not using icons.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-unicode-fallback</span> <span class="no">nil</span><span class="p">)</span>
-
-<span class="c1">;; Whether display the buffer name.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-buffer-name</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Whether display the minor modes in the mode-line.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-minor-modes</span> <span class="no">nil</span><span class="p">)</span>
-
-<span class="c1">;; If non-nil, a word count will be added to the selection-info modeline segment.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-enable-word-count</span> <span class="no">nil</span><span class="p">)</span>
-
-<span class="c1">;; Major modes in which to display word count continuously.</span>
-<span class="c1">;; Also applies to any derived modes. Respects `doom-modeline-enable-word-count&#39;.</span>
-<span class="c1">;; If it brings the sluggish issue, disable `doom-modeline-enable-word-count&#39; or</span>
-<span class="c1">;; remove the modes from `doom-modeline-continuous-word-count-modes&#39;.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-continuous-word-count-modes</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">markdown-mode</span> <span class="nv">gfm-mode</span> <span class="nv">org-mode</span><span class="p">))</span>
-
-<span class="c1">;; Whether display the buffer encoding.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-buffer-encoding</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Whether display the indentation information.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-indent-info</span> <span class="no">nil</span><span class="p">)</span>
-
-<span class="c1">;; If non-nil, only display one number for checker information if applicable.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-checker-simple-format</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; The maximum number displayed for notifications.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-number-limit</span> <span class="mi">99</span><span class="p">)</span>
-
-<span class="c1">;; The maximum displayed length of the branch name of version control.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-vcs-max-length</span> <span class="mi">12</span><span class="p">)</span>
-
-<span class="c1">;; Whether display the workspace name. Non-nil to display in the mode-line.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-workspace-name</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Whether display the perspective name. Non-nil to display in the mode-line.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-persp-name</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; If non nil the default perspective name is displayed in the mode-line.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-display-default-persp-name</span> <span class="no">nil</span><span class="p">)</span>
-
-<span class="c1">;; If non nil the perspective name is displayed alongside a folder icon.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-persp-icon</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Whether display the `lsp&#39; state. Non-nil to display in the mode-line.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-lsp</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Whether display the GitHub notifications. It requires `ghub&#39; package.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-github</span> <span class="no">nil</span><span class="p">)</span>
-
-<span class="c1">;; The interval of checking GitHub.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-github-interval</span> <span class="p">(</span><span class="nf">*</span> <span class="mi">30</span> <span class="mi">60</span><span class="p">))</span>
-
-<span class="c1">;; Whether display the modal state icon.</span>
-<span class="c1">;; Including `evil&#39;, `overwrite&#39;, `god&#39;, `ryo&#39; and `xah-fly-keys&#39;, etc.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-modal-icon</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Whether display the mu4e notifications. It requires `mu4e-alert&#39; package.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-mu4e</span> <span class="no">nil</span><span class="p">)</span>
-<span class="c1">;; also enable the start of mu4e-alert</span>
-<span class="c1">;; (mu4e-alert-enable-mode-line-display)</span>
-
-<span class="c1">;; Whether display the gnus notifications.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-gnus</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Whether gnus should automatically be updated and how often (set to 0 or smaller than 0 to disable)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-gnus-timer</span> <span class="mi">2</span><span class="p">)</span>
-
-<span class="c1">;; Wheter groups should be excludede when gnus automatically being updated.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-gnus-excluded-groups</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;dummy.group&#34;</span><span class="p">))</span>
-
-<span class="c1">;; Whether display the IRC notifications. It requires `circe&#39; or `erc&#39; package.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-irc</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Function to stylize the irc buffer names.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-irc-stylize</span> <span class="ss">&#39;identity</span><span class="p">)</span>
-
-<span class="c1">;; Whether display the environment version.</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-version</span> <span class="no">t</span><span class="p">)</span>
-<span class="c1">;; Or for individual languages</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-enable-python</span> <span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-enable-ruby</span> <span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-enable-perl</span> <span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-enable-go</span> <span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-enable-elixir</span> <span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-enable-rust</span> <span class="no">t</span><span class="p">)</span>
-
-<span class="c1">;; Change the executables to use for the language version string</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-python-executable</span> <span class="s">&#34;python&#34;</span><span class="p">)</span> <span class="c1">; or `python-shell-interpreter&#39;</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-ruby-executable</span> <span class="s">&#34;ruby&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-perl-executable</span> <span class="s">&#34;perl&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-go-executable</span> <span class="s">&#34;go&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-elixir-executable</span> <span class="s">&#34;iex&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-rust-executable</span> <span class="s">&#34;rustc&#34;</span><span class="p">)</span>
-
-<span class="c1">;; What to display as the version while a new one is being loaded</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-env-load-string</span> <span class="s">&#34;...&#34;</span><span class="p">)</span>
-
-<span class="c1">;; Hooks that run before/after the modeline version string is updated</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-before-update-env-hook</span> <span class="no">nil</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">doom-modeline-after-update-env-hook</span> <span class="no">nil</span><span class="p">)</span>
-<span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="buffer-tab-上方的-tab">buffer-tab, 上方的 tab</h4>
-<ul>
-<li>以 awesome-tab 为例, 下载文件  <a href="https://raw.githubusercontent.com/manateelazycat/awesome-tab/master/awesome-tab.el" target="_blank" rel="noopener noreffer">awesome-tab.el</a> <br/></li>
-<li>并把文件放到 .emacs.d/core/plugins 文件夹 <br/></li>
-</ul>
-<!--listend-->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
-</span><span class="lnt">56
-</span><span class="lnt">57
-</span><span class="lnt">58
-</span><span class="lnt">59
-</span><span class="lnt">60
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
-<span class="c1">;; awesome-tab 管理 Buffer</span>
-<span class="p">(</span><span class="nb">use-package</span> <span class="nv">awesome-tab</span>
-  <span class="nb">:ensure</span> <span class="no">nil</span>
-  <span class="nb">:defer</span> <span class="mi">2</span>
-  <span class="nb">:load-path</span> <span class="s">&#34;~/.emacs.d/core/plugins&#34;</span> <span class="c1">;; 从次路径加载这个包</span>
-  <span class="nb">:config</span>
-  <span class="p">(</span><span class="nv">awesome-tab-mode</span> <span class="no">t</span><span class="p">)</span>
-<span class="c1">;; 设置标签栏长度</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">awesome-tab-label-fixed-length</span> <span class="mi">14</span><span class="p">)</span>
-<span class="c1">;; 高度</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">awesome-tab-height</span> <span class="mi">150</span><span class="p">)</span>
-<span class="c1">;; 按使用索引排行</span>
-<span class="c1">;; (setq awesome-tab-show-tab-index t)</span>
-<span class="c1">;; 如果使用 helm</span>
-<span class="p">(</span><span class="nv">awesome-tab-build-helm-source</span><span class="p">)</span>
-<span class="c1">;; 隐藏那些buffer</span>
-<span class="p">(</span><span class="nb">defun</span> <span class="nv">awesome-tab-hide-tab</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span>
-  <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">name</span> <span class="p">(</span><span class="nf">format</span> <span class="s">&#34;%s&#34;</span> <span class="nv">x</span><span class="p">)))</span>
-    <span class="p">(</span><span class="nb">or</span>
-     <span class="p">(</span><span class="nv">string-prefix-p</span> <span class="s">&#34;*epc&#34;</span> <span class="nv">name</span><span class="p">)</span>
-     <span class="p">(</span><span class="nv">string-prefix-p</span> <span class="s">&#34;*helm&#34;</span> <span class="nv">name</span><span class="p">)</span>
-     <span class="p">(</span><span class="nv">string-prefix-p</span> <span class="s">&#34;*bm-bookmarks*&#34;</span> <span class="nv">name</span><span class="p">)</span>
-     <span class="p">(</span><span class="nv">string-prefix-p</span> <span class="s">&#34;*Compile-Log*&#34;</span> <span class="nv">name</span><span class="p">)</span>
-     <span class="p">(</span><span class="nv">string-prefix-p</span> <span class="s">&#34;*lsp&#34;</span> <span class="nv">name</span><span class="p">)</span>
-     <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">string-prefix-p</span> <span class="s">&#34;magit&#34;</span> <span class="nv">name</span><span class="p">)</span>
-               <span class="p">(</span><span class="nv">not</span> <span class="p">(</span><span class="nv">file-name-extension</span> <span class="nv">name</span><span class="p">)))</span>
-     <span class="p">)))</span>
-
-<span class="c1">;; buffer 群组归类</span>
-<span class="p">(</span><span class="nb">defun</span> <span class="nv">awesome-tab-buffer-groups</span> <span class="p">()</span>
-  <span class="s">&#34;</span><span class="ss">`awesome-tab-buffer-groups&#39;</span><span class="s"> control buffers&#39; group rules.
-</span><span class="s">
-</span><span class="s">Group awesome-tab with mode if buffer is derived from </span><span class="ss">`eshell-mode&#39;</span><span class="s"> </span><span class="ss">`emacs-lisp-mode&#39;</span><span class="s"> </span><span class="ss">`dired-mode&#39;</span><span class="s"> </span><span class="ss">`org-mode&#39;</span><span class="s"> </span><span class="ss">`magit-mode&#39;</span><span class="s">.
-</span><span class="s">All buffer name start with * will group to \&#34;Emacs\&#34;.
-</span><span class="s">Other buffer group by </span><span class="ss">`awesome-tab-get-group-name&#39;</span><span class="s"> with project name.&#34;</span>
-  <span class="p">(</span><span class="nf">list</span>
-   <span class="p">(</span><span class="nb">cond</span>
-    <span class="p">((</span><span class="nb">or</span> <span class="p">(</span><span class="nf">string-equal</span> <span class="s">&#34;*&#34;</span> <span class="p">(</span><span class="nf">substring</span> <span class="p">(</span><span class="nf">buffer-name</span><span class="p">)</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">))</span>
-         <span class="p">(</span><span class="nf">memq</span> <span class="nv">major-mode</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">magit-process-mode</span>
-                            <span class="nv">magit-status-mode</span>
-                            <span class="nv">magit-diff-mode</span>
-                            <span class="nv">magit-log-mode</span>
-                            <span class="nv">magit-file-mode</span>
-                            <span class="nv">magit-blob-mode</span>
-                            <span class="nv">magit-blame-mode</span>
-                            <span class="p">)))</span>
-     <span class="s">&#34;Emacs&#34;</span><span class="p">)</span>
-    <span class="p">((</span><span class="nv">derived-mode-p</span> <span class="ss">&#39;eshell-mode</span><span class="p">)</span>
-     <span class="s">&#34;EShell&#34;</span><span class="p">)</span>
-    <span class="p">((</span><span class="nv">derived-mode-p</span> <span class="ss">&#39;emacs-lisp-mode</span><span class="p">)</span>
-     <span class="s">&#34;Elisp&#34;</span><span class="p">)</span>
-    <span class="p">((</span><span class="nv">derived-mode-p</span> <span class="ss">&#39;dired-mode</span><span class="p">)</span>
-     <span class="s">&#34;Dired&#34;</span><span class="p">)</span>
-    <span class="p">((</span><span class="nf">memq</span> <span class="nv">major-mode</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">org-mode</span> <span class="nv">org-agenda-mode</span> <span class="nv">diary-mode</span><span class="p">))</span>
-     <span class="s">&#34;OrgMode&#34;</span><span class="p">)</span>
-    <span class="p">(</span><span class="no">t</span>
-     <span class="p">(</span><span class="nv">awesome-tab-get-group-name</span> <span class="p">(</span><span class="nf">current-buffer</span><span class="p">))))))</span>
-
-<span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="增强-emacs-搜索功能">增强 Emacs 搜索功能</h3>
-<h4 id="最新三套装">最新三套装</h4>
-<ul>
-<li>vertico 提供一个搜索框架 <br/></li>
-<li>consult 文本搜索 <br/></li>
-<li>orderless 使用无序搜索, 例如你要搜 whoami ，你可以直接 am who <br/></li>
-</ul>
-<!--list-separator-->
-<ul>
-<li>
-<p>vertico</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">vertico</span>
-  <span class="nb">:defer</span> <span class="mi">3</span>
-  <span class="nb">:ensure</span> <span class="no">t</span>
-  <span class="nb">:config</span>
-  <span class="p">(</span><span class="nv">vertico-mode</span> <span class="no">t</span><span class="p">))</span>
-<span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
-<span class="c1">;; 每次重启后都有搜索记录</span>
-<span class="p">(</span><span class="nb">use-package</span> <span class="nv">savehist</span>
-  <span class="nb">:defer</span> <span class="mi">3</span>
-  <span class="nb">:ensure</span> <span class="no">nil</span>
-  <span class="nb">:init</span>
-  <span class="p">(</span><span class="nv">savehist-mode</span><span class="p">)</span>
-  <span class="p">)</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>安装后重启 Emacs , 再按 M-x 看看有什么不同 <br/></p>
-</li>
-</ul>
-<!--list-separator-->
-<ul>
-<li>
-<p>orderless</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
-<span class="c1">;; ;; Optionally use the `orderless&#39; completion style.</span>
-<span class="p">(</span><span class="nb">use-package</span> <span class="nv">orderless</span>
-  <span class="nb">:defer</span> <span class="mi">3</span>
-  <span class="nb">:init</span>
-  <span class="c1">;; Configure a custom style dispatcher (see the Consult wiki)</span>
-  <span class="c1">;; (setq orderless-style-dispatchers &#39;(+orderless-dispatch)</span>
-  <span class="c1">;;       orderless-component-separator #&#39;orderless-escapable-split-on-space)</span>
-  <span class="p">(</span><span class="nb">setq</span> <span class="nv">completion-styles</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">orderless</span> <span class="nv">basic</span><span class="p">)</span>
-        <span class="nv">completion-category-defaults</span> <span class="no">nil</span>
-        <span class="nv">completion-category-overrides</span> <span class="o">&#39;</span><span class="p">((</span><span class="nv">file</span> <span class="p">(</span><span class="nv">styles</span> <span class="nv">partial-completion</span><span class="p">)))))</span>
-   
-<span class="c1">;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
-<span class="c1">;; ;; A few more useful configurations...</span>
-<span class="p">(</span><span class="nb">use-package</span> <span class="nv">emacs</span>
-  <span class="nb">:defer</span> <span class="mi">3</span>
-  <span class="nb">:ensure</span> <span class="no">nil</span>
-  <span class="nb">:init</span>
-  <span class="c1">;; Add prompt indicator to `completing-read-multiple&#39;.</span>
-  <span class="c1">;; We display [CRM&lt;separator&gt;], e.g., [CRM,] if the separator is a comma.</span>
-  <span class="p">(</span><span class="nb">defun</span> <span class="nv">crm-indicator</span> <span class="p">(</span><span class="nv">args</span><span class="p">)</span>
-    <span class="p">(</span><span class="nf">cons</span> <span class="p">(</span><span class="nf">format</span> <span class="s">&#34;[CRM%s] %s&#34;</span>
-                  <span class="p">(</span><span class="nv">replace-regexp-in-string</span>
-                   <span class="s">&#34;\\`\\[.*?]\\*\\|\\[.*?]\\*\\&#39;&#34;</span> <span class="s">&#34;&#34;</span>
-                   <span class="nv">crm-separator</span><span class="p">)</span>
-                  <span class="p">(</span><span class="nf">car</span> <span class="nv">args</span><span class="p">))</span>
-          <span class="p">(</span><span class="nf">cdr</span> <span class="nv">args</span><span class="p">)))</span>
-  <span class="p">(</span><span class="nv">advice-add</span> <span class="nf">#&#39;</span><span class="nv">completing-read-multiple</span> <span class="nb">:filter-args</span> <span class="nf">#&#39;</span><span class="nv">crm-indicator</span><span class="p">)</span>
-   
-  <span class="c1">;; Do not allow the cursor in the minibuffer prompt</span>
-  <span class="p">(</span><span class="nb">setq</span> <span class="nv">minibuffer-prompt-properties</span>
-        <span class="o">&#39;</span><span class="p">(</span><span class="nv">read-only</span> <span class="no">t</span> <span class="nv">cursor-intangible</span> <span class="no">t</span> <span class="nv">face</span> <span class="nf">minibuffer-prompt</span><span class="p">))</span>
-  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;minibuffer-setup-hook</span> <span class="nf">#&#39;</span><span class="nv">cursor-intangible-mode</span><span class="p">)</span>
-   
-  <span class="c1">;; Emacs 28: Hide commands in M-x which do not work in the current mode.</span>
-  <span class="c1">;; Vertico commands are hidden in normal buffers.</span>
-  <span class="c1">;; (setq read-extended-command-predicate</span>
-  <span class="c1">;;       #&#39;command-completion-default-include-p)</span>
-   
-  <span class="c1">;; Enable recursive minibuffers</span>
-  <span class="p">(</span><span class="nb">setq</span> <span class="nv">enable-recursive-minibuffers</span> <span class="no">t</span><span class="p">))</span>
-   
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<!--list-separator-->
-<ul>
-<li>
-<p>consult</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</span>
-<span class="c1">;; Search content in the file</span>
-<span class="p">(</span><span class="nb">use-package</span> <span class="nv">consult</span>
-  <span class="nb">:defer</span> <span class="mi">3</span>
-  <span class="nb">:ensure</span> <span class="no">t</span>
-  <span class="nb">:bind</span> <span class="p">(</span><span class="s">&#34;C-s&#34;</span> <span class="o">.</span> <span class="nv">consult-line</span><span class="p">)</span>
-<span class="p">)</span> 
-</code></pre></td></tr></table>
-</div>
-</div><p>安装后打开一个文件, 按 C-s 试试搜索文本 <br/></p>
-</li>
-</ul>
-<h2 id="org-mode-重头戏">Org-mode 重头戏</h2>
 ]]></description>
 </item><item>
     <title>永久免账号密码推送Github</title>
