@@ -1,1158 +1,181 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>ISouthRain</title>
-        <link>http://isouthrain.github.io/</link>
-        <description>Freedom and Peace 自由与和平</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
-            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Tue, 26 Apr 2022 00:00:00 &#43;0000</lastBuildDate>
-            <atom:link href="http://isouthrain.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
-    <title>Emacs Gnus 使用 Gmail</title>
-    <link>http://isouthrain.github.io/2022-06-04-gnus-use-gmail.zh-ch/</link>
-    <pubDate>Sat, 04 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-06-04-gnus-use-gmail.zh-ch/</guid>
-    <description><![CDATA[<h1 id="介绍">介绍</h1>
-<p>Xinetd 是一个互联网多功能的工具, 在此这里只使用它的 <strong>端口转发</strong> 功能<br>
-<strong>端口转发</strong> 是将服务器端口进行数据转接, <code>例如: </code>当你使用服务端口配置好了 <strong>imap.gmail.com + 端口</strong>, 客户端口就可以直接访问 <strong>服务器IP + 端口</strong> 就相当于你访问的是 <strong>imap.gmail.com + 端口</strong> 的数据, 这样就可以避免无法访问gmail</p>
-<h2 id="要求">要求</h2>
-<p>一台可以访问 gmail 的服务器</p>
-<h2 id="安装-xinetd">安装 Xinetd</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">apt install xinetd
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="编辑-xinetd-配置文件-让gmail工作">编辑 Xinetd 配置文件, 让gmail工作</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">vim /etc/xinetd.d/gmail
-</code></pre></td></tr></table>
-</div>
-</div><p><code>/etc/xinetd.d/gmail</code> 文件内容:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># /etc/xinetd.d/gmail
-service imap
-{
-type = UNLISTED
-port = 993
-bind = 0.0.0.0
-socket_type = stream
-wait = no
-user = nobody
-redirect = imap.gmail.com 993
-per_source = UNLIMITED
-cps = 100 2
-}
-service smtp-465
-{
-type = UNLISTED
-port = 465
-bind = 0.0.0.0
-socket_type = stream
-wait = no
-user = nobody
-redirect = smtp.gmail.com 465
-per_source = UNLIMITED
-cps = 100 2
-}
-service smtp-587
-{
-type = UNLISTED
-port = 587
-bind = 0.0.0.0
-socket_type = stream
-wait = no
-user = nobody
-redirect = smtp.gmail.com 587
-per_source = UNLIMITED
-cps = 100 2
-}
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="运行服务">运行服务</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">service xinetd start
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="hacker-enjoy">Hacker Enjoy</h3>
-<pre><code>把你的Gnus配置接受服务 `imap.gmail.com` 改成 对应于你的 服务器IP
-发送邮件设置也一样改成你的服务器IP 
-</code></pre>
-]]></description>
-</item><item>
-    <title>Hugo添加Algolia搜索</title>
-    <link>http://isouthrain.github.io/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia/</link>
-    <pubDate>Wed, 04 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia/</guid>
-    <description><![CDATA[<h2 id="前言">前言</h2>
-<p><strong>Hugo</strong> 添加 <strong>Algolia</strong> 搜索, 本文以 <strong>LoveIt</strong> 主题为例</p>
-<h2 id="loveit-启用-algolia-搜索">LoveIt 启用 Algolia 搜索</h2>
-<ul>
-<li><strong>添加以下代码在你的 config.toml</strong>, 根据自己情况填写</li>
-</ul>
-<!--listend-->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
- <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
-  <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-  <span class="c"># 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)</span>
-  <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;algolia&#34;</span>
-  <span class="c"># 文章内容最长索引长度</span>
-  <span class="nx">contentLength</span> <span class="p">=</span> <span class="mi">4000</span>
-  <span class="c"># 搜索框的占位提示语</span>
-  <span class="nx">placeholder</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-  <span class="c"># LoveIt 新增 | 0.2.1 最大结果数目</span>
-  <span class="nx">maxResultLength</span> <span class="p">=</span> <span class="mi">10</span>
-  <span class="c"># LoveIt 新增 | 0.2.3 结果内容片段长度</span>
-  <span class="nx">snippetLength</span> <span class="p">=</span> <span class="mi">50</span>
-  <span class="c"># LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签</span>
-  <span class="nx">highlightTag</span> <span class="p">=</span> <span class="s2">&#34;em&#34;</span>
-  <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
-  <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
-  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
-    <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-    <span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-    <span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-<span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
-  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;JSON&#34;</span><span class="p">]</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="获取-algolia-相关配置">获取 Algolia 相关配置</h2>
-<ul>
-<li><a href="https://www.algolia.com/" target="_blank" rel="noopener noreffer">Algolia官网</a></li>
-<li>注册登陆</li>
-</ul>
-<h3 id="创建属于-hugo-的-application">创建属于 Hugo 的 Application</h3>
-<figure>
-     
-</figure>
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>普通人如何使用Emacs - ISouthRain</title><meta name="Description" content="Freedom and Peace 自由与和平"><meta property="og:title" content="普通人如何使用Emacs" />
+<meta property="og:description" content="#&#43;是否为草稿 #&#43;Html导出主题 #&#43;置顶文章 0 为指定 Emacs 不仅可用于编码， 更可用于生活。 Home 阅读之前 本文的 普通人 指的是 非程序员 为什么编写这编文章" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://isouthrain.github.io/2022-04-29-how-to-use-emacs/" />
+<meta property="og:image" content="http://isouthrain.github.io/"/>
+<meta property="article:published_time" content="2022-04-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-23T13:25:20+08:00" /><meta property="og:site_name" content="ISouthRain" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://isouthrain.github.io/"/>
 
-<ol>
-<li>名称随便填一个, 例如 Hugo</li>
-<li><strong>CHOOSE YOUR SUBSCRIPTION</strong> &ndash;&gt; 选择免费的 <strong>FREE</strong></li>
-<li>点击右侧 &mdash;&gt; <strong>Next Step:Data Center</strong></li>
-<li>选择一个离你网站地方进的地方</li>
-</ol>
-<h4 id="获取-index">获取 index</h4>
-<ul>
-<li>
-<p><strong>回到主页</strong></p>
-<ol>
-<li>点击左下角的  <strong>Data sources</strong></li>
-<li>选择你刚才注册的 Application</li>
-</ol>
-<figure>
-     
-</figure>
+<meta name="twitter:title" content="普通人如何使用Emacs"/>
+<meta name="twitter:description" content="#&#43;是否为草稿 #&#43;Html导出主题 #&#43;置顶文章 0 为指定 Emacs 不仅可用于编码， 更可用于生活。 Home 阅读之前 本文的 普通人 指的是 非程序员 为什么编写这编文章"/>
+<meta name="application-name" content="ISouthRain">
+<meta name="apple-mobile-web-app-title" content="ISouthRain"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://isouthrain.github.io/2022-04-29-how-to-use-emacs/" /><link rel="prev" href="http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/" /><link rel="next" href="http://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "普通人如何使用Emacs",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/isouthrain.github.io\/2022-04-29-how-to-use-emacs\/"
+        },"genre": "posts","keywords": "Emacs","wordcount":  3612 ,
+        "url": "http:\/\/isouthrain.github.io\/2022-04-29-how-to-use-emacs\/","datePublished": "2022-04-29T00:00:00+00:00","dateModified": "2022-06-23T13:25:20+08:00","publisher": {
+            "@type": "Organization",
+            "name": "ISouthRain","logo": "https:\/\/raw.githubusercontent.com\/ISouthRain\/ISouthRain.github.io\/main\/android-chrome-192x192.png"},"author": {
+                "@type": "Person",
+                "name": "ISouthRain"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-<ol>
-<li>点击左上角 <strong>Indices</strong></li>
-<li>点击右上角 <strong>Greate Index</strong></li>
-<li>填一个名称, 例如 Hugo, 之后在 <strong>config.toml</strong> 配置 <strong>index</strong></li>
-</ol>
-</li>
-</ul>
-<h4 id="获取-appid">获取 appID</h4>
-<figure>
-     
-</figure>
-
-<h4 id="获取-searchkey">获取 searchKey</h4>
-<figure>
-     
-</figure>
-
-<figure>
-     
-</figure>
-
-<h2 id="上传到-algolia">上传到 Algolia</h2>
-<ol>
-<li>
-<p>在你的Hugo主目录下运行:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo
-</code></pre></td></tr></table>
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="ISouthRain"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        data-srcset="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 1.5x, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        title="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png" />ISouthRain</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/thanks/" title="致谢"> 致谢 </a><a class="menu-item" href="/quotation/" title="语录"> 语录 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/2022-04-29-how-to-use-emacs/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="ISouthRain"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        data-srcset="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 1.5x, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        title="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png" />ISouthRain</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/thanks/" title="致谢">致谢</a><a class="menu-item" href="/quotation/" title="语录">语录</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/2022-04-29-how-to-use-emacs/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
 </div>
-</div></li>
-<li>
-<p>public 目录下会生成 <strong>index.json</strong></p>
-</li>
-<li>
-<p>将 <strong>index.json</strong> 上传到你的 Algolia index 中</p>
-</li>
-</ol>
-<h2 id="自动化上传-index-dot-json">自动化上传 index.json</h2>
-<ul>
-<li>需要安装 npm, nodejs</li>
-<li><a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener noreffer">Nodejs</a></li>
-</ul>
-<h3 id="你的-hugo-目录下安装-atomc-algolia">你的 Hugo 目录下安装 atomc-algolia</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm install atomic-algolia --save
-</code></pre></td></tr></table>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
 </div>
-</div><h3 id="你的-hugo-目录下新建-dot-env-文件">你的 Hugo 目录下新建 .env 文件</h3>
-<ul>
-<li>内容为, 请根据自己信息填写, 每一项缺一不可</li>
-</ul>
-<!--listend-->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ALGOLIA_APP_ID=
-ALGOLIA_INDEX_NAME=&#34;&#34;
-ALGOLIA_INDEX_FILE=&#34;public/index.json&#34;
-ALGOLIA_ADMIN_KEY=
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="开始自动上传">开始自动上传</h4>
-<ul>
-<li><strong>hugo</strong></li>
-<li>自动生成 <em>public</em> 目录</li>
-<li><strong>npm run algolia</strong></li>
-</ul>
-<h2 id="添加不同语言的搜索">添加不同语言的搜索</h2>
-<ul>
-<li>
-<p>在 Algolia 同个 Application 创建两个 index</p>
-</li>
-<li>
-<p>不同语言有不同的 <strong>index.json</strong></p>
-</li>
-<li>
-<p>请在下方找到对应的 search 配置</p>
-</li>
-<li>
-<p>参考配置</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span><span class="lnt">102
-</span><span class="lnt">103
-</span><span class="lnt">104
-</span><span class="lnt">105
-</span><span class="lnt">106
-</span><span class="lnt">107
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># [en, zh-cn, fr, pl, ...] 设置默认的语言</span>
-<span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>
-
-<span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
-  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
-    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;ISouthRain&#34;</span>
-    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
-    <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
-      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Posts&#34;</span>
-      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/posts/&#34;</span>
-      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
-      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Tags&#34;</span>
-      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/tags/&#34;</span>
-      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
-      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Categories&#34;</span>
-      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/categories/&#34;</span>
-      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>
-    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
-      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-      <span class="c"># 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)</span>
-      <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;algolia&#34;</span>
-      <span class="c"># 文章内容最长索引长度</span>
-      <span class="nx">contentLength</span> <span class="p">=</span> <span class="mi">4000</span>
-      <span class="c"># 搜索框的占位提示语</span>
-      <span class="nx">placeholder</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="c"># LoveIt 新增 | 0.2.1 最大结果数目</span>
-      <span class="nx">maxResultLength</span> <span class="p">=</span> <span class="mi">10</span>
-      <span class="c"># LoveIt 新增 | 0.2.3 结果内容片段长度</span>
-      <span class="nx">snippetLength</span> <span class="p">=</span> <span class="mi">50</span>
-      <span class="c"># LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签</span>
-      <span class="nx">highlightTag</span> <span class="p">=</span> <span class="s2">&#34;em&#34;</span>
-      <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
-      <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
-      <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
-    <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 根据你创建的 index 名, 例如 Hugo-en</span>
-    <span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
-    <span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
-
-
-  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">]</span>
-    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;ISouthRain&#34;</span>
-    <span class="c"># 网站语言, 仅在这里 CN 大写</span>
-    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;zh-CN&#34;</span>
-    <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;简体中文&#34;</span>
-    <span class="c"># 是否包括中日韩文字</span>
-    <span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">true</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
-      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;文章&#34;</span>
-      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/posts/&#34;</span>
-      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
-      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;标签&#34;</span>
-      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/tags/&#34;</span>
-      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
-      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;分类&#34;</span>
-      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/categories/&#34;</span>
-      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>
-    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
-      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-      <span class="c"># 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)</span>
-      <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;algolia&#34;</span>
-      <span class="c"># 文章内容最长索引长度</span>
-      <span class="nx">contentLength</span> <span class="p">=</span> <span class="mi">4000</span>
-      <span class="c"># 搜索框的占位提示语</span>
-      <span class="nx">placeholder</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="c"># LoveIt 新增 | 0.2.1 最大结果数目</span>
-      <span class="nx">maxResultLength</span> <span class="p">=</span> <span class="mi">10</span>
-      <span class="c"># LoveIt 新增 | 0.2.3 结果内容片段长度</span>
-      <span class="nx">snippetLength</span> <span class="p">=</span> <span class="mi">50</span>
-      <span class="c"># LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签</span>
-      <span class="nx">highlightTag</span> <span class="p">=</span> <span class="s2">&#34;em&#34;</span>
-      <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
-      <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
-      <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
-    <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 根据你创建的 index 名, 例如 Hugo-zh</span>
-    <span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
-    <span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<h3 id="请享受">请享受🍔🍟</h3>
-<h3 id="faq">FAQ❓</h3>
-<ul>
-<li>遇到了问题?
-<ul>
-<li>请在下方回复</li>
-</ul>
-</li>
-</ul>
-]]></description>
-</item><item>
-    <title>npm, node升级</title>
-    <link>http://isouthrain.github.io/2022-05-02-npm%E5%8D%87%E7%BA%A7/</link>
-    <pubDate>Mon, 02 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-05-02-npm%E5%8D%87%E7%BA%A7/</guid>
-    <description><![CDATA[<h2 id="安装模块-n">安装模块 n</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm install n -g
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="升级-npm-和-nodejs">升级 npm 和 nodejs</h2>
-<h3 id="查看当前-npm-nodejs-版本">查看当前 npm nodejs 版本</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm -v
-node -v
-<span class="c1"># 升级 npm</span>
-npm install npm -g
-<span class="c1"># 升级 node</span>
-n stable
-<span class="c1"># 升级到对应版</span>
-npm install npm@3.3 -g
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item><item>
-    <title>搭建 Telegram Bot RSS 订阅</title>
-    <link>http://isouthrain.github.io/2022-05-02-telegrambotrss/</link>
-    <pubDate>Mon, 02 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-05-02-telegrambotrss/</guid>
-    <description><![CDATA[<blockquote>
-<p>妄想逃脱大数据的背叛🤨</p>
-</blockquote>
-<h2 id="rss">RSS</h2>
-<ul>
-<li>自己管理自己的订阅，掌控自己的爱好!!</li>
-</ul>
-<h2 id="要求">要求</h2>
-<ul>
-<li>一台海外 VPS</li>
-<li>一点点 Linux 技术</li>
-</ul>
-<h3 id="flowerss-bot">Flowerss-bot</h3>
-<ul>
-<li><strong>一个国人开源的 Telegra bot RSS 订阅机器人</strong></li>
-<li>搭建非常简单, 功能非常多</li>
-<li>只需要填写 bot Token 就可以使用</li>
-<li>支持 Telegram Instart  view 即时预览</li>
-<li><a href="https://github.com/indes/flowerss-bot" target="_blank" rel="noopener noreffer">flowerrss-bot</a></li>
-</ul>
-<h3 id="下载-flowerss-bot">下载 Flowerss-bot</h3>
-<ul>
-<li><a href="https://github.com/indes/flowerss-bot/releases" target="_blank" rel="noopener noreffer">下载对应版本</a></li>
-</ul>
-<h3 id="获取机器人">获取机器人</h3>
-<ol>
-<li>@BotFather</li>
-<li>/newbot</li>
-<li>随便命名一个 <code>称呼</code></li>
-<li>命名机器人，必须 Bot 或者 _bot 结尾, 例如: MyrssBot</li>
-<li>复制 token</li>
-</ol>
-<h3 id="修改-configynl">修改 config.ynl</h3>
-<ul>
-<li>修改第一行, 将 token 复制进去</li>
-<li>根据自己情况修改需要，默认只需要修改了 token 就可以使用了</li>
-<li><a href="https://flowerss-bot.vercel.app/#/install" target="_blank" rel="noopener noreffer">详细修改</a></li>
-</ul>
-<h3 id="关于使用-telegraph-即使预览">关于使用 Telegraph 即使预览</h3>
-<ul>
-<li>默认获取 token 就可以使用</li>
-<li><a href="https://telegra.ph/api" target="_blank" rel="noopener noreffer">获取方法</a></li>
-<li>Telegtaph 官方机器人 @telegraph</li>
-</ul>
-<h3 id="步骤">步骤</h3>
-<ol>
-<li>关注 Telegraph 机器人</li>
-<li>在浏览器输入, 自动生成 token</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">https://api.telegra.ph/createAccount?short_name=称呼名&amp;author_name=用户名
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="运行">运行</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">chmod <span class="m">755</span> flowerss-bot
-./flowerss-bot
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="成功了就请享受">成功了就请享受🌝</h3>
-<h3 id="感谢作者大大的开源让我们用上这么好的作品">感谢作者大大的开源，让我们用上这么好的作品🌹</h3>
-<ul>
-<li><a href="https://github.com/indes/flowerss-bot" target="_blank" rel="noopener noreffer">flowerss-bot</a></li>
-</ul>
-<h3 id="faq">FAQ❓</h3>
-<p><strong>遇到问题可以在下面回复</strong></p>
-]]></description>
-</item><item>
-    <title>Frp内网穿透</title>
-    <link>http://isouthrain.github.io/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
-    <pubDate>Sun, 01 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
-    <description><![CDATA[<h3 id="什么是内网穿透">什么是内网穿透?</h3>
-<p><strong>通俗的说:</strong> 把 <code>局域网</code> 变成 <code>公网</code> 那样可以让外面的人访问</p>
-<h3 id="内网穿透工具">内网穿透工具</h3>
-<ul>
-<li><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreffer">Frp</a></li>
-<li><a href="https://ngrok.com" target="_blank" rel="noopener noreffer">ngrok</a></li>
-<li><a href="https://flynat.51miaole.com" target="_blank" rel="noopener noreffer">蜻蜓映射</a></li>
-<li><a href="https://natapp.cn" target="_blank" rel="noopener noreffer">natapp</a></li>
-<li>以及一些其它的, 不一一列出了, 大家可以上网查查</li>
-<li>推荐大家使用 <code>Frp</code> , 因为免费且开源, 易配置, 简单使用</li>
-</ul>
-<h3 id="frp-为例">Frp 为例</h3>
-<ul>
-<li><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreffer">Frp项目地址</a></li>
-</ul>
-<h3 id="服务器端">服务器端</h3>
-<h4 id="下载-frp">下载 frp</h4>
-<ul>
-<li>
-<p>根据自己的系统下载对于版本</p>
-</li>
-<li>
-<p><a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreffer">Frp地址</a></p>
-</li>
-<li>
-<p>Linux 用户可以使用 <code>wget</code> 工具下载</p>
-<ul>
-<li>例如: wget <a href="https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz">https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz</a></li>
-</ul>
-</li>
-</ul>
-<h4 id="解压">解压</h4>
-<ul>
-<li>tar -zxvf frpxxxxxx.tar.gz</li>
-</ul>
-<h4 id="前往到解压目录">前往到解压目录</h4>
-<ul>
-<li>cd frpxxxxxx</li>
-</ul>
-<h4 id="编辑-frpsini">编辑 frps.ini</h4>
-<ul>
-<li><strong>根据自己情况添加</strong></li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">common</span><span class="p">]</span>
-<span class="nx">bind_addr</span> <span class="p">=</span> <span class="mf">0.0</span><span class="p">.</span><span class="mf">0.0</span>
-<span class="c"># frp 监听的端口，默认是7000</span>
-<span class="nx">bind_port</span> <span class="p">=</span> <span class="mi">7000</span>
-<span class="c"># 授权码, 随便填一个</span>
-<span class="nx">token</span> <span class="p">=</span> <span class="nx">xxxxx</span>
-
-<span class="c"># frp管理后台端口，请按自己需求更改</span>
-<span class="nx">dashboard_port</span> <span class="p">=</span> <span class="mi">7100</span>
-<span class="c"># frp管理后台用户名和密码</span>
-<span class="nx">dashboard_user</span> <span class="p">=</span> <span class="nx">xxxx</span>
-<span class="nx">dashboard_pwd</span> <span class="p">=</span> <span class="nx">xxxx</span>
-<span class="nx">enable_prometheus</span> <span class="p">=</span> <span class="kc">true</span>
-
-<span class="c"># frp日志配置</span>
-<span class="nx">log_file</span> <span class="p">=</span> <span class="err">/</span><span class="nx">var</span><span class="err">/</span><span class="nx">log</span><span class="err">/</span><span class="nx">frps</span><span class="p">.</span><span class="nx">log</span>
-<span class="nx">log_level</span> <span class="p">=</span> <span class="nx">info</span>
-<span class="nx">log_max_days</span> <span class="p">=</span> <span class="mi">3</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="运行-frps">运行 frps</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Linux 用户</span>
-chomd +x frps
-./frps -c frps.ini
-<span class="c1"># windows用户</span>
-./frps.exe -c frps.ini
-
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="客户端你的局域网端">客户端(你的局域网端)</h3>
-<ul>
-<li><strong>相同方法下载</strong></li>
-</ul>
-<h4 id="解压后-编辑-frpcini">解压后 编辑 frpc.ini</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 服务端配置</span>
-<span class="p">[</span><span class="nx">common</span><span class="p">]</span>
-<span class="nx">server_addr</span> <span class="p">=</span> <span class="nx">服务器ip</span>
-<span class="c"># 请换成设置的服务器端口</span>
-<span class="nx">server_port</span> <span class="p">=</span> <span class="mi">7000</span>
-<span class="nx">token</span> <span class="p">=</span> <span class="nx">与上面frps</span><span class="p">.</span><span class="nx">ini的相同</span>
-
-<span class="c"># 配置ssh服务</span>
-<span class="p">[</span><span class="nx">ssh</span><span class="p">]</span>
-<span class="nx">type</span> <span class="p">=</span> <span class="nx">tcp</span>
-<span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
-<span class="nx">local_port</span> <span class="p">=</span> <span class="mi">8022</span>
-<span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如8022</span>
-
-<span class="p">[</span><span class="nx">web</span><span class="p">]</span>
-<span class="nx">type</span> <span class="p">=</span> <span class="nx">http</span>
-<span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
-<span class="nx">local_port</span> <span class="p">=</span> <span class="mi">8080</span>
-<span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如8080</span>
-<span class="c"># 多端口</span>
-<span class="p">[</span><span class="nx">range</span><span class="err">:</span><span class="nx">Test</span><span class="p">]</span>
-<span class="p">[</span><span class="nx">web</span><span class="p">]</span>
-<span class="nx">type</span> <span class="p">=</span> <span class="nx">http</span>
-<span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
-<span class="nx">local_port</span> <span class="p">=</span> <span class="mi">9000-9010</span>
-<span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如9000</span><span class="mi">-9010</span>
-
-
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="启动-frpc">启动 frpc</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Linux用户</span>
-./frpc -c frpc.ini
-<span class="c1"># Windows用户</span>
-./frpc.exe -c frpc.ini
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="测试">测试</h3>
-<p><strong>在你的公网端, 进行测试</strong></p>
-<ul>
-<li>例如, 服务器端链接局域网端 ssh</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ssh -p 端口 root@服务器IP
-<span class="c1"># 例如</span>
-ssh -p <span class="m">8022</span> root@192.13.33.6
-</code></pre></td></tr></table>
-</div>
-</div><p><strong><code>服务器端口必须要开放对应端口</code></strong></p>
-<p><strong>注意, 当你想访问局域网端时, 局域网端口的本地端口一定是开的, 并对应于你设置frpc.ini的端口</strong></p>
-<p><strong>服务器端 frps, 局域网端 frpc, 必须同时开启才可正常使用</strong></p>
-<h3 id="faq">FAQ❓</h3>
-<h4 id="可以让服务器端开机启动-不太麻烦">可以让服务器端开机启动, 不太麻烦</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> frp目录
-mkdir -p /etc/frp
-cp frps.ini /etc/frp
-cp frps /usr/bin
-cp systemd/frps.service /usr/lib/systemd/system/
-systemctl <span class="nb">enable</span> frps
-systemctl start frps
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item><item>
-    <title>Hugo如何置顶文章</title>
-    <link>http://isouthrain.github.io/2022-04-30-hugo%E5%A6%82%E4%BD%95%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</link>
-    <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-04-30-hugo%E5%A6%82%E4%BD%95%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</guid>
-    <description><![CDATA[<h3 id="hugo-置顶文章很简单只需要将以下放在文章头部即可置顶">Hugo 置顶文章很简单，只需要将以下放在文章头部即可置顶</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">---
-weight: 1
----
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item><item>
-    <title>Markdown语法</title>
-    <link>http://isouthrain.github.io/2022-04-30-markdown%E8%AF%AD%E6%B3%95/</link>
-    <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-04-30-markdown%E8%AF%AD%E6%B3%95/</guid>
-    <description><![CDATA[<h4 id="粗体">粗体</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">**粗体**
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="斜体">斜体</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">*斜体* 
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="粗斜体">粗斜体</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">***粗斜体***
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="粗斜体-1">粗斜体</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">***粗斜体***
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="链接">链接🔗</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">[<span class="nt">备注</span>](<span class="na">链接</span>) 
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="文件链接">文件链接</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">![<span class="nt">备注</span>](<span class="na">链接</span>)
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="内部文件跳转">内部文件跳转</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;span id = &#34;瞄点&#34;&gt;跳转至瞄点&lt;/span&gt;
-
-[跳转至瞄点](#瞄点)
-</code></pre></td></tr></table>
-</div>
-</div><h5 id="效果如下">效果如下</h5>
-<p><code>效果如下👇</code></p>
-<video poster="效果动图"  width="360" height="240" controls>
-    <source src="/posts/Attachment/2022-04-30-Markdown语法.zh-cn.md/2022-04-30-23-07-03.mp4" type="video/mp4">
-</video>    
-<h4 id="嵌入视频">嵌入视频</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">&lt;video poster=&#34;效果动图&#34;  width=&#34;360&#34; height=&#34;240&#34; controls&gt;
-    &lt;source src=&#34;视频链接链接，支持其他格式，当使用其他格式时，不要替换后面的 video/mp4&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;  
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="折叠列表">折叠列表</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">&lt;details&gt;
-&lt;summary&gt;这是一个折叠列表&lt;/summary&gt;
-
-折叠内容, 上面空一行
-
-下一行
-&lt;details&gt;
-&lt;summary&gt;这是一个嵌套折叠列表&lt;/summary&gt;
-
-嵌套折叠内容, 上面空一行
-
-下一行
-&lt;/details&gt;
-&lt;/details&gt;
-</code></pre></td></tr></table>
-</div>
-</div><h5 id="效果如下-1">效果如下</h5>
-<video poster="效果动图"  width="360" height="240" controls>
-    <source src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/posts/Attachment/2022-04-30-Markdown语法.zh-cn.md/折叠列表.mp4" type="video/mp4">
-</video>  
-<h4 id="表格">表格</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">|1   |   2  |   3|
-|:-  |  :-: |  -:|
-|居右| 居中 |居左|
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="代码块">代码块</h4>
-<p>用6个  <strong>`</strong> 包裹</p>
-<h4 id="块状">块状</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="sb">`块状`</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="下划线">下划线</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">&lt;u&gt;下划线&lt;/u&gt;
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="删除线">删除线</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">~~删除线~~
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="使用表情">使用表情</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">露营 :tent: 
-
-真好笑 :joy:
-</code></pre></td></tr></table>
-</div>
-</div><p>露营⛺</p>
-<p>真好笑😂</p>
-<p><a href="https://gist.github.com/rxaviers/7360908" target="_blank" rel="noopener noreffer">表情符号码表</a></p>
-]]></description>
-</item><item>
-    <title>如何上传/推送到 Github</title>
-    <link>http://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/</link>
-    <pubDate>Fri, 29 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/</guid>
-    <description><![CDATA[<h3 id="git-push-推送上传到-github">git push 推送/上传到 GitHub</h3>
-<h3 id="git-push-输入账号密码后推送不了">git push 输入账号密码后推送不了?</h3>
-<p>因为 Github 的推送/上传机制改了<br>
-之前可以输入 账号密码 就可以 push, 现在只能使用 <code>github token</code> 代替  <code>密码</code> 才能推送/上传</p>
-<h3 id="申请-token">申请 token</h3>
-<p><code>Settings</code> &ndash;&gt; <code>Developer settings</code> &ndash;&gt;  <code>Personal access tokens</code> &ndash;&gt;  <code>Generate new token</code></p>
-<ul>
-<li>Note &ndash;&gt; 随便填一个名称</li>
-<li>Expiration &ndash;&gt; 选择该 token 有效期，个人建议如果是使用推送/上传功能，建议选  <code>No expiration</code></li>
-<li>其余 <code>打勾</code> 按照你自己需求，新手建议全部打勾</li>
-<li>Generate token 点击创建</li>
-</ul>
-<h3 id="将你创建刚刚创建-token-复制">将你创建刚刚创建 token 复制</h3>
-<h3 id="再次使用-git-push">再次使用 git push</h3>
-<ul>
-<li>输入你的用户名,回车</li>
-<li>将 token 粘贴上去, 回车</li>
-</ul>
-<h3 id="如果成功-上传推送-请享受">如果成功 上传/推送 ，请享受🎉🎉🎉</h3>
-<h3 id="每次-推送上传-都要输入-账号密码">每次 推送/上传 都要输入 账号密码??</h3>
-<p>如果你不想每次 上传/推送 都要输入 账号密码，可以看我的另一个文章
-每次都要输入账号密码太麻烦了<br>
-👉  <a href="https://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/" target="_blank" rel="noopener noreffer">永久免账号密码 推送/上传 GitHub</a></p>
-<h3 id="faq">FAQ❓</h3>
-<p>如果你遇到了问题，可以在下面评论去提问，基本都会回复的</p>
-]]></description>
-</item><item>
-    <title>普通人如何使用Emacs</title>
-    <link>http://isouthrain.github.io/2022-04-29-how-to-use-emacs/</link>
-    <pubDate>Fri, 29 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-04-29-how-to-use-emacs/</guid>
-    <description><![CDATA[<p>#+是否为草稿 <br/></p>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">普通人如何使用Emacs</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>ISouthRain</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-29">2022-04-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3612 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#home">Home</a>
+      <ul>
+        <li><a href="#阅读之前">阅读之前</a></li>
+        <li><a href="#文章适合人群">文章适合人群</a></li>
+        <li><a href="#安装-emacs">安装 Emacs</a></li>
+        <li><a href="#简单使用">简单使用</a></li>
+        <li><a href="#emacs-允许用户修改emacs所有的设置">Emacs 允许用户修改Emacs所有的设置</a></li>
+        <li><a href="#基本配置">基本配置</a>
+          <ul>
+            <li><a href="#简单配置">简单配置</a></li>
+            <li><a href="#区分系统类型和gui或者tui界面">区分系统类型和GUI或者TUI界面</a></li>
+          </ul>
+        </li>
+        <li><a href="#配置管理-请重视此标题-这将在未来帮助你减少大量时间">配置管理, 请重视此标题, 这将在未来帮助你减少大量时间</a></li>
+        <li><a href="#包安装">包安装</a>
+          <ul>
+            <li><a href="#原生安装">原生安装</a></li>
+            <li><a href="#使用-use-package-安装扩展包">使用 Use-package 安装扩展包</a></li>
+          </ul>
+        </li>
+        <li><a href="#emacs-光标移动选择">Emacs 光标移动选择</a>
+          <ul>
+            <li><a href="#个人推荐键盘">个人推荐键盘</a></li>
+          </ul>
+        </li>
+        <li><a href="#美化-emacs">美化 Emacs</a>
+          <ul>
+            <li><a href="#theme-主题">theme 主题</a></li>
+            <li><a href="#mode-line-下方的状态栏美化-以-doom-modeline-为例-还有很多选择">mode-line 下方的状态栏美化, 以 doom-modeline 为例, 还有很多选择</a></li>
+            <li><a href="#buffer-tab-上方的-tab">buffer-tab, 上方的 tab</a></li>
+          </ul>
+        </li>
+        <li><a href="#增强-emacs-搜索功能">增强 Emacs 搜索功能</a>
+          <ul>
+            <li><a href="#最新三套装">最新三套装</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#org-mode-重头戏">Org-mode 重头戏</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>#+是否为草稿 <br/></p>
 <p>#+Html导出主题 <br/></p>
 <p>#+置顶文章 0 为指定 <br/></p>
 <blockquote>
@@ -2257,53 +1280,45 @@ weight: 1
 </li>
 </ul>
 <h2 id="org-mode-重头戏">Org-mode 重头戏</h2>
-]]></description>
-</item><item>
-    <title>永久免账号密码推送Github</title>
-    <link>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</link>
-    <pubDate>Thu, 28 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</guid>
-    <description><![CDATA[<h3 id="使用以下方法后">使用以下方法后</h3>
-<h3 id="git-push-再也不用一直输入-账号密码了">git push 再也不用一直输入 账号密码了!</h3>
-<h3 id="git-push-每次都要输入账号密码-从此解决">git push 每次都要输入账号密码? 从此解决</h3>
-<h3 id="正文">正文👇</h3>
-<h3 id="首先配置-git-个人信息">首先配置 Git 个人信息</h3>
-<h4 id="依此输入以下两个命令">依此输入以下两个命令:</h4>
-<h4 id="配置你的-github-邮箱">配置你的 GitHub 邮箱📬</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global user.email <span class="s2">&#34;你在 GitHub 注册的邮箱&#34;</span>
-</code></pre></td></tr></table>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-06-23</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://isouthrain.github.io/2022-04-29-how-to-use-emacs/" data-title="普通人如何使用Emacs" data-via="ISouthRain" data-hashtags="Emacs"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://isouthrain.github.io/2022-04-29-how-to-use-emacs/" data-hashtag="Emacs"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://isouthrain.github.io/2022-04-29-how-to-use-emacs/" data-title="普通人如何使用Emacs" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://isouthrain.github.io/2022-04-29-how-to-use-emacs/" data-title="普通人如何使用Emacs"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Instapaper" data-sharer="instapaper" data-url="http://isouthrain.github.io/2022-04-29-how-to-use-emacs/" data-title="普通人如何使用Emacs" data-description=""><i data-svg-src="/lib/simple-icons/icons/instapaper.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://isouthrain.github.io/2022-04-29-how-to-use-emacs/" data-title="普通人如何使用Emacs"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="http://isouthrain.github.io/2022-04-29-how-to-use-emacs/" data-title="普通人如何使用Emacs" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://isouthrain.github.io/2022-04-29-how-to-use-emacs/" data-title="普通人如何使用Emacs" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://isouthrain.github.io/2022-04-29-how-to-use-emacs/" data-title="普通人如何使用Emacs"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/emacs/">Emacs</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/" class="prev" rel="prev" title="永久免账号密码推送Github"><i class="fas fa-angle-left fa-fw"></i>永久免账号密码推送Github</a>
+            <a href="/2022-04-29-%E6%8E%A8%E9%80%81github/" class="next" rel="next" title="如何上传/推送到 Github">如何上传/推送到 Github<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
-</div><h4 id="配置你的-github-用户名">配置你的 GitHub 用户名</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global user.name <span class="s2">&#34;你的 GitHub 用户名&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="输入以下命令后将会保存你-git-push-时登录的信息">输入以下命令后，将会保存你 git push 时登录的信息</h4>
-<h4 id="当下一次-git-push-时就不用再输入登录信息了">当下一次 git push 时就不用再输入登录信息了!</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global credential.helper store
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="如何推送上传到githubhttpsisouthraingithubio2022-04-29-e68ea8e98081github"><a href="https://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/" target="_blank" rel="noopener noreffer">如何推送/上传到GitHub</a></h3>
-<h4 id="faq">FAQ❓</h4>
-<h5 id="由于github已经更改了-git-push-机制">由于GitHub已经更改了 git push 机制</h5>
-<h5 id="git-push-时密码改用-token"><code>git push</code> 时<code>密码改用</code> <code>token</code></h5>
-<h4 id="已完成所有工作-请-git-push-一次试试">已完成所有工作, 请 git push 一次试试</h4>
-<h5 id="如果成功了请享受">如果成功了，请享受🎉🎉🎉</h5>
-]]></description>
-</item></channel>
-</rss>
+<div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.68.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/ISouthRain" target="_blank">ISouthRain</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"title","label":"Comment","lightTheme":"github-light","repo":"ISouthRain/ISouthRain.github.io"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"T83K20E5M4","algoliaIndex":"Hugo-zh","algoliaSearchKey":"20115b19e00d97ccd072e0cbe77abf47","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
