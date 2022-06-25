@@ -14,9 +14,9 @@
     <guid>http://isouthrain.github.io/2022-06-25-gpg/</guid>
     <description><![CDATA[<h2 id="什么是-gnupg">什么是 GnuPG ?</h2>
 <p>GPG 全名叫 <strong>GNU Privacy Guard</strong>, 是一个加密前端, 可以使用 <em>RSA 、ESCDA</em> 等算法去加密</p>
-<h2 id="下载-gnupg">下载 Gnupg</h2>
+<h2 id="下载-gnupg">下载 GnuPG</h2>
 <ul>
-<li><a href="https://gnupg.org/" target="_blank" rel="noopener noreffer">Gnupg官网</a></li>
+<li><a href="https://gnupg.org/" target="_blank" rel="noopener noreffer">GnuPG官网</a></li>
 </ul>
 <h2 id="获取密钥--windows-使用终端命令">获取密钥(Windows 使用终端命令)</h2>
 <p><strong>请记住, 密钥绝不要给任何人</strong></p>
@@ -160,7 +160,7 @@ gpg -o fileame -d filename.gpg
 <span class="p">(</span><span class="nv">org-crypt-use-before-save-magic</span><span class="p">)</span>
 <span class="p">(</span><span class="nb">setq</span> <span class="nv">org-tags-exclude-from-inheritance</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;crypt&#34;</span><span class="p">))</span>
 <span class="c1">;; GPG ID, 解密一个文件可以知道这个ID, 每个人都不同</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-crypt-key</span> <span class="s">&#34;0EVT4708DD97889B&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-crypt-key</span> <span class="s">&#34;0PVT4708DD97889B&#34;</span><span class="p">)</span>
 <span class="p">(</span><span class="nb">setq</span> <span class="nv">auto-save-default</span> <span class="no">nil</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
@@ -168,10 +168,15 @@ gpg -o fileame -d filename.gpg
 </ul>
 <!--listend-->
 <ul>
-<li>加密
-在标题后面写上 :crypt: , 保存文件将会自动加密此标题内容</li>
-<li>解密
-将 光标放在具有 :crypt: 标题上, 命令 org-decrypt-entry</li>
+<li>
+<p>加密
+在标题后面写上 :crypt: , 保存文件将会自动加密此标题内容</p>
+<p><strong>注意</strong>: Windows 加密会乱码，导致无法解密org标题内容，谨慎使用(请不要在Windows使用Org加密)</p>
+</li>
+<li>
+<p>解密
+将 光标放在具有 :crypt: 标题上, 命令 org-decrypt-entry</p>
+</li>
 </ul>
 ]]></description>
 </item><item>
