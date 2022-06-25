@@ -4,7 +4,169 @@
         <link>http://isouthrain.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
         <description>技术 - 分类 - ISouthRain</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
-            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sat, 04 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/categories/%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sat, 25 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/categories/%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>Gnupg(GPG) 加密使用</title>
+    <link>http://isouthrain.github.io/2022-06-25-gpg/</link>
+    <pubDate>Sat, 25 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-06-25-gpg/</guid>
+    <description><![CDATA[<h2 id="什么是-gnupg">什么是 GnuPG ?</h2>
+<p>GPG 全名叫 <strong>GNU Privacy Guard</strong>, 是一个加密前端, 可以使用 <em>RSA 、ESCDA</em> 等算法去加密</p>
+<h2 id="下载-gnupg">下载 Gnupg</h2>
+<ul>
+<li><a href="https://gnupg.org/" target="_blank" rel="noopener noreffer">Gnupg官网</a></li>
+</ul>
+<h2 id="获取密钥--windows-使用终端命令">获取密钥(Windows 使用终端命令)</h2>
+<p><strong>请记住, 密钥绝不要给任何人</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gpg --gen-key
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>默认选项即可</strong></p>
+<h2 id="加密解密文件">加密解密文件</h2>
+<ul>
+<li>加密之前
+<ul>
+<li>加密分为两种
+<ol>
+<li>对称加密解密(双方只要输入对密码就可以查看和加密)</li>
+<li>非对称加密解密(对方使用 <strong>你给的公钥加密</strong>, 只有使用 <strong>你自己的密钥</strong> 能解密查看)</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><a href="https://gist.github.com/jhjguxin/6037564" target="_blank" rel="noopener noreffer">详细解释</a></li>
+</ul>
+<h3 id="对称加密解密">对称加密解密</h3>
+<ul>
+<li>加密(输入两次相同密码)</li>
+</ul>
+<!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gpg --symmetric filename
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>解密(输入配对密码, 与上面的密码相同)
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 仅仅解密内容</span>
+gpg -d filename.gpg
+<span class="c1"># 解密并输出原文件</span>
+gpg -o fileame -d filename.gpg
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="非对称加密解密--个人常用">非对称加密解密(个人常用)</h3>
+<ul>
+<li>加密
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># -r 表示 gpg 用户, 就刚才创建密钥的用户名</span>
+gpg -e -r User filename
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>解密
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 仅仅解密内容</span>
+gpg -d filename.gpg
+<span class="c1"># 解密并输出原文件</span>
+gpg -o fileame -d filename.gpg
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="导出--请不要将密钥发送给任何人-自己导出密钥保存就好">导出(请不要将密钥发送给任何人,自己导出密钥保存就好)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">gpg -o filename.asc --export keyID
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="导入--个人使用导入密钥就好">导入(个人使用导入密钥就好)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gpg --imort filename.asc
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="faq">FAQ❓</h2>
+<ol>
+<li>是不是在我的电脑上，使用别人A的公钥加密了一个文件，而我没有别人A的密钥，我也无法读取查看。是吗？？
+是的</li>
+<li>是不是使用 非对称加密(不需要密码)，别人没有公钥和私钥就无法破解读取数据？
+公钥大家都可以有，可以用来加密(比如在公共平台发一个只有你能解密的消息)但不可以用来解密。私钥只有你有，可以用来解密
+也就是只有私钥才能查看数据？？在属于自己的机器，只需要导入私钥就好了，是吧(是的)</li>
+<li>那现在的GPG加密在没有私钥的情况下有没有可能被破解？？
+首先，GPG只是一个前端，背后用的一般是RSA。密钥位数够的话，你可以认为没有可能</li>
+</ol>
+<h2 id="emacs-使用-gpg">Emacs 使用 GPG</h2>
+<ul>
+<li><strong>只要后端正常使用 GPG, Emacs 打开 .gpg 文件会自动解密, 在编辑保存后自动解密</strong></li>
+</ul>
+<h3 id="org-mode-使用-gpg-加密">org-mode 使用 GPG 加密</h3>
+<ul>
+<li>配置 EPG(Emacs的一个包, 调用 GPG)
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-crypt</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">org-crypt-use-before-save-magic</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-tags-exclude-from-inheritance</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;crypt&#34;</span><span class="p">))</span>
+<span class="c1">;; GPG ID, 解密一个文件可以知道这个ID, 每个人都不同</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-crypt-key</span> <span class="s">&#34;0EVT4708DD97889B&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">auto-save-default</span> <span class="no">nil</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<!--listend-->
+<ul>
+<li>加密
+在标题后面写上 :crypt: , 保存文件将会自动加密此标题内容</li>
+<li>解密
+将 光标放在具有 :crypt: 标题上, 命令 org-decrypt-entry</li>
+</ul>
+]]></description>
+</item><item>
     <title>Emacs Gnus 使用 Gmail</title>
     <link>http://isouthrain.github.io/2022-06-04-gnus-use-gmail.zh-ch/</link>
     <pubDate>Sat, 04 Jun 2022 00:00:00 &#43;0000</pubDate>
@@ -1402,160 +1564,6 @@ admins: [用户ID]
 </span></code></pre></td></tr></table>
 </div>
 </div><h5 id="一定要用扫码登录不能用图片导入登录">一定要用扫码登录，不能用图片导入登录</h5>
-]]></description>
-</item><item>
-    <title>Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)</title>
-    <link>http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/</link>
-    <pubDate>Wed, 12 Jan 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/</guid>
-    <description><![CDATA[<h2 id="概述">概述</h2>
-<p><strong>Notion</strong> 和 <strong>Obsidian</strong> 都有收集网页的功能, Org-mode 自然也有, Org-mode 是调用 Org-protocol 协议使用的, 而插件 <code>Org-protocol-capture-html</code> 是其中能使 <code>Org-protocol</code> 收集的网页更加美观和可视化</p>
-<p>因为很多人都不会都不理解 <code>Org-protocol</code> 和怎么去使用, 以及<code>Org-protocol-capture-html</code>, 说得只是怎么用这个插件, 却没有说怎么配置, 所以才有了本教程.</p>
-<h2 id="相关链接">相关链接</h2>
-<ul>
-<li><a href="https://github.com/alphapapa/org-protocol-capture-html" target="_blank" rel="noopener noreffer">Org-protocol-capture-html 官网</a></li>
-<li><a href="https://orgmode.org/manual/Protocols.html" target="_blank" rel="noopener noreffer">Org-protocol 协议官网</a></li>
-</ul>
-<h3 id="效果如下">效果如下</h3>
-<p><code>效果如下👇</code> 
-<video poster="效果动图"  width="360" height="240" controls>
-<source src="/posts/Attachment/2022-01-12-Org-protocol-capture-html/2022-01-22-14-24-59.mkv" type="video/mp4">
-</video></p>
-<h1 id="安装-org-protocol-capture-html">安装 Org-protocol-capture-html</h1>
-<p>这个插件是不需要配置, 直接安装此插件就可以调用</p>
-<p><code>请自己按装此插件</code></p>
-<ul>
-<li>使用 use-package 安装</li>
-<li>手动安装</li>
-</ul>
-<h2 id="配置-org-protocol-capture-html">配置 Org-protocol-capture-html</h2>
-<p>此插件是调用 <code>org-capture</code> 功能, 请自觉检查如下配置</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Elisp" data-lang="Elisp"><span class="p">(</span><span class="nv">server-start</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol</span><span class="p">)</span>
-
-<span class="p">(</span><span class="nb">use-package</span> <span class="nv">s</span><span class="p">)</span> <span class="c1">;;依赖</span>
-
-<span class="c1">;; 安装 org-protocol-capture-html </span>
-<span class="c1">;; 如果跟我的不同, 请将下面两行删除</span>
-<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="s">&#34;~/.emacs.d/plugins/org-protocol-capture-html/&#34;</span><span class="p">)</span> <span class="c1">;;</span>
-<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol-capture-html</span><span class="p">)</span>
-
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-capture-templates</span>
-      <span class="o">&#39;</span><span class="p">(</span>
-	 <span class="c1">;;Org-protocol网页收集, 按键 w 调用</span>
-	 <span class="p">(</span><span class="s">&#34;w&#34;</span> <span class="s">&#34;网页收集&#34;</span> <span class="nv">entry</span> <span class="p">(</span><span class="nv">file</span> <span class="s">&#34;~/Org/网页收集.org&#34;</span><span class="p">)</span>
-	 <span class="s">&#34;* [[%:link][%:description]] \n %U \n %:initial \n&#34;</span><span class="p">)</span>
-	<span class="p">))</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="系统安装-org-protocol">系统安装 org-protocol</h2>
-<p><code>如果下面的方法无法安装, 请见官网 👇</code></p>
-<ul>
-<li><a href="https://orgmode.org/worg/org-contrib/org-protocol.html" target="_blank" rel="noopener noreffer">官网安装 org-protocol 教程</a></li>
-</ul>
-<h3 id="windows-用户">Windows 用户👇</h3>
-<ul>
-<li>桌面新建 <code>org-protocol.reg</code> 文件, 使用 记事本 软件打开 , 并将以下👇代码放进去并保存, 然后运行安装并给权限</li>
-<li><code>请把下面的 emacsclientw.exe 路径换成你自己的路径</code></li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">REGEDIT4
-
-[HKEY_CLASSES_ROOT\org-protocol]
-@=&#34;URL:Org Protocol&#34;
-&#34;URL Protocol&#34;=&#34;&#34;
-[HKEY_CLASSES_ROOT\org-protocol\shell]
-[HKEY_CLASSES_ROOT\org-protocol\shell\open]
-[HKEY_CLASSES_ROOT\org-protocol\shell\open\command]
-@=&#34;\&#34;C:\\Programme\\Emacs\\emacs\\bin\\emacsclientw.exe\&#34; \&#34;%1\&#34;&#34;
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="linux-用户请见--linux-使用-org-protoclhttpskisaragi-hiucomorg-protocol-linux">Linux 用户请见 👉 <a href="https://kisaragi-hiu.com/org-protocol-linux" target="_blank" rel="noopener noreffer">Linux 使用 org-protocl</a></h3>
-<h2 id="根据自己使用的浏览器添加书签">根据自己使用的浏览器添加书签</h2>
-<p><code>关于 org-protocol-capture-html 对不同的 浏览书签 见</code></p>
-<ul>
-<li><a href="https://github.com/alphapapa/org-protocol-capture-html" target="_blank" rel="noopener noreffer">Org-protocol-capture-html 官网</a></li>
-</ul>
-<h3 id="例如-chrome">例如 Chrome</h3>
-<h4 id="在-chrome-新建-书签">在 Chrome 新建 书签</h4>
-<ol>
-<li>书签名称随便取</li>
-<li>书签地址如下👇</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">javascript</span><span class="o">:</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;org-protocol:///capture-html?template=w&amp;url=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;title=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;[untitled page]&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;body=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">window</span><span class="p">.</span><span class="nx">getSelection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">sel</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">getSelection</span><span class="p">();</span> <span class="k">if</span> <span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;div&#34;</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span><span class="nx">container</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">getRangeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">cloneContents</span><span class="p">());}</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">container</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">&#34;Text&#34;</span><span class="p">)</span> <span class="p">{</span><span class="nx">html</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">createRange</span><span class="p">().</span><span class="nx">htmlText</span><span class="p">;}}</span> <span class="kd">var</span> <span class="nx">relToAbs</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">href</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;a&#34;</span><span class="p">);</span> <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">href</span><span class="p">;</span> <span class="kd">var</span> <span class="nx">abs</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">+</span> <span class="s2">&#34;//&#34;</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">host</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">pathname</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">search</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">hash</span><span class="p">;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span> <span class="k">return</span> <span class="nx">abs</span><span class="p">;};</span> <span class="kd">var</span> <span class="nx">elementTypes</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;img&#39;</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">]];</span> <span class="kd">var</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">html</span><span class="p">;</span> <span class="nx">elementTypes</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elementType</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">elements</span> <span class="o">=</span> <span class="nx">div</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">relToAbs</span><span class="p">(</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">])));}});</span> <span class="k">return</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}());</span>
-
-<span class="nx">javascript</span><span class="o">:</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;org-protocol:///capture-eww-readable?template=w&amp;url=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;title=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;[untitled page]&#34;</span><span class="p">);</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="firefox-如下">Firefox 如下</h3>
-<h4 id="在-firefox-新建-书签">在 Firefox 新建 书签</h4>
-<ol>
-<li>书签名称随便取</li>
-<li>书签地址如下👇</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">javascript</span><span class="o">:</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;org-protocol://capture-html?template=w&amp;url=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;title=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">||</span> <span class="s2">&#34;[untitled page]&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&amp;body=&#39;</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getSelection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">sel</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getSelection</span><span class="p">();</span> <span class="k">if</span> <span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;div&#34;</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">sel</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span><span class="nx">container</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">sel</span><span class="p">.</span><span class="nx">getRangeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">cloneContents</span><span class="p">());}</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">container</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span> <span class="o">!=</span> <span class="s2">&#34;undefined&#34;</span><span class="p">)</span> <span class="p">{</span><span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="s2">&#34;Text&#34;</span><span class="p">)</span> <span class="p">{</span><span class="nx">html</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">createRange</span><span class="p">().</span><span class="nx">htmlText</span><span class="p">;}}</span> <span class="kd">var</span> <span class="nx">relToAbs</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">href</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&#34;a&#34;</span><span class="p">);</span> <span class="nx">a</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">href</span><span class="p">;</span> <span class="kd">var</span> <span class="nx">abs</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">+</span> <span class="s2">&#34;//&#34;</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">host</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">pathname</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">search</span> <span class="o">+</span> <span class="nx">a</span><span class="p">.</span><span class="nx">hash</span><span class="p">;</span> <span class="nx">a</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span> <span class="k">return</span> <span class="nx">abs</span><span class="p">;};</span> <span class="kd">var</span> <span class="nx">elementTypes</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;img&#39;</span><span class="p">,</span> <span class="s1">&#39;src&#39;</span><span class="p">]];</span> <span class="kd">var</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">html</span><span class="p">;</span> <span class="nx">elementTypes</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">elementType</span><span class="p">)</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">elements</span> <span class="o">=</span> <span class="nx">div</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">elements</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">relToAbs</span><span class="p">(</span><span class="nx">elements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="nx">elementType</span><span class="p">[</span><span class="mi">1</span><span class="p">])));}});</span> <span class="k">return</span> <span class="nx">div</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;}());</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="享受使用-">享受使用 👇</h2>
-<h3 id="使用之前">使用之前</h3>
-<p><code>请把你的 Chrome 或者 Firefox 的 书签 始终可见(比如在你浏览网页选中文字时可以点击你的书签)</code></p>
-<h3 id="开始使用">开始使用</h3>
-<ol>
-<li>打开 Emacs</li>
-<li>使用浏览器浏览网页</li>
-<li>在网页 <code>选择你想收集的文本</code></li>
-<li>点击你刚才新建的书签, 点击确定授权之类的</li>
-<li>回到 Emacs 你会看到你已经收集到的 Capture</li>
-<li>自己记得保存</li>
-<li>你收集到的会 保存到 <code>~/Org/网页收集.org</code> 文件中</li>
-</ol>
-<h2 id="如果你有更多的需求-请自己学习-因为网上并没有详细的教程使用-org-protocol-所以才有了本教程">如果你有更多的需求, 请自己学习, 因为网上并没有详细的教程使用 org-protocol 所以才有了本教程</h2>
-<p><code>祝你使用愉快🤓⚡👉♥️🌹</code></p>
 ]]></description>
 </item></channel>
 </rss>

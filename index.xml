@@ -7,6 +7,168 @@
             <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Tue, 26 Apr 2022 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="http://isouthrain.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Gnupg(GPG) 加密使用</title>
+    <link>http://isouthrain.github.io/2022-06-25-gpg/</link>
+    <pubDate>Sat, 25 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-06-25-gpg/</guid>
+    <description><![CDATA[<h2 id="什么是-gnupg">什么是 GnuPG ?</h2>
+<p>GPG 全名叫 <strong>GNU Privacy Guard</strong>, 是一个加密前端, 可以使用 <em>RSA 、ESCDA</em> 等算法去加密</p>
+<h2 id="下载-gnupg">下载 Gnupg</h2>
+<ul>
+<li><a href="https://gnupg.org/" target="_blank" rel="noopener noreffer">Gnupg官网</a></li>
+</ul>
+<h2 id="获取密钥--windows-使用终端命令">获取密钥(Windows 使用终端命令)</h2>
+<p><strong>请记住, 密钥绝不要给任何人</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gpg --gen-key
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>默认选项即可</strong></p>
+<h2 id="加密解密文件">加密解密文件</h2>
+<ul>
+<li>加密之前
+<ul>
+<li>加密分为两种
+<ol>
+<li>对称加密解密(双方只要输入对密码就可以查看和加密)</li>
+<li>非对称加密解密(对方使用 <strong>你给的公钥加密</strong>, 只有使用 <strong>你自己的密钥</strong> 能解密查看)</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><a href="https://gist.github.com/jhjguxin/6037564" target="_blank" rel="noopener noreffer">详细解释</a></li>
+</ul>
+<h3 id="对称加密解密">对称加密解密</h3>
+<ul>
+<li>加密(输入两次相同密码)</li>
+</ul>
+<!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gpg --symmetric filename
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>解密(输入配对密码, 与上面的密码相同)
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 仅仅解密内容</span>
+gpg -d filename.gpg
+<span class="c1"># 解密并输出原文件</span>
+gpg -o fileame -d filename.gpg
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="非对称加密解密--个人常用">非对称加密解密(个人常用)</h3>
+<ul>
+<li>加密
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># -r 表示 gpg 用户, 就刚才创建密钥的用户名</span>
+gpg -e -r User filename
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>解密
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 仅仅解密内容</span>
+gpg -d filename.gpg
+<span class="c1"># 解密并输出原文件</span>
+gpg -o fileame -d filename.gpg
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="导出--请不要将密钥发送给任何人-自己导出密钥保存就好">导出(请不要将密钥发送给任何人,自己导出密钥保存就好)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">gpg -o filename.asc --export keyID
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="导入--个人使用导入密钥就好">导入(个人使用导入密钥就好)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gpg --imort filename.asc
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="faq">FAQ❓</h2>
+<ol>
+<li>是不是在我的电脑上，使用别人A的公钥加密了一个文件，而我没有别人A的密钥，我也无法读取查看。是吗？？
+是的</li>
+<li>是不是使用 非对称加密(不需要密码)，别人没有公钥和私钥就无法破解读取数据？
+公钥大家都可以有，可以用来加密(比如在公共平台发一个只有你能解密的消息)但不可以用来解密。私钥只有你有，可以用来解密
+也就是只有私钥才能查看数据？？在属于自己的机器，只需要导入私钥就好了，是吧(是的)</li>
+<li>那现在的GPG加密在没有私钥的情况下有没有可能被破解？？
+首先，GPG只是一个前端，背后用的一般是RSA。密钥位数够的话，你可以认为没有可能</li>
+</ol>
+<h2 id="emacs-使用-gpg">Emacs 使用 GPG</h2>
+<ul>
+<li><strong>只要后端正常使用 GPG, Emacs 打开 .gpg 文件会自动解密, 在编辑保存后自动解密</strong></li>
+</ul>
+<h3 id="org-mode-使用-gpg-加密">org-mode 使用 GPG 加密</h3>
+<ul>
+<li>配置 EPG(Emacs的一个包, 调用 GPG)
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-crypt</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">org-crypt-use-before-save-magic</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-tags-exclude-from-inheritance</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;crypt&#34;</span><span class="p">))</span>
+<span class="c1">;; GPG ID, 解密一个文件可以知道这个ID, 每个人都不同</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-crypt-key</span> <span class="s">&#34;0EVT4708DD97889B&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">auto-save-default</span> <span class="no">nil</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<!--listend-->
+<ul>
+<li>加密
+在标题后面写上 :crypt: , 保存文件将会自动加密此标题内容</li>
+<li>解密
+将 光标放在具有 :crypt: 标题上, 命令 org-decrypt-entry</li>
+</ul>
+]]></description>
+</item><item>
     <title>Emacs Gnus 使用 Gmail</title>
     <link>http://isouthrain.github.io/2022-06-04-gnus-use-gmail.zh-ch/</link>
     <pubDate>Sat, 04 Jun 2022 00:00:00 &#43;0000</pubDate>
@@ -1192,238 +1354,6 @@ weight: 1
 <h5 id="git-push-时密码改用-token"><code>git push</code> 时<code>密码改用</code> <code>token</code></h5>
 <h4 id="已完成所有工作-请-git-push-一次试试">已完成所有工作, 请 git push 一次试试</h4>
 <h5 id="如果成功了请享受">如果成功了，请享受🎉🎉🎉</h5>
-]]></description>
-</item><item>
-    <title>Telegram 收发微信消息</title>
-    <link>http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/</link>
-    <pubDate>Sun, 20 Mar 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/</guid>
-    <description><![CDATA[<h3 id="telegram收发微信消息可以不需要购买服务器单纯手机也可以">Telegram收发微信消息(可以不需要购买服务器，单纯手机也可以)</h3>
-<h3 id="-在开始本教程之前请你确认你的微信号是否支持网页端登录如果不支持请离开">📍📍 在开始本教程之前，请你确认你的微信号是否支持网页端登录，如果不支持请离开</h3>
-<ul>
-<li><a href="https://wx.qq.com/" target="_blank" rel="noopener noreffer">微信网页版入口</a></li>
-<li>也可以试试 先登录 <a href="https://filehelper.weixin.qq.com/" target="_blank" rel="noopener noreffer">微信文件传输助手网页版</a> 再去登录网页版</li>
-</ul>
-<h3 id="概述">概述</h3>
-<p>微信浪费电是大家都知道的，但奈何亲朋好友都在用没法换，只能自己另有他寻了，所以有了本教程。使用TG的好处懂得都懂</p>
-<h5 id="需要使用科学上网才能进行登录android用户直接挂vpn就可以购买服务器的可以使用外国服务器或者国内的服务器给服务器上代理就可以了">需要使用科学上网才能进行登录，Android用户直接挂VPN就可以，购买服务器的可以使用外国服务器，或者国内的服务器给服务器上代理就可以了</h5>
-<hr>
-<hr>
-<p><em><strong>本教程声明</strong></em> Android手机不需要购买服务器<br>
-此教程没有以下功能</p>
-<ul>
-<li>没有朋友圈</li>
-<li>没有红包</li>
-<li>不能发语音（可以收听）</li>
-<li>不能发位置</li>
-<li>类似Web微信</li>
-<li>部分文件、图片、表情等多媒体文件会被网页版微信截断，即收不到任何数据， 尤以表情为甚。因此造成的偶发现象，会提醒用户使用移动客户端查看。</li>
-</ul>
-<h5 id="目前只有ubuntu系统能把功能都实现所以本教程使用ubuntu系统">目前只有Ubuntu系统能把功能都实现，所以本教程使用Ubuntu系统</h5>
-<hr>
-<h5 id="需要一点点linux知识不会也没有关系耐心看跟着做就好了">需要一点点Linux知识，不会也没有关系，耐心看跟着做就好了</h5>
-<hr>
-<h4 id="android用户可以使用termux安装一个ubuntu系统就可以了在ubuntu进行配置就好了很完美了">Android用户可以使用Termux安装一个Ubuntu系统就可以了,在Ubuntu进行配置就好了，很完美了！</h4>
-<h5 id="关于-termux-可以直接去下载完全免费很省电耗电量可以忽略不计">关于 Termux 可以直接去下载，完全免费，很省电，耗电量可以忽略不计</h5>
-<hr>
-<hr>
-<h5 id="termux安装ubuntu">Termux安装Ubuntu</h5>
-<p>更新下软件包：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg update
-</code></pre></td></tr></table>
-</div>
-</div><p>打开软件，输入以下代码按回车：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg install wget openssl-tool proot -y &amp;&amp; hash -r &amp;&amp; wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh &amp;&amp; bash ubuntu.sh
-</code></pre></td></tr></table>
-</div>
-</div><hr>
-<p>输入以下代码进入Ubuntu系统：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">./start-ubuntu.sh
-</code></pre></td></tr></table>
-</div>
-</div><hr>
-<h4 id="回到本教程开始搭建tg收发微信消息">回到本教程，开始搭建TG收发微信消息</h4>
-<ol>
-<li>先更新系统软件：</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt update &amp;&amp; apt upgrade -y
-</code></pre></td></tr></table>
-</div>
-</div><ol>
-<li>下载必要依赖：</li>
-</ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt install ffmpeg python3-pip python3-dev python3-setuptools libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libmagic-dev -y
-</code></pre></td></tr></table>
-</div>
-</div><ol>
-<li>安装EH转发机器人和主从通道:</li>
-</ol>
-<ul>
-<li>安装EFB：</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install ehforwarderbot
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>安装TG机器人</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install efb-telegram-master
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>微信端：</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install efb-wechat-slave
-</code></pre></td></tr></table>
-</div>
-</div><h5 id="现在做完了服务器工作再去申请一个机器人">现在做完了服务器工作，再去申请一个机器人</h5>
-<ol>
-<li>打开TG搜索 @botfather</li>
-<li>发送 /newbot 创建自已的机器人</li>
-<li>给自已的机器人取个称呼（随便取）</li>
-<li>给自已的机器人取个用户名，必须是以 bot 结尾（例如Wechatbot）注意可能被人取了就另外再打个bot结尾的名称，必须是英文</li>
-<li>创建后你会得到一个API（也可以称 token），复制下来</li>
-<li>配置机器人：</li>
-</ol>
-<ul>
-<li>输入 /setprivacy 发送，选择你的机器人，点Disable</li>
-<li>输入 /setjoingroups 发送，选择你的机器人，点Enable</li>
-<li>输入 /setcommands 发送，选择你的机器人，输入以下内容(全部一起发，不是一条条发)还有其他功能自己可以去摸索:</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">link - 将会话绑定到 Telegram 群组
-chat - 生成会话头
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>返回telegram主界面，点放大镜，搜索@userinfobot，进入点开始会得到你的telegram id</li>
-</ul>
-<hr>
-<ol>
-<li>服务器上操作或者Termux操作（Android用户一定要在Ubuntu上操作）</li>
-</ol>
-<ul>
-<li>下载编辑软件vim：</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt install vim
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>编辑文件：</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">vim ~/.ehforwarderbot/profiles/default/config.yaml
-</code></pre></td></tr></table>
-</div>
-</div><p>进入后点一下键盘 i</p>
-<ul>
-<li>把以下代码复制进去：</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">master_channel: blueset.telegram
-slave_channels:
-- blueset.wechat
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>按下键盘的 ESC 再输入英文状态下的 :  输入 wq 后回车，就这样保存文件并退出了</li>
-<li>继续输入：</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">vim ~/.ehforwarderbot/profiles/default/blueset.telegram/config.yaml
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>按上面的方法复制一下代码进去：</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">token: &#34;机器人的API&#34;
-admins: [用户ID]
-</code></pre></td></tr></table>
-</div>
-</div><p>把上面的 机器人API 和 用户ID 换成你刚才在TG用那两个机器人得到的（符号不要改）</p>
-<hr>
-<h5 id="把-vpn-挂在后台才可以登录">把 VPN 挂在后台才可以登录</h5>
-<h5 id="运行登录你的微信">运行登录你的微信</h5>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-basic" data-lang="basic"><span class="vg">ehforwarderbot</span><span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><h5 id="一定要用扫码登录不能用图片导入登录">一定要用扫码登录，不能用图片导入登录</h5>
 ]]></description>
 </item></channel>
 </rss>

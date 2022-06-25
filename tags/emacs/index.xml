@@ -4,7 +4,169 @@
         <link>http://isouthrain.github.io/tags/emacs/</link>
         <description>Emacs - 标签 - ISouthRain</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
-            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sat, 04 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/emacs/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sat, 25 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/emacs/" rel="self" type="application/rss+xml" /><item>
+    <title>Gnupg(GPG) 加密使用</title>
+    <link>http://isouthrain.github.io/2022-06-25-gpg/</link>
+    <pubDate>Sat, 25 Jun 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-06-25-gpg/</guid>
+    <description><![CDATA[<h2 id="什么是-gnupg">什么是 GnuPG ?</h2>
+<p>GPG 全名叫 <strong>GNU Privacy Guard</strong>, 是一个加密前端, 可以使用 <em>RSA 、ESCDA</em> 等算法去加密</p>
+<h2 id="下载-gnupg">下载 Gnupg</h2>
+<ul>
+<li><a href="https://gnupg.org/" target="_blank" rel="noopener noreffer">Gnupg官网</a></li>
+</ul>
+<h2 id="获取密钥--windows-使用终端命令">获取密钥(Windows 使用终端命令)</h2>
+<p><strong>请记住, 密钥绝不要给任何人</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gpg --gen-key
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>默认选项即可</strong></p>
+<h2 id="加密解密文件">加密解密文件</h2>
+<ul>
+<li>加密之前
+<ul>
+<li>加密分为两种
+<ol>
+<li>对称加密解密(双方只要输入对密码就可以查看和加密)</li>
+<li>非对称加密解密(对方使用 <strong>你给的公钥加密</strong>, 只有使用 <strong>你自己的密钥</strong> 能解密查看)</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><a href="https://gist.github.com/jhjguxin/6037564" target="_blank" rel="noopener noreffer">详细解释</a></li>
+</ul>
+<h3 id="对称加密解密">对称加密解密</h3>
+<ul>
+<li>加密(输入两次相同密码)</li>
+</ul>
+<!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gpg --symmetric filename
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>解密(输入配对密码, 与上面的密码相同)
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 仅仅解密内容</span>
+gpg -d filename.gpg
+<span class="c1"># 解密并输出原文件</span>
+gpg -o fileame -d filename.gpg
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="非对称加密解密--个人常用">非对称加密解密(个人常用)</h3>
+<ul>
+<li>加密
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># -r 表示 gpg 用户, 就刚才创建密钥的用户名</span>
+gpg -e -r User filename
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>解密
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 仅仅解密内容</span>
+gpg -d filename.gpg
+<span class="c1"># 解密并输出原文件</span>
+gpg -o fileame -d filename.gpg
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="导出--请不要将密钥发送给任何人-自己导出密钥保存就好">导出(请不要将密钥发送给任何人,自己导出密钥保存就好)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">gpg -o filename.asc --export keyID
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="导入--个人使用导入密钥就好">导入(个人使用导入密钥就好)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">gpg --imort filename.asc
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="faq">FAQ❓</h2>
+<ol>
+<li>是不是在我的电脑上，使用别人A的公钥加密了一个文件，而我没有别人A的密钥，我也无法读取查看。是吗？？
+是的</li>
+<li>是不是使用 非对称加密(不需要密码)，别人没有公钥和私钥就无法破解读取数据？
+公钥大家都可以有，可以用来加密(比如在公共平台发一个只有你能解密的消息)但不可以用来解密。私钥只有你有，可以用来解密
+也就是只有私钥才能查看数据？？在属于自己的机器，只需要导入私钥就好了，是吧(是的)</li>
+<li>那现在的GPG加密在没有私钥的情况下有没有可能被破解？？
+首先，GPG只是一个前端，背后用的一般是RSA。密钥位数够的话，你可以认为没有可能</li>
+</ol>
+<h2 id="emacs-使用-gpg">Emacs 使用 GPG</h2>
+<ul>
+<li><strong>只要后端正常使用 GPG, Emacs 打开 .gpg 文件会自动解密, 在编辑保存后自动解密</strong></li>
+</ul>
+<h3 id="org-mode-使用-gpg-加密">org-mode 使用 GPG 加密</h3>
+<ul>
+<li>配置 EPG(Emacs的一个包, 调用 GPG)
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-crypt</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">org-crypt-use-before-save-magic</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-tags-exclude-from-inheritance</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;crypt&#34;</span><span class="p">))</span>
+<span class="c1">;; GPG ID, 解密一个文件可以知道这个ID, 每个人都不同</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-crypt-key</span> <span class="s">&#34;0EVT4708DD97889B&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">auto-save-default</span> <span class="no">nil</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<!--listend-->
+<ul>
+<li>加密
+在标题后面写上 :crypt: , 保存文件将会自动加密此标题内容</li>
+<li>解密
+将 光标放在具有 :crypt: 标题上, 命令 org-decrypt-entry</li>
+</ul>
+]]></description>
+</item><item>
     <title>Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)</title>
     <link>http://isouthrain.github.io/2022-01-12-org-protocol-capture-html/</link>
     <pubDate>Wed, 12 Jan 2022 00:00:00 &#43;0000</pubDate>
