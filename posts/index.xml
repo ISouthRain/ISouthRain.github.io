@@ -4,7 +4,110 @@
         <link>http://isouthrain.github.io/posts/</link>
         <description>所有文章 | ISouthRain</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
-            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sat, 25 Jun 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Sun, 03 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>像 Linux Emacs 一样使用 Windows Emacs</title>
+    <link>http://isouthrain.github.io/2022-07-03-windowsemacsforwsl/</link>
+    <pubDate>Sun, 03 Jul 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-07-03-windowsemacsforwsl/</guid>
+    <description><![CDATA[<h2 id="前言">前言</h2>
+<p>由于 Windows 的某些原因使用 Emacs 总会那么的不方便或者不好用,
+有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点
+<strong>所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux 下使用, 目前体验基本与Linux下体验一致, 不过 EAF 不支持</strong></p>
+<h2 id="效果">效果</h2>
+<figure>
+     
+</figure>
+
+<h2 id="安装-wsl-本文是使用-wsl2-ubuntu22-dot-04">安装 WSL, 本文是使用 WSL2 Ubuntu22.04</h2>
+<ul>
+<li>如果你想把 <strong>Ubuntu22.04</strong> 安装到自己指定盘符, 可以观看此文章
+<a href="https://www.myfreax.com/installing-wsl-manually-on-non-system-drive/" target="_blank" rel="noopener noreffer">如何将WSL安装到其它驱动器或者文件夹中 | myfreax</a></li>
+</ul>
+<h3 id="启用-wsl-功能">启用 WSL 功能</h3>
+<ol>
+<li>Win + s 打开搜索, 输入 <strong>启用或关闭 Windows 功能</strong>, 并打开
+</li>
+<li>将红线两个功能打勾✔, 启用后重启电脑
+</li>
+<li>以 <strong>管理员权限</strong> 打开 Powershell, 设置默认为 wsl2
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">wsl</span> <span class="p">-</span><span class="n">-set-default-version</span> <span class="n">2</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>安装 Ubuntu22.04, <strong>wsl.exe &ndash;install -d Ubuntu22.04</strong>
+<ul>
+<li>如果安装不成功, 请参考文章 <a href="https://www.myfreax.com/installing-wsl-manually-on-non-system-drive/" target="_blank" rel="noopener noreffer">如何将WSL安装到其它驱动器或者文件夹中 | myfreax</a></li>
+</ul>
+</li>
+<li>运行 wsl, 直接在 Powershell 输入 wsl 运行</li>
+</ol>
+<h2 id="wsl-文件所在目录-wsl">WSL 文件所在目录 \\wsl$</h2>
+<h2 id="自觉安装-emacs">自觉安装 Emacs</h2>
+<h2 id="安装-gui-支持">安装 GUI 支持</h2>
+<h3 id="下载并安装-mobaxterm">下载并安装 MobaXterm</h3>
+<p><a href="https://mobaxterm.mobatek.net/download.html" target="_blank" rel="noopener noreffer">MobaXterm Xserver with SSH, telnet, RDP, VNC and X11 - Download</a></p>
+<h3 id="配置-gui-支持">配置 GUI 支持</h3>
+<ul>
+<li>Ubuntu 下 编写 ~/.bashrc 或者 ~/.zshrc <strong>末尾处添加</strong>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># ~/.bashrc 或者 ~/.zshrc 文件</span>
+<span class="c1"># 获取 Windows WSL IP</span>
+<span class="nv">host_ip</span><span class="o">=</span><span class="k">$(</span>cat /etc/resolv.conf <span class="p">|</span>grep <span class="s2">&#34;nameserver&#34;</span> <span class="p">|</span>cut -f <span class="m">2</span> -d <span class="s2">&#34; &#34;</span><span class="k">)</span>
+<span class="c1"># 将 GUI 显示让 mobaxterm 显示代替</span>
+<span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$host_ip</span><span class="s2">:0&#34;</span>
+<span class="c1"># 如果你要使用 windows 代理</span>
+<span class="c1"># export ALL_PROXY=&#34;http://$host_ip:7890&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>打开 <strong>MobaXterm</strong>, 挂在后台</li>
+<li>刷新 shell, <strong>source ~/.zshrc</strong> 或者 <strong>source ~/.basrch</strong></li>
+<li>Ubuntu 启动 emacs 试试, 弹出的窗口一直点 <strong>是</strong> 即可</li>
+</ul>
+<h2 id="gui-配置">GUI 配置</h2>
+<h3 id="mobaxterm-模糊解决-修改-dip"><strong>MobaXterm</strong> 模糊解决, 修改 DIP</h3>
+<figure>
+     
+</figure>
+
+<h3 id="ubuntu-emacs-字体补充">Ubuntu Emacs 字体补充</h3>
+<ul>
+<li>当你打开 emacs 时候会乱码之类的, 是因为缺少字体</li>
+<li>将 <strong>C:\Windows\Fons</strong> 目录下的字体全部复制到 <strong>\\wsl$\Ubuntu22.04\root\.local\share\fonts</strong></li>
+</ul>
+<h2 id="增强-emacs-美化">增强 emacs 美化</h2>
+<ul>
+<li>
+<p>emasc 启动屏幕尺寸太小, 修改数字</p>
+<p>(set-face-attribute &lsquo;default nil :height 150)</p>
+</li>
+<li>
+<p>建议 emasc 安装以下包</p>
+<ol>
+<li>cnfonts 用来调整 emacs 字体大小</li>
+<li>all-the-icons 为 emacs 提供 图标支持</li>
+<li>emojfyi 为 emacs 提供 表情符号支持</li>
+</ol>
+</li>
+</ul>
+]]></description>
+</item><item>
     <title>GnuPG(GPG) 加密</title>
     <link>http://isouthrain.github.io/2022-06-25-gpg/</link>
     <pubDate>Sat, 25 Jun 2022 00:00:00 &#43;0000</pubDate>
@@ -1316,53 +1419,6 @@ weight: 1
 👉  <a href="https://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/" target="_blank" rel="noopener noreffer">永久免账号密码 推送/上传 GitHub</a></p>
 <h3 id="faq">FAQ❓</h3>
 <p>如果你遇到了问题，可以在下面评论去提问，基本都会回复的</p>
-]]></description>
-</item><item>
-    <title>永久免账号密码推送Github</title>
-    <link>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</link>
-    <pubDate>Thu, 28 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</guid>
-    <description><![CDATA[<h3 id="使用以下方法后">使用以下方法后</h3>
-<h3 id="git-push-再也不用一直输入-账号密码了">git push 再也不用一直输入 账号密码了!</h3>
-<h3 id="git-push-每次都要输入账号密码-从此解决">git push 每次都要输入账号密码? 从此解决</h3>
-<h3 id="正文">正文👇</h3>
-<h3 id="首先配置-git-个人信息">首先配置 Git 个人信息</h3>
-<h4 id="依此输入以下两个命令">依此输入以下两个命令:</h4>
-<h4 id="配置你的-github-邮箱">配置你的 GitHub 邮箱📬</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global user.email <span class="s2">&#34;你在 GitHub 注册的邮箱&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="配置你的-github-用户名">配置你的 GitHub 用户名</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global user.name <span class="s2">&#34;你的 GitHub 用户名&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="输入以下命令后将会保存你-git-push-时登录的信息">输入以下命令后，将会保存你 git push 时登录的信息</h4>
-<h4 id="当下一次-git-push-时就不用再输入登录信息了">当下一次 git push 时就不用再输入登录信息了!</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global credential.helper store
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="如何推送上传到githubhttpsisouthraingithubio2022-04-29-e68ea8e98081github"><a href="https://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/" target="_blank" rel="noopener noreffer">如何推送/上传到GitHub</a></h3>
-<h4 id="faq">FAQ❓</h4>
-<h5 id="由于github已经更改了-git-push-机制">由于GitHub已经更改了 git push 机制</h5>
-<h5 id="git-push-时密码改用-token"><code>git push</code> 时<code>密码改用</code> <code>token</code></h5>
-<h4 id="已完成所有工作-请-git-push-一次试试">已完成所有工作, 请 git push 一次试试</h4>
-<h5 id="如果成功了请享受">如果成功了，请享受🎉🎉🎉</h5>
 ]]></description>
 </item></channel>
 </rss>
