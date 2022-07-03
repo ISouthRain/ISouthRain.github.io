@@ -11,9 +11,9 @@
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-07-03-windowsemacsforwsl/</guid>
     <description><![CDATA[<h2 id="前言">前言</h2>
-<p>由于 Windows 的某些原因使用 Emacs 总会那么的不方便或者不好用,
-有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点
-<strong>所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux 下使用, 目前体验基本与Linux下体验一致, 不过 EAF 不支持</strong></p>
+<p>由于 Windows 的某些原因使用 Emacs 总会那么的不方便或者不好用,</p>
+<p>有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点</p>
+<p><strong>所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux 下使用, 目前体验基本与Linux下体验一致, 不过 EAF 不支持</strong></p>
 <h2 id="效果">效果</h2>
 <figure>
      
