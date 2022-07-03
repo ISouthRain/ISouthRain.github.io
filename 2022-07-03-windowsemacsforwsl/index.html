@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://isouthrain.github.io/2022-07-03-windowsemacsforwsl/" />
 <meta property="og:image" content="http://isouthrain.github.io/"/>
 <meta property="article:published_time" content="2022-07-03T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-07-03T22:15:51+08:00" /><meta property="og:site_name" content="ISouthRain" />
+<meta property="article:modified_time" content="2022-07-03T22:25:20+08:00" /><meta property="og:site_name" content="ISouthRain" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://isouthrain.github.io/"/>
 
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/isouthrain.github.io\/2022-07-03-windowsemacsforwsl\/"
-        },"genre": "posts","keywords": "Emacs","wordcount":  531 ,
-        "url": "http:\/\/isouthrain.github.io\/2022-07-03-windowsemacsforwsl\/","datePublished": "2022-07-03T00:00:00+00:00","dateModified": "2022-07-03T22:15:51+08:00","publisher": {
+        },"genre": "posts","keywords": "Emacs","wordcount":  538 ,
+        "url": "http:\/\/isouthrain.github.io\/2022-07-03-windowsemacsforwsl\/","datePublished": "2022-07-03T00:00:00+00:00","dateModified": "2022-07-03T22:25:20+08:00","publisher": {
             "@type": "Organization",
             "name": "ISouthRain","logo": "https:\/\/raw.githubusercontent.com\/ISouthRain\/ISouthRain.github.io\/main\/android-chrome-192x192.png"},"author": {
                 "@type": "Person",
@@ -124,7 +124,7 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">像 Linux Emacs 一样使用 Windows Emacs</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>ISouthRain</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-03">2022-07-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 531 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-07-03">2022-07-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 538 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -215,7 +215,8 @@
 <p><a href="https://mobaxterm.mobatek.net/download.html" target="_blank" rel="noopener noreffer">MobaXterm Xserver with SSH, telnet, RDP, VNC and X11 - Download</a></p>
 <h3 id="配置-gui-支持">配置 GUI 支持</h3>
 <ul>
-<li>Ubuntu 下 编写 ~/.bashrc 或者 ~/.zshrc <strong>末尾处添加</strong>
+<li>
+<p>Ubuntu 下 编写 ~/.bashrc 或者 ~/.zshrc <strong>末尾处添加</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -237,9 +238,23 @@
 </code></pre></td></tr></table>
 </div>
 </div></li>
-<li>打开 <strong>MobaXterm</strong>, 挂在后台</li>
-<li>刷新 shell, <strong>source ~/.zshrc</strong> 或者 <strong>source ~/.basrch</strong></li>
-<li>Ubuntu 启动 emacs 试试, 弹出的窗口一直点 <strong>是</strong> 即可</li>
+<li>
+<p>打开 <strong>MobaXterm</strong>, 挂在后台, <strong>有颜色为启动</strong>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/%e5%ae%89%e8%a3%85_GUI_%e6%94%af%e6%8c%81/2022-07-03_22-22-17_1.png"
+        data-srcset="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/%e5%ae%89%e8%a3%85_GUI_%e6%94%af%e6%8c%81/2022-07-03_22-22-17_1.png, /posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/%e5%ae%89%e8%a3%85_GUI_%e6%94%af%e6%8c%81/2022-07-03_22-22-17_1.png 1.5x, /posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/%e5%ae%89%e8%a3%85_GUI_%e6%94%af%e6%8c%81/2022-07-03_22-22-17_1.png 2x"
+        data-sizes="auto"
+        alt="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/安装_GUI_支持/2022-07-03_22-22-17_1.png"
+        title="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/安装_GUI_支持/2022-07-03_22-22-17_1.png" /></p>
+</li>
+<li>
+<p>刷新 shell, <strong>source ~/.zshrc</strong> 或者 <strong>source ~/.bashrc</strong></p>
+</li>
+<li>
+<p>Ubuntu 启动 emacs 试试, 弹出的窗口一直点 <strong>是</strong> 即可</p>
+</li>
 </ul>
 <h2 id="gui-配置">GUI 配置</h2>
 <h3 id="mobaxterm-模糊解决-修改-dip"><strong>MobaXterm</strong> 模糊解决, 修改 DIP</h3>

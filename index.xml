@@ -56,7 +56,8 @@
 <p><a href="https://mobaxterm.mobatek.net/download.html" target="_blank" rel="noopener noreffer">MobaXterm Xserver with SSH, telnet, RDP, VNC and X11 - Download</a></p>
 <h3 id="配置-gui-支持">配置 GUI 支持</h3>
 <ul>
-<li>Ubuntu 下 编写 ~/.bashrc 或者 ~/.zshrc <strong>末尾处添加</strong>
+<li>
+<p>Ubuntu 下 编写 ~/.bashrc 或者 ~/.zshrc <strong>末尾处添加</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -78,9 +79,16 @@
 </code></pre></td></tr></table>
 </div>
 </div></li>
-<li>打开 <strong>MobaXterm</strong>, 挂在后台</li>
-<li>刷新 shell, <strong>source ~/.zshrc</strong> 或者 <strong>source ~/.basrch</strong></li>
-<li>Ubuntu 启动 emacs 试试, 弹出的窗口一直点 <strong>是</strong> 即可</li>
+<li>
+<p>打开 <strong>MobaXterm</strong>, 挂在后台, <strong>有颜色为启动</strong>
+</p>
+</li>
+<li>
+<p>刷新 shell, <strong>source ~/.zshrc</strong> 或者 <strong>source ~/.bashrc</strong></p>
+</li>
+<li>
+<p>Ubuntu 启动 emacs 试试, 弹出的窗口一直点 <strong>是</strong> 即可</p>
+</li>
 </ul>
 <h2 id="gui-配置">GUI 配置</h2>
 <h3 id="mobaxterm-模糊解决-修改-dip"><strong>MobaXterm</strong> 模糊解决, 修改 DIP</h3>
