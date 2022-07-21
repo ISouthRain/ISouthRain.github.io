@@ -125,7 +125,7 @@
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install efb-wechat-slave
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install git+https://github.com/ehForwarderBot/efb-wechat-slave
 </code></pre></td></tr></table>
 </div>
 </div><h5 id="现在做完了服务器工作再去申请一个机器人">现在做完了服务器工作，再去申请一个机器人</h5>
