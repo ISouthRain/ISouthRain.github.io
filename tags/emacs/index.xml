@@ -333,9 +333,11 @@ gpg -o fileame -d filename.gpg
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
+</span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Elisp" data-lang="Elisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol</span><span class="p">)</span>
+<pre class="chroma"><code class="language-Elisp" data-lang="Elisp"><span class="p">(</span><span class="nv">server-start</span><span class="p">)</span> <span class="c1">;; 如果你知道这意味着什么，可以不使用这句， 这句是为了能调用 emacsclientw</span>
+<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol</span><span class="p">)</span>
 
 <span class="p">(</span><span class="nb">use-package</span> <span class="nv">s</span><span class="p">)</span> <span class="c1">;;依赖</span>
 
