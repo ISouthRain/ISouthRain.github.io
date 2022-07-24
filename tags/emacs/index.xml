@@ -437,7 +437,7 @@ gpg -o fileame -d filename.gpg
 <li>点击你刚才新建的书签, 点击确定授权之类的</li>
 <li>回到 Emacs 你会看到你已经收集到的 Capture</li>
 <li>自己记得保存</li>
-<li>你收集到的会 保存到 <code>~/Org/网页收集.org</code> 文件中</li>
+<li>你收集到的会 保存到 <code>~/Org/网页收集.org</code> 文件中(因为上面的配置保存到这文件， 请按自己需求更改)</li>
 </ol>
 <h2 id="如果你有更多的需求-请自己学习-因为网上并没有详细的教程使用-org-protocol-所以才有了本教程">如果你有更多的需求, 请自己学习, 因为网上并没有详细的教程使用 org-protocol 所以才有了本教程</h2>
 <p><code>祝你使用愉快🤓⚡👉♥️🌹</code></p>
