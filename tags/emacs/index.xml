@@ -303,7 +303,7 @@ gpg -o fileame -d filename.gpg
 <li><a href="https://orgmode.org/manual/Protocols.html" target="_blank" rel="noopener noreffer">Org-protocol 协议官网</a></li>
 </ul>
 <h3 id="效果如下">效果如下</h3>
-<p><code>效果如下👇</code> 
+<p><code>效果如下👇</code>
 <video poster="效果动图"  width="360" height="240" controls>
 <source src="/posts/Attachment/2022-01-12-Org-protocol-capture-html/2022-01-22-14-24-59.mkv" type="video/mp4">
 </video></p>
@@ -333,15 +333,13 @@ gpg -o fileame -d filename.gpg
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
-</span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Elisp" data-lang="Elisp"><span class="p">(</span><span class="nv">server-start</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol</span><span class="p">)</span>
+<pre class="chroma"><code class="language-Elisp" data-lang="Elisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol</span><span class="p">)</span>
 
 <span class="p">(</span><span class="nb">use-package</span> <span class="nv">s</span><span class="p">)</span> <span class="c1">;;依赖</span>
 
-<span class="c1">;; 安装 org-protocol-capture-html </span>
+<span class="c1">;; 安装 org-protocol-capture-html</span>
 <span class="c1">;; 如果跟我的不同, 请将下面两行删除</span>
 <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="s">&#34;~/.emacs.d/plugins/org-protocol-capture-html/&#34;</span><span class="p">)</span> <span class="c1">;;</span>
 <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-protocol-capture-html</span><span class="p">)</span>
