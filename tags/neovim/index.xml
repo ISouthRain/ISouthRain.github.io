@@ -11,7 +11,7 @@
     <author>作者</author>
     <guid>http://isouthrain.github.io/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
     <description><![CDATA[<h1 id="前言">前言</h1>
-<p><strong>这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs</strong><br>
+<p><strong>这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs</strong>
 <strong>Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读者根据自己的需求选择 Vim 还是 Emacs</strong></p>
 <h2 id="编辑习惯">编辑习惯</h2>
 <ol>
