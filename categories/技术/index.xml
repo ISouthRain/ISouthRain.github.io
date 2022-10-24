@@ -1566,7 +1566,7 @@ chat - 生成会话头
 </code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>返回telegram主界面，点放大镜，搜索@userinfobot，进入点开始会得到你的telegram id</li>
+<li>返回telegram主界面，搜索按扭🔍，搜索@get_id_bot，进入点开始会得到你的telegram id</li>
 </ul>
 <hr>
 <ol>
