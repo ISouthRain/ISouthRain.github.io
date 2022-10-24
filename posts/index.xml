@@ -831,46 +831,6 @@ ALGOLIA_ADMIN_KEY=
 </ul>
 ]]></description>
 </item><item>
-    <title>npm, node升级</title>
-    <link>http://isouthrain.github.io/2022-05-02-npm%E5%8D%87%E7%BA%A7/</link>
-    <pubDate>Mon, 02 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-05-02-npm%E5%8D%87%E7%BA%A7/</guid>
-    <description><![CDATA[<h2 id="安装模块-n">安装模块 n</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm install n -g
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="升级-npm-和-nodejs">升级 npm 和 nodejs</h2>
-<h3 id="查看当前-npm-nodejs-版本">查看当前 npm nodejs 版本</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm -v
-node -v
-<span class="c1"># 升级 npm</span>
-npm install npm -g
-<span class="c1"># 升级 node</span>
-n stable
-<span class="c1"># 升级到对应版</span>
-npm install npm@3.3 -g
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item><item>
     <title>搭建 Telegram Bot RSS 订阅</title>
     <link>http://isouthrain.github.io/2022-05-02-telegrambotrss/</link>
     <pubDate>Mon, 02 May 2022 00:00:00 &#43;0000</pubDate>
@@ -1188,26 +1148,6 @@ systemctl start frps
 </div>
 </div>]]></description>
 </item><item>
-    <title>Hugo如何置顶文章</title>
-    <link>http://isouthrain.github.io/2022-04-30-hugo%E5%A6%82%E4%BD%95%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</link>
-    <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-04-30-hugo%E5%A6%82%E4%BD%95%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0/</guid>
-    <description><![CDATA[<h3 id="hugo-置顶文章很简单只需要将以下放在文章头部即可置顶">Hugo 置顶文章很简单，只需要将以下放在文章头部即可置顶</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">---
-weight: 1
----
-</code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item><item>
     <title>Markdown语法</title>
     <link>http://isouthrain.github.io/2022-04-30-markdown%E8%AF%AD%E6%B3%95/</link>
     <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
@@ -1427,6 +1367,287 @@ weight: 1
 👉  <a href="https://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/" target="_blank" rel="noopener noreffer">永久免账号密码 推送/上传 GitHub</a></p>
 <h3 id="faq">FAQ❓</h3>
 <p>如果你遇到了问题，可以在下面评论去提问，基本都会回复的</p>
+]]></description>
+</item><item>
+    <title>永久免账号密码推送Github</title>
+    <link>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</link>
+    <pubDate>Thu, 28 Apr 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</guid>
+    <description><![CDATA[<h3 id="使用以下方法后">使用以下方法后</h3>
+<h3 id="git-push-再也不用一直输入-账号密码了">git push 再也不用一直输入 账号密码了!</h3>
+<h3 id="git-push-每次都要输入账号密码-从此解决">git push 每次都要输入账号密码? 从此解决</h3>
+<h3 id="正文">正文👇</h3>
+<h3 id="首先配置-git-个人信息">首先配置 Git 个人信息</h3>
+<h4 id="依此输入以下两个命令">依此输入以下两个命令:</h4>
+<h4 id="配置你的-github-邮箱">配置你的 GitHub 邮箱📬</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global user.email <span class="s2">&#34;你在 GitHub 注册的邮箱&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="配置你的-github-用户名">配置你的 GitHub 用户名</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global user.name <span class="s2">&#34;你的 GitHub 用户名&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="输入以下命令后将会保存你-git-push-时登录的信息">输入以下命令后，将会保存你 git push 时登录的信息</h4>
+<h4 id="当下一次-git-push-时就不用再输入登录信息了">当下一次 git push 时就不用再输入登录信息了!</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global credential.helper store
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="如何推送上传到githubhttpsisouthraingithubio2022-04-29-e68ea8e98081github"><a href="https://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/" target="_blank" rel="noopener noreffer">如何推送/上传到GitHub</a></h3>
+<h4 id="faq">FAQ❓</h4>
+<h5 id="由于github已经更改了-git-push-机制">由于GitHub已经更改了 git push 机制</h5>
+<h5 id="git-push-时密码改用-token"><code>git push</code> 时<code>密码改用</code> <code>token</code></h5>
+<h4 id="已完成所有工作-请-git-push-一次试试">已完成所有工作, 请 git push 一次试试</h4>
+<h5 id="如果成功了请享受">如果成功了，请享受🎉🎉🎉</h5>
+]]></description>
+</item><item>
+    <title>Telegram 收发微信消息</title>
+    <link>http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/</link>
+    <pubDate>Sun, 20 Mar 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/</guid>
+    <description><![CDATA[<h3 id="2022-08-30-更新">2022-08-30 更新</h3>
+<p>全部帐号可用</p>
+<h3 id="telegram收发微信消息可以不需要购买服务器单纯手机也可以">Telegram收发微信消息(可以不需要购买服务器，单纯手机也可以)</h3>
+<h3 id="-在开始本教程之前请你确认你的微信号是否支持网页端登录如果不支持请离开">📍📍 在开始本教程之前，请你确认你的微信号是否支持网页端登录，如果不支持请离开</h3>
+<ul>
+<li><a href="https://wx.qq.com/" target="_blank" rel="noopener noreffer">微信网页版入口</a></li>
+<li>也可以试试 先登录 <a href="https://filehelper.weixin.qq.com/" target="_blank" rel="noopener noreffer">微信文件传输助手网页版</a> 再去登录网页版</li>
+</ul>
+<h3 id="概述">概述</h3>
+<p>微信浪费电是大家都知道的，但奈何亲朋好友都在用没法换，只能自己另有他寻了，所以有了本教程。使用TG的好处懂得都懂</p>
+<h5 id="需要使用科学上网才能进行登录android用户直接挂vpn就可以购买服务器的可以使用外国服务器或者国内的服务器给服务器上代理就可以了">需要使用科学上网才能进行登录，Android用户直接挂VPN就可以，购买服务器的可以使用外国服务器，或者国内的服务器给服务器上代理就可以了</h5>
+<hr>
+<hr>
+<p><em><strong>本教程声明</strong></em> Android手机不需要购买服务器<br>
+此教程没有以下功能</p>
+<ul>
+<li>没有朋友圈</li>
+<li>没有红包</li>
+<li>不能发语音（可以收听）</li>
+<li>不能发位置</li>
+<li>类似Web微信</li>
+<li>部分文件、图片、表情等多媒体文件会被网页版微信截断，即收不到任何数据， 尤以表情为甚。因此造成的偶发现象，会提醒用户使用移动客户端查看。</li>
+</ul>
+<h5 id="目前只有ubuntu系统能把功能都实现所以本教程使用ubuntu系统">目前只有Ubuntu系统能把功能都实现，所以本教程使用Ubuntu系统</h5>
+<hr>
+<h5 id="需要一点点linux知识不会也没有关系耐心看跟着做就好了">需要一点点Linux知识，不会也没有关系，耐心看跟着做就好了</h5>
+<hr>
+<h4 id="android用户可以使用termux安装一个ubuntu系统就可以了在ubuntu进行配置就好了很完美了">Android用户可以使用Termux安装一个Ubuntu系统就可以了,在Ubuntu进行配置就好了，很完美了！</h4>
+<h5 id="关于-termux-可以直接去下载完全免费很省电耗电量可以忽略不计">关于 Termux 可以直接去下载，完全免费，很省电，耗电量可以忽略不计</h5>
+<hr>
+<hr>
+<h5 id="termux安装ubuntu">Termux安装Ubuntu</h5>
+<p>更新下软件包：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg update
+</code></pre></td></tr></table>
+</div>
+</div><p>打开软件，输入以下代码按回车：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg install wget openssl-tool proot -y &amp;&amp; hash -r &amp;&amp; wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh &amp;&amp; bash ubuntu.sh
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p>输入以下代码进入Ubuntu系统：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">./start-ubuntu.sh
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h4 id="回到本教程开始搭建tg收发微信消息">回到本教程，开始搭建TG收发微信消息</h4>
+<ol>
+<li>先更新系统软件：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt update &amp;&amp; apt upgrade -y
+</code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>下载必要依赖：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt install ffmpeg python3-pip python3-dev python3-setuptools libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libmagic-dev -y
+</code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>安装EH转发机器人和主从通道:</li>
+</ol>
+<ul>
+<li>安装EFB：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install ehforwarderbot
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>安装TG机器人</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install efb-telegram-master
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>微信端：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install git+https://github.com/ehForwarderBot/efb-wechat-slave
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="现在做完了服务器工作再去申请一个机器人">现在做完了服务器工作，再去申请一个机器人</h5>
+<ol>
+<li>打开TG搜索 @botfather</li>
+<li>发送 /newbot 创建自已的机器人</li>
+<li>给自已的机器人取个称呼（随便取）</li>
+<li>给自已的机器人取个用户名，必须是以 bot 结尾（例如Wechatbot）注意可能被人取了就另外再打个bot结尾的名称，必须是英文</li>
+<li>创建后你会得到一个API（也可以称 token），复制下来</li>
+<li>配置机器人：</li>
+</ol>
+<ul>
+<li>输入 /setprivacy 发送，选择你的机器人，点Disable</li>
+<li>输入 /setjoingroups 发送，选择你的机器人，点Enable</li>
+<li>输入 /setcommands 发送，选择你的机器人，输入以下内容(全部一起发，不是一条条发)还有其他功能自己可以去摸索:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">link - 将会话绑定到 Telegram 群组
+chat - 生成会话头
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>返回telegram主界面，点放大镜，搜索@userinfobot，进入点开始会得到你的telegram id</li>
+</ul>
+<hr>
+<ol>
+<li>服务器上操作或者Termux操作（Android用户一定要在Ubuntu上操作）</li>
+</ol>
+<ul>
+<li>下载编辑软件vim：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt install vim
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>编辑文件：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">vim ~/.ehforwarderbot/profiles/default/config.yaml
+</code></pre></td></tr></table>
+</div>
+</div><p>进入后点一下键盘 i</p>
+<ul>
+<li>把以下代码复制进去：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">master_channel: blueset.telegram
+slave_channels:
+- blueset.wechat
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>按下键盘的 ESC 再输入英文状态下的 :  输入 wq 后回车，就这样保存文件并退出了</li>
+<li>继续输入：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">vim ~/.ehforwarderbot/profiles/default/blueset.telegram/config.yaml
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>按上面的方法复制一下代码进去：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">token: &#34;机器人的API&#34;
+admins: [用户ID]
+</code></pre></td></tr></table>
+</div>
+</div><p>把上面的 机器人API 和 用户ID 换成你刚才在TG用那两个机器人得到的（符号不要改）</p>
+<hr>
+<h5 id="把-vpn-挂在后台才可以登录">把 VPN 挂在后台才可以登录</h5>
+<h5 id="运行登录你的微信">运行登录你的微信</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-basic" data-lang="basic"><span class="vg">ehforwarderbot</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h5 id="一定要用扫码登录不能用图片导入登录">一定要用扫码登录，不能用图片导入登录</h5>
 ]]></description>
 </item></channel>
 </rss>
