@@ -8,10 +8,10 @@
         <title>像 Linux Emacs 一样使用 WSL Emacs - ISouthRain</title><meta name="Description" content="Freedom and Peace 自由与和平"><meta property="og:title" content="像 Linux Emacs 一样使用 WSL Emacs" />
 <meta property="og:description" content="前言 由于 Windows 的某些原因使用 Emacs 总会那么的不方便或者不好用, 有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点 所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://isouthrain.github.io/2022-07-03-windowsemacsforwsl/" />
-<meta property="og:image" content="http://isouthrain.github.io/"/>
+<meta property="og:url" content="http://isouthrain.github.io/2022-07-03-windowsemacsforwsl/" /><meta property="og:image" content="http://isouthrain.github.io/"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-07-03T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-07-03T22:29:32+08:00" /><meta property="og:site_name" content="ISouthRain" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://isouthrain.github.io/"/>
 
@@ -162,8 +162,7 @@
 <p>有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点</p>
 <p><strong>所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux 下使用, 目前体验基本与Linux下体验一致, 不过 EAF 不支持</strong></p>
 <h2 id="效果">效果</h2>
-<figure>
-    <img src="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/%e6%95%88%e6%9e%9c/2022-07-03_21-20-45_1.png"/> 
+<figure><img src="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/%e6%95%88%e6%9e%9c/2022-07-03_21-20-45_1.png"/>
 </figure>
 
 <h2 id="安装-wsl-本文是使用-wsl2-ubuntu22-dot-04">安装 WSL, 本文是使用 WSL2 Ubuntu22.04</h2>
@@ -194,11 +193,11 @@
 <li>以 <strong>管理员权限</strong> 打开 Powershell, 设置默认为 wsl2
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">wsl</span> <span class="p">-</span><span class="n">-set-default-version</span> <span class="n">2</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">wsl</span> <span class="p">-</span><span class="n">-set-default-version</span> <span class="n">2</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>安装 Ubuntu22.04, <strong>wsl.exe &ndash;install -d Ubuntu22.04</strong>
@@ -219,7 +218,7 @@
 <p>Ubuntu 下 编写 ~/.bashrc 或者 ~/.zshrc <strong>末尾处添加</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -228,14 +227,14 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># ~/.bashrc 或者 ~/.zshrc 文件</span>
-<span class="c1"># 获取 Windows WSL IP</span>
-<span class="nv">host_ip</span><span class="o">=</span><span class="k">$(</span>cat /etc/resolv.conf <span class="p">|</span>grep <span class="s2">&#34;nameserver&#34;</span> <span class="p">|</span>cut -f <span class="m">2</span> -d <span class="s2">&#34; &#34;</span><span class="k">)</span>
-<span class="c1"># 将 GUI 显示让 mobaxterm 显示代替</span>
-<span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$host_ip</span><span class="s2">:0&#34;</span>
-<span class="c1"># 如果你要使用 windows 代理</span>
-<span class="c1"># export ALL_PROXY=&#34;http://$host_ip:7890&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># ~/.bashrc 或者 ~/.zshrc 文件</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 获取 Windows WSL IP</span>
+</span></span><span class="line"><span class="cl"><span class="nv">host_ip</span><span class="o">=</span><span class="k">$(</span>cat /etc/resolv.conf <span class="p">|</span>grep <span class="s2">&#34;nameserver&#34;</span> <span class="p">|</span>cut -f <span class="m">2</span> -d <span class="s2">&#34; &#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 将 GUI 显示让 mobaxterm 显示代替</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$host_ip</span><span class="s2">:0&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果你要使用 windows 代理</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># export ALL_PROXY=&#34;http://$host_ip:7890&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -258,8 +257,7 @@
 </ul>
 <h2 id="gui-配置">GUI 配置</h2>
 <h3 id="mobaxterm-模糊解决-修改-dip"><strong>MobaXterm</strong> 模糊解决, 修改 DIP</h3>
-<figure>
-    <img src="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/GUI_%e9%85%8d%e7%bd%ae/2022-07-03_21-59-27_1.png"/> 
+<figure><img src="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/GUI_%e9%85%8d%e7%bd%ae/2022-07-03_21-59-27_1.png"/>
 </figure>
 
 <h3 id="ubuntu-emacs-字体补充">Ubuntu Emacs 字体补充</h3>
@@ -311,7 +309,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.68.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.104.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/ISouthRain" target="_blank">ISouthRain</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

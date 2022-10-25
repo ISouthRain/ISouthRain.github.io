@@ -16,7 +16,6 @@
 <p><strong>所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux 下使用, 目前体验基本与Linux下体验一致, 不过 EAF 不支持</strong></p>
 <h2 id="效果">效果</h2>
 <figure>
-     
 </figure>
 
 <h2 id="安装-wsl-本文是使用-wsl2-ubuntu22-dot-04">安装 WSL, 本文是使用 WSL2 Ubuntu22.04</h2>
@@ -33,11 +32,11 @@
 <li>以 <strong>管理员权限</strong> 打开 Powershell, 设置默认为 wsl2
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">wsl</span> <span class="p">-</span><span class="n">-set-default-version</span> <span class="n">2</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">wsl</span> <span class="p">-</span><span class="n">-set-default-version</span> <span class="n">2</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>安装 Ubuntu22.04, <strong>wsl.exe &ndash;install -d Ubuntu22.04</strong>
@@ -58,7 +57,7 @@
 <p>Ubuntu 下 编写 ~/.bashrc 或者 ~/.zshrc <strong>末尾处添加</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -67,14 +66,14 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># ~/.bashrc 或者 ~/.zshrc 文件</span>
-<span class="c1"># 获取 Windows WSL IP</span>
-<span class="nv">host_ip</span><span class="o">=</span><span class="k">$(</span>cat /etc/resolv.conf <span class="p">|</span>grep <span class="s2">&#34;nameserver&#34;</span> <span class="p">|</span>cut -f <span class="m">2</span> -d <span class="s2">&#34; &#34;</span><span class="k">)</span>
-<span class="c1"># 将 GUI 显示让 mobaxterm 显示代替</span>
-<span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$host_ip</span><span class="s2">:0&#34;</span>
-<span class="c1"># 如果你要使用 windows 代理</span>
-<span class="c1"># export ALL_PROXY=&#34;http://$host_ip:7890&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># ~/.bashrc 或者 ~/.zshrc 文件</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 获取 Windows WSL IP</span>
+</span></span><span class="line"><span class="cl"><span class="nv">host_ip</span><span class="o">=</span><span class="k">$(</span>cat /etc/resolv.conf <span class="p">|</span>grep <span class="s2">&#34;nameserver&#34;</span> <span class="p">|</span>cut -f <span class="m">2</span> -d <span class="s2">&#34; &#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 将 GUI 显示让 mobaxterm 显示代替</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$host_ip</span><span class="s2">:0&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果你要使用 windows 代理</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># export ALL_PROXY=&#34;http://$host_ip:7890&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -91,7 +90,6 @@
 <h2 id="gui-配置">GUI 配置</h2>
 <h3 id="mobaxterm-模糊解决-修改-dip"><strong>MobaXterm</strong> 模糊解决, 修改 DIP</h3>
 <figure>
-     
 </figure>
 
 <h3 id="ubuntu-emacs-字体补充">Ubuntu Emacs 字体补充</h3>
@@ -131,11 +129,11 @@
 <p><strong>请记住, 密钥绝不要给任何人</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">gpg --gen-key
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gpg --gen-key
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>默认选项即可</strong></p>
 <h2 id="加密解密文件">加密解密文件</h2>
@@ -159,27 +157,27 @@
 <!--listend-->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">gpg --symmetric filename
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gpg --symmetric filename
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>解密(输入配对密码, 与上面的密码相同)
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 仅仅解密内容</span>
-gpg -d filename.gpg
-<span class="c1"># 解密并输出原文件</span>
-gpg -o fileame -d filename.gpg
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 仅仅解密内容</span>
+</span></span><span class="line"><span class="cl">gpg -d filename.gpg
+</span></span><span class="line"><span class="cl"><span class="c1"># 解密并输出原文件</span>
+</span></span><span class="line"><span class="cl">gpg -o fileame -d filename.gpg
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 </ul>
@@ -188,49 +186,49 @@ gpg -o fileame -d filename.gpg
 <li>加密
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># -r 表示 gpg 用户, 就刚才创建密钥的用户名</span>
-gpg -e -r User filename
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># -r 表示 gpg 用户, 就刚才创建密钥的用户名</span>
+</span></span><span class="line"><span class="cl">gpg -e -r User filename
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>解密
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 仅仅解密内容</span>
-gpg -d filename.gpg
-<span class="c1"># 解密并输出原文件</span>
-gpg -o fileame -d filename.gpg
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 仅仅解密内容</span>
+</span></span><span class="line"><span class="cl">gpg -d filename.gpg
+</span></span><span class="line"><span class="cl"><span class="c1"># 解密并输出原文件</span>
+</span></span><span class="line"><span class="cl">gpg -o fileame -d filename.gpg
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 </ul>
 <h2 id="导出--请不要将密钥发送给任何人-自己导出密钥保存就好">导出(请不要将密钥发送给任何人,自己导出密钥保存就好)</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">gpg -o filename.asc --export keyID
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gpg -o filename.asc --export keyID
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="导入--个人使用导入密钥就好">导入(个人使用导入密钥就好)</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">gpg --imort filename.asc
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gpg --imort filename.asc
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="faq">FAQ❓</h2>
 <ol>
@@ -250,14 +248,14 @@ gpg -o fileame -d filename.gpg
 </ol>
 <h2 id="emacs-使用-gpg">Emacs 使用 GPG</h2>
 <ul>
-<li><strong>只要后端正常使用 GPG, Emacs 打开 .gpg 文件会自动解密, 在编辑保存后自动解密</strong></li>
+<li><strong>只要后端正常使用 GPG, Emacs 打开 .gpg 文件会自动解密, 在编辑保存后自动加密</strong></li>
 </ul>
 <h3 id="org-mode-使用-gpg-加密">org-mode 使用 GPG 加密</h3>
 <ul>
 <li>配置 EPG(Emacs的一个包, 调用 GPG)
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -265,13 +263,13 @@ gpg -o fileame -d filename.gpg
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-crypt</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">org-crypt-use-before-save-magic</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-tags-exclude-from-inheritance</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;crypt&#34;</span><span class="p">))</span>
-<span class="c1">;; GPG ID, 解密一个文件可以知道这个ID, 每个人都不同</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-crypt-key</span> <span class="s">&#34;0PVT4708DD97889B&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">auto-save-default</span> <span class="no">nil</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-crypt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">org-crypt-use-before-save-magic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">org-tags-exclude-from-inheritance</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;crypt&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; GPG ID, 解密一个文件可以知道这个ID, 每个人都不同</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">org-crypt-key</span> <span class="s">&#34;0PVT4708DD97889B&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">setq</span> <span class="nv">auto-save-default</span> <span class="no">nil</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 </ul>
@@ -302,25 +300,25 @@ gpg -o fileame -d filename.gpg
 <h2 id="安装-xinetd">安装 Xinetd</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">apt install xinetd
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">apt install xinetd
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="编辑-xinetd-配置文件-让gmail工作">编辑 Xinetd 配置文件, 让gmail工作</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">vim /etc/xinetd.d/gmail
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vim /etc/xinetd.d/gmail
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>/etc/xinetd.d/gmail</code> 文件内容:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -359,53 +357,53 @@ gpg -o fileame -d filename.gpg
 </span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># /etc/xinetd.d/gmail
-service imap
-{
-type = UNLISTED
-port = 993
-bind = 0.0.0.0
-socket_type = stream
-wait = no
-user = nobody
-redirect = imap.gmail.com 993
-per_source = UNLIMITED
-cps = 100 2
-}
-service smtp-465
-{
-type = UNLISTED
-port = 465
-bind = 0.0.0.0
-socket_type = stream
-wait = no
-user = nobody
-redirect = smtp.gmail.com 465
-per_source = UNLIMITED
-cps = 100 2
-}
-service smtp-587
-{
-type = UNLISTED
-port = 587
-bind = 0.0.0.0
-socket_type = stream
-wait = no
-user = nobody
-redirect = smtp.gmail.com 587
-per_source = UNLIMITED
-cps = 100 2
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># /etc/xinetd.d/gmail
+</span></span><span class="line"><span class="cl">service imap
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">type = UNLISTED
+</span></span><span class="line"><span class="cl">port = 993
+</span></span><span class="line"><span class="cl">bind = 0.0.0.0
+</span></span><span class="line"><span class="cl">socket_type = stream
+</span></span><span class="line"><span class="cl">wait = no
+</span></span><span class="line"><span class="cl">user = nobody
+</span></span><span class="line"><span class="cl">redirect = imap.gmail.com 993
+</span></span><span class="line"><span class="cl">per_source = UNLIMITED
+</span></span><span class="line"><span class="cl">cps = 100 2
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">service smtp-465
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">type = UNLISTED
+</span></span><span class="line"><span class="cl">port = 465
+</span></span><span class="line"><span class="cl">bind = 0.0.0.0
+</span></span><span class="line"><span class="cl">socket_type = stream
+</span></span><span class="line"><span class="cl">wait = no
+</span></span><span class="line"><span class="cl">user = nobody
+</span></span><span class="line"><span class="cl">redirect = smtp.gmail.com 465
+</span></span><span class="line"><span class="cl">per_source = UNLIMITED
+</span></span><span class="line"><span class="cl">cps = 100 2
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">service smtp-587
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">type = UNLISTED
+</span></span><span class="line"><span class="cl">port = 587
+</span></span><span class="line"><span class="cl">bind = 0.0.0.0
+</span></span><span class="line"><span class="cl">socket_type = stream
+</span></span><span class="line"><span class="cl">wait = no
+</span></span><span class="line"><span class="cl">user = nobody
+</span></span><span class="line"><span class="cl">redirect = smtp.gmail.com 587
+</span></span><span class="line"><span class="cl">per_source = UNLIMITED
+</span></span><span class="line"><span class="cl">cps = 100 2
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="运行服务">运行服务</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">service xinetd start
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">service xinetd start
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="hacker-enjoy">Hacker Enjoy</h3>
 <pre><code>把你的Gnus配置接受服务 `imap.gmail.com` 改成 对应于你的 服务器IP
@@ -427,7 +425,7 @@ cps = 100 2
 <!--listend-->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -452,30 +450,30 @@ cps = 100 2
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
- <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
-  <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-  <span class="c"># 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)</span>
-  <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;algolia&#34;</span>
-  <span class="c"># 文章内容最长索引长度</span>
-  <span class="nx">contentLength</span> <span class="p">=</span> <span class="mi">4000</span>
-  <span class="c"># 搜索框的占位提示语</span>
-  <span class="nx">placeholder</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-  <span class="c"># LoveIt 新增 | 0.2.1 最大结果数目</span>
-  <span class="nx">maxResultLength</span> <span class="p">=</span> <span class="mi">10</span>
-  <span class="c"># LoveIt 新增 | 0.2.3 结果内容片段长度</span>
-  <span class="nx">snippetLength</span> <span class="p">=</span> <span class="mi">50</span>
-  <span class="c"># LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签</span>
-  <span class="nx">highlightTag</span> <span class="p">=</span> <span class="s2">&#34;em&#34;</span>
-  <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
-  <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
-  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
-    <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-    <span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-    <span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-<span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
-  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;JSON&#34;</span><span class="p">]</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"> <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;algolia&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># 文章内容最长索引长度</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">contentLength</span> <span class="p">=</span> <span class="mi">4000</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># 搜索框的占位提示语</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">placeholder</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># LoveIt 新增 | 0.2.1 最大结果数目</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">maxResultLength</span> <span class="p">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># LoveIt 新增 | 0.2.3 结果内容片段长度</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">snippetLength</span> <span class="p">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">highlightTag</span> <span class="p">=</span> <span class="s2">&#34;em&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;JSON&#34;</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="获取-algolia-相关配置">获取 Algolia 相关配置</h2>
 <ul>
@@ -484,7 +482,6 @@ cps = 100 2
 </ul>
 <h3 id="创建属于-hugo-的-application">创建属于 Hugo 的 Application</h3>
 <figure>
-     
 </figure>
 
 <ol>
@@ -502,8 +499,7 @@ cps = 100 2
 <li>选择你刚才注册的 Application</li>
 </ol>
 <figure>
-     
-</figure>
+    </figure>
 
 <ol>
 <li>点击左上角 <strong>Indices</strong></li>
@@ -514,16 +510,13 @@ cps = 100 2
 </ul>
 <h4 id="获取-appid">获取 appID</h4>
 <figure>
-     
 </figure>
 
 <h4 id="获取-searchkey">获取 searchKey</h4>
 <figure>
-     
 </figure>
 
 <figure>
-     
 </figure>
 
 <h2 id="上传到-algolia">上传到 Algolia</h2>
@@ -532,11 +525,11 @@ cps = 100 2
 <p>在你的Hugo主目录下运行:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
@@ -554,11 +547,11 @@ cps = 100 2
 <h3 id="你的-hugo-目录下安装-atomc-algolia">你的 Hugo 目录下安装 atomc-algolia</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">npm install atomic-algolia --save
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install atomic-algolia --save
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="你的-hugo-目录下新建-dot-env-文件">你的 Hugo 目录下新建 .env 文件</h3>
 <ul>
@@ -567,17 +560,17 @@ cps = 100 2
 <!--listend-->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ALGOLIA_APP_ID=
-ALGOLIA_INDEX_NAME=&#34;&#34;
-ALGOLIA_INDEX_FILE=&#34;public/index.json&#34;
-ALGOLIA_ADMIN_KEY=
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ALGOLIA_APP_ID=
+</span></span><span class="line"><span class="cl">ALGOLIA_INDEX_NAME=&#34;&#34;
+</span></span><span class="line"><span class="cl">ALGOLIA_INDEX_FILE=&#34;public/index.json&#34;
+</span></span><span class="line"><span class="cl">ALGOLIA_ADMIN_KEY=
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="开始自动上传">开始自动上传</h4>
 <ul>
@@ -600,7 +593,7 @@ ALGOLIA_ADMIN_KEY=
 <p>参考配置</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -709,114 +702,114 @@ ALGOLIA_ADMIN_KEY=
 </span><span class="lnt">107
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># [en, zh-cn, fr, pl, ...] 设置默认的语言</span>
-<span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>
-
-<span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
-  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
-    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;ISouthRain&#34;</span>
-    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
-    <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
-      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Posts&#34;</span>
-      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/posts/&#34;</span>
-      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
-      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Tags&#34;</span>
-      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/tags/&#34;</span>
-      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
-      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Categories&#34;</span>
-      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/categories/&#34;</span>
-      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>
-    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
-      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-      <span class="c"># 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)</span>
-      <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;algolia&#34;</span>
-      <span class="c"># 文章内容最长索引长度</span>
-      <span class="nx">contentLength</span> <span class="p">=</span> <span class="mi">4000</span>
-      <span class="c"># 搜索框的占位提示语</span>
-      <span class="nx">placeholder</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="c"># LoveIt 新增 | 0.2.1 最大结果数目</span>
-      <span class="nx">maxResultLength</span> <span class="p">=</span> <span class="mi">10</span>
-      <span class="c"># LoveIt 新增 | 0.2.3 结果内容片段长度</span>
-      <span class="nx">snippetLength</span> <span class="p">=</span> <span class="mi">50</span>
-      <span class="c"># LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签</span>
-      <span class="nx">highlightTag</span> <span class="p">=</span> <span class="s2">&#34;em&#34;</span>
-      <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
-      <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
-      <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
-    <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 根据你创建的 index 名, 例如 Hugo-en</span>
-    <span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
-    <span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
-
-
-  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">]</span>
-    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;ISouthRain&#34;</span>
-    <span class="c"># 网站语言, 仅在这里 CN 大写</span>
-    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;zh-CN&#34;</span>
-    <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;简体中文&#34;</span>
-    <span class="c"># 是否包括中日韩文字</span>
-    <span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">true</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
-      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;文章&#34;</span>
-      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/posts/&#34;</span>
-      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
-      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;标签&#34;</span>
-      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/tags/&#34;</span>
-      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
-      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;分类&#34;</span>
-      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/categories/&#34;</span>
-      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>
-    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
-      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
-      <span class="c"># 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)</span>
-      <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;algolia&#34;</span>
-      <span class="c"># 文章内容最长索引长度</span>
-      <span class="nx">contentLength</span> <span class="p">=</span> <span class="mi">4000</span>
-      <span class="c"># 搜索框的占位提示语</span>
-      <span class="nx">placeholder</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-      <span class="c"># LoveIt 新增 | 0.2.1 最大结果数目</span>
-      <span class="nx">maxResultLength</span> <span class="p">=</span> <span class="mi">10</span>
-      <span class="c"># LoveIt 新增 | 0.2.3 结果内容片段长度</span>
-      <span class="nx">snippetLength</span> <span class="p">=</span> <span class="mi">50</span>
-      <span class="c"># LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签</span>
-      <span class="nx">highlightTag</span> <span class="p">=</span> <span class="s2">&#34;em&#34;</span>
-      <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
-      <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
-      <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh</span><span class="err">-</span><span class="nx">cn</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
-    <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 根据你创建的 index 名, 例如 Hugo-zh</span>
-    <span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
-    <span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># [en, zh-cn, fr, pl, ...] 设置默认的语言</span>
+</span></span><span class="line"><span class="cl"><span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;ISouthRain&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Posts&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/posts/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Tags&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/tags/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Categories&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/categories/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;algolia&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># 文章内容最长索引长度</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">contentLength</span> <span class="p">=</span> <span class="mi">4000</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># 搜索框的占位提示语</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">placeholder</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># LoveIt 新增 | 0.2.1 最大结果数目</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">maxResultLength</span> <span class="p">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># LoveIt 新增 | 0.2.3 结果内容片段长度</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">snippetLength</span> <span class="p">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">highlightTag</span> <span class="p">=</span> <span class="s2">&#34;em&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 根据你创建的 index 名, 例如 Hugo-en</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;ISouthRain&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 网站语言, 仅在这里 CN 大写</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;zh-CN&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;简体中文&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 是否包括中日韩文字</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;文章&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/posts/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;标签&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/tags/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">identifier</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;分类&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/categories/&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># 搜索引擎的类型 (&#34;lunr&#34;, &#34;algolia&#34;)</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">type</span> <span class="p">=</span> <span class="s2">&#34;algolia&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># 文章内容最长索引长度</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">contentLength</span> <span class="p">=</span> <span class="mi">4000</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># 搜索框的占位提示语</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">placeholder</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># LoveIt 新增 | 0.2.1 最大结果数目</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">maxResultLength</span> <span class="p">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># LoveIt 新增 | 0.2.3 结果内容片段长度</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">snippetLength</span> <span class="p">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">highlightTag</span> <span class="p">=</span> <span class="s2">&#34;em&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 根据你创建的 index 名, 例如 Hugo-zh</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 </ul>
@@ -887,22 +880,22 @@ ALGOLIA_ADMIN_KEY=
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">https://api.telegra.ph/createAccount?short_name=称呼名&amp;author_name=用户名
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://api.telegra.ph/createAccount?short_name=称呼名&amp;author_name=用户名
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="运行">运行</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">chmod <span class="m">755</span> flowerss-bot
-./flowerss-bot
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">755</span> flowerss-bot
+</span></span><span class="line"><span class="cl">./flowerss-bot
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="成功了就请享受">成功了就请享受🌝</h3>
 <h3 id="感谢作者大大的开源让我们用上这么好的作品">感谢作者大大的开源，让我们用上这么好的作品🌹</h3>
@@ -945,7 +938,7 @@ ALGOLIA_ADMIN_KEY=
 <li>
 <p>Linux 用户可以使用 <code>wget</code> 工具下载</p>
 <ul>
-<li>例如: wget <a href="https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz">https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz</a></li>
+<li>例如: wget <a href="https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz" target="_blank" rel="noopener noreffer">https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz</a></li>
 </ul>
 </li>
 </ul>
@@ -963,7 +956,7 @@ ALGOLIA_ADMIN_KEY=
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -983,44 +976,42 @@ ALGOLIA_ADMIN_KEY=
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">common</span><span class="p">]</span>
-<span class="nx">bind_addr</span> <span class="p">=</span> <span class="mf">0.0</span><span class="p">.</span><span class="mf">0.0</span>
-<span class="c"># frp 监听的端口，默认是7000</span>
-<span class="nx">bind_port</span> <span class="p">=</span> <span class="mi">7000</span>
-<span class="c"># 授权码, 随便填一个</span>
-<span class="nx">token</span> <span class="p">=</span> <span class="nx">xxxxx</span>
-
-<span class="c"># frp管理后台端口，请按自己需求更改</span>
-<span class="nx">dashboard_port</span> <span class="p">=</span> <span class="mi">7100</span>
-<span class="c"># frp管理后台用户名和密码</span>
-<span class="nx">dashboard_user</span> <span class="p">=</span> <span class="nx">xxxx</span>
-<span class="nx">dashboard_pwd</span> <span class="p">=</span> <span class="nx">xxxx</span>
-<span class="nx">enable_prometheus</span> <span class="p">=</span> <span class="kc">true</span>
-
-<span class="c"># frp日志配置</span>
-<span class="nx">log_file</span> <span class="p">=</span> <span class="err">/</span><span class="nx">var</span><span class="err">/</span><span class="nx">log</span><span class="err">/</span><span class="nx">frps</span><span class="p">.</span><span class="nx">log</span>
-<span class="nx">log_level</span> <span class="p">=</span> <span class="nx">info</span>
-<span class="nx">log_max_days</span> <span class="p">=</span> <span class="mi">3</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">common</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">bind_addr</span> <span class="p">=</span> <span class="mf">0.0</span><span class="p">.</span><span class="mf">0.0</span>
+</span></span><span class="line"><span class="cl"><span class="c"># frp 监听的端口，默认是7000</span>
+</span></span><span class="line"><span class="cl"><span class="nx">bind_port</span> <span class="p">=</span> <span class="mi">7000</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 授权码, 随便填一个</span>
+</span></span><span class="line"><span class="cl"><span class="nx">token</span> <span class="p">=</span> <span class="nx">xxxxx</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># frp管理后台端口，请按自己需求更改</span>
+</span></span><span class="line"><span class="cl"><span class="nx">dashboard_port</span> <span class="p">=</span> <span class="mi">7100</span>
+</span></span><span class="line"><span class="cl"><span class="c"># frp管理后台用户名和密码</span>
+</span></span><span class="line"><span class="cl"><span class="nx">dashboard_user</span> <span class="p">=</span> <span class="nx">xxxx</span>
+</span></span><span class="line"><span class="cl"><span class="nx">dashboard_pwd</span> <span class="p">=</span> <span class="nx">xxxx</span>
+</span></span><span class="line"><span class="cl"><span class="nx">enable_prometheus</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># frp日志配置</span>
+</span></span><span class="line"><span class="cl"><span class="nx">log_file</span> <span class="p">=</span> <span class="err">/</span><span class="nx">var</span><span class="err">/</span><span class="nx">log</span><span class="err">/</span><span class="nx">frps</span><span class="p">.</span><span class="nx">log</span>
+</span></span><span class="line"><span class="cl"><span class="nx">log_level</span> <span class="p">=</span> <span class="nx">info</span>
+</span></span><span class="line"><span class="cl"><span class="nx">log_max_days</span> <span class="p">=</span> <span class="mi">3</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="运行-frps">运行 frps</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Linux 用户</span>
-chomd +x frps
-./frps -c frps.ini
-<span class="c1"># windows用户</span>
-./frps.exe -c frps.ini
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Linux 用户</span>
+</span></span><span class="line"><span class="cl">chomd +x frps
+</span></span><span class="line"><span class="cl">./frps -c frps.ini
+</span></span><span class="line"><span class="cl"><span class="c1"># windows用户</span>
+</span></span><span class="line"><span class="cl">./frps.exe -c frps.ini
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="客户端你的局域网端">客户端(你的局域网端)</h3>
 <ul>
@@ -1029,7 +1020,7 @@ chomd +x frps
 <h4 id="解压后-编辑-frpcini">解压后 编辑 frpc.ini</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1055,54 +1046,50 @@ chomd +x frps
 </span><span class="lnt">24
 </span><span class="lnt">25
 </span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># 服务端配置</span>
-<span class="p">[</span><span class="nx">common</span><span class="p">]</span>
-<span class="nx">server_addr</span> <span class="p">=</span> <span class="nx">服务器ip</span>
-<span class="c"># 请换成设置的服务器端口</span>
-<span class="nx">server_port</span> <span class="p">=</span> <span class="mi">7000</span>
-<span class="nx">token</span> <span class="p">=</span> <span class="nx">与上面frps</span><span class="p">.</span><span class="nx">ini的相同</span>
-
-<span class="c"># 配置ssh服务</span>
-<span class="p">[</span><span class="nx">ssh</span><span class="p">]</span>
-<span class="nx">type</span> <span class="p">=</span> <span class="nx">tcp</span>
-<span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
-<span class="nx">local_port</span> <span class="p">=</span> <span class="mi">8022</span>
-<span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如8022</span>
-
-<span class="p">[</span><span class="nx">web</span><span class="p">]</span>
-<span class="nx">type</span> <span class="p">=</span> <span class="nx">http</span>
-<span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
-<span class="nx">local_port</span> <span class="p">=</span> <span class="mi">8080</span>
-<span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如8080</span>
-<span class="c"># 多端口</span>
-<span class="p">[</span><span class="nx">range</span><span class="err">:</span><span class="nx">Test</span><span class="p">]</span>
-<span class="p">[</span><span class="nx">web</span><span class="p">]</span>
-<span class="nx">type</span> <span class="p">=</span> <span class="nx">http</span>
-<span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
-<span class="nx">local_port</span> <span class="p">=</span> <span class="mi">9000-9010</span>
-<span class="nx">remote_port</span> <span class="p">=</span> <span class="nx">例如9000</span><span class="mi">-9010</span>
-
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># 服务端配置</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">common</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">server_addr</span> <span class="p">=</span> <span class="err">服务器</span><span class="nx">ip</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 请换成设置的服务器端口</span>
+</span></span><span class="line"><span class="cl"><span class="nx">server_port</span> <span class="p">=</span> <span class="mi">7000</span>
+</span></span><span class="line"><span class="cl"><span class="nx">token</span> <span class="p">=</span> <span class="err">与上面</span><span class="nx">frps</span><span class="p">.</span><span class="nx">ini</span><span class="err">的相同</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 配置ssh服务</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">ssh</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">type</span> <span class="p">=</span> <span class="nx">tcp</span>
+</span></span><span class="line"><span class="cl"><span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">local_port</span> <span class="p">=</span> <span class="mi">8022</span>
+</span></span><span class="line"><span class="cl"><span class="nx">remote_port</span> <span class="p">=</span> <span class="err">例如</span><span class="mi">8022</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">web</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">type</span> <span class="p">=</span> <span class="nx">http</span>
+</span></span><span class="line"><span class="cl"><span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">local_port</span> <span class="p">=</span> <span class="mi">8080</span>
+</span></span><span class="line"><span class="cl"><span class="nx">remote_port</span> <span class="p">=</span> <span class="err">例如</span><span class="mi">8080</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 多端口</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">range</span><span class="err">:</span><span class="nx">Test</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">web</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">type</span> <span class="p">=</span> <span class="nx">http</span>
+</span></span><span class="line"><span class="cl"><span class="nx">local_ip</span> <span class="p">=</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">local_port</span> <span class="p">=</span> <span class="mi">9000-9010</span>
+</span></span><span class="line"><span class="cl"><span class="nx">remote_port</span> <span class="p">=</span> <span class="err">例如</span><span class="mi">9000-9010</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="启动-frpc">启动 frpc</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Linux用户</span>
-./frpc -c frpc.ini
-<span class="c1"># Windows用户</span>
-./frpc.exe -c frpc.ini
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Linux用户</span>
+</span></span><span class="line"><span class="cl">./frpc -c frpc.ini
+</span></span><span class="line"><span class="cl"><span class="c1"># Windows用户</span>
+</span></span><span class="line"><span class="cl">./frpc.exe -c frpc.ini
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="测试">测试</h3>
 <p><strong>在你的公网端, 进行测试</strong></p>
@@ -1111,15 +1098,15 @@ chomd +x frps
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ssh -p 端口 root@服务器IP
-<span class="c1"># 例如</span>
-ssh -p <span class="m">8022</span> root@192.13.33.6
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh -p 端口 root@服务器IP
+</span></span><span class="line"><span class="cl"><span class="c1"># 例如</span>
+</span></span><span class="line"><span class="cl">ssh -p <span class="m">8022</span> root@192.13.33.6
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong><code>服务器端口必须要开放对应端口</code></strong></p>
 <p><strong>注意, 当你想访问局域网端时, 局域网端口的本地端口一定是开的, 并对应于你设置frpc.ini的端口</strong></p>
@@ -1128,7 +1115,7 @@ ssh -p <span class="m">8022</span> root@192.13.33.6
 <h4 id="可以让服务器端开机启动-不太麻烦">可以让服务器端开机启动, 不太麻烦</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1137,14 +1124,14 @@ ssh -p <span class="m">8022</span> root@192.13.33.6
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> frp目录
-mkdir -p /etc/frp
-cp frps.ini /etc/frp
-cp frps /usr/bin
-cp systemd/frps.service /usr/lib/systemd/system/
-systemctl <span class="nb">enable</span> frps
-systemctl start frps
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> frp目录
+</span></span><span class="line"><span class="cl">mkdir -p /etc/frp
+</span></span><span class="line"><span class="cl">cp frps.ini /etc/frp
+</span></span><span class="line"><span class="cl">cp frps /usr/bin
+</span></span><span class="line"><span class="cl">cp systemd/frps.service /usr/lib/systemd/system/
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> frps
+</span></span><span class="line"><span class="cl">systemctl start frps
+</span></span></code></pre></td></tr></table>
 </div>
 </div>]]></description>
 </item><item>
@@ -1156,69 +1143,69 @@ systemctl start frps
     <description><![CDATA[<h4 id="粗体">粗体</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">**粗体**
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="line"><span class="cl">**粗体**
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="斜体">斜体</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">*斜体* 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">*斜体* 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="粗斜体">粗斜体</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">***粗斜体***
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="line"><span class="cl">***粗斜体***
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="粗斜体-1">粗斜体</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">***粗斜体***
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">***粗斜体***
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="链接">链接🔗</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">[<span class="nt">备注</span>](<span class="na">链接</span>) 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="line"><span class="cl">[<span class="nt">备注</span>](<span class="na">链接</span>) 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="文件链接">文件链接</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">![<span class="nt">备注</span>](<span class="na">链接</span>)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="line"><span class="cl">![<span class="nt">备注</span>](<span class="na">链接</span>)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="内部文件跳转">内部文件跳转</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;span id = &#34;瞄点&#34;&gt;跳转至瞄点&lt;/span&gt;
-
-[跳转至瞄点](#瞄点)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;span id = &#34;瞄点&#34;&gt;跳转至瞄点&lt;/span&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[跳转至瞄点](#瞄点)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="效果如下">效果如下</h5>
 <p><code>效果如下👇</code></p>
@@ -1228,20 +1215,20 @@ systemctl start frps
 <h4 id="嵌入视频">嵌入视频</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">&lt;video poster=&#34;效果动图&#34;  width=&#34;360&#34; height=&#34;240&#34; controls&gt;
-    &lt;source src=&#34;视频链接链接，支持其他格式，当使用其他格式时，不要替换后面的 video/mp4&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;  
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">video</span> <span class="na">poster</span><span class="o">=</span><span class="s">&#34;效果动图&#34;</span>  <span class="na">width</span><span class="o">=</span><span class="s">&#34;360&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;240&#34;</span> <span class="na">controls</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">source</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;视频链接链接，支持其他格式，当使用其他格式时，不要替换后面的 video/mp4&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;video/mp4&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>  
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="折叠列表">折叠列表</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1257,21 +1244,21 @@ systemctl start frps
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">&lt;details&gt;
-&lt;summary&gt;这是一个折叠列表&lt;/summary&gt;
-
-折叠内容, 上面空一行
-
-下一行
-&lt;details&gt;
-&lt;summary&gt;这是一个嵌套折叠列表&lt;/summary&gt;
-
-嵌套折叠内容, 上面空一行
-
-下一行
-&lt;/details&gt;
-&lt;/details&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">details</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">summary</span><span class="p">&gt;</span>这是一个折叠列表<span class="p">&lt;/</span><span class="nt">summary</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">折叠内容, 上面空一行
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">下一行
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">details</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">summary</span><span class="p">&gt;</span>这是一个嵌套折叠列表<span class="p">&lt;/</span><span class="nt">summary</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">嵌套折叠内容, 上面空一行
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">下一行
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">details</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">details</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="效果如下-1">效果如下</h5>
 <video poster="效果动图"  width="360" height="240" controls>
@@ -1280,57 +1267,57 @@ systemctl start frps
 <h4 id="表格">表格</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-markdown" data-lang="markdown">|1   |   2  |   3|
-|:-  |  :-: |  -:|
-|居右| 居中 |居左|
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">|1   |   2  |   3|
+</span></span><span class="line"><span class="cl">|:-  |  :-: |  -:|
+</span></span><span class="line"><span class="cl">|居右| 居中 |居左|
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="代码块">代码块</h4>
 <p>用6个  <strong>`</strong> 包裹</p>
 <h4 id="块状">块状</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="sb">`块状`</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="line"><span class="cl"><span class="sb">`块状`</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="下划线">下划线</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">&lt;u&gt;下划线&lt;/u&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">u</span><span class="p">&gt;</span>下划线<span class="p">&lt;/</span><span class="nt">u</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="删除线">删除线</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">~~删除线~~
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="line"><span class="cl">~~删除线~~
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="使用表情">使用表情</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Markdown" data-lang="Markdown">露营 :tent: 
-
-真好笑 :joy:
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Markdown" data-lang="Markdown"><span class="line"><span class="cl">露营 :tent: 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">真好笑 :joy:
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>露营⛺</p>
 <p>真好笑😂</p>
@@ -1383,30 +1370,30 @@ systemctl start frps
 <h4 id="配置你的-github-邮箱">配置你的 GitHub 邮箱📬</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global user.email <span class="s2">&#34;你在 GitHub 注册的邮箱&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;你在 GitHub 注册的邮箱&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="配置你的-github-用户名">配置你的 GitHub 用户名</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global user.name <span class="s2">&#34;你的 GitHub 用户名&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;你的 GitHub 用户名&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="输入以下命令后将会保存你-git-push-时登录的信息">输入以下命令后，将会保存你 git push 时登录的信息</h4>
 <h4 id="当下一次-git-push-时就不用再输入登录信息了">当下一次 git push 时就不用再输入登录信息了!</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git config --global credential.helper store
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global credential.helper store
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="如何推送上传到githubhttpsisouthraingithubio2022-04-29-e68ea8e98081github"><a href="https://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/" target="_blank" rel="noopener noreffer">如何推送/上传到GitHub</a></h3>
 <h4 id="faq">FAQ❓</h4>
@@ -1456,30 +1443,30 @@ systemctl start frps
 <p>更新下软件包：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg update
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg update
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>打开软件，输入以下代码按回车：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg install wget openssl-tool proot -y &amp;&amp; hash -r &amp;&amp; wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh &amp;&amp; bash ubuntu.sh
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg install wget openssl-tool proot -y &amp;&amp; hash -r &amp;&amp; wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh &amp;&amp; bash ubuntu.sh
+</span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
 <p>输入以下代码进入Ubuntu系统：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">./start-ubuntu.sh
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./start-ubuntu.sh
+</span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
 <h4 id="回到本教程开始搭建tg收发微信消息">回到本教程，开始搭建TG收发微信消息</h4>
@@ -1488,22 +1475,22 @@ systemctl start frps
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt update &amp;&amp; apt upgrade -y
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt update &amp;&amp; apt upgrade -y
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol>
 <li>下载必要依赖：</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt install ffmpeg python3-pip python3-dev python3-setuptools libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libmagic-dev -y
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt install ffmpeg python3-pip python3-dev python3-setuptools libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libmagic-dev -y
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol>
 <li>安装EH转发机器人和主从通道:</li>
@@ -1513,33 +1500,33 @@ systemctl start frps
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install ehforwarderbot
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip3 install ehforwarderbot
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>安装TG机器人</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install efb-telegram-master
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip3 install efb-telegram-master
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>微信端：</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install git+https://github.com/ehForwarderBot/efb-wechat-slave
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip3 install git+https://github.com/ehForwarderBot/efb-wechat-slave
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="现在做完了服务器工作再去申请一个机器人">现在做完了服务器工作，再去申请一个机器人</h5>
 <ol>
@@ -1557,13 +1544,13 @@ systemctl start frps
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">link - 将会话绑定到 Telegram 群组
-chat - 生成会话头
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">link - 将会话绑定到 Telegram 群组
+</span></span><span class="line"><span class="cl">chat - 生成会话头
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>返回telegram主界面，搜索按扭🔍，搜索@get_id_bot，进入点开始会得到你的telegram id</li>
@@ -1577,22 +1564,22 @@ chat - 生成会话头
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt install vim
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt install vim
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>编辑文件：</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">vim ~/.ehforwarderbot/profiles/default/config.yaml
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vim ~/.ehforwarderbot/profiles/default/config.yaml
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>进入后点一下键盘 i</p>
 <ul>
@@ -1600,15 +1587,15 @@ chat - 生成会话头
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">master_channel: blueset.telegram
-slave_channels:
-- blueset.wechat
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">master_channel: blueset.telegram
+</span></span><span class="line"><span class="cl">slave_channels:
+</span></span><span class="line"><span class="cl">- blueset.wechat
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>按下键盘的 ESC 再输入英文状态下的 :  输入 wq 后回车，就这样保存文件并退出了</li>
@@ -1616,24 +1603,24 @@ slave_channels:
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">vim ~/.ehforwarderbot/profiles/default/blueset.telegram/config.yaml
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vim ~/.ehforwarderbot/profiles/default/blueset.telegram/config.yaml
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>按上面的方法复制一下代码进去：</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">token: &#34;机器人的API&#34;
-admins: [用户ID]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">token: &#34;机器人的API&#34;
+</span></span><span class="line"><span class="cl">admins: [用户ID]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>把上面的 机器人API 和 用户ID 换成你刚才在TG用那两个机器人得到的（符号不要改）</p>
 <hr>
@@ -1641,11 +1628,11 @@ admins: [用户ID]
 <h5 id="运行登录你的微信">运行登录你的微信</h5>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-basic" data-lang="basic"><span class="vg">ehforwarderbot</span><span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-basic" data-lang="basic"><span class="line"><span class="cl"><span class="vg">ehforwarderbot</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="一定要用扫码登录不能用图片导入登录">一定要用扫码登录，不能用图片导入登录</h5>
 ]]></description>
