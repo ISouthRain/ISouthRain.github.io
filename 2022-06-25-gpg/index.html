@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/isouthrain.github.io\/2022-06-25-gpg\/"
-        },"genre": "posts","keywords": "Emacs","wordcount":  814 ,
+        },"genre": "posts","keywords": "Emacs","wordcount":  835 ,
         "url": "http:\/\/isouthrain.github.io\/2022-06-25-gpg\/","datePublished": "2022-06-25T00:00:00+00:00","dateModified": "2022-06-25T23:40:28+08:00","publisher": {
             "@type": "Organization",
             "name": "ISouthRain","logo": "https:\/\/raw.githubusercontent.com\/ISouthRain\/ISouthRain.github.io\/main\/android-chrome-192x192.png"},"author": {
@@ -124,7 +124,7 @@
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">GnuPG(GPG) 加密</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>ISouthRain</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-25">2022-06-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 814 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-25">2022-06-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 835 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -311,8 +311,28 @@
 <li>
 <p>加密
 在标题后面写上 :crypt: , 保存文件将会自动加密此标题内容</p>
-<p><strong>注意</strong>: Windows 加密会乱码，导致无法解密org标题内容，谨慎使用(请不要在Windows使用Org加密)</p>
-</li>
+<p><strong>警告</strong>: Windows 系统 加密会导致 ^M 换行而无法解密，可以使用下面的函数解密</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="line"><span class="cl"><span class="c1">;; 解决 ^M 解密问题</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">freedom/org-decrypt-entry</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="s">&#34;Replace DOS eolns CR LF with Unix eolns CR&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">goto-char</span> <span class="p">(</span><span class="nf">point-min</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">while</span> <span class="p">(</span><span class="nf">search-forward</span> <span class="s">&#34;\r&#34;</span> <span class="no">nil</span> <span class="no">t</span><span class="p">)</span> <span class="p">(</span><span class="nf">replace-match</span> <span class="s">&#34;&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">org-decrypt-entry</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
 <li>
 <p>解密
 将 光标放在具有 :crypt: 标题上, 命令 org-decrypt-entry</p>
