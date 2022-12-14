@@ -128,9 +128,8 @@
 <li>M-x google-translate-smooth-translate 回车</li>
 <li>C-n 切换翻译方案</li>
 </ol>
-<div class="myshortcode">
-<p>{{&lt; bilibili BV1kK41167ni &gt;}}</p>
-</div>
+<div class="bilibili"><iframe src="//player.bilibili.com/player.html?bvid=BV1kK41167ni&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div>
+
 ]]></description>
 </item><item>
     <title>像 Linux Emacs 一样使用 WSL Emacs</title>
