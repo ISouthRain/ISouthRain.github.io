@@ -11,6 +11,7 @@
 <meta property="og:url" content="http://isouthrain.github.io/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/" /><meta property="og:image" content="http://isouthrain.github.io/"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-03-20T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-04-28T00:00:00+00:00" /><meta property="og:site_name" content="ISouthRain" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://isouthrain.github.io/"/>
 
@@ -208,8 +209,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg update
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pkg update
+</code></pre></td></tr></table>
 </div>
 </div><p>打开软件，输入以下代码按回车：</p>
 <div class="highlight"><div class="chroma">
@@ -217,8 +218,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg install wget openssl-tool proot -y &amp;&amp; hash -r &amp;&amp; wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh &amp;&amp; bash ubuntu.sh
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pkg install wget openssl-tool proot -y &amp;&amp; hash -r &amp;&amp; wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh &amp;&amp; bash ubuntu.sh
+</code></pre></td></tr></table>
 </div>
 </div><hr>
 <p>输入以下代码进入Ubuntu系统：</p>
@@ -227,8 +228,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./start-ubuntu.sh
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">./start-ubuntu.sh
+</code></pre></td></tr></table>
 </div>
 </div><hr>
 <h4 id="回到本教程开始搭建tg收发微信消息">回到本教程，开始搭建TG收发微信消息</h4>
@@ -240,8 +241,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt update &amp;&amp; apt upgrade -y
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">apt update &amp;&amp; apt upgrade -y
+</code></pre></td></tr></table>
 </div>
 </div><ol>
 <li>下载必要依赖：</li>
@@ -251,8 +252,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt install ffmpeg python3-pip python3-dev python3-setuptools libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libmagic-dev -y
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">apt install ffmpeg python3-pip python3-dev python3-setuptools libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libmagic-dev -y
+</code></pre></td></tr></table>
 </div>
 </div><ol>
 <li>安装EH转发机器人和主从通道:</li>
@@ -265,8 +266,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip3 install ehforwarderbot
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install ehforwarderbot
+</code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>安装TG机器人</li>
@@ -276,8 +277,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip3 install efb-telegram-master
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install efb-telegram-master
+</code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>微信端：</li>
@@ -287,8 +288,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip3 install git+https://github.com/ehForwarderBot/efb-wechat-slave
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pip3 install git+https://github.com/ehForwarderBot/efb-wechat-slave
+</code></pre></td></tr></table>
 </div>
 </div><h5 id="现在做完了服务器工作再去申请一个机器人">现在做完了服务器工作，再去申请一个机器人</h5>
 <ol>
@@ -310,9 +311,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">link - 将会话绑定到 Telegram 群组
-</span></span><span class="line"><span class="cl">chat - 生成会话头
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">link - 将会话绑定到 Telegram 群组
+chat - 生成会话头
+</code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>返回telegram主界面，搜索按扭🔍，搜索@get_id_bot，进入点开始会得到你的telegram id</li>
@@ -329,8 +330,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt install vim
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">apt install vim
+</code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>编辑文件：</li>
@@ -340,8 +341,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vim ~/.ehforwarderbot/profiles/default/config.yaml
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">vim ~/.ehforwarderbot/profiles/default/config.yaml
+</code></pre></td></tr></table>
 </div>
 </div><p>进入后点一下键盘 i</p>
 <ul>
@@ -354,10 +355,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">master_channel: blueset.telegram
-</span></span><span class="line"><span class="cl">slave_channels:
-</span></span><span class="line"><span class="cl">- blueset.wechat
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">master_channel: blueset.telegram
+slave_channels:
+- blueset.wechat
+</code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>按下键盘的 ESC 再输入英文状态下的 :  输入 wq 后回车，就这样保存文件并退出了</li>
@@ -368,8 +369,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vim ~/.ehforwarderbot/profiles/default/blueset.telegram/config.yaml
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">vim ~/.ehforwarderbot/profiles/default/blueset.telegram/config.yaml
+</code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>按上面的方法复制一下代码进去：</li>
@@ -380,9 +381,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">token: &#34;机器人的API&#34;
-</span></span><span class="line"><span class="cl">admins: [用户ID]
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">token: &#34;机器人的API&#34;
+admins: [用户ID]
+</code></pre></td></tr></table>
 </div>
 </div><p>把上面的 机器人API 和 用户ID 换成你刚才在TG用那两个机器人得到的（符号不要改）</p>
 <hr>
@@ -393,8 +394,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-basic" data-lang="basic"><span class="line"><span class="cl"><span class="vg">ehforwarderbot</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-basic" data-lang="basic"><span class="vg">ehforwarderbot</span>
+</code></pre></td></tr></table>
 </div>
 </div><h5 id="一定要用扫码登录不能用图片导入登录">一定要用扫码登录，不能用图片导入登录</h5>
 </div><div class="post-footer" id="post-footer">
@@ -427,8 +428,8 @@
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.108.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/ISouthRain" target="_blank">ISouthRain</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.91.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/ISouthRain" target="_blank">ISouthRain</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
