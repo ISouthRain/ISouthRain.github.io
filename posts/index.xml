@@ -4,7 +4,7 @@
         <link>http://isouthrain.github.io/posts/</link>
         <description>所有文章 | ISouthRain</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
-            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Tue, 13 Dec 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Thu, 15 Dec 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Emacs google-translate 翻译文本</title>
     <link>http://isouthrain.github.io/20221213-emacs-google-translate/</link>
     <pubDate>Tue, 13 Dec 2022 00:00:00 &#43;0000</pubDate>
@@ -128,6 +128,94 @@
 </ol>
 <div class="bilibili"><iframe src="//player.bilibili.com/player.html?bvid=BV1kK41167ni&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div>
 
+]]></description>
+</item><item>
+    <title>Emacs use-package 包管理器</title>
+    <link>http://isouthrain.github.io/20221215-emacs-use-package/</link>
+    <pubDate>Thu, 15 Dec 2022 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://isouthrain.github.io/20221215-emacs-use-package/</guid>
+    <description><![CDATA[<h2 id="use-package">use-package</h2>
+<h3 id="源码地址">源码地址</h3>
+<p><a href="https://github.com/jwiegley/use-package" target="_blank" rel="noopener noreffer">GitHub - jwiegley/use-package: A use-package declaration for simplifying your&hellip;</a></p>
+<h3 id="什么是-use-packaeg">什么是 use-packaeg</h3>
+<p>use-package 是管理 Emacs 包(插件) 的一个宏管理器
+可以管理每个包的设置，并配置和定义</p>
+<h3 id="安装-use-package">安装 use-package</h3>
+<ul>
+<li>将以下源码复制到你的 init.el 文件中, 然后重启 Emacs
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;; 添加下载包的来源</span>
+<span class="p">(</span><span class="nb">eval-and-compile</span>
+  <span class="p">(</span><span class="nv">customize-set-variable</span>
+   <span class="ss">&#39;package-archives</span> <span class="o">&#39;</span><span class="p">(</span>
+                       <span class="p">(</span><span class="s">&#34;melpa&#34;</span> <span class="o">.</span> <span class="s">&#34;http://melpa.org/packages/&#34;</span><span class="p">)</span>
+                       <span class="p">(</span><span class="s">&#34;org&#34;</span> <span class="o">.</span> <span class="s">&#34;http://orgmode.org/elpa/&#34;</span><span class="p">)</span>
+                       <span class="p">(</span><span class="s">&#34;gnu&#34;</span> <span class="o">.</span> <span class="s">&#34;https://elpa.gnu.org/packages/&#34;</span><span class="p">)</span>
+                       <span class="p">(</span><span class="s">&#34;nongnu&#34;</span> <span class="o">.</span> <span class="s">&#34;https://elpa.nongnu.org/nongnu/&#34;</span><span class="p">)</span>
+                       <span class="p">))</span>
+  <span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span>
+   <span class="c1">;; 如果Emacs 检测到你没有安装 use-package, 那么自动安装 use-package</span>
+  <span class="p">(</span><span class="nb">unless</span> <span class="p">(</span><span class="nv">package-installed-p</span> <span class="ss">&#39;use-package</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">package-refresh-contents</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">package-install</span> <span class="ss">&#39;use-package</span><span class="p">))</span>
+  <span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="使用-use-package">使用 use-package</h3>
+<ul>
+<li>例如: 安装 doom-themes 主题
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;; 安装 doom-themes 主题，并启用 doom-one 主题</span>
+<span class="p">(</span><span class="nb">use-package</span> <span class="nv">doom-themes</span>
+  <span class="nb">:ensure</span> <span class="no">t</span>
+  <span class="nb">:config</span>
+  <span class="p">(</span><span class="nv">load-theme</span> <span class="ss">&#39;doom-one</span> <span class="no">t</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="use-package-关键词解释">use-package 关键词解释</h4>
+<ul>
+<li>:ensure t/nil
+是否从网络源安装？ t 代表从网络安装，nil 代表从 Emacs 内置包加载(如果Emacs内置了这个包，Emacs如果没有那么将报错)</li>
+<li>:config
+加载/下载 包 之后再加载的配置</li>
+<li>:init
+加载/下载 包 之前加载的配置</li>
+<li>:defer num
+懒加载，num 代表数字, 在 Emacs 启动完成 num秒后再加载 :config 的内容, 可以减少 Emacs 启动时间</li>
+<li>还有更多关键词使用，可以自己到项目地址查看
+比如 bind 自定义按键， commands 调用某个命令后再加载 :config 配置</li>
+</ul>
 ]]></description>
 </item><item>
     <title>像 Linux Emacs 一样使用 WSL Emacs</title>
@@ -1505,53 +1593,6 @@ systemctl start frps
 👉  <a href="https://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/" target="_blank" rel="noopener noreffer">永久免账号密码 推送/上传 GitHub</a></p>
 <h3 id="faq">FAQ❓</h3>
 <p>如果你遇到了问题，可以在下面评论去提问，基本都会回复的</p>
-]]></description>
-</item><item>
-    <title>永久免账号密码推送Github</title>
-    <link>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</link>
-    <pubDate>Thu, 28 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</guid>
-    <description><![CDATA[<h3 id="使用以下方法后">使用以下方法后</h3>
-<h3 id="git-push-再也不用一直输入-账号密码了">git push 再也不用一直输入 账号密码了!</h3>
-<h3 id="git-push-每次都要输入账号密码-从此解决">git push 每次都要输入账号密码? 从此解决</h3>
-<h3 id="正文">正文👇</h3>
-<h3 id="首先配置-git-个人信息">首先配置 Git 个人信息</h3>
-<h4 id="依此输入以下两个命令">依此输入以下两个命令:</h4>
-<h4 id="配置你的-github-邮箱">配置你的 GitHub 邮箱📬</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git config --global user.email <span class="s2">&#34;你在 GitHub 注册的邮箱&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="配置你的-github-用户名">配置你的 GitHub 用户名</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git config --global user.name <span class="s2">&#34;你的 GitHub 用户名&#34;</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="输入以下命令后将会保存你-git-push-时登录的信息">输入以下命令后，将会保存你 git push 时登录的信息</h4>
-<h4 id="当下一次-git-push-时就不用再输入登录信息了">当下一次 git push 时就不用再输入登录信息了!</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git config --global credential.helper store
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="如何推送上传到githubhttpsisouthraingithubio2022-04-29-e68ea8e98081github"><a href="https://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/" target="_blank" rel="noopener noreffer">如何推送/上传到GitHub</a></h3>
-<h4 id="faq">FAQ❓</h4>
-<h5 id="由于github已经更改了-git-push-机制">由于GitHub已经更改了 git push 机制</h5>
-<h5 id="git-push-时密码改用-token"><code>git push</code> 时<code>密码改用</code> <code>token</code></h5>
-<h4 id="已完成所有工作-请-git-push-一次试试">已完成所有工作, 请 git push 一次试试</h4>
-<h5 id="如果成功了请享受">如果成功了，请享受🎉🎉🎉</h5>
 ]]></description>
 </item></channel>
 </rss>
