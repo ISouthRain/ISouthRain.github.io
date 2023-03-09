@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Vim和Emacs的选择 - ISouthRain</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ISouthRain" /><meta name="description" content="前言 这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.91.2 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.0f337d9d3eae904ea2c93977e825396a03f536c750af9e04b9810f6bfbe36f88.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="Vim和Emacs的选择" />
+<meta property="og:description" content="前言 这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-12-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-28T00:00:00+00:00" />
+
+<meta itemprop="name" content="Vim和Emacs的选择">
+<meta itemprop="description" content="前言 这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读"><meta itemprop="datePublished" content="2021-12-27T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-04-28T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1004">
+<meta itemprop="keywords" content="Vim,Emacs,Neovim," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vim和Emacs的选择"/>
+<meta name="twitter:description" content="前言 这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+
+  
+
+
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">ISouthRain</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于我</li>
+      </a><a href="/links/">
+        <li class="mobile-menu-item">外链</li>
+      </a><a href="/search/">
+        <li class="mobile-menu-item">搜索</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">ISouthRain</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于我</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/links/">外链</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/search/">搜索</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Vim和Emacs的选择</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-12-27 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a>
+      <ul>
+        <li><a href="#编辑习惯">编辑习惯</a></li>
+        <li><a href="#vim-和-emacs-设置理念">Vim 和 Emacs 设置理念</a></li>
+        <li><a href="#emacs-的个人笔记管理">Emacs 的个人笔记管理</a></li>
+        <li><a href="#如何选择-vim-和-emacs-">如何选择 Vim 和 Emacs ?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="前言">前言</h1>
+<p><strong>这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs</strong>
+<strong>Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读者根据自己的需求选择 Vim 还是 Emacs</strong></p>
+<h2 id="编辑习惯">编辑习惯</h2>
+<ol>
+<li>
+<p>Vim 在于<strong>按键的组合</strong>,比如你可以配置任何按键组合去触发某些动作,(e.g 你可以在 I 模式 配置 jk 去触发按键 <ESC> 进入 N 模式,然后相当于你没有输入过 jk), 这只是一个例子,反正你能做到全部Vim 能做的,甚至调用插件以及命令.</p>
+</li>
+<li>
+<p>Emacs 做不到上面例子,Emacs 是靠函数触发的或者说你必须 Ctrl+才能实现某些功能(类似Vim 的例子), Emacs 就是一个 Elisp 语言的运行器, 你做的每一个动作都是在触发某个函数(e.g Ctrl+n 触发 next-line 函数将光标移动到下一行)</p>
+</li>
+<li>
+<p>在这一点上显然是 Vim 更方便,因为按键组合真的非常好用,还不影响输入,对于 Emacs 就必须用两个按键同时按下, 这非常麻烦, 所以在按键组合中 <strong>Vim</strong> 有着非常好的优势, 因为 <strong>Emacs</strong> 要按 <strong>Ctrl</strong> 键, 左边小拇指真的难受, 不过 <strong>Emacs</strong> 也有模拟 <strong>Vim</strong> 的插件, 但仅仅是只能模拟控制光标和一些命令, 做不到可以设置按键组合触发某些功能!</p>
+</li>
+</ol>
+<h2 id="vim-和-emacs-设置理念">Vim 和 Emacs 设置理念</h2>
+<ol>
+<li>
+<p>Vim 类似一把短刀, 只做好一件事, 他仅仅是一个编辑器</p>
+</li>
+<li>
+<p>Emacs 类似一个武器库, 可以做非常多的事, 但都不精, Emacs 有时候被人说做是一个 <strong>编辑器系统</strong> 我个人感觉还是挺符合的</p>
+</li>
+<li>
+<p>总之 Emacs 比 Vim 做的事多得多, Emacs 是可以查看图片的, 而且现在 Emacs 已经发展到通过插件可以在Emacs进行网页浏览和播放视频了 [类似 Chrome 那种浏览器 ] (e.g EAF 框架)</p>
+</li>
+</ol>
+<h2 id="emacs-的个人笔记管理">Emacs 的个人笔记管理</h2>
+<ol>
+<li>
+<p>如果你有写笔记的习惯, 那么你一定听说过 Markdown 的语法, <strong>我要说的不是Markdown</strong> 而是Emacs内置的一个笔记系统 Org-mode.</p>
+</li>
+<li>
+<p>Org-mode 只有在 Emacs 有着非常好的体验, 而在其它编辑软件基本无法发挥 org-mode 的强大</p>
+</li>
+<li>
+<p>Org-mode 的表格可以运算, 代码块可以直接进行运行并返回结果, 捕获(Capture)功能, GTD管理系统(比如 日程安排(可以重复提醒), TODO, 计时器, 导出为其它格式)</p>
+</li>
+<li>
+<p>所以说, 如果你打算使用 Emacs 真的非常多优点, org-mode 有点难学习(和设置), 因为使用 org 之前你的会 Emacs 以及 ELisp语言基础</p>
+</li>
+</ol>
+<h2 id="如何选择-vim-和-emacs-">如何选择 Vim 和 Emacs ?</h2>
+<p><strong>如果你需要很多的功能, 建议你选择 Emacs , 因为 Emacs 是可发展的, 以及可以运行图形界面, 使 GUI 功能 在Emacs成为了可能</strong></p>
+<p><strong>Vim 只能查看文本之类的, 图片这些无法处理, 只能通过调用第三方应用才能处理查看</strong>
+<strong>如果你非常需要 GTD 系统之类的, 那么 Emacs 是不二智选, 如果 你只是需要出来文本的,那么Vim更好</strong></p>
+<p><strong>Emacs 如果你使用的非常好, 非常6, 那么你将非常牛逼, 而且我估计你未来时不会再更换编辑器了</strong></p>
+<p>我个人是 Vim &mdash;&gt; Emacs &mdash;&gt; Vim 还是回到了 Vim</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ISouthRain</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-04-28
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/vim/">Vim</a>
+          <a href="/tags/emacs/">Emacs</a>
+          <a href="/tags/neovim/">Neovim</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/2022-01-12-org-protocol-capture-html/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/">
+            <span class="next-text nav-default">(Neo)Vim 中英文输入法</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="ISouthRain/ISouthRain.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+	
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ISouthRain" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2021 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>ISouthRain</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top" title="回到顶部">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+	<script id="baidu_push">
+	  (function(){
+		if (window.location.hostname === 'localhost') return;
+		var bp = document.createElement('script'); bp.async = true;
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+		  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+		  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	  })();
+	</script>
+
+
+<script>
+  function createCopyButton(highlightDiv) {
+    const div = document.createElement("div");
+    div.className = "copy-code";
+    div.innerText = "Copy";
+    div.addEventListener("click", () =>
+      copyCodeToClipboard(div, highlightDiv)
+    );
+    addCopyButtonToDom(div, highlightDiv);
+  }
+
+  async function copyCodeToClipboard(button, highlightDiv) {
+    const codeToCopy = highlightDiv.querySelector(":last-child > .chroma > code")
+      .innerText;
+    await navigator.clipboard.writeText(codeToCopy);
+    button.blur();
+    button.innerText = "Copied!";
+    setTimeout(() => button.innerText = "Copy", 2000);
+  }
+
+  function addCopyButtonToDom(button, highlightDiv) {
+    highlightDiv.insertBefore(button, highlightDiv.firstChild);
+    const wrapper = document.createElement("div");
+    wrapper.className = "highlight-wrapper";
+    highlightDiv.parentNode.insertBefore(wrapper, highlightDiv);
+    wrapper.appendChild(highlightDiv);
+  }
+
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if(!isMobile){
+     document.querySelectorAll(".highlight").forEach((highlightDiv) => createCopyButton(highlightDiv));
+  }
+</script>  
+
+
+</body>
+</html>
