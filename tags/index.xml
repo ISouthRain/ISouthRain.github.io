@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 飞狐的部落格</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on 飞狐的部落格</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 18 Sep 2022 09:43:19 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go</title>
+      <link>http://localhost:1313/tags/go/</link>
+      <pubDate>Sun, 18 Sep 2022 09:43:19 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://localhost:1313/tags/hugo/</link>
+      <pubDate>Sun, 18 Sep 2022 09:43:19 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github Pages</title>
+      <link>http://localhost:1313/tags/github-pages/</link>
+      <pubDate>Sat, 03 Sep 2022 18:35:57 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/github-pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTTPS</title>
+      <link>http://localhost:1313/tags/https/</link>
+      <pubDate>Sun, 24 Dec 2017 10:28:03 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/https/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
