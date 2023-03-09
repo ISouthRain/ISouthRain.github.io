@@ -649,7 +649,8 @@ cps = 100 2
     <pubDate>Wed, 04 May 2022 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://isouthrain.github.io/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia/</guid>
-    <description><![CDATA[<h2 id="前言">前言</h2>
+    <description><![CDATA[<h2 id="该方法已失效">该方法已失效</h2>
+<h2 id="前言">前言</h2>
 <p><strong>Hugo</strong> 添加 <strong>Algolia</strong> 搜索, 本文以 <strong>LoveIt</strong> 主题为例</p>
 <h2 id="loveit-启用-algolia-搜索">LoveIt 启用 Algolia 搜索</h2>
 <ul>
@@ -754,8 +755,7 @@ cps = 100 2
 
 <h2 id="上传到-algolia">上传到 Algolia</h2>
 <ol>
-<li>
-<p>在你的Hugo主目录下运行:</p>
+<li>在你的Hugo主目录下运行:
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -765,12 +765,8 @@ cps = 100 2
 </code></pre></td></tr></table>
 </div>
 </div></li>
-<li>
-<p>public 目录下会生成 <strong>index.json</strong></p>
-</li>
-<li>
-<p>将 <strong>index.json</strong> 上传到你的 Algolia index 中</p>
-</li>
+<li>public 目录下会生成 <strong>index.json</strong></li>
+<li>将 <strong>index.json</strong> 上传到你的 Algolia index 中</li>
 </ol>
 <h2 id="自动化上传-index-dot-json">自动化上传 index.json</h2>
 <ul>
@@ -813,17 +809,10 @@ ALGOLIA_ADMIN_KEY=
 </ul>
 <h2 id="添加不同语言的搜索">添加不同语言的搜索</h2>
 <ul>
-<li>
-<p>在 Algolia 同个 Application 创建两个 index</p>
-</li>
-<li>
-<p>不同语言有不同的 <strong>index.json</strong></p>
-</li>
-<li>
-<p>请在下方找到对应的 search 配置</p>
-</li>
-<li>
-<p>参考配置</p>
+<li>在 Algolia 同个 Application 创建两个 index</li>
+<li>不同语言有不同的 <strong>index.json</strong></li>
+<li>请在下方找到对应的 search 配置</li>
+<li>参考配置
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">  1
@@ -985,9 +974,9 @@ ALGOLIA_ADMIN_KEY=
       <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
       <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
       <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
-	<span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 根据你创建的 index 名, 例如 Hugo-en</span>
-	<span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
-	<span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
+        <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 根据你创建的 index 名, 例如 Hugo-en</span>
+        <span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
+        <span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
 
 
   <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">]</span>
@@ -1039,9 +1028,9 @@ ALGOLIA_ADMIN_KEY=
       <span class="c"># LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径</span>
       <span class="nx">absoluteURL</span> <span class="p">=</span> <span class="kc">false</span>
       <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">zh-cn</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">algolia</span><span class="p">]</span>
-	<span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 根据你创建的 index 名, 例如 Hugo-zh</span>
-	<span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
-	<span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
+        <span class="nx">index</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 根据你创建的 index 名, 例如 Hugo-zh</span>
+        <span class="nx">appID</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
+        <span class="nx">searchKey</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span> <span class="c"># 添加自己的</span>
 </code></pre></td></tr></table>
 </div>
 </div></li>
