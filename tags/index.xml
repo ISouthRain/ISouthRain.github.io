@@ -6,7 +6,34 @@
     <description>Recent content in Tags on ISouthRain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 15 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Feb 2023 13:48:05 +0800</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java</title>
+      <link>http://isouthrain.github.io/tags/java/</link>
+      <pubDate>Fri, 17 Feb 2023 13:48:05 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>http://isouthrain.github.io/tags/kubernetes/</link>
+      <pubDate>Wed, 11 Jan 2023 11:31:45 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>http://isouthrain.github.io/tags/linux/</link>
+      <pubDate>Wed, 11 Jan 2023 11:31:45 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Emacs</title>
       <link>http://isouthrain.github.io/tags/emacs/</link>
@@ -17,20 +44,110 @@
     </item>
     
     <item>
-      <title>Emacs Gnus</title>
-      <link>http://isouthrain.github.io/tags/emacs-gnus/</link>
-      <pubDate>Sat, 04 Jun 2022 00:00:00 +0000</pubDate>
+      <title>kubesphere</title>
+      <link>http://isouthrain.github.io/tags/kubesphere/</link>
+      <pubDate>Fri, 11 Nov 2022 18:19:12 +0800</pubDate>
       
-      <guid>http://isouthrain.github.io/tags/emacs-gnus/</guid>
+      <guid>http://isouthrain.github.io/tags/kubesphere/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>http://isouthrain.github.io/tags/go/</link>
+      <pubDate>Sun, 18 Sep 2022 09:43:19 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
       <link>http://isouthrain.github.io/tags/hugo/</link>
-      <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 18 Sep 2022 09:43:19 +0800</pubDate>
       
       <guid>http://isouthrain.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jenkins</title>
+      <link>http://isouthrain.github.io/tags/jenkins/</link>
+      <pubDate>Thu, 15 Sep 2022 15:46:24 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nacos</title>
+      <link>http://isouthrain.github.io/tags/nacos/</link>
+      <pubDate>Thu, 15 Sep 2022 15:46:24 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/nacos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bit</title>
+      <link>http://isouthrain.github.io/tags/bit/</link>
+      <pubDate>Thu, 08 Sep 2022 10:04:59 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/bit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LDAP</title>
+      <link>http://isouthrain.github.io/tags/ldap/</link>
+      <pubDate>Sun, 04 Sep 2022 09:35:50 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/ldap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github Pages</title>
+      <link>http://isouthrain.github.io/tags/github-pages/</link>
+      <pubDate>Sat, 03 Sep 2022 18:35:57 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/github-pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MinIO</title>
+      <link>http://isouthrain.github.io/tags/minio/</link>
+      <pubDate>Sat, 20 Aug 2022 20:35:44 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/minio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>http://isouthrain.github.io/tags/docker/</link>
+      <pubDate>Thu, 04 Aug 2022 16:56:18 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java Concurrency</title>
+      <link>http://isouthrain.github.io/tags/java-concurrency/</link>
+      <pubDate>Thu, 16 Jun 2022 12:16:44 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/java-concurrency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Emacs Gnus</title>
+      <link>http://isouthrain.github.io/tags/emacs-gnus/</link>
+      <pubDate>Sat, 04 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/emacs-gnus/</guid>
       <description></description>
     </item>
     
@@ -89,6 +206,33 @@
     </item>
     
     <item>
+      <title>html5</title>
+      <link>http://isouthrain.github.io/tags/html5/</link>
+      <pubDate>Sun, 20 Feb 2022 20:38:18 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/html5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>http://isouthrain.github.io/tags/javascript/</link>
+      <pubDate>Sun, 20 Feb 2022 20:38:18 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring</title>
+      <link>http://isouthrain.github.io/tags/spring/</link>
+      <pubDate>Sun, 16 Jan 2022 11:00:01 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/spring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Neovim</title>
       <link>http://isouthrain.github.io/tags/neovim/</link>
       <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
@@ -112,6 +256,123 @@
       <pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>http://isouthrain.github.io/tags/%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MyBatis</title>
+      <link>http://isouthrain.github.io/tags/mybatis/</link>
+      <pubDate>Thu, 15 Apr 2021 09:37:41 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/mybatis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>http://isouthrain.github.io/tags/mysql/</link>
+      <pubDate>Thu, 22 Aug 2019 11:32:19 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quartz</title>
+      <link>http://isouthrain.github.io/tags/quartz/</link>
+      <pubDate>Tue, 09 Jan 2018 22:10:30 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/quartz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SpringMVC</title>
+      <link>http://isouthrain.github.io/tags/springmvc/</link>
+      <pubDate>Tue, 09 Jan 2018 22:10:30 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/springmvc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>XML</title>
+      <link>http://isouthrain.github.io/tags/xml/</link>
+      <pubDate>Thu, 04 Jan 2018 11:21:42 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/xml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTTPS</title>
+      <link>http://isouthrain.github.io/tags/https/</link>
+      <pubDate>Sun, 24 Dec 2017 10:28:03 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/https/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JVM</title>
+      <link>http://isouthrain.github.io/tags/jvm/</link>
+      <pubDate>Sat, 12 Aug 2017 18:09:53 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/jvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>EasyUI</title>
+      <link>http://isouthrain.github.io/tags/easyui/</link>
+      <pubDate>Sun, 06 Aug 2017 00:06:36 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/easyui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Birt</title>
+      <link>http://isouthrain.github.io/tags/birt/</link>
+      <pubDate>Fri, 07 Apr 2017 10:47:28 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/birt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intellij IDEA</title>
+      <link>http://isouthrain.github.io/tags/intellij-idea/</link>
+      <pubDate>Sun, 05 Mar 2017 14:04:43 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/intellij-idea/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JUnit</title>
+      <link>http://isouthrain.github.io/tags/junit/</link>
+      <pubDate>Sun, 20 Mar 2016 16:27:21 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/junit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring Security</title>
+      <link>http://isouthrain.github.io/tags/spring-security/</link>
+      <pubDate>Sun, 20 Mar 2016 16:05:52 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/spring-security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mediawiki</title>
+      <link>http://isouthrain.github.io/tags/mediawiki/</link>
+      <pubDate>Fri, 18 Mar 2016 23:14:59 +0800</pubDate>
+      
+      <guid>http://isouthrain.github.io/tags/mediawiki/</guid>
       <description></description>
     </item>
     

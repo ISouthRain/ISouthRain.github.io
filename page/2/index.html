@@ -139,126 +139,127 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2022-05-02-telegrambotrss/">搭建 Telegram Bot RSS 订阅</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/hugo/share-experience-for-using-hugo-even-theme/">个人Hugo博客关于Even主题的一些使用改进</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-05-02 </span>
+      <span class="post-time"> 2022-09-18 </span>
       <div class="post-category">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+          <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"> 个人博客 </a>
           </div>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      妄想逃脱大数据的背叛🤨 RSS 自己管理自己的订阅，掌控自己的爱好!! 要求 一台海外 VPS 一点点 Linux 技术 Flowerss-bot 一个国人开源的 Telegra bot RSS 订阅机器人 搭建非常简单, 功能非
+      <p>记录下个人<a href="https://gohugo.io/"><strong>Hugo</strong></a>博客使用<a href="https://github.com/olOwOlo/hugo-theme-even"><strong>Even</strong></a>主题时的一些使用心得与个人改进。</p>
     </div>
     <div class="read-more">
-      <a href="/post/2022-05-02-telegrambotrss/" class="read-more-link">阅读更多</a>
+      <a href="/post/hugo/share-experience-for-using-hugo-even-theme/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">Frp内网穿透</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/devops/using-nacos-and-kubesphere-to-create-multiple-environments/">利用Nacos与KubeSphere创建多套开发与测试环境</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-05-01 </span>
+      <span class="post-time"> 2022-09-15 </span>
       <div class="post-category">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+          <a href="/categories/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/"> 持续集成 </a>
           </div>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      什么是内网穿透? 通俗的说: 把 局域网 变成 公网 那样可以让外面的人访问 内网穿透工具 Frp ngrok 蜻蜓映射 natapp 以及一些其它的, 不一一列出了, 大家可以上网查查 推荐
+      <p>基于<a href="/post/devops/share-experiences-for-using-kubesphere/">KubeSphere使用心得</a>给部门搭建了<code>dev</code>、<code>sit</code>、<code>test</code>、<code>prod</code>这4套环境之后，一开始使用较为顺利，但随着项目的推进以及开发人员的增多，同时有多个功能模块需要并行开发与测试，导致原有的4套环境不够用。经过一番摸索后，实现了结合<a href="https://nacos.io/zh-cn/docs/what-is-nacos.html">Nacos</a>在<code>KubeSphere</code>中动态配置多套环境功能，通过修改<code>Nacos</code>中的<code>JSON</code>配置文件可很容易的从4套扩展为16套甚至更多。</p>
     </div>
     <div class="read-more">
-      <a href="/post/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" class="read-more-link">阅读更多</a>
+      <a href="/post/devops/using-nacos-and-kubesphere-to-create-multiple-environments/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2022-04-30-markdown%E8%AF%AD%E6%B3%95/">Markdown语法</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/bit/merge-three-int-number-into-a-long-number/">将3个小int整数合并到1个long中从而缩小数据量</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-04-30 </span>
+      <span class="post-time"> 2022-09-08 </span>
       <div class="post-category">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+          <a href="/categories/%E4%BD%8D%E6%93%8D%E4%BD%9C/"> 位操作 </a>
+          <a href="/categories/java%E7%BC%96%E7%A8%8B/"> Java编程 </a>
           </div>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      粗体 1 **粗体** 斜体 1 *斜体* 粗斜体 1 ***粗斜体*** 粗斜体 1 ***粗斜体*** 链接🔗 1 [备注](链接) 文件链接 1 ![备注](链接) 内部
+      <p>近期在工作中遇到由于<code>HTTP</code>返回的内容较多导致系统响应延迟的问题，最终自己结合<a href="https://en.wikipedia.org/wiki/Gzip">gzip</a>、<a href="https://developers.google.com/protocol-buffers">Protocol Buffers</a>、<a href="https://zh.wikipedia.org/wiki/%E4%BD%8D%E6%93%8D%E4%BD%9C">位运算</a>等将<code>HTTP</code>响应返回的数据从15M减少到1M从而解决系统无卡顿问题。其中对于<code>位运算</code>部分自己是结合业务实际，将3个小型<code>int</code>转化为1个<code>long</code>，将数据量减少三分之一，简单记录下其实现(以<code>Java</code>实现为例)。</p>
     </div>
     <div class="read-more">
-      <a href="/post/2022-04-30-markdown%E8%AF%AD%E6%B3%95/" class="read-more-link">阅读更多</a>
+      <a href="/post/bit/merge-three-int-number-into-a-long-number/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2022-04-29-%E6%8E%A8%E9%80%81github/">如何上传/推送到 Github</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/devops/setting-ldap-for-kubesphere/">Kubesphere集成LDAP踩坑记录</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-04-29 </span>
+      <span class="post-time"> 2022-09-04 </span>
       <div class="post-category">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+          <a href="/categories/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/"> 持续集成 </a>
           </div>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      git push 推送/上传到 GitHub git push 输入账号密码后推送不了? 因为 Github 的推送/上传机制改了 之前可以输入 账号密码 就可以 push, 现在只能使用 github token 代替 密码 才能推送/上传 申
+      <p>之前在公司内部推广<a href="https://kubesphere.io/">KubeSphere</a>用于持续集成和部署，取得了不错的反馈，考虑到大规模使用的便利性以及之前已有<a href="https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol">LDAP</a>整合其它系统的成熟经验，很自然的想将<code>LDAP</code>集成到<code>KubeSphere</code>中。原以为会很容易，一番折腾下来费了不好功夫(<strong><code>KubeSphere</code>要求使用<code>LDAP</code>时必须设置管理员账号和密码</strong>)，简单记录下。</p>
     </div>
     <div class="read-more">
-      <a href="/post/2022-04-29-%E6%8E%A8%E9%80%81github/" class="read-more-link">阅读更多</a>
+      <a href="/post/devops/setting-ldap-for-kubesphere/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/">永久免账号密码推送Github</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/hugo/using-github-action-to-auto-build-deploy/">利用GitHub Action实现Hugo博客在GitHub Pages自动部署</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-04-28 </span>
+      <span class="post-time"> 2022-09-03 </span>
       <div class="post-category">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+          <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"> 个人博客 </a>
           </div>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      使用以下方法后 git push 再也不用一直输入 账号密码了! git push 每次都要输入账号密码? 从此解决 正文👇 首先配置 Git 个人信息 依此输入以下两个命令: 配置你的 GitHub 邮箱
+      <p>作为一名IT民工，善于利用各种工具提升工作效率才算合格，本文简单记录自己如何利用<a href="https://github.com/features/actions">GitHub Actions</a>实现个人<a href="https://gohugo.io/">Hugo</a>博客在<a href="https://pages.github.com/">GitHub Pages</a>中的自动化部署。</p>
     </div>
     <div class="read-more">
-      <a href="/post/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/" class="read-more-link">阅读更多</a>
+      <a href="/post/hugo/using-github-action-to-auto-build-deploy/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/">Telegram 收发微信消息</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/minio/download-minio-folder-as-zip-file/">将MinIO中的文件夹下载为ZIP文件</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-03-20 </span>
+      <span class="post-time"> 2022-08-20 </span>
       <div class="post-category">
-          <a href="/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+          <a href="/categories/java%E7%BC%96%E7%A8%8B/"> Java编程 </a>
           </div>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      2022-08-30 更新 📍📍全部帐号可用, 不支持网页版的也可以使用了, 使用本教程就可以正常使用 📍📍 Telegram收发微信消息(可以不需要购买服务器，单纯手机
+      <p>公司项目采用<a href="https://min.io/"><strong>MinIO</strong></a>作为数据存储，最近遇到一个需求是将其中的某个文件夹的数据基于其原有的结构下载为<code>ZIP</code>文件，网上有很多下载为<code>ZIP</code>的代码，个人觉得其中好多不够精简，简单记录下自己的实现。</p>
     </div>
     <div class="read-more">
-      <a href="/post/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/" class="read-more-link">阅读更多</a>
+      <a href="/post/minio/download-minio-folder-as-zip-file/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
@@ -284,6 +285,9 @@
 
     <footer id="footer" class="footer">
       <div class="social-links">
+      <a href="mailto:cumtlu@126.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/3176419" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.linkedin.com/in/%E8%BF%90%E5%BC%BA-%E5%8D%A2-50a08bb5/" class="iconfont icon-linkedin" title="linkedin"></a>
       <a href="https://github.com/ISouthRain" class="iconfont icon-github" title="github"></a>
   <a href="http://isouthrain.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
