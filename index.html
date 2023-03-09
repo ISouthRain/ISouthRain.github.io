@@ -5,7 +5,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>ISouthRain</title><meta name="Description" content="Freedom and Peace 自由与和平"><meta property="og:title" content="ISouthRain" />
 <meta property="og:description" content="Freedom and Peace 自由与和平" />
 <meta property="og:type" content="website" />
@@ -20,7 +19,9 @@
 <meta name="apple-mobile-web-app-title" content="ISouthRain"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://isouthrain.github.io/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="ISouthRain">
-    <link rel="feed" href="/index.xml" type="application/rss+xml" title="ISouthRain"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    <link rel="feed" href="/index.xml" type="application/rss+xml" title="ISouthRain"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "WebSite",
@@ -30,7 +31,7 @@
             },"description": "Freedom and Peace 自由与和平","name": "ISouthRain"
     }
     </script></head>
-    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -45,23 +46,23 @@
         title="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png" />ISouthRain</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/quotation/" title="语录"> 语录 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
-                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/">English</option><option value="/" selected>简体中文</option></select>
-                    </a><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="/quotation/" title="语录"> 语录 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/">English</option><option value="/" selected>简体中文</option></select>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
@@ -85,70 +86,69 @@
                     <div class="search mobile" id="search-mobile">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
                         <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="/quotation/" title="语录">语录</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
                     <select class="language-select" onchange="location = this.value;"><option value="/en/">English</option><option value="/" selected>简体中文</option></select>
                 </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
-                <div class="container"><div class="page home" posts><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="文章"><img
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="文章"><img
         class="lazyload"
         src="/svg/loading.min.svg"
         data-src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
         data-srcset="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 1.5x, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 2x"
         data-sizes="auto"
         alt="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
-        title="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png" /></a></div><h1 class="home-title">Freedom and Peace</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/ISouthRain" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://twitter.com/ISouthRain" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://www.instagram.com/ISouthRain" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a><a href="https://facebook.com/ISouthRain" title="facebook" target="_blank" rel="noopener noreffer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/ISouthRain" title="Telegram" target="_blank" rel="noopener noreffer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:isouthrain@gmail.com.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div></div>
+        title="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png" /></a></div><h1 class="home-title">Freedom and Peace</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/ISouthRain" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="https://twitter.com/ISouthRain" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="https://www.instagram.com/ISouthRain" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw" aria-hidden="true"></i></a><a href="https://facebook.com/ISouthRain" title="facebook" target="_blank" rel="noopener noreffer me"><i class="fab fa-facebook fa-fw" aria-hidden="true"></i></a><a href="https://t.me/ISouthRain" title="Telegram" target="_blank" rel="noopener noreffer me"><i class="fab fa-telegram-plane fa-fw" aria-hidden="true"></i></a><a href="mailto:isouthrain@gmail.com.com" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/20221215-emacs-use-package/">Emacs use-package 包管理器</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>ISouthRain</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-15">2022-12-15</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div><div class="content">use-package 源码地址 GitHub - jwiegley/use-package: A use-package declaration for simplifying your&hellip; 什么是 use-packaeg use-package 是管理 Emacs 包(插件) 的一个宏管理器 可以管理每个包的设置，并配置和定义 安装 use-package 将以下源码复制到你的 init.el 文件中,</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>ISouthRain</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-15">2022-12-15</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div><div class="content">use-package 源码地址 GitHub - jwiegley/use-package: A use-package declaration for simplifying your&hellip; 什么是 use-packaeg use-package 是管理 Emacs 包(插件) 的一个宏管理器 可以管理每个包的设置，并配置和定义 安装 use-package 将以下源码复制到你的 init.el 文件中,</div><div class="post-footer">
         <a href="/20221215-emacs-use-package/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/emacs/">Emacs</a></div></div>
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/emacs/">Emacs</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/20221213-emacs-google-translate/">Emacs google-translate 翻译文本</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>ISouthRain</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-13">2022-12-13</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div><div class="content">google-translate 源码地址 GitHub - atykhonov/google-translate: Emacs interface to Google Translate 安装 google-translate 安装 use-package , 如果你没有使用 use-package 1 2 3 4 5 6 7 8 9 10 11 12 13 (eval-and-compile (customize-set-variable &#39;package-archives &#39;( (&#34;melpa&#34; . &#34;http://melpa.org/packages/&#34;) (&#34;org&#34; . &#34;http://orgmode.org/elpa/&#34;) (&#34;gnu&#34; . &#34;https://elpa.gnu.org/packages/&#34;) (&#34;nongnu&#34; . &#34;https://elpa.nongnu.org/nongnu/&#34;) )) (package-initialize) (unless (package-installed-p &#39;use-package) (package-refresh-contents) (package-install &#39;use-package)) ) 安装 google-translate 1</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>ISouthRain</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-12-13">2022-12-13</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div><div class="content">google-translate 源码地址 GitHub - atykhonov/google-translate: Emacs interface to Google Translate 安装 google-translate 安装 use-package , 如果你没有使用 use-package 1 2 3 4 5 6 7 8 9 10 11 12 13 (eval-and-compile (customize-set-variable &#39;package-archives &#39;( (&#34;melpa&#34; . &#34;http://melpa.org/packages/&#34;) (&#34;org&#34; . &#34;http://orgmode.org/elpa/&#34;) (&#34;gnu&#34; . &#34;https://elpa.gnu.org/packages/&#34;) (&#34;nongnu&#34; . &#34;https://elpa.nongnu.org/nongnu/&#34;) )) (package-initialize) (unless (package-installed-p &#39;use-package) (package-refresh-contents) (package-install &#39;use-package)) ) 安装 google-translate 1</div><div class="post-footer">
         <a href="/20221213-emacs-google-translate/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/emacs/">Emacs</a></div></div>
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/emacs/">Emacs</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2022-07-03-windowsemacsforwsl/">像 Linux Emacs 一样使用 WSL Emacs</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>ISouthRain</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-07-03">2022-07-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div><div class="content">前言 由于 Windows 的某些原因使用 Emacs 总会那么的不方便或者不好用, 有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点 所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>ISouthRain</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-07-03">2022-07-03</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div><div class="content">前言 由于 Windows 的某些原因使用 Emacs 总会那么的不方便或者不好用, 有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点 所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux</div><div class="post-footer">
         <a href="/2022-07-03-windowsemacsforwsl/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/emacs/">Emacs</a></div></div>
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/emacs/">Emacs</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2022-06-25-gpg/">GnuPG(GPG) 加密</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>ISouthRain</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-06-25">2022-06-25</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div><div class="content">什么是 GnuPG ? GPG 全名叫 GNU Privacy Guard, 是一个加密前端, 可以使用 RSA 、ESCDA 等算法去加密 下载 GnuPG GnuPG官网 获取密钥(Windows 使用终端命令) 请记住,</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>ISouthRain</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-06-25">2022-06-25</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div><div class="content">什么是 GnuPG ? GPG 全名叫 GNU Privacy Guard, 是一个加密前端, 可以使用 RSA 、ESCDA 等算法去加密 下载 GnuPG GnuPG官网 获取密钥(Windows 使用终端命令) 请记住,</div><div class="post-footer">
         <a href="/2022-06-25-gpg/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/emacs/">Emacs</a></div></div>
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/emacs/">Emacs</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2022-06-04-gnus-use-gmail.zh-ch/">Emacs Gnus 使用 Gmail</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>ISouthRain</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-06-04">2022-06-04</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div><div class="content">介绍 Xinetd 是一个互联网多功能的工具, 在此这里只使用它的 端口转发 功能 端口转发 是将服务器端口进行数据转接, 例如: 当你使用服务端口配置好了 imap.gmail.com + 端口, 客</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>ISouthRain</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-06-04">2022-06-04</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div><div class="content">介绍 Xinetd 是一个互联网多功能的工具, 在此这里只使用它的 端口转发 功能 端口转发 是将服务器端口进行数据转接, 例如: 当你使用服务端口配置好了 imap.gmail.com + 端口, 客</div><div class="post-footer">
         <a href="/2022-06-04-gnus-use-gmail.zh-ch/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/emacs-gnus/">Emacs Gnus</a></div></div>
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/emacs-gnus/">Emacs Gnus</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia/">Hugo添加Algolia搜索</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>ISouthRain</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-05-04">2022-05-04</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw"></i>技术</a></span></div><div class="content">前言 Hugo 添加 Algolia 搜索, 本文以 LoveIt 主题为例 LoveIt 启用 Algolia 搜索 添加以下代码在你的 config.toml, 根据自己情况填写 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 [params] [params.search] enable = true #</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/ISouthRain" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>ISouthRain</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2022-05-04">2022-05-04</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div><div class="content">前言 Hugo 添加 Algolia 搜索, 本文以 LoveIt 主题为例 LoveIt 启用 Algolia 搜索 添加以下代码在你的 config.toml, 根据自己情况填写 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 [params] [params.search] enable = true #</div><div class="post-footer">
         <a href="/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a></div></div>
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/hugo/">Hugo</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -163,15 +163,15 @@
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.91.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/ISouthRain" target="_blank">ISouthRain</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.91.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/ISouthRain" target="_blank">ISouthRain</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw"></i>
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"data":{"id-1":"🎉Wecome to ISouthRain Blog🎉"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"T83K20E5M4","algoliaIndex":"Hugo-zh","algoliaSearchKey":"20115b19e00d97ccd072e0cbe77abf47","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"data":{"id-1":"🎉Wecome to ISouthRain Blog🎉"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"T83K20E5M4","algoliaIndex":"Hugo-zh","algoliaSearchKey":"20115b19e00d97ccd072e0cbe77abf47","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

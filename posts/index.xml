@@ -8,11 +8,11 @@
     <title>Emacs use-package 包管理器</title>
     <link>http://isouthrain.github.io/20221215-emacs-use-package/</link>
     <pubDate>Thu, 15 Dec 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
+    <author>ISouthRain</author>
     <guid>http://isouthrain.github.io/20221215-emacs-use-package/</guid>
     <description><![CDATA[<h2 id="use-package">use-package</h2>
 <h3 id="源码地址">源码地址</h3>
-<p><a href="https://github.com/jwiegley/use-package" target="_blank" rel="noopener noreffer">GitHub - jwiegley/use-package: A use-package declaration for simplifying your&hellip;</a></p>
+<p><a href="https://github.com/jwiegley/use-package" target="_blank" rel="noopener noreffer ">GitHub - jwiegley/use-package: A use-package declaration for simplifying your&hellip;</a></p>
 <h3 id="什么是-use-packaeg">什么是 use-packaeg</h3>
 <p>use-package 是管理 Emacs 包(插件) 的一个宏管理器
 可以管理每个包的设置，并配置和定义</p>
@@ -92,16 +92,17 @@
 比如 bind 自定义按键， commands 调用某个命令后再加载 :config 配置</li>
 </ul>
 ]]></description>
-</item><item>
+</item>
+<item>
     <title>Emacs google-translate 翻译文本</title>
     <link>http://isouthrain.github.io/20221213-emacs-google-translate/</link>
     <pubDate>Tue, 13 Dec 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
+    <author>ISouthRain</author>
     <guid>http://isouthrain.github.io/20221213-emacs-google-translate/</guid>
     <description><![CDATA[<h2 id="google-translate">google-translate</h2>
 <h3 id="源码地址">源码地址</h3>
 <ul>
-<li><a href="https://github.com/atykhonov/google-translate" target="_blank" rel="noopener noreffer">GitHub - atykhonov/google-translate: Emacs interface to Google Translate</a></li>
+<li><a href="https://github.com/atykhonov/google-translate" target="_blank" rel="noopener noreffer ">GitHub - atykhonov/google-translate: Emacs interface to Google Translate</a></li>
 </ul>
 <h3 id="安装-google-translate">安装 google-translate</h3>
 <ul>
@@ -217,11 +218,12 @@
 <div class="bilibili"><iframe src="//player.bilibili.com/player.html?bvid=BV1kK41167ni&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div>
 
 ]]></description>
-</item><item>
+</item>
+<item>
     <title>像 Linux Emacs 一样使用 WSL Emacs</title>
     <link>http://isouthrain.github.io/2022-07-03-windowsemacsforwsl/</link>
     <pubDate>Sun, 03 Jul 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
+    <author>ISouthRain</author>
     <guid>http://isouthrain.github.io/2022-07-03-windowsemacsforwsl/</guid>
     <description><![CDATA[<h2 id="前言">前言</h2>
 <p>由于 Windows 的某些原因使用 Emacs 总会那么的不方便或者不好用,</p>
@@ -234,7 +236,7 @@
 <h2 id="安装-wsl-本文是使用-wsl2-ubuntu22-dot-04">安装 WSL, 本文是使用 WSL2 Ubuntu22.04</h2>
 <ul>
 <li>如果你想把 <strong>Ubuntu22.04</strong> 安装到自己指定盘符, 可以观看此文章
-<a href="https://www.myfreax.com/installing-wsl-manually-on-non-system-drive/" target="_blank" rel="noopener noreffer">如何将WSL安装到其它驱动器或者文件夹中 | myfreax</a></li>
+<a href="https://www.myfreax.com/installing-wsl-manually-on-non-system-drive/" target="_blank" rel="noopener noreffer ">如何将WSL安装到其它驱动器或者文件夹中 | myfreax</a></li>
 </ul>
 <h3 id="启用-wsl-功能">启用 WSL 功能</h3>
 <ol>
@@ -254,7 +256,7 @@
 </div></li>
 <li>安装 Ubuntu22.04, <strong>wsl.exe &ndash;install -d Ubuntu22.04</strong>
 <ul>
-<li>如果安装不成功, 请参考文章 <a href="https://www.myfreax.com/installing-wsl-manually-on-non-system-drive/" target="_blank" rel="noopener noreffer">如何将WSL安装到其它驱动器或者文件夹中 | myfreax</a></li>
+<li>如果安装不成功, 请参考文章 <a href="https://www.myfreax.com/installing-wsl-manually-on-non-system-drive/" target="_blank" rel="noopener noreffer ">如何将WSL安装到其它驱动器或者文件夹中 | myfreax</a></li>
 </ul>
 </li>
 <li>运行 wsl, 直接在 Powershell 输入 wsl 运行</li>
@@ -263,7 +265,7 @@
 <h2 id="自觉安装-emacs">自觉安装 Emacs</h2>
 <h2 id="安装-gui-支持">安装 GUI 支持</h2>
 <h3 id="下载并安装-mobaxterm">下载并安装 MobaXterm</h3>
-<p><a href="https://mobaxterm.mobatek.net/download.html" target="_blank" rel="noopener noreffer">MobaXterm Xserver with SSH, telnet, RDP, VNC and X11 - Download</a></p>
+<p><a href="https://mobaxterm.mobatek.net/download.html" target="_blank" rel="noopener noreffer ">MobaXterm Xserver with SSH, telnet, RDP, VNC and X11 - Download</a></p>
 <h3 id="配置-gui-支持">配置 GUI 支持</h3>
 <ul>
 <li>
@@ -326,17 +328,18 @@
 </li>
 </ul>
 ]]></description>
-</item><item>
+</item>
+<item>
     <title>GnuPG(GPG) 加密</title>
     <link>http://isouthrain.github.io/2022-06-25-gpg/</link>
     <pubDate>Sat, 25 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
+    <author>ISouthRain</author>
     <guid>http://isouthrain.github.io/2022-06-25-gpg/</guid>
     <description><![CDATA[<h2 id="什么是-gnupg">什么是 GnuPG ?</h2>
 <p>GPG 全名叫 <strong>GNU Privacy Guard</strong>, 是一个加密前端, 可以使用 <em>RSA 、ESCDA</em> 等算法去加密</p>
 <h2 id="下载-gnupg">下载 GnuPG</h2>
 <ul>
-<li><a href="https://gnupg.org/" target="_blank" rel="noopener noreffer">GnuPG官网</a></li>
+<li><a href="https://gnupg.org/" target="_blank" rel="noopener noreffer ">GnuPG官网</a></li>
 </ul>
 <h2 id="获取密钥--windows-使用终端命令">获取密钥(Windows 使用终端命令)</h2>
 <p><strong>请记住, 密钥绝不要给任何人</strong></p>
@@ -361,7 +364,7 @@
 </li>
 </ul>
 </li>
-<li><a href="https://gist.github.com/jhjguxin/6037564" target="_blank" rel="noopener noreffer">详细解释</a></li>
+<li><a href="https://gist.github.com/jhjguxin/6037564" target="_blank" rel="noopener noreffer ">详细解释</a></li>
 </ul>
 <h3 id="对称加密解密">对称加密解密</h3>
 <ul>
@@ -519,11 +522,12 @@ gpg -o fileame -d filename.gpg
 </li>
 </ul>
 ]]></description>
-</item><item>
+</item>
+<item>
     <title>Emacs Gnus 使用 Gmail</title>
     <link>http://isouthrain.github.io/2022-06-04-gnus-use-gmail.zh-ch/</link>
     <pubDate>Sat, 04 Jun 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
+    <author>ISouthRain</author>
     <guid>http://isouthrain.github.io/2022-06-04-gnus-use-gmail.zh-ch/</guid>
     <description><![CDATA[<h1 id="介绍">介绍</h1>
 <p>Xinetd 是一个互联网多功能的工具, 在此这里只使用它的 <strong>端口转发</strong> 功能<br>
@@ -643,11 +647,12 @@ cps = 100 2
 发送邮件设置也一样改成你的服务器IP 
 </code></pre>
 ]]></description>
-</item><item>
+</item>
+<item>
     <title>Hugo添加Algolia搜索</title>
     <link>http://isouthrain.github.io/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia/</link>
     <pubDate>Wed, 04 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
+    <author>ISouthRain</author>
     <guid>http://isouthrain.github.io/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia/</guid>
     <description><![CDATA[<h2 id="前言">前言</h2>
 <p><strong>Hugo</strong> 添加 <strong>Algolia</strong> 搜索, 本文以 <strong>LoveIt</strong> 主题为例</p>
@@ -710,7 +715,7 @@ cps = 100 2
 </div>
 </div><h2 id="获取-algolia-相关配置">获取 Algolia 相关配置</h2>
 <ul>
-<li><a href="https://www.algolia.com/" target="_blank" rel="noopener noreffer">Algolia官网</a></li>
+<li><a href="https://www.algolia.com/" target="_blank" rel="noopener noreffer ">Algolia官网</a></li>
 <li>注册登陆</li>
 </ul>
 <h3 id="创建属于-hugo-的-application">创建属于 Hugo 的 Application</h3>
@@ -775,7 +780,7 @@ cps = 100 2
 <h2 id="自动化上传-index-dot-json">自动化上传 index.json</h2>
 <ul>
 <li>需要安装 npm, nodejs</li>
-<li><a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener noreffer">Nodejs</a></li>
+<li><a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener noreffer ">Nodejs</a></li>
 </ul>
 <h3 id="你的-hugo-目录下安装-atomc-algolia">你的 Hugo 目录下安装 atomc-algolia</h3>
 <div class="highlight"><div class="chroma">
@@ -1056,11 +1061,12 @@ ALGOLIA_ADMIN_KEY=
 </li>
 </ul>
 ]]></description>
-</item><item>
+</item>
+<item>
     <title>搭建 Telegram Bot RSS 订阅</title>
     <link>http://isouthrain.github.io/2022-05-02-telegrambotrss/</link>
     <pubDate>Mon, 02 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
+    <author>ISouthRain</author>
     <guid>http://isouthrain.github.io/2022-05-02-telegrambotrss/</guid>
     <description><![CDATA[<blockquote>
 <p>妄想逃脱大数据的背叛🤨</p>
@@ -1080,11 +1086,11 @@ ALGOLIA_ADMIN_KEY=
 <li>搭建非常简单, 功能非常多</li>
 <li>只需要填写 bot Token 就可以使用</li>
 <li>支持 Telegram Instart  view 即时预览</li>
-<li><a href="https://github.com/indes/flowerss-bot" target="_blank" rel="noopener noreffer">flowerrss-bot</a></li>
+<li><a href="https://github.com/indes/flowerss-bot" target="_blank" rel="noopener noreffer ">flowerrss-bot</a></li>
 </ul>
 <h3 id="下载-flowerss-bot">下载 Flowerss-bot</h3>
 <ul>
-<li><a href="https://github.com/indes/flowerss-bot/releases" target="_blank" rel="noopener noreffer">下载对应版本</a></li>
+<li><a href="https://github.com/indes/flowerss-bot/releases" target="_blank" rel="noopener noreffer ">下载对应版本</a></li>
 </ul>
 <h3 id="获取机器人">获取机器人</h3>
 <ol>
@@ -1098,12 +1104,12 @@ ALGOLIA_ADMIN_KEY=
 <ul>
 <li>修改第一行, 将 token 复制进去</li>
 <li>根据自己情况修改需要，默认只需要修改了 token 就可以使用了</li>
-<li><a href="https://flowerss-bot.vercel.app/#/install" target="_blank" rel="noopener noreffer">详细修改</a></li>
+<li><a href="https://flowerss-bot.vercel.app/#/install" target="_blank" rel="noopener noreffer ">详细修改</a></li>
 </ul>
 <h3 id="关于使用-telegraph-即使预览">关于使用 Telegraph 即使预览</h3>
 <ul>
 <li>默认获取 token 就可以使用</li>
-<li><a href="https://telegra.ph/api" target="_blank" rel="noopener noreffer">获取方法</a></li>
+<li><a href="https://telegra.ph/api" target="_blank" rel="noopener noreffer ">获取方法</a></li>
 <li>Telegtaph 官方机器人 @telegraph</li>
 </ul>
 <h3 id="步骤">步骤</h3>
@@ -1133,31 +1139,32 @@ ALGOLIA_ADMIN_KEY=
 </div><h3 id="成功了就请享受">成功了就请享受🌝</h3>
 <h3 id="感谢作者大大的开源让我们用上这么好的作品">感谢作者大大的开源，让我们用上这么好的作品🌹</h3>
 <ul>
-<li><a href="https://github.com/indes/flowerss-bot" target="_blank" rel="noopener noreffer">flowerss-bot</a></li>
+<li><a href="https://github.com/indes/flowerss-bot" target="_blank" rel="noopener noreffer ">flowerss-bot</a></li>
 </ul>
 <h3 id="faq">FAQ❓</h3>
 <p><strong>遇到问题可以在下面回复</strong></p>
 ]]></description>
-</item><item>
+</item>
+<item>
     <title>Frp内网穿透</title>
     <link>http://isouthrain.github.io/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
     <pubDate>Sun, 01 May 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
+    <author>ISouthRain</author>
     <guid>http://isouthrain.github.io/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
     <description><![CDATA[<h3 id="什么是内网穿透">什么是内网穿透?</h3>
 <p><strong>通俗的说:</strong> 把 <code>局域网</code> 变成 <code>公网</code> 那样可以让外面的人访问</p>
 <h3 id="内网穿透工具">内网穿透工具</h3>
 <ul>
-<li><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreffer">Frp</a></li>
-<li><a href="https://ngrok.com" target="_blank" rel="noopener noreffer">ngrok</a></li>
-<li><a href="https://flynat.51miaole.com" target="_blank" rel="noopener noreffer">蜻蜓映射</a></li>
-<li><a href="https://natapp.cn" target="_blank" rel="noopener noreffer">natapp</a></li>
+<li><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreffer ">Frp</a></li>
+<li><a href="https://ngrok.com" target="_blank" rel="noopener noreffer ">ngrok</a></li>
+<li><a href="https://flynat.51miaole.com" target="_blank" rel="noopener noreffer ">蜻蜓映射</a></li>
+<li><a href="https://natapp.cn" target="_blank" rel="noopener noreffer ">natapp</a></li>
 <li>以及一些其它的, 不一一列出了, 大家可以上网查查</li>
 <li>推荐大家使用 <code>Frp</code> , 因为免费且开源, 易配置, 简单使用</li>
 </ul>
 <h3 id="frp-为例">Frp 为例</h3>
 <ul>
-<li><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreffer">Frp项目地址</a></li>
+<li><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreffer ">Frp项目地址</a></li>
 </ul>
 <h3 id="服务器端">服务器端</h3>
 <h4 id="下载-frp">下载 frp</h4>
@@ -1166,12 +1173,12 @@ ALGOLIA_ADMIN_KEY=
 <p>根据自己的系统下载对于版本</p>
 </li>
 <li>
-<p><a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreffer">Frp地址</a></p>
+<p><a href="https://github.com/fatedier/frp/releases" target="_blank" rel="noopener noreffer ">Frp地址</a></p>
 </li>
 <li>
 <p>Linux 用户可以使用 <code>wget</code> 工具下载</p>
 <ul>
-<li>例如: wget <a href="https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz" target="_blank" rel="noopener noreffer">https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz</a></li>
+<li>例如: wget <a href="https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz" target="_blank" rel="noopener noreffer ">https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_amd64.tar.gz</a></li>
 </ul>
 </li>
 </ul>
@@ -1373,11 +1380,12 @@ systemctl start frps
 </code></pre></td></tr></table>
 </div>
 </div>]]></description>
-</item><item>
+</item>
+<item>
     <title>Markdown语法</title>
     <link>http://isouthrain.github.io/2022-04-30-markdown%E8%AF%AD%E6%B3%95/</link>
     <pubDate>Sat, 30 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
+    <author>ISouthRain</author>
     <guid>http://isouthrain.github.io/2022-04-30-markdown%E8%AF%AD%E6%B3%95/</guid>
     <description><![CDATA[<h4 id="粗体">粗体</h4>
 <div class="highlight"><div class="chroma">
@@ -1560,13 +1568,14 @@ systemctl start frps
 </div>
 </div><p>露营⛺</p>
 <p>真好笑😂</p>
-<p><a href="https://gist.github.com/rxaviers/7360908" target="_blank" rel="noopener noreffer">表情符号码表</a></p>
+<p><a href="https://gist.github.com/rxaviers/7360908" target="_blank" rel="noopener noreffer ">表情符号码表</a></p>
 ]]></description>
-</item><item>
+</item>
+<item>
     <title>如何上传/推送到 Github</title>
     <link>http://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/</link>
     <pubDate>Fri, 29 Apr 2022 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
+    <author>ISouthRain</author>
     <guid>http://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/</guid>
     <description><![CDATA[<h3 id="git-push-推送上传到-github">git push 推送/上传到 GitHub</h3>
 <h3 id="git-push-输入账号密码后推送不了">git push 输入账号密码后推送不了?</h3>
@@ -1590,9 +1599,10 @@ systemctl start frps
 <h3 id="每次-推送上传-都要输入-账号密码">每次 推送/上传 都要输入 账号密码??</h3>
 <p>如果你不想每次 上传/推送 都要输入 账号密码，可以看我的另一个文章
 每次都要输入账号密码太麻烦了<br>
-👉  <a href="https://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/" target="_blank" rel="noopener noreffer">永久免账号密码 推送/上传 GitHub</a></p>
+👉  <a href="https://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/" target="_blank" rel="noopener noreffer ">永久免账号密码 推送/上传 GitHub</a></p>
 <h3 id="faq">FAQ❓</h3>
 <p>如果你遇到了问题，可以在下面评论去提问，基本都会回复的</p>
 ]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>
