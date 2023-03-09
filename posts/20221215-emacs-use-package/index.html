@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Emacs use-package 包管理器 - ISouthRain - SimpleLife</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ISouthRain" /><meta name="description" content="use-package 源码地址 GitHub - jwiegley/use-package: A use-package declaration for simplifying your&amp;hellip; 什么是 use-packaeg use-package 是管理 Emacs 包(插件) 的一个宏管理器 可以管理每个包的设置，并配置和定义 安装 use-package 将以下源码复制到你的 init.el 文件中," /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.91.2 with theme even" />
+
+
+<link rel="canonical" href="https://isouthrain.github.io/posts/20221215-emacs-use-package/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.0f337d9d3eae904ea2c93977e825396a03f536c750af9e04b9810f6bfbe36f88.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="Emacs use-package 包管理器" />
+<meta property="og:description" content="use-package 源码地址 GitHub - jwiegley/use-package: A use-package declaration for simplifying your&hellip; 什么是 use-packaeg use-package 是管理 Emacs 包(插件) 的一个宏管理器 可以管理每个包的设置，并配置和定义 安装 use-package 将以下源码复制到你的 init.el 文件中," />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://isouthrain.github.io/posts/20221215-emacs-use-package/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-01-06T20:39:32+08:00" />
+
+<meta itemprop="name" content="Emacs use-package 包管理器">
+<meta itemprop="description" content="use-package 源码地址 GitHub - jwiegley/use-package: A use-package declaration for simplifying your&hellip; 什么是 use-packaeg use-package 是管理 Emacs 包(插件) 的一个宏管理器 可以管理每个包的设置，并配置和定义 安装 use-package 将以下源码复制到你的 init.el 文件中,"><meta itemprop="datePublished" content="2022-12-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-01-06T20:39:32+08:00" />
+<meta itemprop="wordCount" content="368">
+<meta itemprop="keywords" content="Emacs," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs use-package 包管理器"/>
+<meta name="twitter:description" content="use-package 源码地址 GitHub - jwiegley/use-package: A use-package declaration for simplifying your&hellip; 什么是 use-packaeg use-package 是管理 Emacs 包(插件) 的一个宏管理器 可以管理每个包的设置，并配置和定义 安装 use-package 将以下源码复制到你的 init.el 文件中,"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+
+  
+	  
+	  
+	  <a href="https://isouthrain.github.io" title="https://isouthrain.github.io" target="_blank">  
+	  <img style="position: fixed; top: 0; right: 0; border: 0; z-index:9999;" 
+		 src="/blog_img/forkme_right_gray.png" 
+		 alt="Fork me on GitHub">
+	  </a>
+  
+
+
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">ISouthRain Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/about.en/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/quotation.en/">
+        <li class="mobile-menu-item">Quotation</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a><a href="/quotation/">
+        <li class="mobile-menu-item">语录</li>
+      </a><a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于我</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/links/">
+        <li class="mobile-menu-item">外链</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/search/">
+        <li class="mobile-menu-item">搜索</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">ISouthRain Blog</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/about.en/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/quotation.en/">Quotation</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/quotation/">语录</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于我</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/links/">外链</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/search/">搜索</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <h2 id="use-package">use-package</h2>
+<h3 id="源码地址">源码地址</h3>
+<p><a href="https://github.com/jwiegley/use-package">GitHub - jwiegley/use-package: A use-package declaration for simplifying your&hellip;</a></p>
+<h3 id="什么是-use-packaeg">什么是 use-packaeg</h3>
+<p>use-package 是管理 Emacs 包(插件) 的一个宏管理器
+可以管理每个包的设置，并配置和定义</p>
+<h3 id="安装-use-package">安装 use-package</h3>
+<ul>
+<li>将以下源码复制到你的 init.el 文件中, 然后重启 Emacs
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;; 添加下载包的来源</span>
+<span class="p">(</span><span class="nb">eval-and-compile</span>
+  <span class="p">(</span><span class="nv">customize-set-variable</span>
+   <span class="ss">&#39;package-archives</span> <span class="o">&#39;</span><span class="p">(</span>
+                       <span class="p">(</span><span class="s">&#34;melpa&#34;</span> <span class="o">.</span> <span class="s">&#34;http://melpa.org/packages/&#34;</span><span class="p">)</span>
+                       <span class="p">(</span><span class="s">&#34;org&#34;</span> <span class="o">.</span> <span class="s">&#34;http://orgmode.org/elpa/&#34;</span><span class="p">)</span>
+                       <span class="p">(</span><span class="s">&#34;gnu&#34;</span> <span class="o">.</span> <span class="s">&#34;https://elpa.gnu.org/packages/&#34;</span><span class="p">)</span>
+                       <span class="p">(</span><span class="s">&#34;nongnu&#34;</span> <span class="o">.</span> <span class="s">&#34;https://elpa.nongnu.org/nongnu/&#34;</span><span class="p">)</span>
+                       <span class="p">))</span>
+  <span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span>
+   <span class="c1">;; 如果Emacs 检测到你没有安装 use-package, 那么自动安装 use-package</span>
+  <span class="p">(</span><span class="nb">unless</span> <span class="p">(</span><span class="nv">package-installed-p</span> <span class="ss">&#39;use-package</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">package-refresh-contents</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">package-install</span> <span class="ss">&#39;use-package</span><span class="p">))</span>
+  <span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="使用-use-package">使用 use-package</h3>
+<ul>
+<li>例如: 安装 doom-themes 主题
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;; 安装 doom-themes 主题，并启用 doom-one 主题</span>
+<span class="p">(</span><span class="nb">use-package</span> <span class="nv">doom-themes</span>
+  <span class="nb">:ensure</span> <span class="no">t</span>
+  <span class="nb">:config</span>
+  <span class="p">(</span><span class="nv">load-theme</span> <span class="ss">&#39;doom-one</span> <span class="no">t</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="use-package-关键词解释">use-package 关键词解释</h4>
+<ul>
+<li>:ensure t/nil
+是否从网络源安装？ t 代表从网络安装，nil 代表从 Emacs 内置包加载(如果Emacs内置了这个包，Emacs如果没有那么将报错)</li>
+<li>:config
+加载/下载 包 之后再加载的配置</li>
+<li>:init
+加载/下载 包 之前加载的配置</li>
+<li>:defer num
+懒加载，num 代表数字, 在 Emacs 启动完成 num秒后再加载 :config 的内容, 可以减少 Emacs 启动时间</li>
+<li>还有更多关键词使用，可以自己到项目地址查看
+比如 bind 自定义按键， commands 调用某个命令后再加载 :config 配置</li>
+</ul>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+	
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:cumtlu@126.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/3176419" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.linkedin.com/in/%E8%BF%90%E5%BC%BA-%E5%8D%A2-50a08bb5/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/lucumt" class="iconfont icon-github" title="github"></a>
+  <a href="https://isouthrain.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2016 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>ISouthRain</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top" title="回到顶部">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+<script id="baidu_analytics">
+	  var _hmt = _hmt || [];
+	  (function() {
+		if (window.location.hostname === 'localhost') return;
+		var hm = document.createElement("script"); hm.async = true;
+		hm.src = "https://hm.baidu.com/hm.js?cabc0a71f63da092412d82d1aefe7d1c";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	  })();
+	</script>
+
+
+	<script id="baidu_push">
+	  (function(){
+		if (window.location.hostname === 'localhost') return;
+		var bp = document.createElement('script'); bp.async = true;
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+		  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+		  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	  })();
+	</script>
+
+
+<script>
+  function createCopyButton(highlightDiv) {
+    const div = document.createElement("div");
+    div.className = "copy-code";
+    div.innerText = "Copy";
+    div.addEventListener("click", () =>
+      copyCodeToClipboard(div, highlightDiv)
+    );
+    addCopyButtonToDom(div, highlightDiv);
+  }
+
+  async function copyCodeToClipboard(button, highlightDiv) {
+    const codeToCopy = highlightDiv.querySelector(":last-child > .chroma > code")
+      .innerText;
+    await navigator.clipboard.writeText(codeToCopy);
+    button.blur();
+    button.innerText = "Copied!";
+    setTimeout(() => button.innerText = "Copy", 2000);
+  }
+
+  function addCopyButtonToDom(button, highlightDiv) {
+    highlightDiv.insertBefore(button, highlightDiv.firstChild);
+    const wrapper = document.createElement("div");
+    wrapper.className = "highlight-wrapper";
+    highlightDiv.parentNode.insertBefore(wrapper, highlightDiv);
+    wrapper.appendChild(highlightDiv);
+  }
+
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if(!isMobile){
+     document.querySelectorAll(".highlight").forEach((highlightDiv) => createCopyButton(highlightDiv));
+  }
+</script>  
+
+
+</body>
+</html>

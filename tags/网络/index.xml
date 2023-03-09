@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网络 on ISouthRain - SimpleLife</title>
+    <link>https://isouthrain.github.io/tags/%E7%BD%91%E7%BB%9C/</link>
+    <description>Recent content in 网络 on ISouthRain - SimpleLife</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://isouthrain.github.io/tags/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Frp内网穿透</title>
+      <link>https://isouthrain.github.io/post/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://isouthrain.github.io/post/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+      <description>什么是内网穿透? 通俗的说: 把 局域网 变成 公网 那样可以让外面的人访问 内网穿透工具 Frp ngrok 蜻蜓映射 natapp 以及一些其它的, 不一一列出了, 大家可以上网查查 推荐</description>
+    </item>
+    
+    <item>
+      <title>Frp内网穿透</title>
+      <link>https://isouthrain.github.io/posts/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://isouthrain.github.io/posts/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+      <description>什么是内网穿透? 通俗的说: 把 局域网 变成 公网 那样可以让外面的人访问 内网穿透工具 Frp ngrok 蜻蜓映射 natapp 以及一些其它的, 不一一列出了, 大家可以上网查查 推荐</description>
+    </item>
+    
+  </channel>
+</rss>
