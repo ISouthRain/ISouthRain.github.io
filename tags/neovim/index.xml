@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Neovim on ISouthRain</title>
-    <link>http://localhost:1313/tags/neovim/</link>
+    <link>http://isouthrain.github.io/tags/neovim/</link>
     <description>Recent content in Neovim on ISouthRain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vim和Emacs的选择</title>
-      <link>http://localhost:1313/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</link>
+      <link>http://isouthrain.github.io/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</link>
       <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
+      <guid>http://isouthrain.github.io/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
       <description>前言 这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读</description>
     </item>
     
     <item>
       <title>(Neo)Vim 中英文输入法</title>
-      <link>http://localhost:1313/post/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+      <link>http://isouthrain.github.io/post/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</link>
       <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
+      <guid>http://isouthrain.github.io/post/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
       <description>概述 使用 Vim 每当我们切换中文输入时都要切换中英文,这非常繁琐还好有Vim 插件了来弥补这个缺点 这个插件就是 ZFVimIM, 这插件支持云输入(云词库), 非常的好</description>
     </item>
     
