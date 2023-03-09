@@ -26,21 +26,21 @@
     </item>
     
     <item>
+      <title>关于</title>
+      <link>http://isouthrain.github.io/about/</link>
+      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://isouthrain.github.io/about/</guid>
+      <description>我们无法决定未来, 但我们能控制自己如何生活! ISouthRain Blog Wecometo you🎉 关于我是谁?🤓 如你所见, 我叫 ISouthRain, 当然, 这只是我的一个化名!! 我的专业 ✍️ 我不是 程序员</description>
+    </item>
+    
+    <item>
       <title>语录</title>
       <link>http://isouthrain.github.io/quotation/</link>
       <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>http://isouthrain.github.io/quotation/</guid>
       <description>2022 遵循自己的内心活下去, 不要回首往事, 昨天是历史, 今天是礼物, 明天是未知的, 未知的事而不应放在当下担忧 !! 美好的事情终会到来🍮 得到之前都是需要</description>
-    </item>
-    
-    <item>
-      <title>关于我</title>
-      <link>http://isouthrain.github.io/about/</link>
-      <pubDate>Mon, 27 Feb 2023 18:44:29 +0800</pubDate>
-      
-      <guid>http://isouthrain.github.io/about/</guid>
-      <description>一个混迹于帝都的程序猿，主要从事Java、Python和Golang相关的开发工作。 编程领域 Java，主要用它进行web开发 Python，主</description>
     </item>
     
     <item>
@@ -257,15 +257,6 @@
       
       <guid>http://isouthrain.github.io/posts/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</guid>
       <description>使用以下方法后 git push 再也不用一直输入 账号密码了! git push 每次都要输入账号密码? 从此解决 正文👇 首先配置 Git 个人信息 依此输入以下两个命令: 配置你的 GitHub 邮箱</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://isouthrain.github.io/template/</link>
-      <pubDate>Mon, 25 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://isouthrain.github.io/template/</guid>
-      <description></description>
     </item>
     
     <item>

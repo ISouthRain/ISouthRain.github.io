@@ -16,15 +16,15 @@
   </url>
   
   <url>
-    <loc>http://isouthrain.github.io/quotation/</loc>
+    <loc>http://isouthrain.github.io/about/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://isouthrain.github.io/about/</loc>
-    <lastmod>2023-02-27T18:44:29+08:00</lastmod>
+    <loc>http://isouthrain.github.io/quotation/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -283,13 +283,6 @@
   
   <url>
     <loc>http://isouthrain.github.io/posts/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</loc>
-    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://isouthrain.github.io/template/</loc>
     <lastmod>2022-04-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
