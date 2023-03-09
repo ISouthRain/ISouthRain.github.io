@@ -1,0 +1,10 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ISouthRain</title>
+        <link>http://isouthrain.github.io/en/</link>
+        <description>Freedom and Peace 自由与和平</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster>
+            <atom:link href="http://isouthrain.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+        </channel>
+</rss>
