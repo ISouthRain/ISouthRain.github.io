@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>GnuPG(GPG) 加密 - ISouthRain</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ISouthRain" /><meta name="description" content="什么是 GnuPG ? GPG 全名叫 GNU Privacy Guard, 是一个加密前端, 可以使用 RSA 、ESCDA 等算法去加密 下载 GnuPG GnuPG官网 获取密钥(Windows 使用终端命令) 请记住," /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.91.2 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/posts/2022-06-25-gpg/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.0f337d9d3eae904ea2c93977e825396a03f536c750af9e04b9810f6bfbe36f88.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="GnuPG(GPG) 加密" />
+<meta property="og:description" content="什么是 GnuPG ? GPG 全名叫 GNU Privacy Guard, 是一个加密前端, 可以使用 RSA 、ESCDA 等算法去加密 下载 GnuPG GnuPG官网 获取密钥(Windows 使用终端命令) 请记住," />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/2022-06-25-gpg/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-25T23:40:28+08:00" />
+
+<meta itemprop="name" content="GnuPG(GPG) 加密">
+<meta itemprop="description" content="什么是 GnuPG ? GPG 全名叫 GNU Privacy Guard, 是一个加密前端, 可以使用 RSA 、ESCDA 等算法去加密 下载 GnuPG GnuPG官网 获取密钥(Windows 使用终端命令) 请记住,"><meta itemprop="datePublished" content="2022-06-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-06-25T23:40:28+08:00" />
+<meta itemprop="wordCount" content="835">
+<meta itemprop="keywords" content="Emacs," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GnuPG(GPG) 加密"/>
+<meta name="twitter:description" content="什么是 GnuPG ? GPG 全名叫 GNU Privacy Guard, 是一个加密前端, 可以使用 RSA 、ESCDA 等算法去加密 下载 GnuPG GnuPG官网 获取密钥(Windows 使用终端命令) 请记住,"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+
+  
+	  
+	  
+	  <a href="https://github.com/ISouthRain/hugo-theme-even" title="https://github.com/ISouthRain/hugo-theme-even" target="_blank">  
+	  <img style="position: fixed; top: 0; right: 0; border: 0; z-index:9999;" 
+		 src="/blog_img/forkme_right_gray.png" 
+		 alt="Fork me on GitHub">
+	  </a>
+  
+
+
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">ISouthRain</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/about.en/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/quotation.en/">
+        <li class="mobile-menu-item">Quotation</li>
+      </a><a href="/quotation/">
+        <li class="mobile-menu-item">语录</li>
+      </a><a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于我</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/links/">
+        <li class="mobile-menu-item">外链</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/search/">
+        <li class="mobile-menu-item">搜索</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">ISouthRain</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/about.en/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/quotation.en/">Quotation</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/quotation/">语录</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于我</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/links/">外链</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/search/">搜索</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <h2 id="什么是-gnupg">什么是 GnuPG ?</h2>
+<p>GPG 全名叫 <strong>GNU Privacy Guard</strong>, 是一个加密前端, 可以使用 <em>RSA 、ESCDA</em> 等算法去加密</p>
+<h2 id="下载-gnupg">下载 GnuPG</h2>
+<ul>
+<li><a href="https://gnupg.org/">GnuPG官网</a></li>
+</ul>
+<h2 id="获取密钥--windows-使用终端命令">获取密钥(Windows 使用终端命令)</h2>
+<p><strong>请记住, 密钥绝不要给任何人</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">gpg --gen-key
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>默认选项即可</strong></p>
+<h2 id="加密解密文件">加密解密文件</h2>
+<ul>
+<li>加密之前
+<ul>
+<li>加密分为两种
+<ol>
+<li>对称加密解密(双方只要输入对密码就可以查看和加密)</li>
+<li>非对称加密解密(对方使用 <strong>你给的公钥加密</strong>, 只有使用 <strong>你自己的密钥</strong> 能解密查看)</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><a href="https://gist.github.com/jhjguxin/6037564">详细解释</a></li>
+</ul>
+<h3 id="对称加密解密">对称加密解密</h3>
+<ul>
+<li>加密(输入两次相同密码)</li>
+</ul>
+<!--listend-->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">gpg --symmetric filename
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>解密(输入配对密码, 与上面的密码相同)
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 仅仅解密内容</span>
+gpg -d filename.gpg
+<span class="c1"># 解密并输出原文件</span>
+gpg -o fileame -d filename.gpg
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="非对称加密解密--个人常用">非对称加密解密(个人常用)</h3>
+<ul>
+<li>加密
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># -r 表示 gpg 用户, 就刚才创建密钥的用户名</span>
+gpg -e -r User filename
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>解密
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 仅仅解密内容</span>
+gpg -d filename.gpg
+<span class="c1"># 解密并输出原文件</span>
+gpg -o fileame -d filename.gpg
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="导出--请不要将密钥发送给任何人-自己导出密钥保存就好">导出(请不要将密钥发送给任何人,自己导出密钥保存就好)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">gpg -o filename.asc --export keyID
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="导入--个人使用导入密钥就好">导入(个人使用导入密钥就好)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">gpg --imort filename.asc
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="faq">FAQ❓</h2>
+<ol>
+<li>
+<p>是不是在我的电脑上，使用别人A的公钥加密了一个文件，而我没有别人A的密钥，我也无法读取查看。是吗？？</p>
+<p>是的</p>
+</li>
+<li>
+<p>是不是使用 非对称加密(不需要密码)，别人没有公钥和私钥就无法破解读取数据？</p>
+<p>公钥大家都可以有，可以用来加密(比如在公共平台发一个只有你能解密的消息)但不可以用来解密。私钥只有你有，可以用来解密</p>
+<p>也就是只有私钥才能查看数据？？在属于自己的机器，只需要导入私钥就好了，是吧(是的)</p>
+</li>
+<li>
+<p>那现在的GPG加密在没有私钥的情况下有没有可能被破解？？</p>
+<p>首先，GPG只是一个前端，背后用的一般是RSA。密钥位数够的话，你可以认为没有可能</p>
+</li>
+</ol>
+<h2 id="emacs-使用-gpg">Emacs 使用 GPG</h2>
+<ul>
+<li><strong>只要后端正常使用 GPG, Emacs 打开 .gpg 文件会自动解密, 在编辑保存后自动加密</strong></li>
+</ul>
+<h3 id="org-mode-使用-gpg-加密">org-mode 使用 GPG 加密</h3>
+<ul>
+<li>配置 EPG(Emacs的一个包, 调用 GPG)
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;org-crypt</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">org-crypt-use-before-save-magic</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-tags-exclude-from-inheritance</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;crypt&#34;</span><span class="p">))</span>
+<span class="c1">;; GPG ID, 解密一个文件可以知道这个ID, 每个人都不同</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">org-crypt-key</span> <span class="s">&#34;0PVT4708DD97889B&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">auto-save-default</span> <span class="no">nil</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<!--listend-->
+<ul>
+<li>
+<p>加密
+在标题后面写上 :crypt: , 保存文件将会自动加密此标题内容</p>
+<p><strong>警告</strong>: Windows 系统 加密会导致 ^M 换行而无法解密，可以使用下面的函数解密</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-elisp" data-lang="elisp"><span class="c1">;; 解决 ^M 解密问题</span>
+<span class="p">(</span><span class="nb">defun</span> <span class="nv">freedom/org-decrypt-entry</span> <span class="p">()</span>
+<span class="s">&#34;Replace DOS eolns CR LF with Unix eolns CR&#34;</span>
+<span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">goto-char</span> <span class="p">(</span><span class="nf">point-min</span><span class="p">))</span>
+<span class="p">(</span><span class="nb">while</span> <span class="p">(</span><span class="nf">search-forward</span> <span class="s">&#34;\r&#34;</span> <span class="no">nil</span> <span class="no">t</span><span class="p">)</span> <span class="p">(</span><span class="nf">replace-match</span> <span class="s">&#34;&#34;</span><span class="p">))</span>
+<span class="p">(</span><span class="nv">org-decrypt-entry</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>解密
+将 光标放在具有 :crypt: 标题上, 命令 org-decrypt-entry</p>
+</li>
+</ul>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+	
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:cumtlu@126.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/3176419" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://www.linkedin.com/in/%E8%BF%90%E5%BC%BA-%E5%8D%A2-50a08bb5/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/ISouthRain" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2016 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>ISouthRain</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top" title="回到顶部">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+	<script id="baidu_push">
+	  (function(){
+		if (window.location.hostname === 'localhost') return;
+		var bp = document.createElement('script'); bp.async = true;
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+		  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+		  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	  })();
+	</script>
+
+
+<script>
+  function createCopyButton(highlightDiv) {
+    const div = document.createElement("div");
+    div.className = "copy-code";
+    div.innerText = "Copy";
+    div.addEventListener("click", () =>
+      copyCodeToClipboard(div, highlightDiv)
+    );
+    addCopyButtonToDom(div, highlightDiv);
+  }
+
+  async function copyCodeToClipboard(button, highlightDiv) {
+    const codeToCopy = highlightDiv.querySelector(":last-child > .chroma > code")
+      .innerText;
+    await navigator.clipboard.writeText(codeToCopy);
+    button.blur();
+    button.innerText = "Copied!";
+    setTimeout(() => button.innerText = "Copy", 2000);
+  }
+
+  function addCopyButtonToDom(button, highlightDiv) {
+    highlightDiv.insertBefore(button, highlightDiv.firstChild);
+    const wrapper = document.createElement("div");
+    wrapper.className = "highlight-wrapper";
+    highlightDiv.parentNode.insertBefore(wrapper, highlightDiv);
+    wrapper.appendChild(highlightDiv);
+  }
+
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if(!isMobile){
+     document.querySelectorAll(".highlight").forEach((highlightDiv) => createCopyButton(highlightDiv));
+  }
+</script>  
+
+
+</body>
+</html>
