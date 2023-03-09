@@ -44,15 +44,6 @@
     </item>
     
     <item>
-      <title>各种外链</title>
-      <link>https://isouthrain.github.io/links/</link>
-      <pubDate>Mon, 27 Feb 2023 18:40:33 +0800</pubDate>
-      
-      <guid>https://isouthrain.github.io/links/</guid>
-      <description>记录个人觉得有意义的各种博客、公众号页面、视频等。 博客园 地址 内容 其它 程序员自由之路 主要是JavaEE开发，关于Java框架的文章很多 Mich</description>
-    </item>
-    
-    <item>
       <title>Emacs use-package 包管理器</title>
       <link>https://isouthrain.github.io/post/20221215-emacs-use-package/</link>
       <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
@@ -103,7 +94,7 @@
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://isouthrain.github.io/post/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia/</guid>
-      <description>该方法已失效 前言 Hugo 添加 Algolia 搜索, 本文以 LoveIt 主题为例 LoveIt 启用 Algolia 搜索 添加以下代码在你的 config.toml, 根据自己情况填写 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23</description>
+      <description>前言 Hugo 添加 Algolia 搜索, 本文以 LoveIt 主题为例 LoveIt 启用 Algolia 搜索 添加以下代码在你的 config.toml, 根据自己情况填写 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 [params] [params.search] enable = true #</description>
     </item>
     
     <item>
@@ -194,6 +185,15 @@
       
       <guid>https://isouthrain.github.io/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
       <description>概述 在如今这个时代每个人都需要做笔记，用来记录一些生活琐事，以及一些重要的事情，避免忘记， 好记性不如烂笔头 那么用什么软件记笔记呢?一个好的笔</description>
+    </item>
+    
+    <item>
+      <title>外链</title>
+      <link>https://isouthrain.github.io/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://isouthrain.github.io/links/</guid>
+      <description>记录个人觉得有意义的各种博客、公众号页面、视频等。 地址 内容 其它 阮一峰的网络日志 周刊</description>
     </item>
     
     <item>
