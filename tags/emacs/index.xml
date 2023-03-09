@@ -2,134 +2,134 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emacs on ISouthRain</title>
-    <link>http://localhost:1313/tags/emacs/</link>
+    <link>http://isouthrain.github.io/tags/emacs/</link>
     <description>Recent content in Emacs on ISouthRain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 15 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs use-package 包管理器</title>
-      <link>http://localhost:1313/post/20221215-emacs-use-package/</link>
+      <link>http://isouthrain.github.io/post/20221215-emacs-use-package/</link>
       <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/20221215-emacs-use-package/</guid>
+      <guid>http://isouthrain.github.io/post/20221215-emacs-use-package/</guid>
       <description>use-package 源码地址 GitHub - jwiegley/use-package: A use-package declaration for simplifying your&amp;hellip; 什么是 use-packaeg use-package 是管理 Emacs 包(插件) 的一个宏管理器 可以管理每个包的设置，并配置和定义 安装 use-package 将以下源码复制到你的 init.el 文件中,</description>
     </item>
     
     <item>
       <title>Emacs use-package 包管理器</title>
-      <link>http://localhost:1313/posts/20221215-emacs-use-package/</link>
+      <link>http://isouthrain.github.io/posts/20221215-emacs-use-package/</link>
       <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/20221215-emacs-use-package/</guid>
+      <guid>http://isouthrain.github.io/posts/20221215-emacs-use-package/</guid>
       <description>use-package 源码地址 GitHub - jwiegley/use-package: A use-package declaration for simplifying your&amp;hellip; 什么是 use-packaeg use-package 是管理 Emacs 包(插件) 的一个宏管理器 可以管理每个包的设置，并配置和定义 安装 use-package 将以下源码复制到你的 init.el 文件中,</description>
     </item>
     
     <item>
       <title>Emacs google-translate 翻译文本</title>
-      <link>http://localhost:1313/post/20221213-emacs-google-translate/</link>
+      <link>http://isouthrain.github.io/post/20221213-emacs-google-translate/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/20221213-emacs-google-translate/</guid>
+      <guid>http://isouthrain.github.io/post/20221213-emacs-google-translate/</guid>
       <description>google-translate 源码地址 GitHub - atykhonov/google-translate: Emacs interface to Google Translate 安装 google-translate 安装 use-package , 如果你没有使用 use-package 1 2 3 4 5 6 7 8 9 10 11 12 13 (eval-and-compile (customize-set-variable &amp;#39;package-archives &amp;#39;( (&amp;#34;melpa&amp;#34; . &amp;#34;http://melpa.org/packages/&amp;#34;) (&amp;#34;org&amp;#34; . &amp;#34;http://orgmode.org/elpa/&amp;#34;) (&amp;#34;gnu&amp;#34; . &amp;#34;https://elpa.gnu.org/packages/&amp;#34;) (&amp;#34;nongnu&amp;#34; . &amp;#34;https://elpa.nongnu.org/nongnu/&amp;#34;) )) (package-initialize) (unless (package-installed-p &amp;#39;use-package) (package-refresh-contents) (package-install &amp;#39;use-package)) ) 安装 google-translate 1</description>
     </item>
     
     <item>
       <title>Emacs google-translate 翻译文本</title>
-      <link>http://localhost:1313/posts/20221213-emacs-google-translate/</link>
+      <link>http://isouthrain.github.io/posts/20221213-emacs-google-translate/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/20221213-emacs-google-translate/</guid>
+      <guid>http://isouthrain.github.io/posts/20221213-emacs-google-translate/</guid>
       <description>google-translate 源码地址 GitHub - atykhonov/google-translate: Emacs interface to Google Translate 安装 google-translate 安装 use-package , 如果你没有使用 use-package 1 2 3 4 5 6 7 8 9 10 11 12 13 (eval-and-compile (customize-set-variable &amp;#39;package-archives &amp;#39;( (&amp;#34;melpa&amp;#34; . &amp;#34;http://melpa.org/packages/&amp;#34;) (&amp;#34;org&amp;#34; . &amp;#34;http://orgmode.org/elpa/&amp;#34;) (&amp;#34;gnu&amp;#34; . &amp;#34;https://elpa.gnu.org/packages/&amp;#34;) (&amp;#34;nongnu&amp;#34; . &amp;#34;https://elpa.nongnu.org/nongnu/&amp;#34;) )) (package-initialize) (unless (package-installed-p &amp;#39;use-package) (package-refresh-contents) (package-install &amp;#39;use-package)) ) 安装 google-translate 1</description>
     </item>
     
     <item>
       <title>像 Linux Emacs 一样使用 WSL Emacs</title>
-      <link>http://localhost:1313/post/2022-07-03-windowsemacsforwsl/</link>
+      <link>http://isouthrain.github.io/post/2022-07-03-windowsemacsforwsl/</link>
       <pubDate>Sun, 03 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2022-07-03-windowsemacsforwsl/</guid>
+      <guid>http://isouthrain.github.io/post/2022-07-03-windowsemacsforwsl/</guid>
       <description>前言 由于 Windows 的某些原因使用 Emacs 总会那么的不方便或者不好用, 有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点 所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux</description>
     </item>
     
     <item>
       <title>像 Linux Emacs 一样使用 WSL Emacs</title>
-      <link>http://localhost:1313/posts/2022-07-03-windowsemacsforwsl/</link>
+      <link>http://isouthrain.github.io/posts/2022-07-03-windowsemacsforwsl/</link>
       <pubDate>Sun, 03 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/2022-07-03-windowsemacsforwsl/</guid>
+      <guid>http://isouthrain.github.io/posts/2022-07-03-windowsemacsforwsl/</guid>
       <description>前言 由于 Windows 的某些原因使用 Emacs 总会那么的不方便或者不好用, 有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点 所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux</description>
     </item>
     
     <item>
       <title>GnuPG(GPG) 加密</title>
-      <link>http://localhost:1313/post/2022-06-25-gpg/</link>
+      <link>http://isouthrain.github.io/post/2022-06-25-gpg/</link>
       <pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2022-06-25-gpg/</guid>
+      <guid>http://isouthrain.github.io/post/2022-06-25-gpg/</guid>
       <description>什么是 GnuPG ? GPG 全名叫 GNU Privacy Guard, 是一个加密前端, 可以使用 RSA 、ESCDA 等算法去加密 下载 GnuPG GnuPG官网 获取密钥(Windows 使用终端命令) 请记住,</description>
     </item>
     
     <item>
       <title>GnuPG(GPG) 加密</title>
-      <link>http://localhost:1313/posts/2022-06-25-gpg/</link>
+      <link>http://isouthrain.github.io/posts/2022-06-25-gpg/</link>
       <pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/2022-06-25-gpg/</guid>
+      <guid>http://isouthrain.github.io/posts/2022-06-25-gpg/</guid>
       <description>什么是 GnuPG ? GPG 全名叫 GNU Privacy Guard, 是一个加密前端, 可以使用 RSA 、ESCDA 等算法去加密 下载 GnuPG GnuPG官网 获取密钥(Windows 使用终端命令) 请记住,</description>
     </item>
     
     <item>
       <title>Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)</title>
-      <link>http://localhost:1313/post/2022-01-12-org-protocol-capture-html/</link>
+      <link>http://isouthrain.github.io/post/2022-01-12-org-protocol-capture-html/</link>
       <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2022-01-12-org-protocol-capture-html/</guid>
+      <guid>http://isouthrain.github.io/post/2022-01-12-org-protocol-capture-html/</guid>
       <description>概述 Notion 和 Obsidian 都有收集网页的功能, Org-mode 自然也有, Org-mode 是调用 Org-protocol 协议使用的, 而插件 Org-protocol-capture-html 是其中能使 Org-protocol 收集的网页更加美观和可视化 因为很多人都不会都不理解 Org-protocol 和怎</description>
     </item>
     
     <item>
       <title>Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)</title>
-      <link>http://localhost:1313/posts/2022-01-12-org-protocol-capture-html/</link>
+      <link>http://isouthrain.github.io/posts/2022-01-12-org-protocol-capture-html/</link>
       <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/2022-01-12-org-protocol-capture-html/</guid>
+      <guid>http://isouthrain.github.io/posts/2022-01-12-org-protocol-capture-html/</guid>
       <description>概述 Notion 和 Obsidian 都有收集网页的功能, Org-mode 自然也有, Org-mode 是调用 Org-protocol 协议使用的, 而插件 Org-protocol-capture-html 是其中能使 Org-protocol 收集的网页更加美观和可视化 因为很多人都不会都不理解 Org-protocol 和怎</description>
     </item>
     
     <item>
       <title>Vim和Emacs的选择</title>
-      <link>http://localhost:1313/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</link>
+      <link>http://isouthrain.github.io/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</link>
       <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
+      <guid>http://isouthrain.github.io/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
       <description>前言 这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读</description>
     </item>
     
     <item>
       <title>Vim和Emacs的选择</title>
-      <link>http://localhost:1313/posts/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</link>
+      <link>http://isouthrain.github.io/posts/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</link>
       <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
+      <guid>http://isouthrain.github.io/posts/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
       <description>前言 这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读</description>
     </item>
     
     <item>
       <title>Notion,Obsidian,Org-mode,Logseq,RoamResearch,笔记软件的选择</title>
-      <link>http://localhost:1313/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</link>
+      <link>http://isouthrain.github.io/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</link>
       <pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
+      <guid>http://isouthrain.github.io/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
       <description>概述 在如今这个时代每个人都需要做笔记，用来记录一些生活琐事，以及一些重要的事情，避免忘记， 好记性不如烂笔头 那么用什么软件记笔记呢?一个好的笔</description>
     </item>
     
     <item>
       <title>Notion,Obsidian,Org-mode,Logseq,RoamResearch,笔记软件的选择</title>
-      <link>http://localhost:1313/posts/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</link>
+      <link>http://isouthrain.github.io/posts/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</link>
       <pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
+      <guid>http://isouthrain.github.io/posts/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
       <description>概述 在如今这个时代每个人都需要做笔记，用来记录一些生活琐事，以及一些重要的事情，避免忘记， 好记性不如烂笔头 那么用什么软件记笔记呢?一个好的笔</description>
     </item>
     

@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>笔记 on ISouthRain</title>
-    <link>http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/</link>
+    <link>http://isouthrain.github.io/tags/%E7%AC%94%E8%AE%B0/</link>
     <description>Recent content in 笔记 on ISouthRain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 25 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://isouthrain.github.io/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notion,Obsidian,Org-mode,Logseq,RoamResearch,笔记软件的选择</title>
-      <link>http://localhost:1313/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</link>
+      <link>http://isouthrain.github.io/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</link>
       <pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
+      <guid>http://isouthrain.github.io/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
       <description>概述 在如今这个时代每个人都需要做笔记，用来记录一些生活琐事，以及一些重要的事情，避免忘记， 好记性不如烂笔头 那么用什么软件记笔记呢?一个好的笔</description>
     </item>
     
     <item>
       <title>Notion,Obsidian,Org-mode,Logseq,RoamResearch,笔记软件的选择</title>
-      <link>http://localhost:1313/posts/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</link>
+      <link>http://isouthrain.github.io/posts/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</link>
       <pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
+      <guid>http://isouthrain.github.io/posts/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
       <description>概述 在如今这个时代每个人都需要做笔记，用来记录一些生活琐事，以及一些重要的事情，避免忘记， 好记性不如烂笔头 那么用什么软件记笔记呢?一个好的笔</description>
     </item>
     
