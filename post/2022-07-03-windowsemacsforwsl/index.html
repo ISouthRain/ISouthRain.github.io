@@ -44,11 +44,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://isouthrain.github.io/post/2022-07-03-windowsemacsforwsl/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-07-03T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-03-10T17:22:32+08:00" />
+<meta property="article:modified_time" content="2023-03-10T19:57:11+08:00" />
 
 <meta itemprop="name" content="WSL Emacs">
 <meta itemprop="description" content="前言 由于 Windows 的某些原因使用 Emacs 总会那么的不方便或者不好用, 有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点 所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux"><meta itemprop="datePublished" content="2022-07-03T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-03-10T17:22:32+08:00" />
+<meta itemprop="dateModified" content="2023-03-10T19:57:11+08:00" />
 <meta itemprop="wordCount" content="536">
 <meta itemprop="keywords" content="Emacs," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="WSL Emacs"/>
@@ -192,7 +192,7 @@
 <p>有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点</p>
 <p><strong>所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux 下使用, 目前体验基本与Linux下体验一致, 不过 EAF 不支持</strong></p>
 <h2 id="效果">效果</h2>
-<figure><img src="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/%e6%95%88%e6%9e%9c/2022-07-03_21-20-45_1.png"/>
+<figure><img src="/attach/2022-07-03-WindowsEmacsForWSL.zh-cn/%e6%95%88%e6%9e%9c/2022-07-03_21-20-45_1.png"/>
 </figure>
 
 <h2 id="安装-wsl-本文是使用-wsl2-ubuntu22-dot-04">安装 WSL, 本文是使用 WSL2 Ubuntu22.04</h2>
@@ -203,9 +203,9 @@
 <h3 id="启用-wsl-功能">启用 WSL 功能</h3>
 <ol>
 <li>Win + s 打开搜索, 输入 <strong>启用或关闭 Windows 功能</strong>, 并打开
-<img src="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/%E5%AE%89%E8%A3%85_WSL,_%E6%9C%AC%E6%96%87%E6%98%AF%E4%BD%BF%E7%94%A8_WSL2_Ubuntu22.04/2022-07-03_21-30-48_1.png" alt=""></li>
+<img src="/attach/2022-07-03-WindowsEmacsForWSL.zh-cn/%E5%AE%89%E8%A3%85_WSL,_%E6%9C%AC%E6%96%87%E6%98%AF%E4%BD%BF%E7%94%A8_WSL2_Ubuntu22.04/2022-07-03_21-30-48_1.png" alt=""></li>
 <li>将红线两个功能打勾✔, 启用后重启电脑
-<img src="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/%E5%AE%89%E8%A3%85_WSL,_%E6%9C%AC%E6%96%87%E6%98%AF%E4%BD%BF%E7%94%A8_WSL2_Ubuntu22.04/2022-07-03_21-32-43_1.png" alt=""></li>
+<img src="/attach/2022-07-03-WindowsEmacsForWSL.zh-cn/%E5%AE%89%E8%A3%85_WSL,_%E6%9C%AC%E6%96%87%E6%98%AF%E4%BD%BF%E7%94%A8_WSL2_Ubuntu22.04/2022-07-03_21-32-43_1.png" alt=""></li>
 <li>以 <strong>管理员权限</strong> 打开 Powershell, 设置默认为 wsl2
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -255,7 +255,7 @@
 </div></li>
 <li>
 <p>打开 <strong>MobaXterm</strong>, 挂在后台, <strong>有颜色为启动</strong>
-<img src="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/%E5%AE%89%E8%A3%85_GUI_%E6%94%AF%E6%8C%81/2022-07-03_22-22-17_1.png" alt=""></p>
+<img src="/attach/2022-07-03-WindowsEmacsForWSL.zh-cn/%E5%AE%89%E8%A3%85_GUI_%E6%94%AF%E6%8C%81/2022-07-03_22-22-17_1.png" alt=""></p>
 </li>
 <li>
 <p>刷新 shell, <strong>source ~/.zshrc</strong> 或者 <strong>source ~/.bashrc</strong></p>
@@ -266,7 +266,7 @@
 </ul>
 <h2 id="gui-配置">GUI 配置</h2>
 <h3 id="mobaxterm-模糊解决-修改-dip"><strong>MobaXterm</strong> 模糊解决, 修改 DIP</h3>
-<figure><img src="/posts/Attachment/2022-07-03-WindowsEmacsForWSL.zh-cn/GUI_%e9%85%8d%e7%bd%ae/2022-07-03_21-59-27_1.png"/>
+<figure><img src="/attach/2022-07-03-WindowsEmacsForWSL.zh-cn/GUI_%e9%85%8d%e7%bd%ae/2022-07-03_21-59-27_1.png"/>
 </figure>
 
 <h3 id="ubuntu-emacs-字体补充">Ubuntu Emacs 字体补充</h3>
@@ -313,11 +313,11 @@
   <div class="qr-code">
     
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/posts/Attachment/%E5%BE%AE%E4%BF%A1.jpg">
+        <img class="image" src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/attach/%E5%BE%AE%E4%BF%A1.jpg">
         <span>微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/posts/Attachment/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg">
+        <img class="image" src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/attach/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg">
         <span>支付宝打赏</span>
       </label>
   </div>
