@@ -62,7 +62,7 @@
     </item>
     
     <item>
-      <title>像 Linux Emacs 一样使用 WSL Emacs</title>
+      <title>Linux Emacs 一样使用 Windows Emacs</title>
       <link>https://isouthrain.github.io/post/2022-07-03-windowsemacsforwsl/</link>
       <pubDate>Sun, 03 Jul 2022 00:00:00 +0000</pubDate>
       
@@ -89,7 +89,7 @@
     </item>
     
     <item>
-      <title>Hugo添加Algolia搜索</title>
+      <title>Hugo LoveIt 添加 Algolia 搜索</title>
       <link>https://isouthrain.github.io/post/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia/</link>
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
       
@@ -131,6 +131,15 @@
       
       <guid>https://isouthrain.github.io/post/2022-04-29-%E6%8E%A8%E9%80%81github/</guid>
       <description>git push 推送/上传到 GitHub git push 输入账号密码后推送不了? 因为 Github 的推送/上传机制改了 之前可以输入 账号密码 就可以 push, 现在只能使用 github token 代替 密码 才能推送/上传 申</description>
+    </item>
+    
+    <item>
+      <title>普通人如何使用Emacs</title>
+      <link>https://isouthrain.github.io/post/2022-04-29-how-to-use-emacs/</link>
+      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://isouthrain.github.io/post/2022-04-29-how-to-use-emacs/</guid>
+      <description>Emacs 不仅可用于编码， 更可用于生活。 Home 阅读之前 本文的 普通人 指的是 非程序员 为什么编写这编文章? 因为受到了 Protesilaos Stavrou 影响 Protesilaos Stavrou 隐居、反内卷，不意味着躺平｜专</description>
     </item>
     
     <item>

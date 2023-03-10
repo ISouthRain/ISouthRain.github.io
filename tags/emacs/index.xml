@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>像 Linux Emacs 一样使用 WSL Emacs</title>
+      <title>Linux Emacs 一样使用 Windows Emacs</title>
       <link>https://isouthrain.github.io/post/2022-07-03-windowsemacsforwsl/</link>
       <pubDate>Sun, 03 Jul 2022 00:00:00 +0000</pubDate>
       
@@ -41,6 +41,15 @@
       
       <guid>https://isouthrain.github.io/post/2022-06-25-gpg/</guid>
       <description>什么是 GnuPG ? GPG 全名叫 GNU Privacy Guard, 是一个加密前端, 可以使用 RSA 、ESCDA 等算法去加密 下载 GnuPG GnuPG官网 获取密钥(Windows 使用终端命令) 请记住,</description>
+    </item>
+    
+    <item>
+      <title>普通人如何使用Emacs</title>
+      <link>https://isouthrain.github.io/post/2022-04-29-how-to-use-emacs/</link>
+      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://isouthrain.github.io/post/2022-04-29-how-to-use-emacs/</guid>
+      <description>Emacs 不仅可用于编码， 更可用于生活。 Home 阅读之前 本文的 普通人 指的是 非程序员 为什么编写这编文章? 因为受到了 Protesilaos Stavrou 影响 Protesilaos Stavrou 隐居、反内卷，不意味着躺平｜专</description>
     </item>
     
     <item>
