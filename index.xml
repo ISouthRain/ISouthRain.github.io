@@ -6,25 +6,7 @@
     <description>Recent content on ISouthRain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 15 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://isouthrain.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About</title>
-      <link>https://isouthrain.github.io/about.en/</link>
-      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://isouthrain.github.io/about.en/</guid>
-      <description>🎉Wecome🎉 </description>
-    </item>
-    
-    <item>
-      <title>Quotation</title>
-      <link>https://isouthrain.github.io/quotation.en/</link>
-      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://isouthrain.github.io/quotation.en/</guid>
-      <description>2022 You need to pay the price before getting it. No matter what the price is, it must be unforgettable! 🍔 People can&amp;rsquo;t make money beyond their knowledge💴 Whatever doesn&amp;rsquo;t defeat you simply makes you stronger💪</description>
-    </item>
-    
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://isouthrain.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于</title>
       <link>https://isouthrain.github.io/about/</link>
@@ -35,12 +17,12 @@
     </item>
     
     <item>
-      <title>语录</title>
-      <link>https://isouthrain.github.io/quotation/</link>
-      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
+      <title>Shortcode</title>
+      <link>https://isouthrain.github.io/post/20230310-hugoshortcodeuse/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://isouthrain.github.io/quotation/</guid>
-      <description>2022 遵循自己的内心活下去, 不要回首往事, 昨天是历史, 今天是礼物, 明天是未知的, 未知的事而不应放在当下担忧 !! 美好的事情终会到来🍮 得到之前都是需要</description>
+      <guid>https://isouthrain.github.io/post/20230310-hugoshortcodeuse/</guid>
+      <description>Shortcode *使用请将 a 去掉* youtube 1 {a{&amp;lt; youtube Hffajfw&amp;gt;}} alig 1 2 3 {a{&amp;lt; align left &amp;#34;文字居左&amp;#34; &amp;gt;}} {a{&amp;lt; align center &amp;#34;文字居中&amp;#34; &amp;gt;}} {a{&amp;lt; align right &amp;#34;文字居右&amp;#3</description>
     </item>
     
     <item>
@@ -149,6 +131,15 @@
       
       <guid>https://isouthrain.github.io/post/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/</guid>
       <description>使用以下方法后 git push 再也不用一直输入 账号密码了! git push 每次都要输入账号密码? 从此解决 正文👇 首先配置 Git 个人信息 依此输入以下两个命令: 配置你的 GitHub 邮箱</description>
+    </item>
+    
+    <item>
+      <title>语录</title>
+      <link>https://isouthrain.github.io/quotation/</link>
+      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://isouthrain.github.io/quotation/</guid>
+      <description>2022 遵循自己的内心活下去, 不要回首往事, 昨天是历史, 今天是礼物, 明天是未知的, 未知的事而不应放在当下担忧 !! 美好的事情终会到来🍮 得到之前都是需要</description>
     </item>
     
     <item>

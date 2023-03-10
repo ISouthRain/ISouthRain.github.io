@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on ISouthRain</title>
-    <link>https://isouthrain.github.io/tags/hugo/</link>
+    <link>https://isouthrain.github.io/categories/hugo/</link>
     <description>Recent content in Hugo on ISouthRain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://isouthrain.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://isouthrain.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shortcode</title>
       <link>https://isouthrain.github.io/post/20230310-hugoshortcodeuse/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://isouthrain.github.io/post/20230310-hugoshortcodeuse/</guid>
       <description>Shortcode *使用请将 a 去掉* youtube 1 {a{&amp;lt; youtube Hffajfw&amp;gt;}} alig 1 2 3 {a{&amp;lt; align left &amp;#34;文字居左&amp;#34; &amp;gt;}} {a{&amp;lt; align center &amp;#34;文字居中&amp;#34; &amp;gt;}} {a{&amp;lt; align right &amp;#34;文字居右&amp;#3</description>
-    </item>
-    
-    <item>
-      <title>Hugo LoveIt 添加 Algolia 搜索</title>
-      <link>https://isouthrain.github.io/post/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia/</link>
-      <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://isouthrain.github.io/post/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia/</guid>
-      <description>前言 Hugo 添加 Algolia 搜索, 本文以 LoveIt 主题为例 LoveIt 启用 Algolia 搜索 添加以下代码在你的 config.toml, 根据自己情况填写 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 [params] [params.search] enable = true #</description>
     </item>
     
   </channel>
