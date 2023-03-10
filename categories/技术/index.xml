@@ -17,15 +17,6 @@
     </item>
     
     <item>
-      <title>WSL Emacs</title>
-      <link>https://isouthrain.github.io/post/2022-07-03-windowsemacsforwsl/</link>
-      <pubDate>Sun, 03 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://isouthrain.github.io/post/2022-07-03-windowsemacsforwsl/</guid>
-      <description>前言 由于 Windows 的某些原因使用 Emacs 总会那么的不方便或者不好用, 有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点 所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux</description>
-    </item>
-    
-    <item>
       <title>Emacs Gnus 使用 Gmail</title>
       <link>https://isouthrain.github.io/post/2022-06-04-gnus-use-gmail.zh-ch/</link>
       <pubDate>Sat, 04 Jun 2022 00:00:00 +0000</pubDate>
