@@ -3,23 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://isouthrain.github.io/en/about/</loc>
-    <lastmod>2023-03-14T09:18:04+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://isouthrain.github.io/zh-cn/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://isouthrain.github.io/en/about/"
-                />
+    <lastmod>2023-03-14T09:28:11+00:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://isouthrain.github.io/zh-cn/categories/"
+                hreflang="zh"
+                href="https://isouthrain.github.io/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -30,8 +20,8 @@
     <loc>https://isouthrain.github.io/en/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://isouthrain.github.io/zh-cn/"
+                hreflang="zh"
+                href="https://isouthrain.github.io/zh/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -42,8 +32,8 @@
     <loc>https://isouthrain.github.io/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
-                href="https://isouthrain.github.io/zh-cn/tags/"
+                hreflang="zh"
+                href="https://isouthrain.github.io/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
