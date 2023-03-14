@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Telegram 收发微信消息 - ISouthRain</title><meta name="Description" content="Freedom and Peace 自由与和平"><meta property="og:title" content="Telegram 收发微信消息" />
+<meta property="og:description" content="2022-08-30 更新 📍📍全部帐号可用, 不支持网页版的也可以使用了, 使用本教程就可以正常使用 📍📍 Telegram收发微信消息(可以不需要购买服务器，单纯手机" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://isouthrain.github.io/post/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/" /><meta property="og:image" content="http://isouthrain.github.io/"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-28T00:00:00+00:00" /><meta property="og:site_name" content="ISouthRain" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://isouthrain.github.io/"/>
+
+<meta name="twitter:title" content="Telegram 收发微信消息"/>
+<meta name="twitter:description" content="2022-08-30 更新 📍📍全部帐号可用, 不支持网页版的也可以使用了, 使用本教程就可以正常使用 📍📍 Telegram收发微信消息(可以不需要购买服务器，单纯手机"/>
+<meta name="application-name" content="ISouthRain">
+<meta name="apple-mobile-web-app-title" content="ISouthRain"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://isouthrain.github.io/post/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/" /><link rel="prev" href="http://isouthrain.github.io/post/2022-01-12-org-protocol-capture-html/" /><link rel="next" href="http://isouthrain.github.io/post/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Telegram 收发微信消息",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/isouthrain.github.io\/post\/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF\/"
+        },"genre": "post","keywords": "TelegramBot, 微信","wordcount":  1290 ,
+        "url": "http:\/\/isouthrain.github.io\/post\/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF\/","datePublished": "2022-03-20T00:00:00+00:00","dateModified": "2022-04-28T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "ISouthRain","logo": "https:\/\/raw.githubusercontent.com\/ISouthRain\/ISouthRain.github.io\/main\/android-chrome-192x192.png"},"author": {
+                "@type": "Person",
+                "name": "ISouthRain"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="ISouthRain"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        data-srcset="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 1.5x, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        title="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png" />ISouthRain</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/post/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="ISouthRain"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        data-srcset="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 1.5x, https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png 2x"
+        data-sizes="auto"
+        alt="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png"
+        title="https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/android-chrome-192x192.png" />ISouthRain</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/post/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">Telegram 收发微信消息</h1><div class="content" id="content"><h3 id="2022-08-30-更新">2022-08-30 更新</h3>
+<h3 id="全部帐号可用-不支持网页版的也可以使用了-使用本教程就可以正常使用-">📍📍全部帐号可用, 不支持网页版的也可以使用了, 使用本教程就可以正常使用 📍📍</h3>
+<h4 id="telegram收发微信消息可以不需要购买服务器单纯手机也可以">Telegram收发微信消息(可以不需要购买服务器，单纯手机也可以)</h4>
+<h3 id="-在开始本教程之前请你确认你的微信号是否支持网页端登录如果不支持请离开">📍📍 在开始本教程之前，请你确认你的微信号是否支持网页端登录，如果不支持请离开</h3>
+<ul>
+<li><a href="https://wx.qq.com/" target="_blank" rel="noopener noreffer">微信网页版入口</a></li>
+<li>也可以试试 先登录 <a href="https://filehelper.weixin.qq.com/" target="_blank" rel="noopener noreffer">微信文件传输助手网页版</a> 再去登录网页版</li>
+</ul>
+<h3 id="概述">概述</h3>
+<p>微信浪费电是大家都知道的，但奈何亲朋好友都在用没法换，只能自己另有他寻了，所以有了本教程。使用TG的好处懂得都懂</p>
+<h5 id="需要使用科学上网才能进行登录android用户直接挂vpn就可以购买服务器的可以使用外国服务器或者国内的服务器给服务器上代理就可以了">需要使用科学上网才能进行登录，Android用户直接挂VPN就可以，购买服务器的可以使用外国服务器，或者国内的服务器给服务器上代理就可以了</h5>
+<hr>
+<hr>
+<p><em><strong>本教程声明</strong></em> Android手机不需要购买服务器<br>
+此教程没有以下功能</p>
+<ul>
+<li>没有朋友圈</li>
+<li>没有红包</li>
+<li>不能发语音（可以收听）</li>
+<li>不能发位置</li>
+<li>类似Web微信</li>
+<li>部分文件、图片、表情等多媒体文件会被网页版微信截断，即收不到任何数据， 尤以表情为甚。因此造成的偶发现象，会提醒用户使用移动客户端查看。</li>
+</ul>
+<h5 id="目前只有ubuntu系统能把功能都实现所以本教程使用ubuntu系统">目前只有Ubuntu系统能把功能都实现，所以本教程使用Ubuntu系统</h5>
+<hr>
+<h5 id="需要一点点linux知识不会也没有关系耐心看跟着做就好了">需要一点点Linux知识，不会也没有关系，耐心看跟着做就好了</h5>
+<hr>
+<h4 id="android用户可以使用termux安装一个ubuntu系统就可以了在ubuntu进行配置就好了很完美了">Android用户可以使用Termux安装一个Ubuntu系统就可以了,在Ubuntu进行配置就好了，很完美了！</h4>
+<h5 id="关于-termux-可以直接去下载完全免费很省电耗电量可以忽略不计">关于 Termux 可以直接去下载，完全免费，很省电，耗电量可以忽略不计</h5>
+<hr>
+<hr>
+<h5 id="termux安装ubuntu">Termux安装Ubuntu</h5>
+<p>更新下软件包：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg update
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>打开软件，输入以下代码按回车：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg install wget openssl-tool proot -y &amp;&amp; hash -r &amp;&amp; wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh &amp;&amp; bash ubuntu.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<p>输入以下代码进入Ubuntu系统：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./start-ubuntu.sh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h4 id="回到本教程开始搭建tg收发微信消息">回到本教程，开始搭建TG收发微信消息</h4>
+<ol>
+<li>先更新系统软件：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt update &amp;&amp; apt upgrade -y
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>下载必要依赖：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt install ffmpeg python3-pip python3-dev python3-setuptools libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libmagic-dev -y
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>安装EH转发机器人和主从通道:</li>
+</ol>
+<ul>
+<li>安装EFB：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip3 install ehforwarderbot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>安装TG机器人</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip3 install efb-telegram-master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>微信端：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip3 install git+https://github.com/ehForwarderBot/efb-wechat-slave
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="现在做完了服务器工作再去申请一个机器人">现在做完了服务器工作，再去申请一个机器人</h5>
+<ol>
+<li>打开TG搜索 @botfather</li>
+<li>发送 /newbot 创建自已的机器人</li>
+<li>给自已的机器人取个称呼（随便取）</li>
+<li>给自已的机器人取个用户名，必须是以 bot 结尾（例如Wechatbot）注意可能被人取了就另外再打个bot结尾的名称，必须是英文</li>
+<li>创建后你会得到一个API（也可以称 token），复制下来</li>
+<li>配置机器人：</li>
+</ol>
+<ul>
+<li>输入 /setprivacy 发送，选择你的机器人，点Disable</li>
+<li>输入 /setjoingroups 发送，选择你的机器人，点Enable</li>
+<li>输入 /setcommands 发送，选择你的机器人，输入以下内容(全部一起发，不是一条条发)还有其他功能自己可以去摸索:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">link - 将会话绑定到 Telegram 群组
+</span></span><span class="line"><span class="cl">chat - 生成会话头
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>返回telegram主界面，搜索按扭🔍，搜索@get_id_bot，进入点开始会得到你的telegram id</li>
+</ul>
+<hr>
+<ol>
+<li>服务器上操作或者Termux操作（Android用户一定要在Ubuntu上操作）</li>
+</ol>
+<ul>
+<li>下载编辑软件vim：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt install vim
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>编辑文件：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vim ~/.ehforwarderbot/profiles/default/config.yaml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>进入后点一下键盘 i</p>
+<ul>
+<li>把以下代码复制进去：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">master_channel: blueset.telegram
+</span></span><span class="line"><span class="cl">slave_channels:
+</span></span><span class="line"><span class="cl">- blueset.wechat
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>按下键盘的 ESC 再输入英文状态下的 :  输入 wq 后回车，就这样保存文件并退出了</li>
+<li>继续输入：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vim ~/.ehforwarderbot/profiles/default/blueset.telegram/config.yaml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>按上面的方法复制一下代码进去：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">token: &#34;机器人的API&#34;
+</span></span><span class="line"><span class="cl">admins: [用户ID]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>把上面的 机器人API 和 用户ID 换成你刚才在TG用那两个机器人得到的（符号不要改）</p>
+<hr>
+<h5 id="把-vpn-挂在后台才可以登录">把 VPN 挂在后台才可以登录</h5>
+<h5 id="运行登录你的微信">运行登录你的微信</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-basic" data-lang="basic"><span class="line"><span class="cl"><span class="vg">ehforwarderbot</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="一定要用扫码登录不能用图片导入登录">一定要用扫码登录，不能用图片导入登录</h5>
+</div><div id="comments"><div id="utterances"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
+            </noscript></div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.97.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/ISouthRain" target="_blank">ISouthRain</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"title","label":null,"lightTheme":"github-light","repo":"ISouthRain/ISouthRain.github.io"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
