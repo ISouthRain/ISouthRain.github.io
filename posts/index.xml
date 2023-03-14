@@ -1,12 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>ISouthRain</title>
-        <link>http://isouthrain.github.io/</link>
-        <description>Freedom and Peace 自由与和平</description>
+        <title>所有文章 - ISouthRain</title>
+        <link>http://isouthrain.github.io/posts/</link>
+        <description>所有文章 | ISouthRain</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>isouthrain@gmail.com (ISouthRain)</managingEditor>
-            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Thu, 15 Dec 2022 00:00:00 &#43;0000</lastBuildDate>
-            <atom:link href="http://isouthrain.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>isouthrain@gmail.com (ISouthRain)</webMaster><lastBuildDate>Thu, 15 Dec 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://isouthrain.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Emacs use-package 包管理器</title>
     <link>http://isouthrain.github.io/20221215-emacs-use-package/</link>
     <pubDate>Thu, 15 Dec 2022 00:00:00 &#43;0000</pubDate>
