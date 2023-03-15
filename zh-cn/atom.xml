@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">ISouthRain</title>
     <subtitle type="html">ISouthRain Blog</subtitle>
-    <updated>2023-03-15T09:27:23&#43;00:00</updated>
+    <updated>2023-03-15T11:45:22&#43;00:00</updated>
     <id>https://isouthrain.github.io/zh-cn/</id>
     <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/" />
     <link rel="self" type="application/atom&#43;xml" href="https://isouthrain.github.io/zh-cn/atom.xml" />
@@ -2499,7 +2499,7 @@ ALGOLIA_ADMIN_KEY=
 &lt;/div&gt;
 &lt;/div&gt;&lt;h5 id=&#34;效果如下-1&#34;&gt;效果如下&lt;/h5&gt;
 &lt;video poster=&#34;效果动图&#34;  width=&#34;360&#34; height=&#34;240&#34; controls&gt;
-    &lt;source src=&#34;https://raw.githubusercontent.com/ISouthRain/ISouthRain.github.io/main/attach/2022-04-30-Markdown语法.zh-cn.md/折叠列表.mp4&#34; type=&#34;video/mp4&#34;&gt;
+    &lt;source src=&#34;https://isouthrain.github.io/zh-cn/attach/2022-04-30-Markdown语法.zh-cn.md/折叠列表.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;  
 &lt;h4 id=&#34;表格&#34;&gt;表格&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
