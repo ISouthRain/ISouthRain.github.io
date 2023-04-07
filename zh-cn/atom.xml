@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">ISouthRain</title>
     <subtitle type="html">ISouthRain Blog</subtitle>
-    <updated>2023-03-15T15:29:52&#43;00:00</updated>
+    <updated>2023-04-07T11:48:14&#43;00:00</updated>
     <id>https://isouthrain.github.io/zh-cn/</id>
     <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/" />
     <link rel="self" type="application/atom&#43;xml" href="https://isouthrain.github.io/zh-cn/atom.xml" />
@@ -18,9 +18,9 @@
     <generator uri="https://gohugo.io/" version="0.97.3">Hugo</generator>
         <entry>
             <title type="text">Hugo Theme MemE 主题改进</title>
-            <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/20230315--hugothemememe__hugo/" />
-            <id>https://isouthrain.github.io/zh-cn/post/20230315--hugothemememe__hugo/</id>
-            <updated>2023-03-15T14:59:43&#43;08:00</updated>
+            <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/20230315--hugothemememe--hugo/" />
+            <id>https://isouthrain.github.io/zh-cn/post/20230315--hugothemememe--hugo/</id>
+            <updated>2023-04-07T17:08:43&#43;08:00</updated>
             <published>2023-03-15T00:00:00&#43;00:00</published>
             <author>
                     <name>ISouthRain</name>
@@ -29,7 +29,10 @@
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">MemE 主题改进</summary>
             
-                <content type="html">&lt;h2 id=&#34;目录添加至-侧边&#34;&gt;目录添加至 侧边&lt;/h2&gt;
+                <content type="html">&lt;h2 id=&#34;目录更改至侧边&#34;&gt;目录更改至侧边&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/reuixiy/hugo-theme-meme/commit/b27fb1954baaa1bc5d94e19b1c838af1ba1a931d&#34;&gt;+修改目录显示位置 · reuixiy/hugo-theme-meme@b27fb19 · GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;修改-assets-scss-base-data-attributes-dot-scss&#34;&gt;修改 ~/assets/scss/base/_data-attributes.scss&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;末尾添加&lt;/li&gt;
@@ -268,58 +271,15 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;enableTOC&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#启用目录&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;displayTOCPlace&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;right&amp;#34;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 目录显示位置&lt;/span&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;enableTOC&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;#启用目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;displayTOCPlace&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;right&amp;#34;&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;# 目录显示位置&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Options: &amp;#34;left&amp;#34; | &amp;#34;center&amp;#34; | &amp;#34;right&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;####################&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# 注意&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;displayTOCNum&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 仅在显示位置为 `center` 时可用&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://isouthrain.github.io/zh-cn/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://isouthrain.github.io/zh-cn/tags/hugo/" term="Hugo" label="Hugo" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Hugo Shortcode</title>
-            <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/20230310-hugoshortcodeuse/" />
-            <id>https://isouthrain.github.io/zh-cn/post/20230310-hugoshortcodeuse/</id>
-            <updated>2023-03-15T16:32:55&#43;08:00</updated>
-            <published>2023-03-10T00:00:00&#43;00:00</published>
-            <author>
-                    <name>ISouthRain</name>
-                    <uri>https://isouthrain.github.io/</uri>
-                    <email>isouthrain@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Shortcode 使用时请将 a 去掉 innerlink 内链 1 2 使用时 将 a 去掉 {a{&amp;lt; innerlink src=&amp;#34;/post/20230315-hugothemememe_hugo.md&amp;#34; &amp;gt;}} Hugo Theme MemE 主题改进 日期: 2023-03-15 &amp;nbsp; 标签: #Hugo&amp;nbsp; 目……</summary>
-            
-                <content type="html">&lt;h2 id=&#34;shortcode&#34;&gt;Shortcode&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;自定义-shortcode-简码&#34;&gt;自定义 Shortcode 简码&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;使用时请将 a 去掉&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;innerlink-内链&#34;&gt;innerlink 内链&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -335,22 +295,6 @@
 &lt;/div&gt;&lt;div style=&#34;height: 150px;margin: 1em auto;position: relative;
         box-shadow: 0 2px 4px rgb(0 0 0 / 25%), 0 0 2px rgb(0 0 0 / 25%);
         border-radius: 15px;padding: 23px;max-width: 780px;background: var(--entry);&#34;&gt;
-    
-    
-    &lt;div style=&#34;font-size: 22px; font-weight: 600&#34;&gt;
-        &lt;a target=&#34;_blank&#34; href=&#34;https://isouthrain.github.io/zh-cn/post/20230315--hugothemememe__hugo/&#34; style=&#34;box-shadow: none&#34;&gt;Hugo Theme MemE 主题改进&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;span style=&#34;font-size: 14px; color: #999&#34;&gt;
-        日期: 2023-03-15
-        &amp;nbsp;
-        标签:
-        
-            #Hugo&amp;nbsp;
-        
-    &lt;/span&gt;
-    &lt;div style=&#34;font-size: 14px; line-height: 1.825;max-height: 75px; overflow: hidden;margin-top: 5px;&#34;&gt;
-        目录添加至 侧边 修改 ~/assets/scss/base/_data-attributes.scss 末尾添加 1 2 3 4 5 6 7 [data-toc-place=&amp;amp;#34;left&amp;amp;#34;] { left: 0; } [data-toc-place=&amp;amp;#34;right&amp;amp;#34;] { right: 0; } 修改 ~/assets/scss/layout/_single.scss 在 .footnotes 前面的一行添 ......
-    &lt;/div&gt;
     
     
 &lt;/div&gt;
@@ -630,6 +574,11 @@
 &lt;blockquote class=&#34;quote-center&#34;&gt;
         &lt;p&gt;十里青山远，潮平路带沙&lt;br&gt;数声啼鸟怨年华&lt;br&gt;又是凄凉时候，在天涯&lt;br&gt;白露收残月，清风散晓霞&lt;br&gt;绿杨堤畔问荷花&lt;br&gt;记得年时沽酒，那人家&lt;/p&gt;&lt;/blockquote&gt; 
 
+&lt;h2 id=&#34;参考链接&#34;&gt;参考链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/liwenyip/hugo-easy-gallery&#34;&gt;GitHub - liwenyip/hugo-easy-gallery: Automagical css image gallery in Hugo us&amp;hellip;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://guanqr.com/tech/website/hugo-shortcodes-customization/&#34;&gt;自定义 Hugo Shortcodes 简码 | 荷戟独彷徨&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
             
             
@@ -1071,7 +1020,7 @@
             <title type="text">WSL Emacs</title>
             <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/2022-07-03-windowsemacsforwsl/" />
             <id>https://isouthrain.github.io/zh-cn/post/2022-07-03-windowsemacsforwsl/</id>
-            <updated>2023-03-13T20:09:46&#43;08:00</updated>
+            <updated>2023-04-07T17:10:40&#43;08:00</updated>
             <published>2022-07-03T00:00:00&#43;00:00</published>
             <author>
                     <name>ISouthRain</name>
@@ -1125,7 +1074,6 @@
 &lt;li&gt;运行 wsl, 直接在 Powershell 输入 wsl 运行&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;wsl-文件所在目录-wsl&#34;&gt;WSL 文件所在目录 \\wsl$&lt;/h2&gt;
-&lt;h2 id=&#34;自觉安装-emacs&#34;&gt;自觉安装 Emacs&lt;/h2&gt;
 &lt;h2 id=&#34;安装-gui-支持&#34;&gt;安装 GUI 支持&lt;/h2&gt;
 &lt;h3 id=&#34;下载并安装-mobaxterm&#34;&gt;下载并安装 MobaXterm&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://mobaxterm.mobatek.net/download.html&#34;&gt;MobaXterm Xserver with SSH, telnet, RDP, VNC and X11 - Download&lt;/a&gt;&lt;/p&gt;
