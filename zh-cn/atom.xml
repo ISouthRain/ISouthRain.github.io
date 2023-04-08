@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">ISouthRain</title>
     <subtitle type="html">ISouthRain Blog</subtitle>
-    <updated>2023-04-07T13:19:29&#43;00:00</updated>
+    <updated>2023-04-08T14:49:46&#43;00:00</updated>
     <id>https://isouthrain.github.io/zh-cn/</id>
     <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/" />
     <link rel="self" type="application/atom&#43;xml" href="https://isouthrain.github.io/zh-cn/atom.xml" />
@@ -16,6 +16,157 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.97.3">Hugo</generator>
+        <entry>
+            <title type="text">CheatEngine 加速 百度云盘</title>
+            <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/20230406-cheatenginetobaiduyunpan/" />
+            <id>https://isouthrain.github.io/zh-cn/post/20230406-cheatenginetobaiduyunpan/</id>
+            <updated>2023-04-08T22:47:49&#43;08:00</updated>
+            <published>2023-04-08T00:00:00&#43;00:00</published>
+            <author>
+                    <name>ISouthRain</name>
+                    <uri>https://isouthrain.github.io/</uri>
+                    <email>isouthrain@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 国内的网盘的体验真的一言难尽, 速度方面更是令人难受, 百度云盘 最为突出!! 百度云盘……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;国内的网盘的体验真的一言难尽, 速度方面更是令人难受, 百度云盘 最为突出!!&lt;/p&gt;
+&lt;p&gt;百度云盘的限速是真的难受, 只有 几十kb, 企业想赚钱可以理解, 但吃相太难看了!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本文以 百度云盘 为列, 其它网盘类似&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
+&lt;p&gt;借助 CheatEngine 修改 软件识别时间 以达到加速的效果,&lt;/p&gt;
+&lt;p&gt;比如你要下载 1.2 m/s 的东西, 如果你 10k/s , 那么需要 120s&lt;/p&gt;
+&lt;p&gt;假设你在 9:30 开始下载, 那么你在 9:32 会下载完,&lt;/p&gt;
+&lt;p&gt;使用 CheatEngine 就是将 时间加速, 让软件识别到你时间变了, 相当于下载时间也跟上了,&lt;/p&gt;
+&lt;p&gt;就是你将时间加速 120 倍, 那么你的下载速度就是 1.2m/s&lt;/p&gt;
+&lt;h2 id=&#34;是否有风险&#34;&gt;是否有风险?&lt;/h2&gt;
+&lt;p&gt;完全无风险, 因为你没有做违规的事!!&lt;/p&gt;
+&lt;h2 id=&#34;所需工具&#34;&gt;所需工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cheatengine.org/&#34;&gt;Cheat Engine (免费开源)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;你的云盘软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;效果如下&#34;&gt;效果如下:&lt;/h2&gt;
+&lt;h3 id=&#34;修改前&#34;&gt;修改前&lt;/h3&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=/css/hugo-easy-gallery.css /&gt;
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bf%ae%e6%94%b9%e5%89%8d.gif&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bf%ae%e6%94%b9%e5%89%8d.gif&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;修改后&#34;&gt;修改后&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可以看到, 虽然软件速度不变, 但是下载进度加快了, 网络占用也多, 说明加速成功了&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bf%ae%e6%94%b9%e5%90%8e.gif&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bf%ae%e6%94%b9%e5%90%8e.gif&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;使用步骤&#34;&gt;使用步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将你的网盘软件正在下载&amp;hellip;&amp;hellip;&lt;/li&gt;
+&lt;li&gt;打开 任务管理器 (以 Windows 为列)&lt;/li&gt;
+&lt;li&gt;打开 PID 进程(右键名称), 将 PID 勾上&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4/20230408T221642_PID.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4/20230408T221642_PID.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;找到你网盘软件的 PID 进程, 将你的网盘软件正在下载&amp;hellip;&amp;hellip;
+&lt;ul&gt;
+&lt;li&gt;看到 进程在使用网络 , PID 为 13140
+&lt;img src=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4/20230408T222045_PID.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;打开 CheatEngine 软件
+&lt;img src=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4/20230408T222216_CheatEngine.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;找到对应的 PID , 右键显示 10进制 , 并 点击对应的 PID 进程, 然后点击 打开
+&lt;img src=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4/20230408T222607_Cheat.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;将你的 网盘软件 下载暂停&lt;/li&gt;
+&lt;li&gt;开启加速, 开到最大, 并点击 应用
+&lt;img src=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4/20230408T222710_1.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;打开你的 网盘软件 继续下载, 就可以看到下载非常快了
+&lt;ul&gt;
+&lt;li&gt;注意: 可能你看到的网盘软件下载速度还是一样慢, 别担心, 你已经加速了, 你可以看一下你的 网络下载占用, 或者看网盘软件的下载进度是不是加快了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bf%ae%e6%94%b9%e5%90%8e.gif&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bf%ae%e6%94%b9%e5%90%8e.gif&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;参考来源&#34;&gt;参考来源&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;感谢 零度解说&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=_hJanO6tpDs&#34;&gt;https://www.youtube.com/watch?v=_hJanO6tpDs&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;视频解说&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/_hJanO6tpDs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://isouthrain.github.io/zh-cn/categories/%E6%8A%80%E6%9C%AF/" term="技术" label="技术" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://isouthrain.github.io/zh-cn/tags/%E4%BA%91%E7%9B%98/" term="云盘" label="云盘" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Hugo Theme MemE 主题改进</title>
             <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/20230315--hugothemememe__hugo/" />
