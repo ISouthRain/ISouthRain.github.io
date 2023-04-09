@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 09 Apr 2023 03:12:41 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sun, 09 Apr 2023 03:17:33 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://isouthrain.github.io/zh-cn/rss.xml" />
         
@@ -113,7 +113,7 @@
 &lt;/li&gt;
 &lt;li&gt;打开 CheatEngine 软件
 &lt;img src=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4/20230408T222216_CheatEngine.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
-&lt;li&gt;找到对应的 PID , 右键显示 10进制 , 并 点击对应的 PID 进程, 然后点击 打开
+&lt;li&gt;右键显示 10进制, 找到对应的 PID , 并 点击对应的 PID 进程, 然后点击 打开
 &lt;img src=&#34;https://isouthrain.github.io/zh-cn/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4/20230408T222607_Cheat.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;将你的 网盘软件 下载暂停&lt;/li&gt;
 &lt;li&gt;开启加速, 开到最大, 并点击 应用
