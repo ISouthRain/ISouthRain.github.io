@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">ISouthRain</title>
     <subtitle type="html">ISouthRain Blog</subtitle>
-    <updated>2023-04-09T03:04:41&#43;00:00</updated>
+    <updated>2023-04-09T03:12:41&#43;00:00</updated>
     <id>https://isouthrain.github.io/zh-cn/</id>
     <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/" />
     <link rel="self" type="application/atom&#43;xml" href="https://isouthrain.github.io/zh-cn/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">CheatEngine 提升 云盘下载速度(百度云盘 为例)</title>
             <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/20230406-cheatenginetobaiduyunpan/" />
             <id>https://isouthrain.github.io/zh-cn/post/20230406-cheatenginetobaiduyunpan/</id>
-            <updated>2023-04-09T11:03:20&#43;08:00</updated>
+            <updated>2023-04-09T11:11:53&#43;08:00</updated>
             <published>2023-04-08T00:00:00&#43;00:00</published>
             <author>
                     <name>ISouthRain</name>
@@ -48,6 +48,10 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;效果如下&#34;&gt;效果如下:&lt;/h2&gt;
 &lt;h3 id=&#34;修改前&#34;&gt;修改前&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;下图演示因为我录这个之前使用过加速了, 所以下载总进度一下子跳那么多&lt;/li&gt;
+&lt;li&gt;可以看到下载进度加的非常缓慢(甚至不动)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;link rel=&#34;stylesheet&#34; href=/css/hugo-easy-gallery.css /&gt;
 &lt;div class=&#34;box&#34; &gt;

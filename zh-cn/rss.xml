@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 09 Apr 2023 03:04:41 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sun, 09 Apr 2023 03:12:41 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://isouthrain.github.io/zh-cn/rss.xml" />
         
@@ -57,6 +57,10 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;效果如下&#34;&gt;效果如下:&lt;/h2&gt;
 &lt;h3 id=&#34;修改前&#34;&gt;修改前&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;下图演示因为我录这个之前使用过加速了, 所以下载总进度一下子跳那么多&lt;/li&gt;
+&lt;li&gt;可以看到下载进度加的非常缓慢(甚至不动)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;link rel=&#34;stylesheet&#34; href=/css/hugo-easy-gallery.css /&gt;
 &lt;div class=&#34;box&#34; &gt;
