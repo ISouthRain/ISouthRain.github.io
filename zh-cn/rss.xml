@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 19 May 2023 09:29:36 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 19 May 2023 14:57:46 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://isouthrain.github.io/zh-cn/rss.xml" />
         
@@ -48,6 +48,19 @@
 &lt;h4 id=&#34;让-minibuffer-支持使用-拼音-查找&#34;&gt;让 Minibuffer 支持使用 &lt;code&gt;拼音&lt;/code&gt; 查找&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;例如在 org-mode 中使用 consult-imenu 命令时, 弹出的内容可以使用 拼音 查找&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=/css/hugo-easy-gallery.css /&gt;
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://isouthrain.github.io/zh-cn/attach/20230519--EmacsIssue--Emacs.zh-cn/Emacs_Issue/20230519T191024_1.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://isouthrain.github.io/zh-cn/attach/20230519--EmacsIssue--Emacs.zh-cn/Emacs_Issue/20230519T191024_1.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
 &lt;li&gt;以下方法本人是使用 orderless, vertico, consult, 三个包配合用的&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!--listend--&gt;
