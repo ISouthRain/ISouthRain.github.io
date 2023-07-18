@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">ISouthRain</title>
     <subtitle type="html">ISouthRain Blog</subtitle>
-    <updated>2023-05-19T14:57:46&#43;00:00</updated>
+    <updated>2023-07-18T10:26:59&#43;00:00</updated>
     <id>https://isouthrain.github.io/zh-cn/</id>
     <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/" />
     <link rel="self" type="application/atom&#43;xml" href="https://isouthrain.github.io/zh-cn/atom.xml" />
@@ -17,10 +17,313 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.97.3">Hugo</generator>
         <entry>
+            <title type="text">AMD 5700G OpenCore EFI</title>
+            <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/20230717--opencoreinstallguide--apple/" />
+            <id>https://isouthrain.github.io/zh-cn/post/20230717--opencoreinstallguide--apple/</id>
+            <updated>2023-07-18T18:24:21&#43;08:00</updated>
+            <published>2023-07-17T00:00:00&#43;00:00</published>
+            <author>
+                    <name>ISouthRain</name>
+                    <uri>https://isouthrain.github.io/</uri>
+                    <email>isouthrain@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">AMD 5700G 黑苹果引导配置详细说明</summary>
+            
+                <content type="html">&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
+&lt;p&gt;一份 CPU 为 AMD 5700G 使用 OpenCore 引导安装 黑苹果 的 EFI 配置文件详细说明.&lt;/p&gt;
+&lt;p&gt;搭配 硬件购买清单.&lt;/p&gt;
+&lt;h2 id=&#34;安装后系统整体状态&#34;&gt;安装后系统整体状态&lt;/h2&gt;
+&lt;p&gt;CPU 5700G 的 GPU(核显) 显示有点问题, 貌似无法在浏览器(Edge)播放视频, 其余显示正常, 显卡已经驱动.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这是已知问题, 但原因未知(官方原话)&lt;/strong&gt; &lt;a href=&#34;https://nootinc.github.io/nred#chrome-chromium-based-browsers-and-apps-like-sublime-text-cause-graphical-artefacts-amongst-other-problems&#34;&gt;NootedRed | Noot&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;系统预览&#34;&gt;系统预览&lt;/h2&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=/css/hugo-easy-gallery.css /&gt;
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://isouthrain.github.io/zh-cn/attach/20230717--OpenCoreInstallGuide--Apple.zh-cn/%e7%b3%bb%e7%bb%9f%e5%85%a8%e5%9b%be/20230717T205800_1.jpg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://isouthrain.github.io/zh-cn/attach/20230717--OpenCoreInstallGuide--Apple.zh-cn/%e7%b3%bb%e7%bb%9f%e5%85%a8%e5%9b%be/20230717T205800_1.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;硬件购买来源-硬件详细信息&#34;&gt;硬件购买来源 &amp;ndash; 硬件详细信息&lt;/h2&gt;
+&lt;h3 id=&#34;声明-警告&#34;&gt;声明 - 警告🛑&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;这只是适合个人使用的 硬件 清单, 如果你购买了, 本人没有任何利益, 即个人无须承担任何责任!!!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;慎买&lt;/strong&gt;, &lt;strong&gt;如果你在购买过程中遇到了任何问题, 与本人无关&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://item.jd.com/100023834197.html&#34;&gt;【AMD5700G】AMD 锐龙R7 5700G核显搭微星 MSI PRO B550M-P GEN3 板U套装 CPU主板套装【行情 报价 价格 评测】-京东&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU: 5700G&lt;/li&gt;
+&lt;li&gt;核显: Vega8&lt;/li&gt;
+&lt;li&gt;送散热风扇&lt;/li&gt;
+&lt;li&gt;声卡: Realtek ALC897(注意, 这不是 扬声器), 只有耳机才能用&lt;/li&gt;
+&lt;li&gt;主板 无 WIFI 模块, 无蓝牙模块&lt;/li&gt;
+&lt;li&gt;有线网口: Realtek RTL8111&lt;/li&gt;
+&lt;li&gt;USB 接口全部正常可用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://item.jd.com/100018551171.html?cu=true&amp;amp;utm_source=api.shop.xuelg.com&amp;amp;utm_medium=jingfen&amp;amp;utm_campaign=t_2011134073_&amp;amp;utm_term=410ab07ca8cc4c04babd8e33888d34b7&#34;&gt;【致态TiPlus5000 1TB】致态（ZhiTai）长江存储 1TB SSD固态硬盘 NVMe M.2接口 TiPlus5000系列【行情 报价 价格&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1T 固态硬盘&lt;/li&gt;
+&lt;li&gt;与配置无关, 可根据个人情况购买其他品牌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://item.jd.com/100005625372.html&#34;&gt;【CrucialCT8G4DFS832A】英睿达（Crucial）8GB DDR4 3200频率 台式机内存条【行情 报价 价格 评测】-京东&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2 条 8G 内存条
+与配置无关, 可根据个人情况购买其他品牌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://item.jd.com/100013455568.html&#34;&gt;【小米Redmi显示器1A 23.8英寸】小米Redmi 1A 23.8英寸显示器 IPS技术 三微边设计 低蓝光 HDMI接口 电脑办公显示器显示屏 红&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;显示器&lt;/li&gt;
+&lt;li&gt;与配置无关, 可根据个人情况购买其他品牌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://item.jd.com/100000400375.html&#34;&gt;【航嘉jumper600S】航嘉（Huntkey）JUMPER600S 额定600W 电脑电源(主动PFC/温控风扇/宽幅电压/RTX2080/高转换效率&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电源&lt;/li&gt;
+&lt;li&gt;与配置无关, 可根据个人情况购买其他品牌
+如果你不购买独立显卡(不打游戏), 该配置 300 w 足以&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://item.jd.com/100025663574.html&#34;&gt;【先马平头哥M2】先马（SAMA）平头哥M2 电脑机箱台式机matx小机箱 玻璃侧透/支持240水冷/背线/USB3.0/独立电源仓/防尘易清洗【行情 报&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;机箱&lt;/li&gt;
+&lt;li&gt;与配置无关, 可根据个人情况购买其他品牌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://item.jd.com/100014366815.html&#34;&gt;【ThermalrightAX120 R SE】利民（Thermalright）AX120 R SE CPU风冷散热器AGHP逆重力热管支持LGA1700&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;散热风扇&lt;/li&gt;
+&lt;li&gt;与配置无关, 可根据个人情况购买其他品牌
+如果你不打游戏, 不需要那么强的散热, 送的就可以, 不需要购买&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最低 32G 的 U盘&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mac 镜像
+&lt;a href=&#34;https://mp.weixin.qq.com/s/sqSf78SyVZGs7kQ31hjD3w&#34;&gt;Mac13.4 黑国小兵镜像 OpenCore/Clover/WinPE 系统引导&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;通过该链接 &lt;strong&gt;喜欢作者&lt;/strong&gt; 打赏就可以获取镜像, 并按照原文制作镜像&lt;/p&gt;
+&lt;p&gt;也可以以下方式获取镜像:
+&lt;a href=&#34;https://blog.daliansky.net/categories/%E4%B8%8B%E8%BD%BD/&#34;&gt;分类: 下载 | 黑果小兵的部落阁&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;总价 &amp;lt;= 3500 人民币&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;配置文件&#34;&gt;配置文件&lt;/h2&gt;
+&lt;h3 id=&#34;acpi&#34;&gt;ACPI&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SSDT-CPUR.aml&lt;/li&gt;
+&lt;li&gt;SSDT-EC-USBX-DESKTOP.aml&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;drivers&#34;&gt;Drivers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;HfsPlus.efi&lt;/li&gt;
+&lt;li&gt;OpenRuntime.efi&lt;/li&gt;
+&lt;li&gt;ResetNvramEntry.efi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;kexts&#34;&gt;Kexts&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;AMDRyzenCPUPowerManagement.kext&lt;/li&gt;
+&lt;li&gt;AppleALC.kext&lt;/li&gt;
+&lt;li&gt;AppleMCEReporterDisabler.kext&lt;/li&gt;
+&lt;li&gt;Lilu.kext&lt;/li&gt;
+&lt;li&gt;NootedRed.kext &amp;ndash; CPU 5700G Vega8 核显驱动&lt;/li&gt;
+&lt;li&gt;NVMeFix.kext&lt;/li&gt;
+&lt;li&gt;RadeonSensor.kext&lt;/li&gt;
+&lt;li&gt;RealtekRTL8111.kext&lt;/li&gt;
+&lt;li&gt;RestrictEvents.kext&lt;/li&gt;
+&lt;li&gt;SMCAMDProcessor.kext&lt;/li&gt;
+&lt;li&gt;SMCRadeonGPU.kext&lt;/li&gt;
+&lt;li&gt;USBToolBox.kext&lt;/li&gt;
+&lt;li&gt;UTBMap.kext&lt;/li&gt;
+&lt;li&gt;VirtualSMC.kext&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tools&#34;&gt;Tools&lt;/h3&gt;
+&lt;p&gt;OpenShell.efi&lt;/p&gt;
+&lt;h2 id=&#34;config-dot-plist&#34;&gt;config.plist&lt;/h2&gt;
+&lt;h3 id=&#34;booter&#34;&gt;Booter&lt;/h3&gt;
+&lt;h4 id=&#34;quirks&#34;&gt;Quirks&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;DevirtualiseMmio &amp;ndash;&amp;gt; NO&lt;/li&gt;
+&lt;li&gt;EnableWriteUnprotector &amp;ndash;&amp;gt; NO&lt;/li&gt;
+&lt;li&gt;RebuildAppleMemoryMap &amp;ndash;&amp;gt; YES&lt;/li&gt;
+&lt;li&gt;ResizeAppleGpuBars &amp;ndash;&amp;gt; 0&lt;/li&gt;
+&lt;li&gt;SetupVirtualMap &amp;ndash;&amp;gt; NO&lt;/li&gt;
+&lt;li&gt;SyncRuntimePermissions &amp;ndash;&amp;gt; YES&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;kernel&#34;&gt;Kernel&lt;/h3&gt;
+&lt;h4 id=&#34;emulate&#34;&gt;Emulate&lt;/h4&gt;
+&lt;p&gt;DummyPowerManagement &amp;ndash;&amp;gt; YES&lt;/p&gt;
+&lt;h4 id=&#34;patch&#34;&gt;Patch&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;查看&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html#patch-2&#34;&gt;Ryzen and Threadripper(17h and 19h) | OpenCore Install Guide&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;quirks&#34;&gt;Quirks&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;PanicNoKextDump &amp;ndash;&amp;gt; YES&lt;/li&gt;
+&lt;li&gt;PowerTimeoutKernelPanic &amp;ndash;&amp;gt; YES&lt;/li&gt;
+&lt;li&gt;ProvideCurrentCpuInfo &amp;ndash;&amp;gt; YES&lt;/li&gt;
+&lt;li&gt;XhciPortLimit &amp;ndash;&amp;gt; NO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;misc&#34;&gt;Misc&lt;/h3&gt;
+&lt;h4 id=&#34;boot&#34;&gt;Boot&lt;/h4&gt;
+&lt;p&gt;HideAuxiliary &amp;ndash;&amp;gt; YES&lt;/p&gt;
+&lt;h4 id=&#34;debug&#34;&gt;Debug&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;AppleDebug &amp;ndash;&amp;gt; YES&lt;/li&gt;
+&lt;li&gt;ApplePanic &amp;ndash;&amp;gt; YES&lt;/li&gt;
+&lt;li&gt;DisableWatchDog &amp;ndash;&amp;gt; YES&lt;/li&gt;
+&lt;li&gt;Target &amp;ndash;&amp;gt; 67&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;security&#34;&gt;Security&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;AllowSetDefault &amp;ndash;&amp;gt; YES&lt;/li&gt;
+&lt;li&gt;BlacklistAppleUpdate &amp;ndash;&amp;gt; YES&lt;/li&gt;
+&lt;li&gt;ScanPolicy &amp;ndash;&amp;gt; 0&lt;/li&gt;
+&lt;li&gt;SecureBootModel &amp;ndash;&amp;gt; Disable&lt;/li&gt;
+&lt;li&gt;Vault &amp;ndash;&amp;gt; Optional&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;nvram&#34;&gt;NVRAM&lt;/h3&gt;
+&lt;h4 id=&#34;add&#34;&gt;Add&lt;/h4&gt;
+&lt;h5 id=&#34;7c436110-ab2a-4bbb-a880-fe41995c9f82&#34;&gt;7C436110-AB2A-4BBB-A880-FE41995C9F82&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;boot-args 参数&lt;/p&gt;
+&lt;p&gt;-v&lt;/p&gt;
+&lt;p&gt;debug=0x100&lt;/p&gt;
+&lt;p&gt;keepsyms=1&lt;/p&gt;
+&lt;p&gt;alcid=11 (&lt;a href=&#34;https://github.com/acidanthera/AppleALC/wiki/Supported-codecs&#34;&gt;Supported codecs · acidanthera/AppleALC Wiki · GitHub&lt;/a&gt;), 如果11无法驱动, 请找到 ALC897 重新找个号码填入, 之后重启电脑&lt;/p&gt;
+&lt;p&gt;-radcodec&lt;/p&gt;
+&lt;p&gt;radpg=15&lt;/p&gt;
+&lt;p&gt;unfairgva=1&lt;/p&gt;
+&lt;p&gt;nvda_drv_vrl=1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;csr-active-config &amp;ndash;&amp;gt; FF0F0000&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;run-efi-updater &amp;ndash;&amp;gt; NO&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;prev-lang:kbd &amp;ndash;&amp;gt; en-US:0&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;delete&#34;&gt;Delete&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;WriteFlash &amp;ndash;&amp;gt; YES&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;playformlnfo&#34;&gt;Playformlnfo&lt;/h3&gt;
+&lt;p&gt;以下信息请自建:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SystemProductName&lt;/li&gt;
+&lt;li&gt;SystemSerialNumber&lt;/li&gt;
+&lt;li&gt;MLB&lt;/li&gt;
+&lt;li&gt;SystemUUID&lt;/li&gt;
+&lt;li&gt;ROM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;uefi&#34;&gt;UEFI&lt;/h3&gt;
+&lt;h4 id=&#34;quirks&#34;&gt;Quirks&lt;/h4&gt;
+&lt;p&gt;UnblockFsConnect &amp;ndash;&amp;gt; NO&lt;/p&gt;
+&lt;h2 id=&#34;后续工作&#34;&gt;后续工作&lt;/h2&gt;
+&lt;h3 id=&#34;硬盘划分&#34;&gt;硬盘划分&lt;/h3&gt;
+&lt;p&gt;个人建议使用 双系统(Win/Mac) 或者 三系统(Win/Mac/Linux)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先安装 Windos (大概 128G), 安装 Windows 时随便安装, 直接点整个硬盘安装, 后续在 Windows 划分硬盘空间&lt;/li&gt;
+&lt;li&gt;再压缩 128G 给 Mac&lt;/li&gt;
+&lt;li&gt;剩余的做数据存放盘(Win/Mac)都可用&lt;/li&gt;
+&lt;li&gt;硬盘顺序应该是
+Windos(128G) &amp;ndash; Mac(128G) &amp;ndash; 数据存放盘(NTFS格式)&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://isouthrain.github.io/zh-cn/attach/20230717--OpenCoreInstallGuide--Apple.zh-cn/%e5%90%8e%e7%bb%ad%e5%b7%a5%e4%bd%9c/20230718T182406_1.png&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://isouthrain.github.io/zh-cn/attach/20230717--OpenCoreInstallGuide--Apple.zh-cn/%e5%90%8e%e7%bb%ad%e5%b7%a5%e4%bd%9c/20230718T182406_1.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;为知识付费-知识是无价的&#34;&gt;为知识付费, 知识是无价的&lt;/h3&gt;
+&lt;p&gt;Buy me Coffee ☕️, Thanks you!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.gzj.life/zh-cn/support/&#34;&gt;Support | ISouthRain&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bios-主板设置&#34;&gt;BIOS 主板设置&lt;/h2&gt;
+&lt;p&gt;BIOS 主板 有什么启用就启用什么, 有什么就禁用什么
+&lt;a href=&#34;https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html#amd-bios-settings&#34;&gt;Ryzen and Threadripper(17h and 19h) | OpenCore Install Guide&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;硬件扩展&#34;&gt;硬件扩展&lt;/h2&gt;
+&lt;h3 id=&#34;wifi&#34;&gt;WIFI&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.comfast.cn/index.php?m=content&amp;amp;c=index&amp;amp;a=show&amp;amp;catid=13&amp;amp;id=74&#34;&gt;CF-811AC - 无线网卡 - COMFAST&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这个链接我没有在用, 大概是这个!!&lt;/p&gt;
+&lt;p&gt;本人很早在 某宝 上购买的, 但链接已经失效了!&lt;/p&gt;
+&lt;p&gt;CF-811AC WIFI适配器, Mac 系统安装驱动包, 需要关闭 SIP 才能安装 &lt;a href=&#34;https://sspai.com/post/55066&#34;&gt;macOS 开启或关闭 SIP - 少数派&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/chris1111/Wireless-USB-Adapter&#34;&gt;GitHub - chris1111/Wireless-USB-Adapter&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;蓝牙&#34;&gt;蓝牙&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://m.tb.cn/h.5bA91E3?tk=eCOcdGQu0L2&#34;&gt;B3526蓝牙适配器&lt;/a&gt;
+官方说 12以下免驱, 我没试过&lt;/p&gt;
+&lt;p&gt;12 以上请按照以下方法驱动:&lt;/p&gt;
+&lt;h4 id=&#34;添加以下-kexts&#34;&gt;添加以下  Kexts&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;AirportBrcmFixup.kext&lt;/li&gt;
+&lt;li&gt;BlueToolFixup.kext&lt;/li&gt;
+&lt;li&gt;BrcmBluetoothInjector.kext&lt;/li&gt;
+&lt;li&gt;BrcmFirmwareData.kext&lt;/li&gt;
+&lt;li&gt;BrcmPatchRAM3.kext&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果无法打开蓝牙: 请看 13.4 修复方&lt;/p&gt;
+&lt;h4 id=&#34;ventura-13-dot-4-修复&#34;&gt;Ventura 13.4 修复&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/read/cv24122599&#34;&gt;Ventura13.4蓝牙失效解决方案-黑苹果 - 哔哩哔哩&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
+&lt;p&gt;此处只是记录个人的配置历程, 如果能帮助到你那就更好了!&lt;/p&gt;
+&lt;h3 id=&#34;过程中遇到的难题&#34;&gt;过程中遇到的难题&lt;/h3&gt;
+&lt;h4 id=&#34;5700g-vega8-核显驱动&#34;&gt;5700G Vega8 核显驱动&lt;/h4&gt;
+&lt;p&gt;这个官方的并没有这个的驱动, 都是第三方做的, 感谢第三方, 感谢 OpenCore !!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/NootInc/NootedRed&#34;&gt;GitHub - NootInc/NootedRed: Lilu plugin for AMD Vega iGPUs&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;蓝牙驱动&#34;&gt;蓝牙驱动&lt;/h4&gt;
+&lt;p&gt;卖方给的驱动方法简直是太乱了&lt;/p&gt;
+&lt;h3 id=&#34;mac-osx-使用的问题&#34;&gt;Mac OSX 使用的问题&lt;/h3&gt;
+&lt;p&gt;因为 苹果公司 没有在电脑上使用过 AMD 相关GPU, 所以核显驱动是个大问题&lt;/p&gt;
+&lt;p&gt;目前我遇到的问题是 Edge 浏览器无法正常看视频, 其他浏览器正常, 具体信息请看:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nootinc.github.io/nred#chrome-chromium-based-browsers-and-apps-like-sublime-text-cause-graphical-artefacts-amongst-other-problems&#34;&gt;NootedRed | Noot&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;增强-win-mac-体验&#34;&gt;增强 Win/Mac 体验&lt;/h2&gt;
+&lt;p&gt;首先解决的问题是如何在 Mac 访问 Win 的数据盘, 试过好几款软件, 大多数失效&lt;/p&gt;
+&lt;p&gt;推荐使用: &lt;a href=&#34;https://zh.okaapps.com/product/1580856488&#34;&gt;Omi NTFS磁盘专家 - Mac上最好的免费Windows NTFS管理工具, 支持Apple Silicon M1芯片 - Oka Apps&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在使用 Windows/MacOSX 时, 最好将个人数据文件放到 数据盘&lt;/p&gt;
+&lt;h2 id=&#34;本文的配置仓库&#34;&gt;本文的配置仓库&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ISouthRain/OpenCore-5700G-EFI&#34;&gt;GitHub - ISouthRain/OpenCore-5700G-EFI: AMD 5700G CPU For OpenCore EFI Config&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">Emacs Issue</title>
             <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/20230519--emacsissue--emacs/" />
             <id>https://isouthrain.github.io/zh-cn/post/20230519--emacsissue--emacs/</id>
-            <updated>2023-05-19T22:51:52&#43;08:00</updated>
+            <updated>2023-05-22T09:53:32&#43;08:00</updated>
             <published>2023-05-19T00:00:00&#43;00:00</published>
             <author>
                     <name>ISouthRain</name>
@@ -36,7 +339,7 @@
 &lt;p&gt;这可能会给遇到相同问题时的 Emacser 有所帮助!&lt;/p&gt;
 &lt;p&gt;如果你遇到了某些 Emacs 相关问题, 并解决了, 可以在下面 &lt;strong&gt;评论区&lt;/strong&gt; 记录下来, 我会尝试添加到文章当中&lt;/p&gt;
 &lt;h3 id=&#34;issue&#34;&gt;Issue&lt;/h3&gt;
-&lt;h4 id=&#34;让-minibuffer-支持使用-拼音-查找&#34;&gt;让 Minibuffer 支持使用 &lt;code&gt;拼音&lt;/code&gt; 查找&lt;/h4&gt;
+&lt;h4 id=&#34;1-dot-让-minibuffer-支持使用-拼音-查找&#34;&gt;1. 让 Minibuffer 支持使用 &lt;code&gt;拼音&lt;/code&gt; 查找&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;例如在 org-mode 中使用 consult-imenu 命令时, 弹出的内容可以使用 拼音 查找&lt;/li&gt;
 &lt;/ul&gt;
@@ -93,7 +396,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;windows-org-mode-使用-gnupg--gpg--加密后无法解密-加密信息出现-m&#34;&gt;Windows org-mode 使用 GnuPG(GPG) 加密后无法解密, 加密信息出现 ^M&lt;/h4&gt;
+&lt;/div&gt;&lt;h4 id=&#34;2-dot-windows-org-mode-使用-gnupg--gpg--加密后无法解密-加密信息出现-m&#34;&gt;2. Windows org-mode 使用 GnuPG(GPG) 加密后无法解密, 加密信息出现 ^M&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;比如使用 org-crypt 这个包进行 GPG 加密时, 却无法解密&lt;/li&gt;
 &lt;li&gt;原因是 &lt;strong&gt;文件换行符&lt;/strong&gt; 问题, Windows 系统的默认换行符是 CRLF, 只需将 CRLF 改为再加密就不会出现 CRLF&lt;/li&gt;
@@ -124,7 +427,7 @@
 &lt;li&gt;方法二: &lt;strong&gt;加密之前&lt;/strong&gt; 将文件的换行符改为 LF , 例如:
 C-x &amp;lt;RET&amp;gt; f utf-8-unix &amp;lt;RET&amp;gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;windows-emacs-使用-daemon-方式打开文件时-文件名乱码导致无法打开对应文件&#34;&gt;Windows Emacs 使用 Daemon 方式打开文件时, 文件名乱码导致无法打开对应文件&lt;/h4&gt;
+&lt;h4 id=&#34;3-dot-windows-emacs-使用-daemon-方式打开文件时-文件名乱码导致无法打开对应文件&#34;&gt;3. Windows Emacs 使用 Daemon 方式打开文件时, 文件名乱码导致无法打开对应文件&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;我使用添加以下配置修复
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -155,7 +458,7 @@ C-x &amp;lt;RET&amp;gt; f utf-8-unix &amp;lt;RET&amp;gt;&lt;/li&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;org-mode-的-table-表格没有对齐问题&#34;&gt;Org-mode 的 Table 表格没有对齐问题&lt;/h4&gt;
+&lt;h4 id=&#34;3-dot-org-mode-的-table-表格没有对齐问题&#34;&gt;3. Org-mode 的 Table 表格没有对齐问题&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;这个是由于 中文字体 和 英文字体宽度不等宽导致, 设置Emacs使用某些 &lt;strong&gt;等宽字体&lt;/strong&gt; 就可以解决&lt;/li&gt;
 &lt;li&gt;等宽字体, 两个例子
@@ -253,7 +556,7 @@ C-x &amp;lt;RET&amp;gt; f utf-8-unix &amp;lt;RET&amp;gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;ripgrep-无法搜索中文&#34;&gt;Ripgrep 无法搜索中文&lt;/h4&gt;
+&lt;h4 id=&#34;4-dot-ripgrep-无法搜索中文&#34;&gt;4. Ripgrep 无法搜索中文&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;例如使用以下命令无法搜索中文:
 &lt;ul&gt;
@@ -421,10 +724,10 @@ C-x &amp;lt;RET&amp;gt; f utf-8-unix &amp;lt;RET&amp;gt;&lt;/li&gt;
         </entry>
     
         <entry>
-            <title type="text">财富自由之路–李笑来(观后感)</title>
+            <title type="text">财富自由之路–李笑来</title>
             <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/20230504--%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF--%E6%88%90%E9%95%BF/" />
             <id>https://isouthrain.github.io/zh-cn/post/20230504--%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF--%E6%88%90%E9%95%BF/</id>
-            <updated>2023-05-07T22:19:11&#43;08:00</updated>
+            <updated>2023-05-28T17:53:44&#43;08:00</updated>
             <published>2023-05-01T00:00:00&#43;00:00</published>
             <author>
                     <name>ISouthRain</name>
@@ -1695,6 +1998,50 @@ C-x &amp;lt;RET&amp;gt; f utf-8-unix &amp;lt;RET&amp;gt;&lt;/li&gt;
                             
                             
                                 <category scheme="https://isouthrain.github.io/zh-cn/categories/emacs/" term="Emacs" label="Emacs" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://isouthrain.github.io/zh-cn/tags/emacs/" term="Emacs" label="Emacs" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">如何摆脱大数据</title>
+            <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/2022-11-30-howtoescapebigdata/" />
+            <id>https://isouthrain.github.io/zh-cn/post/2022-11-30-howtoescapebigdata/</id>
+            <updated>2023-06-16T21:48:26&#43;08:00</updated>
+            <published>2022-11-30T00:00:00&#43;00:00</published>
+            <author>
+                    <name>ISouthRain</name>
+                    <uri>https://isouthrain.github.io/</uri>
+                    <email>isouthrain@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">如何摆脱大数据追踪</summary>
+            
+                <content type="html">&lt;h2 id=&#34;如何摆脱大数据追踪&#34;&gt;如何摆脱大数据追踪&lt;/h2&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://isouthrain.github.io/zh-cn/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" term="大数据" label="大数据" />
                             
                         
                     
