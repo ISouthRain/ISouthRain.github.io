@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">ISouthRain</title>
     <subtitle type="html">ISouthRain Blog</subtitle>
-    <updated>2024-01-21T05:43:59&#43;00:00</updated>
+    <updated>2024-03-28T13:32:55&#43;00:00</updated>
     <id>https://isouthrain.github.io/zh-cn/</id>
     <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/" />
     <link rel="self" type="application/atom&#43;xml" href="https://isouthrain.github.io/zh-cn/atom.xml" />
@@ -16,6 +16,140 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.97.3">Hugo</generator>
+        <entry>
+            <title type="text">Corne无线分体键盘构建指南</title>
+            <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/20240328--crone%E6%97%A0%E7%BA%BF%E5%88%86%E4%BD%93%E9%94%AE%E7%9B%98%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8D%97--life/" />
+            <id>https://isouthrain.github.io/zh-cn/post/20240328--crone%E6%97%A0%E7%BA%BF%E5%88%86%E4%BD%93%E9%94%AE%E7%9B%98%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8D%97--life/</id>
+            <updated>2024-03-28T21:10:41&#43;08:00</updated>
+            <published>2024-03-28T00:00:00&#43;00:00</published>
+            <author>
+                    <name>ISouthRain</name>
+                    <uri>https://isouthrain.github.io/</uri>
+                    <email>isouthrain@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">预览 文章适用人群 想要构建一个 无线 分体键盘, 并且当前还没有购买任何 构建键盘所需物品, 还……</summary>
+            
+                <content type="html">&lt;h2 id=&#34;预览&#34;&gt;预览&lt;/h2&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=/css/hugo-easy-gallery.css /&gt;
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://isouthrain.github.io/zh-cn/ox-hugo/20240328T203634_2024-03-28-20-04-30-288.jpg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://isouthrain.github.io/zh-cn/ox-hugo/20240328T203634_2024-03-28-20-04-30-288.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;文章适用人群&#34;&gt;文章适用人群&lt;/h2&gt;
+&lt;p&gt;想要构建一个 &lt;strong&gt;无线&lt;/strong&gt; &lt;strong&gt;分体键盘&lt;/strong&gt;, 并且当前还没有购买任何 &lt;strong&gt;构建键盘所需物品&lt;/strong&gt;, 还处于研究如何构建阶段&lt;/p&gt;
+&lt;p&gt;Corne 键盘 组装起来非常简单, 至少 &lt;strong&gt;需要购买的物品&lt;/strong&gt;  都可以在 &lt;strong&gt;中国淘宝&lt;/strong&gt; 买的到&lt;/p&gt;
+&lt;p&gt;本文并不是一步一步教你从头开始 组装键盘, 而是对 &lt;a href=&#34;https://github.com/foostan/crkbd/&#34;&gt;GitHub - foostan/crkbd: Corne keyboard, a split keyboard with 3x6 column stag&amp;hellip;&lt;/a&gt;
+项目 &lt;strong&gt;增加&lt;/strong&gt; 无线(蓝牙) 组装 补充&lt;/p&gt;
+&lt;p&gt;关于如何构建 Corne 键盘 你应该看官方文档&lt;/p&gt;
+&lt;h2 id=&#34;项目说明&#34;&gt;项目说明&lt;/h2&gt;
+&lt;p&gt;个人构建Crone键盘使用的方案:  Corne cherry V3&lt;/p&gt;
+&lt;p&gt;(这是必须的)键盘固件使用的是: &lt;a href=&#34;https://zmk.dev/&#34;&gt;Hello from ZMK Firmware | ZMK Firmware&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;QMK 固件不支持无线(蓝牙)&lt;/p&gt;
+&lt;p&gt;键盘布局推荐: &lt;a href=&#34;https://github.com/ISouthRain/miryoku_zmk&#34;&gt;GitHub - ISouthRain/miryoku_zmk: Miryoku is an ergonomic, minimal, orthogonal&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其它 Corne 方案应该也是可以的&lt;/p&gt;
+&lt;h2 id=&#34;有关续航&#34;&gt;有关续航&lt;/h2&gt;
+&lt;p&gt;不算 休眠, 睡眠 浪费的电, 不开 LED, 不开RGB:
+左边(带OLED): 96个小时一直使用时间, 所以它一定高于 96个小时&lt;/p&gt;
+&lt;p&gt;右边(不带OLED): 124个小时一直使用时间, 所以它一定高于 124个小时&lt;/p&gt;
+&lt;p&gt;20天续航是没有什么问题的&lt;/p&gt;
+&lt;h2 id=&#34;重要物件变更说明--必读&#34;&gt;重要物件变更说明(必读)&lt;/h2&gt;
+&lt;p&gt;无线 指的是 &lt;strong&gt;蓝牙&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;无论 ProMicro 还是 Elite-C 都是有线的
+不应该购买这两个,  你应该购买 支持蓝牙的 主控制板&lt;/p&gt;
+&lt;p&gt;例如: &lt;a href=&#34;https://item.taobao.com/item.htm?_u=s2074cr45ea4dc&amp;amp;id=729260528560&amp;amp;spm=a1z09.2.0.0.23b72e8dsQ302u&amp;amp;sku_properties=1627207:27319606183&#34;&gt;nrf52840&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以下器件变更 &lt;strong&gt;只适用于&lt;/strong&gt; 亚克力 板当外壳的&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Spacer M2 7.5mm 和 Spacer M2 9mm 金属柱
+应该换成 M2 7mm 和 M2 12mm 尺寸&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;除此之外, 还必须购买电池, 每半个 Corne 键盘大概可以放下三个电池:
+厚度只能最厚 5mm&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;401030-130毫安
+厚度: 4mm
+宽度: 10mm
+长度: 30mm&lt;/li&gt;
+&lt;li&gt;505065-2500毫安
+厚度: 5mm
+宽度: 50mm
+长度: 65mm&lt;/li&gt;
+&lt;li&gt;503040-600毫安
+厚度: 5mm
+宽度: 30mm
+长度: 40mm&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这是一个建议:
+你可以在 PCB板 多开两个孔, 用于 &lt;strong&gt;电池供电&lt;/strong&gt;, 因为这样会比较优雅, 当然修改 PCB 需要一定电路版知识&lt;/p&gt;
+&lt;p&gt;这是建议性的, 不是必须的, 如果你没有修改两个孔, 电池供电看来是这样的:
+&lt;img src=&#34;https://isouthrain.github.io/zh-cn/ox-hugo/20240328T202926_Inked3_LI.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果要开孔, 应该在 黄线 位置&lt;/strong&gt;, 就是 主控制板 的最前面部分的下面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;焊铁, 应该买个圆圆尖尖的, 这样可以将 &lt;strong&gt;亚克力板&lt;/strong&gt; 开一个洞, 它是用于构建键盘必须的
+&lt;a href=&#34;https://item.jd.com/100007421121.html&#34;&gt;焊铁链接&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;使用-焊铁-手动给亚克力板开孔-用于支撑-pcb-板子-地下放置电池&#34;&gt;使用 焊铁 手动给亚克力板开孔, 用于支撑 PCB 板子 地下放置电池&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://isouthrain.github.io/zh-cn/ox-hugo/20240328T202111_1.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://isouthrain.github.io/zh-cn/ox-hugo/20240328T202147_2.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;如何给电池充电&#34;&gt;如何给电池充电??&lt;/h2&gt;
+&lt;p&gt;直接用 USB 数据线 插入 主控制板 口 即可&lt;/p&gt;
+&lt;h2 id=&#34;如果帮助了你-考虑请我喝杯饮料&#34;&gt;如果帮助了你, 考虑请我喝杯饮料&lt;/h2&gt;
+&lt;p&gt;知识是无价的, 也是便宜的 !!&lt;/p&gt;
+&lt;p&gt;Buy me Coffee ☕️, Thanks you!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.gzj.life/zh-cn/support/&#34;&gt;Support | ISouthRain&lt;/a&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://isouthrain.github.io/zh-cn/categories/%E7%94%9F%E6%B4%BB/" term="生活" label="生活" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://isouthrain.github.io/zh-cn/tags/%E5%AE%A2%E5%88%B6%E5%8C%96/" term="客制化" label="客制化" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://isouthrain.github.io/zh-cn/tags/crone/" term="Crone" label="Crone" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">分体键盘的思考</title>
             <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/20240120--%E5%88%86%E4%BD%93%E9%94%AE%E7%9B%98%E7%9A%84%E6%80%9D%E8%80%83--life/" />
@@ -2197,50 +2331,6 @@ C-x &amp;lt;RET&amp;gt; f utf-8-unix &amp;lt;RET&amp;gt;&lt;/li&gt;
                             
                             
                                 <category scheme="https://isouthrain.github.io/zh-cn/categories/emacs/" term="Emacs" label="Emacs" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://isouthrain.github.io/zh-cn/tags/emacs/" term="Emacs" label="Emacs" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">如何摆脱大数据</title>
-            <link rel="alternate" type="text/html" href="https://isouthrain.github.io/zh-cn/post/2022-11-30-howtoescapebigdata/" />
-            <id>https://isouthrain.github.io/zh-cn/post/2022-11-30-howtoescapebigdata/</id>
-            <updated>2023-06-16T21:48:26&#43;08:00</updated>
-            <published>2022-11-30T00:00:00&#43;00:00</published>
-            <author>
-                    <name>ISouthRain</name>
-                    <uri>https://isouthrain.github.io/</uri>
-                    <email>isouthrain@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">如何摆脱大数据追踪</summary>
-            
-                <content type="html">&lt;h2 id=&#34;如何摆脱大数据追踪&#34;&gt;如何摆脱大数据追踪&lt;/h2&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://isouthrain.github.io/zh-cn/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" term="大数据" label="大数据" />
                             
                         
                     
