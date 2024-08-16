@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 28 Mar 2024 13:48:19 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 16 Aug 2024 15:12:30 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://isouthrain.github.io/zh-cn/rss.xml" />
         
@@ -4396,7 +4396,29 @@ admins: [用户ID]
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+                    <description>&lt;p&gt;Emacs Happy You Lief.&lt;/p&gt;
+&lt;h1 id=&#34;结语&#34;&gt;结语&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;本章不再更新, 愿您参与进 Emacs 生活..&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;自 2022 年起使用 Emacs 至今已有两年, 如今 Emacs 才是归属&amp;hellip;.&lt;/p&gt;
+&lt;p&gt;如今 ChatGPT 等 AI 工具的崛起, 个人定制 Emacs 成本更低, Emacs 非常好糊, 随便问问 AI 即可&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Emacs 优点:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;支持 Gui, 显示图片&lt;/li&gt;
+&lt;li&gt;Emacs EAF 框架的出现, 你可以使用 EAF 运行任何软件, 比如: Chroium 内核浏览器&lt;/li&gt;
+&lt;li&gt;Magit 支持 git 易上手插件, 让你不在学习 git 就可以使用 git&lt;/li&gt;
+&lt;li&gt;AI 工具的崛起, 对 Emacs 修改更加简单, 我没有学习 lisp 过, 也让 AI 帮我写了个两个关于 离线英语单词查询/git blame 显示的插件&lt;/li&gt;
+&lt;li&gt;Org 也支持了图片导入&lt;/li&gt;
+&lt;li&gt;Emacs minibuffer 配合 vertico/consult/marginalia/orderless/embark 之类的工具非常强大, 模糊搜索+拼音搜索, 几乎吊打所有 vim/neovim 输入命令框架.&lt;/li&gt;
+&lt;li&gt;Org-roam/org-capture 组织你的生活, Task list on you life.&lt;/li&gt;
+&lt;li&gt;nov-mode 阅读电子书, 配合 org-capture 做笔记.&lt;/li&gt;
+&lt;li&gt;你想干什么都行.&lt;/li&gt;
+&lt;li&gt;我非常高兴的实现:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;输入中文后自动翻译成英文, 不用那么麻烦&lt;/li&gt;
+&lt;li&gt;自动识别当前光标单词, 显示字典, 并自动播放音频纠正自己的读音(都是基于离线的)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs&lt;/strong&gt;
 &lt;strong&gt;Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读者根据自己的需求选择 Vim 还是 Emacs&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;编辑习惯&#34;&gt;编辑习惯&lt;/h2&gt;
@@ -4443,7 +4465,7 @@ admins: [用户ID]
 &lt;p&gt;&lt;strong&gt;Vim 只能查看文本之类的, 图片这些无法处理, 只能通过调用第三方应用才能处理查看&lt;/strong&gt;
 &lt;strong&gt;如果你非常需要 GTD 系统之类的, 那么 Emacs 是不二智选, 如果 你只是需要出来文本的,那么Vim更好&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Emacs 如果你使用的非常好, 非常6, 那么你将非常牛逼, 而且我估计你未来时不会再更换编辑器了&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;我个人是 Vim &amp;mdash;&amp;gt; Emacs &amp;mdash;&amp;gt; Vim 还是回到了 Vim&lt;/p&gt;
+&lt;p&gt;我个人是 Vim &amp;mdash;&amp;gt; Emacs &amp;mdash;&amp;gt; Vim 还是回到了 Vim &amp;mdash;&amp;gt; Emacs&lt;/p&gt;
 </description>
                 
                 
