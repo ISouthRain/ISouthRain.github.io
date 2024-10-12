@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>云盘 on ISouthRain Blog</title>
+    <link>https://isouthrain.github.io/zh-cn/tags/%E4%BA%91%E7%9B%98/</link>
+    <description>Recent content in 云盘 on ISouthRain Blog</description>
+    <image>
+      <title>ISouthRain Blog</title>
+      <url>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 31 Aug 2024 10:27:01 +0800</lastBuildDate>
+    <atom:link href="https://isouthrain.github.io/zh-cn/tags/%E4%BA%91%E7%9B%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CheatEngine 提升 云盘下载速度(百度云盘 为例)</title>
+      <link>https://isouthrain.github.io/zh-cn/post/20230406-cheatenginetobaiduyunpan/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/zh-cn/post/20230406-cheatenginetobaiduyunpan/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;国内的网盘的体验真的一言难尽, 速度方面更是令人难受, 百度云盘 最为突出!!&lt;/p&gt;
+&lt;p&gt;百度云盘的限速是真的难受, 只有 几十kb, 企业想赚钱可以理解, 但吃相太难看了!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本文以 百度云盘 为例, 其它网盘类似&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
+&lt;p&gt;借助 CheatEngine 修改 软件识别时间 以达到加速的效果,&lt;/p&gt;
+&lt;p&gt;比如你要下载 1.2 m/s 的东西, 如果你 10k/s , 那么需要 120s&lt;/p&gt;
+&lt;p&gt;假设你在 9:30 开始下载, 那么你在 9:32 会下载完,&lt;/p&gt;
+&lt;p&gt;使用 CheatEngine 就是将 时间加速, 让软件识别到你时间变了, 相当于下载时间也跟上了,&lt;/p&gt;
+&lt;p&gt;就是你将时间加速 120 倍, 那么你的下载速度就是 1.2m/s&lt;/p&gt;
+&lt;h2 id=&#34;是否有风险&#34;&gt;是否有风险?&lt;/h2&gt;
+&lt;p&gt;完全无风险, 因为你没有做违规的事!!&lt;/p&gt;
+&lt;h2 id=&#34;所需工具&#34;&gt;所需工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cheatengine.org/&#34;&gt;Cheat Engine (免费开源)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;你的云盘软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;效果如下&#34;&gt;效果如下:&lt;/h2&gt;
+&lt;h3 id=&#34;修改前&#34;&gt;修改前&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;下图演示因为我录这个之前使用过加速了, 所以下载总进度一下子跳那么多&lt;/li&gt;
+&lt;li&gt;可以看到下载进度加的非常缓慢(甚至不动)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bf%ae%e6%94%b9%e5%89%8d.gif&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;修改后&#34;&gt;修改后&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可以看到, 虽然软件速度不变, 但是下载进度加快了, 网络占用也多, 说明加速成功了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bf%ae%e6%94%b9%e5%90%8e.gif&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;使用步骤&#34;&gt;使用步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将你的网盘软件正在下载&amp;hellip;&amp;hellip;&lt;/li&gt;
+&lt;li&gt;打开 任务管理器 (以 Windows 为例)&lt;/li&gt;
+&lt;li&gt;打开 PID 进程(右键名称), 将 PID 勾上
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4/20230408T221642_PID.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;找到你网盘软件的 PID 进程, 将你的网盘软件正在下载&amp;hellip;&amp;hellip;
+&lt;ul&gt;
+&lt;li&gt;看到 进程在使用网络 , PID 为 13140
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4/20230408T222045_PID.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;打开 CheatEngine 软件
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4/20230408T222216_CheatEngine.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;右键显示 10进制, 找到对应的 PID , 并 点击对应的 PID 进程, 然后点击 打开
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4/20230408T222607_Cheat.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;将你的 网盘软件 下载暂停&lt;/li&gt;
+&lt;li&gt;开启加速, 开到最大, 并点击 应用
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4/20230408T222710_1.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;打开你的 网盘软件 继续下载, 就可以看到下载非常快了
+&lt;ul&gt;
+&lt;li&gt;注意: 可能你看到的网盘软件下载速度还是一样慢, 别担心, 你已经加速了, 你可以看一下你的 网络下载占用, 或者看网盘软件的下载进度是不是加快了
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bf%ae%e6%94%b9%e5%90%8e.gif&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考来源&#34;&gt;参考来源&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;感谢 零度解说&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
