@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 14 Mar 2023 22:46:31 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 12 Oct 2024 21:43:07 +0800</lastBuildDate>
     <atom:link href="https://isouthrain.github.io/zh-cn/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 主题 PaperMod 改进(今日诗词)</title>
+      <link>https://isouthrain.github.io/zh-cn/post/20241012--hugo%E4%B8%BB%E9%A2%98papermod%E6%94%B9%E8%BF%9B%E4%BB%8A%E6%97%A5%E8%AF%97%E8%AF%8D--hugo/</link>
+      <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/zh-cn/post/20241012--hugo%E4%B8%BB%E9%A2%98papermod%E6%94%B9%E8%BF%9B%E4%BB%8A%E6%97%A5%E8%AF%97%E8%AF%8D--hugo/</guid>
+      <description>PaperMod主题修改</description>
+    </item>
     <item>
       <title>Hugo LoveIt 添加 Algolia 搜索</title>
       <link>https://isouthrain.github.io/zh-cn/post/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia/</link>
