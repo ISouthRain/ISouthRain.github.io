@@ -85,6 +85,30 @@
 &lt;p&gt;无线键盘 固件: &lt;a href=&#34;https://zmk.dev&#34;&gt;Hello from ZMK Firmware | ZMK Firmware&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>(读)让时间陪你慢慢变富-定投改变命运</title>
+      <link>https://isouthrain.github.io/zh-cn/post/20230727--%E8%AE%A9%E6%97%B6%E9%97%B4%E6%85%A2%E6%85%A2%E9%99%AA%E4%BD%A0%E5%8F%98%E5%AF%8C-%E5%AE%9A%E6%8A%95%E6%94%B9%E5%8F%98%E5%91%BD%E8%BF%90--%E6%88%90%E9%95%BF/</link>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/zh-cn/post/20230727--%E8%AE%A9%E6%97%B6%E9%97%B4%E6%85%A2%E6%85%A2%E9%99%AA%E4%BD%A0%E5%8F%98%E5%AF%8C-%E5%AE%9A%E6%8A%95%E6%94%B9%E5%8F%98%E5%91%BD%E8%BF%90--%E6%88%90%E9%95%BF/</guid>
+      <description>&lt;p&gt;这是读 &lt;strong&gt;李笑来&lt;/strong&gt; 的书籍第二本了, 第一本是 &lt;strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;李笑来&lt;/strong&gt; 的书籍还是满有趣的, 至少对我来说就是一种全新的体验.&lt;/p&gt;
+&lt;p&gt;此本书也确实在讲投资, 关于如何投资, 但有收益的投资最有效的方法:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;定投大势所趋标, 并长期持有&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;那么投资的目标是什么?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;选大方向的投资&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;那么什么是大方向呢?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大局中的局部&lt;/strong&gt;, &lt;strong&gt;局部的局部&lt;/strong&gt;, 不要太细分了, 太细分就不能保证一定准确了&lt;/p&gt;
+&lt;p&gt;按照书中的说法是 &lt;strong&gt;未来所趋&lt;/strong&gt;, 也就是当年的 &lt;strong&gt;人工智能&lt;/strong&gt; 这一个大板块, 还有就是 AI 人工智能 需要大数据支持, 谁有数据就应该投谁(注意: 这是很早之前的说法, 现在不一定适用)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;需注意的是, 建议不要全部单独投资在某一个, 可以再投一个它的竞争对手, 投入比例可以细分&lt;/strong&gt;, 这是为了预防, 如果某一个跌了, 那它的竞争对手就很有可能会涨(&lt;em&gt;这是矛盾的&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;需要多久持有?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最少两个大周期&lt;/strong&gt;, 经历过两次大跌周期之后, 几年甚至十几年.&lt;/p&gt;
+&lt;p&gt;很多人都知道未来大势是什么的, 就是在投入的时候没有耐心等到大势到来, 死在了路上, 在期间 又买又卖, 交易的手续费真的是高的吓人啊.&lt;/p&gt;
+&lt;p&gt;很多人都是亏的也大多是因为没有将仅仅是闲钱投入当中, 投入的部分包含了生活应急费用, 当你需要这笔钱的时候它还没有收益.&lt;/p&gt;
+&lt;p&gt;又不得不拿出来, 如果处于亏钱的时候急需这点钱那就亏的更多.&lt;/p&gt;
+&lt;p&gt;所以投资只能是闲钱, 你不需要的钱, 几年甚至几十年都不需要的.&lt;/p&gt;
+&lt;p&gt;我估计这本书的目的估计是 李笑来 为了推广他的 BOX 而写的, 多次提到 BOX, 按照 李笑来 说法, BOX 是真的很有可能赚钱
+.(注意: 请详细阅读 BOX 的规则, 与本人无关, 本人没有接触)&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>AMD 5700G OpenCore EFI</title>
       <link>https://isouthrain.github.io/zh-cn/post/20230717--opencoreinstallguide--apple/</link>
       <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
@@ -138,6 +162,28 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -p &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; username@host -i ~/.ssh/id_rsa
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 如果创建密钥的时候设定了密码, 此处需要的密码是创建密钥的时候的密码, 不是服务器密码&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>财富自由之路–李笑来</title>
+      <link>https://isouthrain.github.io/zh-cn/post/20230504--%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF--%E6%88%90%E9%95%BF/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/zh-cn/post/20230504--%E8%B4%A2%E5%AF%8C%E8%87%AA%E7%94%B1%E4%B9%8B%E8%B7%AF--%E6%88%90%E9%95%BF/</guid>
+      <description>&lt;p&gt;我本以为这个专栏(以下简称 &amp;ldquo;书&amp;rdquo;)是教读者如何去做, 并做到 &amp;ldquo;财富自由&amp;rdquo; 的地步(发大财),结果超乎我的预料.&lt;/p&gt;
+&lt;p&gt;而此书主讲两个字:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;成长&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这本书对于我来说收获挺大的, 它激发了我主动去学习(准确来说是 &amp;ldquo;成长&amp;rdquo; )的欲望!!&lt;/p&gt;
+&lt;p&gt;成长都是一点点的成长, 只有你主动去学习了才会有效果,  多长时间才会看到效果??&lt;/p&gt;
+&lt;p&gt;可能是 1年 ?5年? 甚至是 10年..&lt;/p&gt;
+&lt;p&gt;人做事前应该考虑此事是否有助于个人成长, 哪怕一点点也好啊!&lt;/p&gt;
+&lt;p&gt;大脑是可以塑造, 可以变的更聪明, 与其说变得更聪明, 倒不如说是 &amp;ldquo;无他, 唯手熟尔&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;这些都是可以通过后天习得的, 是可以锻炼的, 就好像我现在写这个笔记是如此的毫无逻辑, 但我坚信我将来会写的更好&lt;/p&gt;
+&lt;p&gt;谁说不是呢? 我 120% 坚信, 纵使被你嘲讽掉了 20% , 我可是还有 100% 呢!!&lt;/p&gt;
+&lt;p&gt;哪怕那个时候还很遥远, 但我活在了 &amp;ldquo;未来&amp;rdquo;, 我很高兴.&lt;/p&gt;
+&lt;p&gt;以前, 现在, 未来&amp;hellip; 如果你把自己活在 &amp;ldquo;未来&amp;rdquo; , 那么你的生活感觉会变得更好, 当你遇到比较的时候, 你不如人, 但是别人的比较都是当下的, 而你活在了&amp;quot;未来&amp;quot;, 未来是指你把目标放在了未来, 而你现在所做的事是为了接近目标, 那么你就活在了 &amp;ldquo;未来&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;痛苦的是现在的你还没有任何成长, 甚至在短时间的未来也看不到你自己的成长, 请不要灰心, 你活在了 &amp;ldquo;未来&amp;rdquo; 就已经超出很多人了,&lt;/p&gt;
+&lt;p&gt;期间你会遇到嘲讽诋毁你的, &amp;ldquo;学这个有什么用呢, 还不是这个样子&amp;rdquo;, 别灰心, 因为他人看到了你开始做出改变(往成长方向), 你让他们感到不舒服了&lt;/p&gt;</description>
     </item>
     <item>
       <title>Git submodule 子模块</title>
