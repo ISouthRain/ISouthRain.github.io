@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ISouthRain Blog</title>
+    <link>https://isouthrain.github.io/en/</link>
+    <description>Recent content on ISouthRain Blog</description>
+    <image>
+      <title>ISouthRain Blog</title>
+      <url>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <atom:link href="https://isouthrain.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://isouthrain.github.io/en/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/en/about/</guid>
+      <description>&lt;p&gt;
+
+&lt;p style=&#34;text-align:center&#34;&gt;I will share what I have learned here, it is not limited to any field!&lt;/p&gt;
+
+
+
+&lt;p style=&#34;text-align:center&#34;&gt;Even I will share my life here, even how to make a delicious dish!&lt;/p&gt;
+
+
+
+&lt;p style=&#34;text-align:center&#34;&gt;If you learned here, then the blog completes its mission!&lt;/p&gt;
+
+
+
+&lt;p style=&#34;text-align:center&#34;&gt;Contact Me: &lt;a href=&#34;https://github.com/ISouthRain&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

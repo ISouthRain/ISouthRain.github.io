@@ -10,7 +10,7 @@
       <link>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.135.0</generator>
-    <language>zh-cn</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 31 Aug 2024 10:34:26 +0800</lastBuildDate>
     <atom:link href="https://isouthrain.github.io/zh-cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -1021,28 +1021,6 @@ augroup END
 &lt;/ul&gt;
 &lt;h3 id=&#34;对于-obsidian-个人建议&#34;&gt;对于 Obsidian 个人建议&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;个人目前&lt;/strong&gt;使用的是&lt;strong&gt;Obsidian&lt;/strong&gt;，因为配合插件的使用真的非常好用，而且可以掌控自己的数据，想保存在那就保存在哪。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>https://isouthrain.github.io/zh-cn/about.en/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://isouthrain.github.io/zh-cn/about.en/</guid>
-      <description>&lt;p&gt;
-
-&lt;p style=&#34;text-align:center&#34;&gt;I will share what I have learned here, it is not limited to any field!&lt;/p&gt;
-
-
-
-&lt;p style=&#34;text-align:center&#34;&gt;Even I will share my life here, even how to make a delicious dish!&lt;/p&gt;
-
-
-
-&lt;p style=&#34;text-align:center&#34;&gt;If you learned here, then the blog completes its mission!&lt;/p&gt;
-
-
-
-&lt;p style=&#34;text-align:center&#34;&gt;Contact Me: &lt;a href=&#34;https://github.com/ISouthRain&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
-&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
