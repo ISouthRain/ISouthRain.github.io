@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ISouthRain Blog</title>
+    <link>https://isouthrain.github.io/</link>
+    <description>Recent content on ISouthRain Blog</description>
+    <image>
+      <title>ISouthRain Blog</title>
+      <url>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 31 Aug 2024 10:34:26 +0800</lastBuildDate>
+    <atom:link href="https://isouthrain.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Corne无线分体键盘构建指南</title>
+      <link>https://isouthrain.github.io/post/20240328--crone%E6%97%A0%E7%BA%BF%E5%88%86%E4%BD%93%E9%94%AE%E7%9B%98%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8D%97--life.zh-cn/</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/20240328--crone%E6%97%A0%E7%BA%BF%E5%88%86%E4%BD%93%E9%94%AE%E7%9B%98%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8D%97--life.zh-cn/</guid>
+      <description>&lt;h2 id=&#34;预览&#34;&gt;预览&lt;/h2&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20240328--Crone%e6%97%a0%e7%ba%bf%e5%88%86%e4%bd%93%e9%94%ae%e7%9b%98%e6%9e%84%e5%bb%ba%e6%8c%87%e5%8d%97--Life.zh-cn/20240328T203634_2024-03-28-20-04-30-288.jpg&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;文章适用人群&#34;&gt;文章适用人群&lt;/h2&gt;
+&lt;p&gt;想要构建一个 &lt;strong&gt;无线&lt;/strong&gt; &lt;strong&gt;分体键盘&lt;/strong&gt;, 并且当前还没有购买任何 &lt;strong&gt;构建键盘所需物品&lt;/strong&gt;, 还处于研究如何构建阶段&lt;/p&gt;
+&lt;p&gt;Corne 键盘 组装起来非常简单, 至少 &lt;strong&gt;需要购买的物品&lt;/strong&gt;  都可以在 &lt;strong&gt;中国淘宝&lt;/strong&gt; 买的到&lt;/p&gt;
+&lt;p&gt;本文并不是一步一步教你从头开始 组装键盘, 而是对 &lt;a href=&#34;https://github.com/foostan/crkbd/&#34;&gt;GitHub - foostan/crkbd: Corne keyboard, a split keyboard with 3x6 column stag&amp;hellip;&lt;/a&gt;
+项目 &lt;strong&gt;增加&lt;/strong&gt; 无线(蓝牙) 组装 补充&lt;/p&gt;
+&lt;p&gt;关于如何构建 Corne 键盘 你应该看官方文档&lt;/p&gt;
+&lt;h2 id=&#34;项目说明&#34;&gt;项目说明&lt;/h2&gt;
+&lt;p&gt;个人构建Crone键盘使用的方案:  Corne cherry V3&lt;/p&gt;
+&lt;p&gt;(这是必须的)键盘固件使用的是: &lt;a href=&#34;https://zmk.dev/&#34;&gt;Hello from ZMK Firmware | ZMK Firmware&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;QMK 固件不支持无线(蓝牙)&lt;/p&gt;
+&lt;p&gt;键盘布局推荐: &lt;a href=&#34;https://github.com/ISouthRain/miryoku_zmk&#34;&gt;GitHub - ISouthRain/miryoku_zmk: Miryoku is an ergonomic, minimal, orthogonal&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其它 Corne 方案应该也是可以的&lt;/p&gt;
+&lt;h2 id=&#34;有关续航&#34;&gt;有关续航&lt;/h2&gt;
+&lt;p&gt;不算 休眠, 睡眠 浪费的电, 不开 LED, 不开RGB:
+左边(带OLED): 96个小时一直使用时间, 所以它一定高于 96个小时&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>分体键盘的思考</title>
+      <link>https://isouthrain.github.io/post/20240120--%E5%88%86%E4%BD%93%E9%94%AE%E7%9B%98%E7%9A%84%E6%80%9D%E8%80%83--life.zh-cn/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/20240120--%E5%88%86%E4%BD%93%E9%94%AE%E7%9B%98%E7%9A%84%E6%80%9D%E8%80%83--life.zh-cn/</guid>
+      <description>&lt;h2 id=&#34;分体键盘有什么好处&#34;&gt;分体键盘有什么好处?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;主打一个健康用手, 优雅, 太优雅了&lt;/li&gt;
+&lt;li&gt;保护手腕, 如果双手长期弯曲触摸键盘必然导致双手酸痛&lt;/li&gt;
+&lt;li&gt;使用一段时间分体键盘, 手腕的压力确实更小了, 负担没有那么严重&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20240120--%e5%88%86%e4%bd%93%e9%94%ae%e7%9b%98%e7%9a%84%e6%80%9d%e8%80%83--Life.zh-cn/20240121T111737_205546608_1132799867211487_330934759526542902_n.jpg&#34; alt=&#34;&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20240120--%e5%88%86%e4%bd%93%e9%94%ae%e7%9b%98%e7%9a%84%e6%80%9d%e8%80%83--Life.zh-cn/20240121T111447_tunnel.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;分体键盘有什么坏处&#34;&gt;分体键盘有什么坏处?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;费钱, 分体键盘相比于普通键盘是真的昂贵&lt;/li&gt;
+&lt;li&gt;功能较少&lt;/li&gt;
+&lt;li&gt;使用分体键盘前期: 不太适应键盘, 打字效率相比之前有所下降
+纵使我已经相对熟悉键盘键位(至少可以盲打), 还是会按错键位
+我相信逐渐会适应, 慢慢恢复到之前的速度&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;键盘使用开源套件自己定做还是购买现成&#34;&gt;键盘使用开源套件自己定做还是购买现成?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;现成
+&lt;ul&gt;
+&lt;li&gt;快速方便, 自己使用&lt;/li&gt;
+&lt;li&gt;功能较少, 以后需要扩展功能有限&lt;/li&gt;
+&lt;li&gt;样式较少&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;根据开源套件自己做
+&lt;ul&gt;
+&lt;li&gt;麻烦, 需要动手能力强&lt;/li&gt;
+&lt;li&gt;功能丰富, 可以根据自己想法改造&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最终我选择了自己做一个 Corne 键盘&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/foostan/crkbd&#34;&gt;GitHub - foostan/crkbd: Corne keyboard, a split keyboard with 3x6 column stag&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;corne-键盘&#34;&gt;Corne 键盘&lt;/h2&gt;
+&lt;p&gt;有线键盘 固件: &lt;a href=&#34;https://qmk.fm/&#34;&gt;QMK Firmware - An open source firmware for AVR and ARM based keyboards&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;无线键盘 固件: &lt;a href=&#34;https://zmk.dev&#34;&gt;Hello from ZMK Firmware | ZMK Firmware&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AMD 5700G OpenCore EFI</title>
+      <link>https://isouthrain.github.io/post/20230717--opencoreinstallguide--apple.zh-cn/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/20230717--opencoreinstallguide--apple.zh-cn/</guid>
+      <description>AMD 5700G 黑苹果引导配置详细说明</description>
+    </item>
+    <item>
+      <title>Emacs Issue</title>
+      <link>https://isouthrain.github.io/post/20230519--emacsissue--emacs.zh-cn/</link>
+      <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/20230519--emacsissue--emacs.zh-cn/</guid>
+      <description>记录Emacs相关问题</description>
+    </item>
+    <item>
+      <title>ssh 密钥连接</title>
+      <link>https://isouthrain.github.io/post/20230519--sshuseprivatetoconnect--linux.zh-cn/</link>
+      <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/20230519--sshuseprivatetoconnect--linux.zh-cn/</guid>
+      <description>&lt;h2 id=&#34;为什么要使用-ssh-密钥-进行连接服务器&#34;&gt;为什么要使用 ssh 密钥 进行连接服务器??&lt;/h2&gt;
+&lt;p&gt;这样连接 &lt;strong&gt;更安全&lt;/strong&gt;, 也可以做到无需密码连接&lt;/p&gt;
+&lt;h2 id=&#34;使用步骤&#34;&gt;使用步骤&lt;/h2&gt;
+&lt;h3 id=&#34;本地客户端创建密钥&#34;&gt;本地客户端创建密钥&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 输入生成的密钥文件名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Generating public/private rsa key pair.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter file in which to save the key &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;~/.ssh/id_rsa&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 会生成 id_rsa 和 id_rsa.pub 文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 输入连接的密码(此密码是用于本地用户连接而设定的, 只要使用了密钥连接服务器就默认无需再输入密码连接)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 如果为空, 无需密码&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter passphrase &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;empty &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; no passphrase&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enter same passphrase again:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Your identification has been saved in ~/.ssh/id_rsa.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Your public key has been saved in ~/.ssh/id_rsa.pub.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The key fingerprint is:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SHA256:cdoRGC7IV2+vvtFzPjQAZKqun5WUIZx7Zo6dBp0spGY vm465564@root
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The key&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;s randomart image is:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+---&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;RSA 3072&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;----+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;        o++      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   . o +.+..     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    o &lt;span class=&#34;nv&#34;&gt;B&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;.     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     + B X o.    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;E&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; S . ..   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   o . @ o o  o  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;      o B o o... &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     . + . . +.  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    ..o   o.  .. &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+----&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;SHA256&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;-----+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;将-id-rsa-dot-pub-文件的内容复制到-服务器-dot-ssh-authorized-keys&#34;&gt;将 id_rsa.pub 文件的内容复制到 服务器 ~/.ssh/authorized_keys&lt;/h3&gt;
+&lt;h3 id=&#34;进行连接服务器&#34;&gt;进行连接服务器&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -p &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; username@host -i ~/.ssh/id_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 如果创建密钥的时候设定了密码, 此处需要的密码是创建密钥的时候的密码, 不是服务器密码&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Git submodule 子模块</title>
+      <link>https://isouthrain.github.io/post/20230411-gitsubmoduelhowtouse.zh-cn/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/20230411-gitsubmoduelhowtouse.zh-cn/</guid>
+      <description>如何使用 Git submodule 子模块</description>
+    </item>
+    <item>
+      <title>CheatEngine 提升 云盘下载速度(百度云盘 为例)</title>
+      <link>https://isouthrain.github.io/post/20230406-cheatenginetobaiduyunpan.zh-cn/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/20230406-cheatenginetobaiduyunpan.zh-cn/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;国内的网盘的体验真的一言难尽, 速度方面更是令人难受, 百度云盘 最为突出!!&lt;/p&gt;
+&lt;p&gt;百度云盘的限速是真的难受, 只有 几十kb, 企业想赚钱可以理解, 但吃相太难看了!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本文以 百度云盘 为例, 其它网盘类似&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
+&lt;p&gt;借助 CheatEngine 修改 软件识别时间 以达到加速的效果,&lt;/p&gt;
+&lt;p&gt;比如你要下载 1.2 m/s 的东西, 如果你 10k/s , 那么需要 120s&lt;/p&gt;
+&lt;p&gt;假设你在 9:30 开始下载, 那么你在 9:32 会下载完,&lt;/p&gt;
+&lt;p&gt;使用 CheatEngine 就是将 时间加速, 让软件识别到你时间变了, 相当于下载时间也跟上了,&lt;/p&gt;
+&lt;p&gt;就是你将时间加速 120 倍, 那么你的下载速度就是 1.2m/s&lt;/p&gt;
+&lt;h2 id=&#34;是否有风险&#34;&gt;是否有风险?&lt;/h2&gt;
+&lt;p&gt;完全无风险, 因为你没有做违规的事!!&lt;/p&gt;
+&lt;h2 id=&#34;所需工具&#34;&gt;所需工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cheatengine.org/&#34;&gt;Cheat Engine (免费开源)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;你的云盘软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;效果如下&#34;&gt;效果如下:&lt;/h2&gt;
+&lt;h3 id=&#34;修改前&#34;&gt;修改前&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;下图演示因为我录这个之前使用过加速了, 所以下载总进度一下子跳那么多&lt;/li&gt;
+&lt;li&gt;可以看到下载进度加的非常缓慢(甚至不动)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bf%ae%e6%94%b9%e5%89%8d.gif&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;修改后&#34;&gt;修改后&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可以看到, 虽然软件速度不变, 但是下载进度加快了, 网络占用也多, 说明加速成功了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bf%ae%e6%94%b9%e5%90%8e.gif&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;使用步骤&#34;&gt;使用步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将你的网盘软件正在下载&amp;hellip;&amp;hellip;&lt;/li&gt;
+&lt;li&gt;打开 任务管理器 (以 Windows 为例)&lt;/li&gt;
+&lt;li&gt;打开 PID 进程(右键名称), 将 PID 勾上
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4/20230408T221642_PID.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;找到你网盘软件的 PID 进程, 将你的网盘软件正在下载&amp;hellip;&amp;hellip;
+&lt;ul&gt;
+&lt;li&gt;看到 进程在使用网络 , PID 为 13140
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4/20230408T222045_PID.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;打开 CheatEngine 软件
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4/20230408T222216_CheatEngine.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;右键显示 10进制, 找到对应的 PID , 并 点击对应的 PID 进程, 然后点击 打开
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4/20230408T222607_Cheat.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;将你的 网盘软件 下载暂停&lt;/li&gt;
+&lt;li&gt;开启加速, 开到最大, 并点击 应用
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4/20230408T222710_1.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;打开你的 网盘软件 继续下载, 就可以看到下载非常快了
+&lt;ul&gt;
+&lt;li&gt;注意: 可能你看到的网盘软件下载速度还是一样慢, 别担心, 你已经加速了, 你可以看一下你的 网络下载占用, 或者看网盘软件的下载进度是不是加快了
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20230406-CheatEngineToBaiDuYunPan.zh-cn/%e4%bf%ae%e6%94%b9%e5%90%8e.gif&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;参考来源&#34;&gt;参考来源&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;感谢 零度解说&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs use-package 包管理器</title>
+      <link>https://isouthrain.github.io/post/20221215-emacs-use-package.zh-cn/</link>
+      <pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/20221215-emacs-use-package.zh-cn/</guid>
+      <description>&lt;h2 id=&#34;use-package&#34;&gt;use-package&lt;/h2&gt;
+&lt;h3 id=&#34;源码地址&#34;&gt;源码地址&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/jwiegley/use-package&#34;&gt;GitHub - jwiegley/use-package: A use-package declaration for simplifying your&amp;hellip;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;什么是-use-packaeg&#34;&gt;什么是 use-packaeg&lt;/h3&gt;
+&lt;p&gt;use-package 是管理 Emacs 包(插件) 的一个宏管理器
+可以管理每个包的设置，并配置和定义&lt;/p&gt;
+&lt;h3 id=&#34;安装-use-package&#34;&gt;安装 use-package&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;将以下源码复制到你的 init.el 文件中, 然后重启 Emacs
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; 添加下载包的来源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;eval-and-compile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;customize-set-variable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;ss&#34;&gt;&amp;#39;package-archives&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;melpa&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;http://melpa.org/packages/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;org&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;http://orgmode.org/elpa/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;gnu&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://elpa.gnu.org/packages/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;nongnu&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://elpa.nongnu.org/nongnu/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;package-initialize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;c1&#34;&gt;;; 如果Emacs 检测到你没有安装 use-package, 那么自动安装 use-package&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;unless&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;package-installed-p&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;use-package&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;package-refresh-contents&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;package-install&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;use-package&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;使用-use-package&#34;&gt;使用 use-package&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;例如: 安装 doom-themes 主题
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; 安装 doom-themes 主题，并启用 doom-one 主题&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;use-package&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;doom-themes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;:ensure&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;:config&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;load-theme&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;doom-one&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;use-package-关键词解释&#34;&gt;use-package 关键词解释&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;:ensure t/nil
+是否从网络源安装？ t 代表从网络安装，nil 代表从 Emacs 内置包加载(如果Emacs内置了这个包，Emacs如果没有那么将报错)&lt;/li&gt;
+&lt;li&gt;:config
+加载/下载 包 之后再加载的配置&lt;/li&gt;
+&lt;li&gt;:init
+加载/下载 包 之前加载的配置&lt;/li&gt;
+&lt;li&gt;:defer num
+懒加载，num 代表数字, 在 Emacs 启动完成 num秒后再加载 :config 的内容, 可以减少 Emacs 启动时间&lt;/li&gt;
+&lt;li&gt;还有更多关键词使用，可以自己到项目地址查看
+比如 bind 自定义按键， commands 调用某个命令后再加载 :config 配置&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Emacs google-translate 翻译文本</title>
+      <link>https://isouthrain.github.io/post/20221213-emacs-google-translate.zh-cn/</link>
+      <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/20221213-emacs-google-translate.zh-cn/</guid>
+      <description>&lt;h2 id=&#34;google-translate&#34;&gt;google-translate&lt;/h2&gt;
+&lt;h3 id=&#34;源码地址&#34;&gt;源码地址&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/atykhonov/google-translate&#34;&gt;GitHub - atykhonov/google-translate: Emacs interface to Google Translate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装-google-translate&#34;&gt;安装 google-translate&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;安装 use-package , 如果你没有使用 use-package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;eval-and-compile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;customize-set-variable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;ss&#34;&gt;&amp;#39;package-archives&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;melpa&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;http://melpa.org/packages/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;org&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;http://orgmode.org/elpa/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;gnu&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://elpa.gnu.org/packages/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;nongnu&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://elpa.nongnu.org/nongnu/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       &lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;package-initialize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;unless&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;package-installed-p&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;use-package&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;package-refresh-contents&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;package-install&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;use-package&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;安装 google-translate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;use-package&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;google-translate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;:ensure&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;:config&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;google-translate-default-source-language&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;auto&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nv&#34;&gt;google-translate-default-target-language&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;google-translate-translation-directions-alist&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;ru&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;配置解释&#34;&gt;配置解释&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;语言来源, 默认自动&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;google-translate-default-source-language&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;auto&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;目标语言，中文简体&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;google-translate-default-target-language&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;翻译方案&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;英文 -&amp;gt; 中文, 中文 -&amp;gt; 英文, 英文 -&amp;gt; 俄语, 使用 C-n 切换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;google-translate-translation-directions-alist&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;ru&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;使用&#34;&gt;使用&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;将光标放到你要翻译的文本上&lt;/li&gt;
+&lt;li&gt;M-x google-translate-smooth-translate 回车&lt;/li&gt;
+&lt;li&gt;C-n 切换翻译方案&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;本期视频&#34;&gt;本期视频&lt;/h4&gt;
+&lt;!DOCTYPE HTML&gt;
+&lt;html lang=&#34;en&#34;&gt;
+&lt;head&gt;
+    &lt;style type=&#34;text/css&#34;&gt;
+        .bilibili_shortcodes {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 66%;
+            margin: auto;
+            overflow: hidden;
+            text-align: center;
+             
+        }
+
+        .bilibili_shortcodes iframe {
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            left: 0;
+            top: 0;
+        }
+    &lt;/style&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&#34;bilibili_shortcodes&#34;&gt;
+    &lt;iframe
+            src=&#34;https://player.bilibili.com/player.html?bvid=BV1kK41167ni&amp;page=1&amp;high_quality=1&amp;danmaku=0&amp;as_wide=0&#34;
+            scrolling=&#34;no&#34;
+            border=&#34;0&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+    
+    
+    
+
+    
+
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</description>
+    </item>
+    <item>
+      <title>Build Emacs in Ubunt</title>
+      <link>https://isouthrain.github.io/post/2022-07-06-ubuntubuildemacs.zh-cn/</link>
+      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-07-06-ubuntubuildemacs.zh-cn/</guid>
+      <description>&lt;h2 id=&#34;ubuntu-编译最新-emacs&#34;&gt;Ubuntu 编译最新 Emacs&lt;/h2&gt;
+&lt;h3 id=&#34;克隆-emacs-源码&#34;&gt;克隆 Emacs 源码&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/emacs-mirror/emacs&#34;&gt;GitHub - emacs-mirror/emacs: Mirror of GNU Emacs&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装依赖&#34;&gt;安装依赖&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install build-essential texinfo libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libncurses-dev libgnutls28-dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;检查依赖&#34;&gt;检查依赖&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./autogen.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./configure
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>WSL Emacs</title>
+      <link>https://isouthrain.github.io/post/2022-07-03-windowsemacsforwsl.zh-cn/</link>
+      <pubDate>Sun, 03 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-07-03-windowsemacsforwsl.zh-cn/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;由于 Windows 的某些原因使用 Emacs 总会那么的不方便或者不好用,&lt;/p&gt;
+&lt;p&gt;有的人是在 MSYS2 下使用, 但由于 MYSYS2 软件包不多, 还是差了点&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;所以本文借助 Windows WSL 进行使用 Emacs 么, 像在 Linux 下使用, 目前体验基本与Linux下体验一致, 不过 EAF 不支持&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;效果&#34;&gt;效果&lt;/h2&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/2022-07-03-WindowsEmacsForWSL.zh-cn/%e6%95%88%e6%9e%9c/2022-07-03_21-20-45_1.png&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;安装-wsl-本文是使用-wsl2-ubuntu22-dot-04&#34;&gt;安装 WSL, 本文是使用 WSL2 Ubuntu22.04&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你想把 &lt;strong&gt;Ubuntu22.04&lt;/strong&gt; 安装到自己指定盘符, 可以观看此文章
+&lt;a href=&#34;https://www.myfreax.com/installing-wsl-manually-on-non-system-drive/&#34;&gt;如何将WSL安装到其它驱动器或者文件夹中 | myfreax&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;启用-wsl-功能&#34;&gt;启用 WSL 功能&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Win + s 打开搜索, 输入 &lt;strong&gt;启用或关闭 Windows 功能&lt;/strong&gt;, 并打开
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/2022-07-03-WindowsEmacsForWSL.zh-cn/%e5%ae%89%e8%a3%85_WSL,_%e6%9c%ac%e6%96%87%e6%98%af%e4%bd%bf%e7%94%a8_WSL2_Ubuntu22.04/2022-07-03_21-30-48_1.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;将红线两个功能打勾✔, 启用后重启电脑
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/2022-07-03-WindowsEmacsForWSL.zh-cn/%e5%ae%89%e8%a3%85_WSL,_%e6%9c%ac%e6%96%87%e6%98%af%e4%bd%bf%e7%94%a8_WSL2_Ubuntu22.04/2022-07-03_21-32-43_1.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/li&gt;
+&lt;li&gt;以 &lt;strong&gt;管理员权限&lt;/strong&gt; 打开 Powershell, 设置默认为 wsl2
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wsl&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;-set-default-version&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;安装 Ubuntu22.04, &lt;strong&gt;wsl.exe &amp;ndash;install -d Ubuntu22.04&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;如果安装不成功, 请参考文章 &lt;a href=&#34;https://www.myfreax.com/installing-wsl-manually-on-non-system-drive/&#34;&gt;如何将WSL安装到其它驱动器或者文件夹中 | myfreax&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;运行 wsl, 直接在 Powershell 输入 wsl 运行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;wsl-文件所在目录-wsl&#34;&gt;WSL 文件所在目录 \\wsl$&lt;/h2&gt;
+&lt;h2 id=&#34;安装-gui-支持&#34;&gt;安装 GUI 支持&lt;/h2&gt;
+&lt;h3 id=&#34;下载并安装-mobaxterm&#34;&gt;下载并安装 MobaXterm&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://mobaxterm.mobatek.net/download.html&#34;&gt;MobaXterm Xserver with SSH, telnet, RDP, VNC and X11 - Download&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GnuPG(GPG) 加密</title>
+      <link>https://isouthrain.github.io/post/2022-06-25-gpg.zh-cn/</link>
+      <pubDate>Sat, 25 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-06-25-gpg.zh-cn/</guid>
+      <description>&lt;h2 id=&#34;什么是-gnupg&#34;&gt;什么是 GnuPG ?&lt;/h2&gt;
+&lt;p&gt;GPG 全名叫 &lt;strong&gt;GNU Privacy Guard&lt;/strong&gt;, 是一个加密前端, 可以使用 &lt;em&gt;RSA 、ESCDA&lt;/em&gt; 等算法去加密&lt;/p&gt;
+&lt;h2 id=&#34;下载-gnupg&#34;&gt;下载 GnuPG&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gnupg.org/&#34;&gt;GnuPG官网&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;获取密钥--windows-使用终端命令&#34;&gt;获取密钥(Windows 使用终端命令)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;请记住, 密钥绝不要给任何人&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpg --gen-key
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;默认选项即可&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;加密解密文件&#34;&gt;加密解密文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;加密之前
+&lt;ul&gt;
+&lt;li&gt;加密分为两种
+&lt;ol&gt;
+&lt;li&gt;对称加密解密(双方只要输入对密码就可以查看和加密)&lt;/li&gt;
+&lt;li&gt;非对称加密解密(对方使用 &lt;strong&gt;你给的公钥加密&lt;/strong&gt;, 只有使用 &lt;strong&gt;你自己的密钥&lt;/strong&gt; 能解密查看)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/jhjguxin/6037564&#34;&gt;详细解释&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;对称加密解密&#34;&gt;对称加密解密&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;加密(输入两次相同密码)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpg --symmetric filename
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;解密(输入配对密码, 与上面的密码相同)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 仅仅解密内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpg -d filename.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 解密并输出原文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpg -o fileame -d filename.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;非对称加密解密--个人常用&#34;&gt;非对称加密解密(个人常用)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;加密
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -r 表示 gpg 用户, 就刚才创建密钥的用户名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpg -e -r User filename
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;解密
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 仅仅解密内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpg -d filename.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 解密并输出原文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpg -o fileame -d filename.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;导出--请不要将密钥发送给任何人-自己导出密钥保存就好&#34;&gt;导出(请不要将密钥发送给任何人,自己导出密钥保存就好)&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-nil&#34; data-lang=&#34;nil&#34;&gt;gpg -o filename.asc --export keyID
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;导入--个人使用导入密钥就好&#34;&gt;导入(个人使用导入密钥就好)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpg --import filename.asc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;faq&#34;&gt;FAQ❓&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;是不是在我的电脑上，使用别人A的公钥加密了一个文件，而我没有别人A的密钥，我也无法读取查看。是吗？？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs Gnus 使用 Gmail</title>
+      <link>https://isouthrain.github.io/post/2022-06-04-gnus-use-gmail.zh-ch/</link>
+      <pubDate>Sat, 04 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-06-04-gnus-use-gmail.zh-ch/</guid>
+      <description>Gnus 用端口转发功能接收 Gmail</description>
+    </item>
+    <item>
+      <title>Hugo LoveIt 添加 Algolia 搜索</title>
+      <link>https://isouthrain.github.io/post/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia.zh-cn/</link>
+      <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-05-04-hugo%E6%B7%BB%E5%8A%A0algolia.zh-cn/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Hugo&lt;/strong&gt; 添加 &lt;strong&gt;Algolia&lt;/strong&gt; 搜索, 本文以 &lt;strong&gt;LoveIt&lt;/strong&gt; 主题为例&lt;/p&gt;
+&lt;h2 id=&#34;loveit-启用-algolia-搜索&#34;&gt;LoveIt 启用 Algolia 搜索&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;添加以下代码在你的 config.toml&lt;/strong&gt;, 根据自己情况填写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;enable&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c&#34;&gt;# 搜索引擎的类型 (&amp;#34;lunr&amp;#34;, &amp;#34;algolia&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;algolia&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c&#34;&gt;# 文章内容最长索引长度&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;contentLength&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c&#34;&gt;# 搜索框的占位提示语&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;placeholder&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c&#34;&gt;# LoveIt 新增 | 0.2.1 最大结果数目&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;maxResultLength&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c&#34;&gt;# LoveIt 新增 | 0.2.3 结果内容片段长度&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;snippetLength&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;50&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c&#34;&gt;# LoveIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;highlightTag&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;em&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c&#34;&gt;# LoveIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;absoluteURL&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;algolia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;appID&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;searchKey&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;outputs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;home&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;HTML&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;RSS&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;JSON&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;获取-algolia-相关配置&#34;&gt;获取 Algolia 相关配置&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.algolia.com/&#34;&gt;Algolia官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;注册登陆&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;创建属于-hugo-的-application&#34;&gt;创建属于 Hugo 的 Application&lt;/h3&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/2022-05-04-Hugo%e6%b7%bb%e5%8a%a0Algolia.zh-cn/1.jpg&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;名称随便填一个, 例如 Hugo&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CHOOSE YOUR SUBSCRIPTION&lt;/strong&gt; &amp;ndash;&amp;gt; 选择免费的 &lt;strong&gt;FREE&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;点击右侧 &amp;mdash;&amp;gt; &lt;strong&gt;Next Step:Data Center&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;选择一个离你网站地方进的地方&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;获取-index&#34;&gt;获取 index&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;回到主页&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>搭建 Telegram Bot RSS 订阅</title>
+      <link>https://isouthrain.github.io/post/2022-05-02-telegrambotrss.zh-cn/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-05-02-telegrambotrss.zh-cn/</guid>
+      <description>搭建 Telegraam Bot RSS 订阅</description>
+    </item>
+    <item>
+      <title>Frp内网穿透</title>
+      <link>https://isouthrain.github.io/post/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F.zh-cn/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-05-01-frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F.zh-cn/</guid>
+      <description>Frp 内网穿透</description>
+    </item>
+    <item>
+      <title>Markdown语法</title>
+      <link>https://isouthrain.github.io/post/2022-04-30-markdown%E8%AF%AD%E6%B3%95.zh-cn/</link>
+      <pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-04-30-markdown%E8%AF%AD%E6%B3%95.zh-cn/</guid>
+      <description>&lt;h4 id=&#34;粗体&#34;&gt;粗体&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Markdown&#34; data-lang=&#34;Markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;**粗体**
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;斜体&#34;&gt;斜体&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Markdwon&#34; data-lang=&#34;Markdwon&#34;&gt;*斜体* 
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;粗斜体&#34;&gt;粗斜体&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Markdown&#34; data-lang=&#34;Markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;***粗斜体***
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;粗斜体-1&#34;&gt;粗斜体&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;***粗斜体***
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;链接&#34;&gt;链接🔗&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Markdown&#34; data-lang=&#34;Markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[&lt;span class=&#34;nt&#34;&gt;备注&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;链接&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;文件链接&#34;&gt;文件链接&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Markdown&#34; data-lang=&#34;Markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![&lt;span class=&#34;nt&#34;&gt;备注&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;链接&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;内部文件跳转&#34;&gt;内部文件跳转&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-markdwon&#34; data-lang=&#34;markdwon&#34;&gt;&amp;lt;span id = &amp;#34;瞄点&amp;#34;&amp;gt;跳转至瞄点&amp;lt;/span&amp;gt;
+
+[跳转至瞄点](#瞄点)
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;效果如下&#34;&gt;效果如下&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;效果如下👇&lt;/code&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;嵌入视频&#34;&gt;嵌入视频&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;video&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;poster&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;效果动图&amp;#34;&lt;/span&gt;  &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;360&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;240&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;controls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;视频链接链接，支持其他格式，当使用其他格式时，不要替换后面的 video/mp4&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;video/mp4&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;video&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;折叠列表&#34;&gt;折叠列表&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;details&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;summary&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;这是一个折叠列表&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;summary&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;折叠内容, 上面空一行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;下一行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;details&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;summary&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;这是一个嵌套折叠列表&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;summary&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;嵌套折叠内容, 上面空一行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;下一行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;details&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;details&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;效果如下-1&#34;&gt;效果如下&lt;/h5&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;表格&#34;&gt;表格&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;|1   |   2  |   3|
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;|:-  |  :-: |  -:|
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;|居右| 居中 |居左|
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;代码块&#34;&gt;代码块&lt;/h4&gt;
+&lt;p&gt;用6个  &lt;strong&gt;`&lt;/strong&gt; 包裹&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>如何上传/推送到 Github</title>
+      <link>https://isouthrain.github.io/post/2022-04-29-%E6%8E%A8%E9%80%81github.zh-cn/</link>
+      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-04-29-%E6%8E%A8%E9%80%81github.zh-cn/</guid>
+      <description>&lt;h3 id=&#34;git-push-推送上传到-github&#34;&gt;git push 推送/上传到 GitHub&lt;/h3&gt;
+&lt;h3 id=&#34;git-push-输入账号密码后推送不了&#34;&gt;git push 输入账号密码后推送不了?&lt;/h3&gt;
+&lt;p&gt;因为 Github 的推送/上传机制改了&lt;br&gt;
+之前可以输入 账号密码 就可以 push, 现在只能使用 &lt;code&gt;github token&lt;/code&gt; 代替  &lt;code&gt;密码&lt;/code&gt; 才能推送/上传&lt;/p&gt;
+&lt;h3 id=&#34;申请-token&#34;&gt;申请 token&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Settings&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;Developer settings&lt;/code&gt; &amp;ndash;&amp;gt;  &lt;code&gt;Personal access tokens&lt;/code&gt; &amp;ndash;&amp;gt;  &lt;code&gt;Generate new token&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Note &amp;ndash;&amp;gt; 随便填一个名称&lt;/li&gt;
+&lt;li&gt;Expiration &amp;ndash;&amp;gt; 选择该 token 有效期，个人建议如果是使用推送/上传功能，建议选  &lt;code&gt;No expiration&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;其余 &lt;code&gt;打勾&lt;/code&gt; 按照你自己需求，新手建议全部打勾&lt;/li&gt;
+&lt;li&gt;Generate token 点击创建&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;将你创建刚刚创建-token-复制&#34;&gt;将你创建刚刚创建 token 复制&lt;/h3&gt;
+&lt;h3 id=&#34;再次使用-git-push&#34;&gt;再次使用 git push&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;输入你的用户名,回车&lt;/li&gt;
+&lt;li&gt;将 token 粘贴上去, 回车&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;如果成功-上传推送-请享受&#34;&gt;如果成功 上传/推送 ，请享受🎉🎉🎉&lt;/h3&gt;
+&lt;h3 id=&#34;每次-推送上传-都要输入-账号密码&#34;&gt;每次 推送/上传 都要输入 账号密码??&lt;/h3&gt;
+&lt;p&gt;如果你不想每次 上传/推送 都要输入 账号密码，可以看我的另一个文章
+每次都要输入账号密码太麻烦了&lt;br&gt;
+👉  &lt;a href=&#34;https://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/&#34;&gt;永久免账号密码 推送/上传 GitHub&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>永久免账号密码推送Github</title>
+      <link>https://isouthrain.github.io/post/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git.zh-cn/</link>
+      <pubDate>Thu, 28 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git.zh-cn/</guid>
+      <description>&lt;h3 id=&#34;使用以下方法后&#34;&gt;使用以下方法后&lt;/h3&gt;
+&lt;h3 id=&#34;git-push-再也不用一直输入-账号密码了&#34;&gt;git push 再也不用一直输入 账号密码了!&lt;/h3&gt;
+&lt;h3 id=&#34;git-push-每次都要输入账号密码-从此解决&#34;&gt;git push 每次都要输入账号密码? 从此解决&lt;/h3&gt;
+&lt;h3 id=&#34;正文&#34;&gt;正文👇&lt;/h3&gt;
+&lt;h3 id=&#34;首先配置-git-个人信息&#34;&gt;首先配置 Git 个人信息&lt;/h3&gt;
+&lt;h4 id=&#34;依此输入以下两个命令&#34;&gt;依此输入以下两个命令:&lt;/h4&gt;
+&lt;h4 id=&#34;配置你的-github-邮箱&#34;&gt;配置你的 GitHub 邮箱📬&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;你在 GitHub 注册的邮箱&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;配置你的-github-用户名&#34;&gt;配置你的 GitHub 用户名&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &lt;span class=&#34;s2&#34;&gt;&amp;#34;你的 GitHub 用户名&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;输入以下命令后将会保存你-git-push-时登录的信息&#34;&gt;输入以下命令后，将会保存你 git push 时登录的信息&lt;/h4&gt;
+&lt;h4 id=&#34;当下一次-git-push-时就不用再输入登录信息了&#34;&gt;当下一次 git push 时就不用再输入登录信息了!&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global credential.helper store
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;如何推送上传到githubhttpsisouthraingithubio2022-04-29-e68ea8e98081github&#34;&gt;&lt;a href=&#34;https://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/&#34;&gt;如何推送/上传到GitHub&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;faq&#34;&gt;FAQ❓&lt;/h4&gt;
+&lt;h5 id=&#34;由于github已经更改了-git-push-机制&#34;&gt;由于GitHub已经更改了 git push 机制&lt;/h5&gt;
+&lt;h5 id=&#34;git-push-时密码改用-token&#34;&gt;&lt;code&gt;git push&lt;/code&gt; 时&lt;code&gt;密码改用&lt;/code&gt; &lt;code&gt;token&lt;/code&gt;&lt;/h5&gt;
+&lt;h4 id=&#34;已完成所有工作-请-git-push-一次试试&#34;&gt;已完成所有工作, 请 git push 一次试试&lt;/h4&gt;
+&lt;h5 id=&#34;如果成功了请享受&#34;&gt;如果成功了，请享受🎉🎉🎉&lt;/h5&gt;</description>
+    </item>
+    <item>
+      <title>语录</title>
+      <link>https://isouthrain.github.io/quotation/</link>
+      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/quotation/</guid>
+      <description>&lt;h1 id=&#34;2022&#34;&gt;2022&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;遵循自己的内心活下去, 不要回首往事, 昨天是历史, 今天是礼物, 明天是未知的, 未知的事而不应放在当下担忧 !!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;美好的事情终会到来🍮&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;得到之前都是需要付出代价的, 无论代价是什么, 必定让人刻骨铭心!🍔&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;人是不能赚取认知以外的钱💴&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;那些打不败你的只会使你更加强大💪&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;没有什么谁可以打败你，能打败的你的只有你自己&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title>Telegram 收发微信消息</title>
+      <link>https://isouthrain.github.io/post/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF.zh-cn/</link>
+      <pubDate>Sun, 20 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF.zh-cn/</guid>
+      <description>&lt;h3 id=&#34;2022-08-30-更新&#34;&gt;2022-08-30 更新&lt;/h3&gt;
+&lt;h3 id=&#34;全部帐号可用-不支持网页版的也可以使用了-使用本教程就可以正常使用-&#34;&gt;📍📍全部帐号可用, 不支持网页版的也可以使用了, 使用本教程就可以正常使用 📍📍&lt;/h3&gt;
+&lt;h4 id=&#34;telegram收发微信消息可以不需要购买服务器单纯手机也可以&#34;&gt;Telegram收发微信消息(可以不需要购买服务器，单纯手机也可以)&lt;/h4&gt;
+&lt;h3 id=&#34;-在开始本教程之前请你确认你的微信号是否支持网页端登录如果不支持请离开&#34;&gt;📍📍 在开始本教程之前，请你确认你的微信号是否支持网页端登录，如果不支持请离开&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wx.qq.com/&#34;&gt;微信网页版入口&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;也可以试试 先登录 &lt;a href=&#34;https://filehelper.weixin.qq.com/&#34;&gt;微信文件传输助手网页版&lt;/a&gt; 再去登录网页版&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;概述&#34;&gt;概述&lt;/h3&gt;
+&lt;p&gt;微信浪费电是大家都知道的，但奈何亲朋好友都在用没法换，只能自己另有他寻了，所以有了本教程。使用TG的好处懂得都懂&lt;/p&gt;
+&lt;h5 id=&#34;需要使用科学上网才能进行登录android用户直接挂vpn就可以购买服务器的可以使用外国服务器或者国内的服务器给服务器上代理就可以了&#34;&gt;需要使用科学上网才能进行登录，Android用户直接挂VPN就可以，购买服务器的可以使用外国服务器，或者国内的服务器给服务器上代理就可以了&lt;/h5&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;本教程声明&lt;/strong&gt;&lt;/em&gt; Android手机不需要购买服务器&lt;br&gt;
+此教程没有以下功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;没有朋友圈&lt;/li&gt;
+&lt;li&gt;没有红包&lt;/li&gt;
+&lt;li&gt;不能发语音（可以收听）&lt;/li&gt;
+&lt;li&gt;不能发位置&lt;/li&gt;
+&lt;li&gt;类似Web微信&lt;/li&gt;
+&lt;li&gt;部分文件、图片、表情等多媒体文件会被网页版微信截断，即收不到任何数据， 尤以表情为甚。因此造成的偶发现象，会提醒用户使用移动客户端查看。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;目前只有ubuntu系统能把功能都实现所以本教程使用ubuntu系统&#34;&gt;目前只有Ubuntu系统能把功能都实现，所以本教程使用Ubuntu系统&lt;/h5&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;需要一点点linux知识不会也没有关系耐心看跟着做就好了&#34;&gt;需要一点点Linux知识，不会也没有关系，耐心看跟着做就好了&lt;/h5&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;android用户可以使用termux安装一个ubuntu系统就可以了在ubuntu进行配置就好了很完美了&#34;&gt;Android用户可以使用Termux安装一个Ubuntu系统就可以了,在Ubuntu进行配置就好了，很完美了！&lt;/h4&gt;
+&lt;h5 id=&#34;关于-termux-可以直接去下载完全免费很省电耗电量可以忽略不计&#34;&gt;关于 Termux 可以直接去下载，完全免费，很省电，耗电量可以忽略不计&lt;/h5&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;termux安装ubuntu&#34;&gt;Termux安装Ubuntu&lt;/h5&gt;
+&lt;p&gt;更新下软件包：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pkg update
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;打开软件，输入以下代码按回车：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pkg install wget openssl-tool proot -y &amp;amp;&amp;amp; hash -r &amp;amp;&amp;amp; wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh &amp;amp;&amp;amp; bash ubuntu.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;p&gt;输入以下代码进入Ubuntu系统：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;./start-ubuntu.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h4 id=&#34;回到本教程开始搭建tg收发微信消息&#34;&gt;回到本教程，开始搭建TG收发微信消息&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先更新系统软件：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt update &amp;amp;&amp;amp; apt upgrade -y
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;下载必要依赖：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install ffmpeg python3-pip python3-dev python3-setuptools libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libmagic-dev -y
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;安装EH转发机器人和主从通道:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;安装EFB：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip3 install ehforwarderbot
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;安装TG机器人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip3 install efb-telegram-master
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;微信端：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip3 install git+https://github.com/ehForwarderBot/efb-wechat-slave
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;现在做完了服务器工作再去申请一个机器人&#34;&gt;现在做完了服务器工作，再去申请一个机器人&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;打开TG搜索 @botfather&lt;/li&gt;
+&lt;li&gt;发送 /newbot 创建自已的机器人&lt;/li&gt;
+&lt;li&gt;给自已的机器人取个称呼（随便取）&lt;/li&gt;
+&lt;li&gt;给自已的机器人取个用户名，必须是以 bot 结尾（例如Wechatbot）注意可能被人取了就另外再打个bot结尾的名称，必须是英文&lt;/li&gt;
+&lt;li&gt;创建后你会得到一个API（也可以称 token），复制下来&lt;/li&gt;
+&lt;li&gt;配置机器人：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;输入 /setprivacy 发送，选择你的机器人，点Disable&lt;/li&gt;
+&lt;li&gt;输入 /setjoingroups 发送，选择你的机器人，点Enable&lt;/li&gt;
+&lt;li&gt;输入 /setcommands 发送，选择你的机器人，输入以下内容(全部一起发，不是一条条发)还有其他功能自己可以去摸索:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;link - 将会话绑定到 Telegram 群组
+chat - 生成会话头
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;返回telegram主界面，搜索按扭🔍，搜索@get_id_bot，进入点开始会得到你的telegram id&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;服务器上操作或者Termux操作（Android用户一定要在Ubuntu上操作）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;下载编辑软件vim：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install vim
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;编辑文件：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vim ~/.ehforwarderbot/profiles/default/config.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;进入后点一下键盘 i&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Org-mode 使用 Org-protocol-capture-html 网页收集(Org-protocol 使用)</title>
+      <link>https://isouthrain.github.io/post/2022-01-12-org-protocol-capture-html.zh-cn/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-01-12-org-protocol-capture-html.zh-cn/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Notion&lt;/strong&gt; 和 &lt;strong&gt;Obsidian&lt;/strong&gt; 都有收集网页的功能, Org-mode 自然也有, Org-mode 是调用 Org-protocol 协议使用的, 而插件 &lt;code&gt;Org-protocol-capture-html&lt;/code&gt; 是其中能使 &lt;code&gt;Org-protocol&lt;/code&gt; 收集的网页更加美观和可视化&lt;/p&gt;
+&lt;p&gt;因为很多人都不会都不理解 &lt;code&gt;Org-protocol&lt;/code&gt; 和怎么去使用, 以及&lt;code&gt;Org-protocol-capture-html&lt;/code&gt;, 说得只是怎么用这个插件, 却没有说怎么配置, 所以才有了本教程.&lt;/p&gt;
+&lt;h2 id=&#34;相关链接&#34;&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/alphapapa/org-protocol-capture-html&#34;&gt;Org-protocol-capture-html 官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://orgmode.org/manual/Protocols.html&#34;&gt;Org-protocol 协议官网&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;效果如下&#34;&gt;效果如下&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;效果如下👇&lt;/code&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;安装-org-protocol-capture-html&#34;&gt;安装 Org-protocol-capture-html&lt;/h1&gt;
+&lt;p&gt;这个插件是不需要配置, 直接安装此插件就可以调用&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;请自己按装此插件&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 use-package 安装&lt;/li&gt;
+&lt;li&gt;手动安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;配置-org-protocol-capture-html&#34;&gt;配置 Org-protocol-capture-html&lt;/h2&gt;
+&lt;p&gt;此插件是调用 &lt;code&gt;org-capture&lt;/code&gt; 功能, 请自觉检查如下配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Elisp&#34; data-lang=&#34;Elisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;server-start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;;; 如果你知道这意味着什么，可以不使用这句， 这句是为了能调用 emacsclientw&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;require&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;org-protocol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;require&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;;;依赖&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; 安装 org-protocol-capture-html&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; 如果跟我的不同, 请将下面两行删除&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;add-to-list&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;load-path&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;~/.emacs.d/plugins/org-protocol-capture-html/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;require&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;org-protocol-capture-html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;org-capture-templates&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	 &lt;span class=&#34;c1&#34;&gt;;;Org-protocol网页收集, 按键 w 调用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;w&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;网页收集&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;entry&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;~/Org/网页收集.org&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	 &lt;span class=&#34;s&#34;&gt;&amp;#34;* [[%:link][%:description]] \n %U \n %:initial \n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;系统安装-org-protocol&#34;&gt;系统安装 org-protocol&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;如果下面的方法无法安装, 请见官网 👇&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vim和Emacs的选择</title>
+      <link>https://isouthrain.github.io/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9.zh-cn/</link>
+      <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9.zh-cn/</guid>
+      <description>&lt;p&gt;Emacs Happy You Lief.&lt;/p&gt;
+&lt;h1 id=&#34;结语&#34;&gt;结语&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;本章不再更新, 愿您参与进 Emacs 生活..&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;自 2022 年起使用 Emacs 至今已有两年, 如今 Emacs 才是归属&amp;hellip;.&lt;/p&gt;
+&lt;p&gt;如今 ChatGPT 等 AI 工具的崛起, 个人定制 Emacs 成本更低, Emacs 非常好糊, 随便问问 AI 即可&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Emacs 优点:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;支持 Gui, 显示图片&lt;/li&gt;
+&lt;li&gt;Emacs EAF 框架的出现, 你可以使用 EAF 运行任何软件, 比如: Chroium 内核浏览器&lt;/li&gt;
+&lt;li&gt;Magit 支持 git 易上手插件, 让你不在学习 git 就可以使用 git&lt;/li&gt;
+&lt;li&gt;AI 工具的崛起, 对 Emacs 修改更加简单, 我没有学习 lisp 过, 也让 AI 帮我写了个两个关于 离线英语单词查询/git blame 显示的插件&lt;/li&gt;
+&lt;li&gt;Org 也支持了图片导入&lt;/li&gt;
+&lt;li&gt;Emacs minibuffer 配合 vertico/consult/marginalia/orderless/embark 之类的工具非常强大, 模糊搜索+拼音搜索, 几乎吊打所有 vim/neovim 输入命令框架.&lt;/li&gt;
+&lt;li&gt;Org-roam/org-capture 组织你的生活, Task list on you life.&lt;/li&gt;
+&lt;li&gt;nov-mode 阅读电子书, 配合 org-capture 做笔记.&lt;/li&gt;
+&lt;li&gt;你想干什么都行.&lt;/li&gt;
+&lt;li&gt;我非常高兴的实现:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;输入中文后自动翻译成英文, 不用那么麻烦&lt;/li&gt;
+&lt;li&gt;自动识别当前光标单词, 显示字典, 并自动播放音频纠正自己的读音(都是基于离线的)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs&lt;/strong&gt;
+&lt;strong&gt;Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读者根据自己的需求选择 Vim 还是 Emacs&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>(Neo)Vim 中英文输入法</title>
+      <link>https://isouthrain.github.io/post/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95.zh-cn/</link>
+      <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95.zh-cn/</guid>
+      <description>&lt;h1 id=&#34;概述&#34;&gt;概述&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;使用 Vim 每当我们切换中文输入时都要切换中英文,这非常繁琐还好有Vim 插件了来弥补这个缺点&lt;/strong&gt; &lt;br&gt;
+&lt;strong&gt;这个插件就是 &lt;a href=&#34;https://github.com/ZSaberLv0/ZFVimIM&#34;&gt;ZFVimIM&lt;/a&gt;, 这插件支持云输入(云词库), 非常的好用, 而且不影响你使用 &lt;em&gt;jk&lt;/em&gt; 切换的到 &lt;em&gt;Normal&lt;/em&gt; 模式, 配置也非常简单&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装-zfvimim&#34;&gt;安装 ZFVimIM&lt;/h2&gt;
+&lt;h3 id=&#34;安装必要插件-使用vim-plug-安装&#34;&gt;安装必要插件 &lt;strong&gt;使用Vim Plug&lt;/strong&gt; 安装&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-vimsirpt&#34; data-lang=&#34;vimsirpt&#34;&gt;Plug &amp;#39;ZSaberLv0/ZFVimIM&amp;#39;
+Plug &amp;#39;ZSaberLv0/ZFVimJob&amp;#39; &amp;#34; 可选, 用于提升词库加载性能
+Plug &amp;#39;ZSaberLv0/ZFVimIM_openapi&amp;#39; &amp;#34;云词库
+Plug &amp;#39;ZSaberLv0/ZFVimIM_pinyin&amp;#39; &amp;#34;db文件
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;我是使用 Neovim 以下是我的配置&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-vimsirpt&#34; data-lang=&#34;vimsirpt&#34;&gt;&amp;#34; 云词库支持
+let g:ZFVimIM_openapi_enable=1
+
+&amp;#34; 使用本地 db 的配置
+function! s:zfvimim_init() abort
+  let db = ZFVimIM_dbInit({&amp;#39;name&amp;#39; : &amp;#39;中文输入法&amp;#39;})
+  call ZFVimIM_cloudRegister({
+			  \   &amp;#39;mode&amp;#39; : &amp;#39;local&amp;#39;,
+			  \   &amp;#39;dbId&amp;#39; : db[&amp;#39;dbId&amp;#39;],
+			  \   &amp;#39;repoPath&amp;#39; : expand(&amp;#39;~/.config/nvim/plugged/ZFVimIM_pinyin/misc/&amp;#39;), &amp;#34; 词库路径,就是放下面两个文件的路径
+			  \   &amp;#39;dbFile&amp;#39; : &amp;#39;pinyin.txt&amp;#39;, &amp;#34; 词库文件, 相对 repoPath 的路径
+			  \   &amp;#39;dbCountFile&amp;#39; : &amp;#39;pinyin_count.txt&amp;#39;, &amp;#34; 非必须, 词频文件, 相对 repoPath 的路径
+			  \ })
+endfunction
+
+augroup zfvim_conf
+  autocmd!
+  autocmd VimEnter * call s:zfvimim_init()
+augroup END
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;安装后使用&#34;&gt;安装后使用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;;;&lt;/code&gt; 开启或关闭输入法, &lt;code&gt;;:&lt;/code&gt; 切换词库&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&lt;/code&gt; 和 &lt;code&gt;=&lt;/code&gt; 翻页&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;空格&lt;/code&gt; 和 &lt;code&gt;0~9&lt;/code&gt; 选词或组词&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[&lt;/code&gt; 和 &lt;code&gt;]&lt;/code&gt; 快速从词组选字&lt;/li&gt;
+&lt;li&gt;输入过程中会自动组自造词, 也可以用 &lt;code&gt;;,&lt;/code&gt; 或 &lt;code&gt;:IMAdd&lt;/code&gt; 手动添加自造词,
+&lt;code&gt;;.&lt;/code&gt; 或 &lt;code&gt;:IMRemove&lt;/code&gt; 删除自造词&lt;/li&gt;
+&lt;li&gt;觉得好用, 记得给开发者&lt;a href=&#34;https://github.com/ZSaberLv0/ZSaberLv0&#34;&gt;买个煎饼&lt;/a&gt;,
+贫穷码农在线乞讨 &lt;code&gt;_(:з」∠)_&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;更多细节请到官方 &lt;a href=&#34;https://github.com/ZSaberLv0/ZFVimIM&#34;&gt;ZFVimIM&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notion,Obsidian,Org-mode,Logseq,RoamResearch,笔记软件的选择</title>
+      <link>https://isouthrain.github.io/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9.zh-cn/</link>
+      <pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9.zh-cn/</guid>
+      <description>&lt;h1 id=&#34;概述&#34;&gt;概述&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;在如今这个时代每个人都需要做笔记，用来记录一些生活琐事，以及一些重要的事情，避免忘记， &lt;em&gt;好记性不如烂笔头&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;那么用什么软件记笔记呢?一个好的笔记软件可以快速让笔记快速记录。&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;笔记软件目前最好用的无非就是那几个，比如:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Notion&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Obsidian&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Logseq&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Emacs Org-mode&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;RoamResearch&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;每个笔记都有自己的优缺点，看自己的选择，上面这几款除了 RoamResearch 没用过，其他的我都有用过，所以在此讨论下。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;仅代表个人观点，仅供参考，无实际意义&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;notion&#34;&gt;Notion&lt;/h2&gt;
+&lt;h3 id=&#34;notion-优点&#34;&gt;Notion 优点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;免费&lt;/li&gt;
+&lt;li&gt;无限Page&lt;/li&gt;
+&lt;li&gt;大量的模板提供使用&lt;/li&gt;
+&lt;li&gt;非常的灵活&lt;/li&gt;
+&lt;li&gt;列表database的使用(e.g. 类似 Excel 的列表，可以自动进行运算)&lt;/li&gt;
+&lt;li&gt;全平台支持(主要是Web，Window，MacOS，Liux，Android，IOS)&lt;/li&gt;
+&lt;li&gt;Task 使用&lt;/li&gt;
+&lt;li&gt;日程的安排(有日历，并进行提醒)&lt;/li&gt;
+&lt;li&gt;每一行都是一个块(非常方便)&lt;/li&gt;
+&lt;li&gt;可以进行简单的GTD管理&lt;/li&gt;
+&lt;li&gt;支持Markdown语法&lt;/li&gt;
+&lt;li&gt;所见既所得&lt;/li&gt;
+&lt;li&gt;能导出(Markdown,PDF,CSV)&lt;/li&gt;
+&lt;li&gt;纯文本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;notion-缺点&#34;&gt;Notion 缺点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;都是需要联网的，没有离线版(可以离线使用，联网后自动同步，但是上传图片不行)&lt;/li&gt;
+&lt;li&gt;数据都是保存在Notion官方里&lt;/li&gt;
+&lt;li&gt;导出功能对中文不友好(中文路径乱码)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;对于-notion-个人建议&#34;&gt;对于 Notion 个人建议&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;如果你需要 多人协同工作 和 列表数据的计算，Notion 将会很适合你&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你需要把资料掌握在手了，而且是记录一些永久数据，不建议使用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这些公司不知道什么时候倒闭，如果你把一些永久保存的资料放上去很不好，导出的时候就很难受了&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不过 Notion 至少可以熬10年，实在是Notion太棒了, 功能强大，界面美观，非常丝滑，令人一上手就不舍得离开，请谨慎使用&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;obsidian&#34;&gt;Obsidian&lt;/h2&gt;
+&lt;h3 id=&#34;obsidian-优点&#34;&gt;Obsidian 优点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;免费&lt;/li&gt;
+&lt;li&gt;全平台支持(Window，MacOS，Liux，Android，IOS)&lt;/li&gt;
+&lt;li&gt;本地存储(也可以使用官方提供的在线存储)&lt;/li&gt;
+&lt;li&gt;支持Markdown语法&lt;/li&gt;
+&lt;li&gt;所见即所得(Mobile 端目前没有实现，将来可能实现)&lt;/li&gt;
+&lt;li&gt;丰富的&lt;strong&gt;插件生态&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;笔记双链&lt;/li&gt;
+&lt;li&gt;可以配合插件进行&lt;strong&gt;绘图&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Git进行版本管理(插件提供)&lt;/li&gt;
+&lt;li&gt;模板捕获&lt;/li&gt;
+&lt;li&gt;配置可迁移，复制配置目录就可以在全平台使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;obsidian-缺点&#34;&gt;Obsidian 缺点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;没有像Notion那样的database使用&lt;/li&gt;
+&lt;li&gt;表格的编辑要安装插件才勉强好用&lt;/li&gt;
+&lt;li&gt;无法进行GTD使用&lt;/li&gt;
+&lt;li&gt;要安装一些插件才能使&lt;strong&gt;Obsidian&lt;/strong&gt;更好用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;对于-obsidian-个人建议&#34;&gt;对于 Obsidian 个人建议&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;个人目前&lt;/strong&gt;使用的是&lt;strong&gt;Obsidian&lt;/strong&gt;，因为配合插件的使用真的非常好用，而且可以掌控自己的数据，想保存在那就保存在哪。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://isouthrain.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/about/</guid>
+      <description>&lt;p&gt;
+
+&lt;p style=&#34;text-align:center&#34;&gt;I will share what I have learned here, it is not limited to any field!&lt;/p&gt;
+
+
+
+&lt;p style=&#34;text-align:center&#34;&gt;Even I will share my life here, even how to make a delicious dish!&lt;/p&gt;
+
+
+
+&lt;p style=&#34;text-align:center&#34;&gt;If you learned here, then the blog completes its mission!&lt;/p&gt;
+
+
+
+&lt;p style=&#34;text-align:center&#34;&gt;Contact Me: &lt;a href=&#34;https://github.com/ISouthRain&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://isouthrain.github.io/about.zh-cn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/about.zh-cn/</guid>
+      <description>&lt;p&gt;
+
+&lt;p style=&#34;text-align:center&#34;&gt;我会在这里分享我学到的东西, 它不局限于任何领域!&lt;/p&gt;
+
+
+
+&lt;p style=&#34;text-align:center&#34;&gt;甚至我会在这里分享我的生活, 哪怕是如何做一道美味的菜肴!&lt;/p&gt;
+
+
+
+&lt;p style=&#34;text-align:center&#34;&gt;如果你在这里学到了知识，那本博客就完成了它的使命!&lt;/p&gt;
+
+
+
+&lt;p style=&#34;text-align:center&#34;&gt;Contact Me: &lt;a href=&#34;https://github.com/ISouthRain&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Support</title>
+      <link>https://isouthrain.github.io/support.zh-cn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/support.zh-cn/</guid>
+      <description>感谢您的支持!</description>
+    </item>
+    <item>
+      <title>外链</title>
+      <link>https://isouthrain.github.io/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/links/</guid>
+      <description>个人觉得有价值的各种外链，包括博客、微信公众号、视频等</description>
+    </item>
+  </channel>
+</rss>

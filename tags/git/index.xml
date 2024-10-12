@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Git on ISouthRain Blog</title>
+    <link>https://isouthrain.github.io/tags/git/</link>
+    <description>Recent content in Git on ISouthRain Blog</description>
+    <image>
+      <title>ISouthRain Blog</title>
+      <url>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 31 Aug 2024 10:28:58 +0800</lastBuildDate>
+    <atom:link href="https://isouthrain.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git submodule 子模块</title>
+      <link>https://isouthrain.github.io/post/20230411-gitsubmoduelhowtouse.zh-cn/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/20230411-gitsubmoduelhowtouse.zh-cn/</guid>
+      <description>如何使用 Git submodule 子模块</description>
+    </item>
+    <item>
+      <title>如何上传/推送到 Github</title>
+      <link>https://isouthrain.github.io/post/2022-04-29-%E6%8E%A8%E9%80%81github.zh-cn/</link>
+      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-04-29-%E6%8E%A8%E9%80%81github.zh-cn/</guid>
+      <description>&lt;h3 id=&#34;git-push-推送上传到-github&#34;&gt;git push 推送/上传到 GitHub&lt;/h3&gt;
+&lt;h3 id=&#34;git-push-输入账号密码后推送不了&#34;&gt;git push 输入账号密码后推送不了?&lt;/h3&gt;
+&lt;p&gt;因为 Github 的推送/上传机制改了&lt;br&gt;
+之前可以输入 账号密码 就可以 push, 现在只能使用 &lt;code&gt;github token&lt;/code&gt; 代替  &lt;code&gt;密码&lt;/code&gt; 才能推送/上传&lt;/p&gt;
+&lt;h3 id=&#34;申请-token&#34;&gt;申请 token&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Settings&lt;/code&gt; &amp;ndash;&amp;gt; &lt;code&gt;Developer settings&lt;/code&gt; &amp;ndash;&amp;gt;  &lt;code&gt;Personal access tokens&lt;/code&gt; &amp;ndash;&amp;gt;  &lt;code&gt;Generate new token&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Note &amp;ndash;&amp;gt; 随便填一个名称&lt;/li&gt;
+&lt;li&gt;Expiration &amp;ndash;&amp;gt; 选择该 token 有效期，个人建议如果是使用推送/上传功能，建议选  &lt;code&gt;No expiration&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;其余 &lt;code&gt;打勾&lt;/code&gt; 按照你自己需求，新手建议全部打勾&lt;/li&gt;
+&lt;li&gt;Generate token 点击创建&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;将你创建刚刚创建-token-复制&#34;&gt;将你创建刚刚创建 token 复制&lt;/h3&gt;
+&lt;h3 id=&#34;再次使用-git-push&#34;&gt;再次使用 git push&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;输入你的用户名,回车&lt;/li&gt;
+&lt;li&gt;将 token 粘贴上去, 回车&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;如果成功-上传推送-请享受&#34;&gt;如果成功 上传/推送 ，请享受🎉🎉🎉&lt;/h3&gt;
+&lt;h3 id=&#34;每次-推送上传-都要输入-账号密码&#34;&gt;每次 推送/上传 都要输入 账号密码??&lt;/h3&gt;
+&lt;p&gt;如果你不想每次 上传/推送 都要输入 账号密码，可以看我的另一个文章
+每次都要输入账号密码太麻烦了&lt;br&gt;
+👉  &lt;a href=&#34;https://isouthrain.github.io/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git/&#34;&gt;永久免账号密码 推送/上传 GitHub&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>永久免账号密码推送Github</title>
+      <link>https://isouthrain.github.io/post/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git.zh-cn/</link>
+      <pubDate>Thu, 28 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2022-04-28-%E6%B0%B8%E4%B9%85%E5%85%8D%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%8E%A8%E9%80%81git.zh-cn/</guid>
+      <description>&lt;h3 id=&#34;使用以下方法后&#34;&gt;使用以下方法后&lt;/h3&gt;
+&lt;h3 id=&#34;git-push-再也不用一直输入-账号密码了&#34;&gt;git push 再也不用一直输入 账号密码了!&lt;/h3&gt;
+&lt;h3 id=&#34;git-push-每次都要输入账号密码-从此解决&#34;&gt;git push 每次都要输入账号密码? 从此解决&lt;/h3&gt;
+&lt;h3 id=&#34;正文&#34;&gt;正文👇&lt;/h3&gt;
+&lt;h3 id=&#34;首先配置-git-个人信息&#34;&gt;首先配置 Git 个人信息&lt;/h3&gt;
+&lt;h4 id=&#34;依此输入以下两个命令&#34;&gt;依此输入以下两个命令:&lt;/h4&gt;
+&lt;h4 id=&#34;配置你的-github-邮箱&#34;&gt;配置你的 GitHub 邮箱📬&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;你在 GitHub 注册的邮箱&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;配置你的-github-用户名&#34;&gt;配置你的 GitHub 用户名&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &lt;span class=&#34;s2&#34;&gt;&amp;#34;你的 GitHub 用户名&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;输入以下命令后将会保存你-git-push-时登录的信息&#34;&gt;输入以下命令后，将会保存你 git push 时登录的信息&lt;/h4&gt;
+&lt;h4 id=&#34;当下一次-git-push-时就不用再输入登录信息了&#34;&gt;当下一次 git push 时就不用再输入登录信息了!&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global credential.helper store
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;如何推送上传到githubhttpsisouthraingithubio2022-04-29-e68ea8e98081github&#34;&gt;&lt;a href=&#34;https://isouthrain.github.io/2022-04-29-%E6%8E%A8%E9%80%81github/&#34;&gt;如何推送/上传到GitHub&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;faq&#34;&gt;FAQ❓&lt;/h4&gt;
+&lt;h5 id=&#34;由于github已经更改了-git-push-机制&#34;&gt;由于GitHub已经更改了 git push 机制&lt;/h5&gt;
+&lt;h5 id=&#34;git-push-时密码改用-token&#34;&gt;&lt;code&gt;git push&lt;/code&gt; 时&lt;code&gt;密码改用&lt;/code&gt; &lt;code&gt;token&lt;/code&gt;&lt;/h5&gt;
+&lt;h4 id=&#34;已完成所有工作-请-git-push-一次试试&#34;&gt;已完成所有工作, 请 git push 一次试试&lt;/h4&gt;
+&lt;h5 id=&#34;如果成功了请享受&#34;&gt;如果成功了，请享受🎉🎉🎉&lt;/h5&gt;</description>
+    </item>
+  </channel>
+</rss>

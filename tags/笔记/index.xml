@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>笔记 on ISouthRain Blog</title>
+    <link>https://isouthrain.github.io/tags/%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 笔记 on ISouthRain Blog</description>
+    <image>
+      <title>ISouthRain Blog</title>
+      <url>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 28 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://isouthrain.github.io/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notion,Obsidian,Org-mode,Logseq,RoamResearch,笔记软件的选择</title>
+      <link>https://isouthrain.github.io/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9.zh-cn/</link>
+      <pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2021-12-25-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%80%89%E6%8B%A9.zh-cn/</guid>
+      <description>&lt;h1 id=&#34;概述&#34;&gt;概述&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;在如今这个时代每个人都需要做笔记，用来记录一些生活琐事，以及一些重要的事情，避免忘记， &lt;em&gt;好记性不如烂笔头&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;那么用什么软件记笔记呢?一个好的笔记软件可以快速让笔记快速记录。&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;笔记软件目前最好用的无非就是那几个，比如:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Notion&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Obsidian&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Logseq&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Emacs Org-mode&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;RoamResearch&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;每个笔记都有自己的优缺点，看自己的选择，上面这几款除了 RoamResearch 没用过，其他的我都有用过，所以在此讨论下。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;仅代表个人观点，仅供参考，无实际意义&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;notion&#34;&gt;Notion&lt;/h2&gt;
+&lt;h3 id=&#34;notion-优点&#34;&gt;Notion 优点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;免费&lt;/li&gt;
+&lt;li&gt;无限Page&lt;/li&gt;
+&lt;li&gt;大量的模板提供使用&lt;/li&gt;
+&lt;li&gt;非常的灵活&lt;/li&gt;
+&lt;li&gt;列表database的使用(e.g. 类似 Excel 的列表，可以自动进行运算)&lt;/li&gt;
+&lt;li&gt;全平台支持(主要是Web，Window，MacOS，Liux，Android，IOS)&lt;/li&gt;
+&lt;li&gt;Task 使用&lt;/li&gt;
+&lt;li&gt;日程的安排(有日历，并进行提醒)&lt;/li&gt;
+&lt;li&gt;每一行都是一个块(非常方便)&lt;/li&gt;
+&lt;li&gt;可以进行简单的GTD管理&lt;/li&gt;
+&lt;li&gt;支持Markdown语法&lt;/li&gt;
+&lt;li&gt;所见既所得&lt;/li&gt;
+&lt;li&gt;能导出(Markdown,PDF,CSV)&lt;/li&gt;
+&lt;li&gt;纯文本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;notion-缺点&#34;&gt;Notion 缺点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;都是需要联网的，没有离线版(可以离线使用，联网后自动同步，但是上传图片不行)&lt;/li&gt;
+&lt;li&gt;数据都是保存在Notion官方里&lt;/li&gt;
+&lt;li&gt;导出功能对中文不友好(中文路径乱码)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;对于-notion-个人建议&#34;&gt;对于 Notion 个人建议&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;如果你需要 多人协同工作 和 列表数据的计算，Notion 将会很适合你&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你需要把资料掌握在手了，而且是记录一些永久数据，不建议使用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这些公司不知道什么时候倒闭，如果你把一些永久保存的资料放上去很不好，导出的时候就很难受了&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不过 Notion 至少可以熬10年，实在是Notion太棒了, 功能强大，界面美观，非常丝滑，令人一上手就不舍得离开，请谨慎使用&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;obsidian&#34;&gt;Obsidian&lt;/h2&gt;
+&lt;h3 id=&#34;obsidian-优点&#34;&gt;Obsidian 优点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;免费&lt;/li&gt;
+&lt;li&gt;全平台支持(Window，MacOS，Liux，Android，IOS)&lt;/li&gt;
+&lt;li&gt;本地存储(也可以使用官方提供的在线存储)&lt;/li&gt;
+&lt;li&gt;支持Markdown语法&lt;/li&gt;
+&lt;li&gt;所见即所得(Mobile 端目前没有实现，将来可能实现)&lt;/li&gt;
+&lt;li&gt;丰富的&lt;strong&gt;插件生态&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;笔记双链&lt;/li&gt;
+&lt;li&gt;可以配合插件进行&lt;strong&gt;绘图&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Git进行版本管理(插件提供)&lt;/li&gt;
+&lt;li&gt;模板捕获&lt;/li&gt;
+&lt;li&gt;配置可迁移，复制配置目录就可以在全平台使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;obsidian-缺点&#34;&gt;Obsidian 缺点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;没有像Notion那样的database使用&lt;/li&gt;
+&lt;li&gt;表格的编辑要安装插件才勉强好用&lt;/li&gt;
+&lt;li&gt;无法进行GTD使用&lt;/li&gt;
+&lt;li&gt;要安装一些插件才能使&lt;strong&gt;Obsidian&lt;/strong&gt;更好用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;对于-obsidian-个人建议&#34;&gt;对于 Obsidian 个人建议&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;个人目前&lt;/strong&gt;使用的是&lt;strong&gt;Obsidian&lt;/strong&gt;，因为配合插件的使用真的非常好用，而且可以掌控自己的数据，想保存在那就保存在哪。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

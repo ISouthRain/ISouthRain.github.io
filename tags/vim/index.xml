@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vim on ISouthRain Blog</title>
+    <link>https://isouthrain.github.io/tags/vim/</link>
+    <description>Recent content in Vim on ISouthRain Blog</description>
+    <image>
+      <title>ISouthRain Blog</title>
+      <url>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 16 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://isouthrain.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim和Emacs的选择</title>
+      <link>https://isouthrain.github.io/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9.zh-cn/</link>
+      <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2021-12-27-vim%E5%92%8Cemacs%E7%9A%84%E9%80%89%E6%8B%A9.zh-cn/</guid>
+      <description>&lt;p&gt;Emacs Happy You Lief.&lt;/p&gt;
+&lt;h1 id=&#34;结语&#34;&gt;结语&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;本章不再更新, 愿您参与进 Emacs 生活..&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;自 2022 年起使用 Emacs 至今已有两年, 如今 Emacs 才是归属&amp;hellip;.&lt;/p&gt;
+&lt;p&gt;如今 ChatGPT 等 AI 工具的崛起, 个人定制 Emacs 成本更低, Emacs 非常好糊, 随便问问 AI 即可&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Emacs 优点:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;支持 Gui, 显示图片&lt;/li&gt;
+&lt;li&gt;Emacs EAF 框架的出现, 你可以使用 EAF 运行任何软件, 比如: Chroium 内核浏览器&lt;/li&gt;
+&lt;li&gt;Magit 支持 git 易上手插件, 让你不在学习 git 就可以使用 git&lt;/li&gt;
+&lt;li&gt;AI 工具的崛起, 对 Emacs 修改更加简单, 我没有学习 lisp 过, 也让 AI 帮我写了个两个关于 离线英语单词查询/git blame 显示的插件&lt;/li&gt;
+&lt;li&gt;Org 也支持了图片导入&lt;/li&gt;
+&lt;li&gt;Emacs minibuffer 配合 vertico/consult/marginalia/orderless/embark 之类的工具非常强大, 模糊搜索+拼音搜索, 几乎吊打所有 vim/neovim 输入命令框架.&lt;/li&gt;
+&lt;li&gt;Org-roam/org-capture 组织你的生活, Task list on you life.&lt;/li&gt;
+&lt;li&gt;nov-mode 阅读电子书, 配合 org-capture 做笔记.&lt;/li&gt;
+&lt;li&gt;你想干什么都行.&lt;/li&gt;
+&lt;li&gt;我非常高兴的实现:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;输入中文后自动翻译成英文, 不用那么麻烦&lt;/li&gt;
+&lt;li&gt;自动识别当前光标单词, 显示字典, 并自动播放音频纠正自己的读音(都是基于离线的)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;这篇文章并不是想引战, 而是试着去说明这两者的区别, 然后根据自己的需求选择 Vim 还是 Emacs&lt;/strong&gt;
+&lt;strong&gt;Vin 和 Emacs 各有自己的特点, 我只想把这两者的特点说明以下, 让读者根据自己的需求选择 Vim 还是 Emacs&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>(Neo)Vim 中英文输入法</title>
+      <link>https://isouthrain.github.io/post/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95.zh-cn/</link>
+      <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/post/2021-12-26-vim%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95.zh-cn/</guid>
+      <description>&lt;h1 id=&#34;概述&#34;&gt;概述&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;使用 Vim 每当我们切换中文输入时都要切换中英文,这非常繁琐还好有Vim 插件了来弥补这个缺点&lt;/strong&gt; &lt;br&gt;
+&lt;strong&gt;这个插件就是 &lt;a href=&#34;https://github.com/ZSaberLv0/ZFVimIM&#34;&gt;ZFVimIM&lt;/a&gt;, 这插件支持云输入(云词库), 非常的好用, 而且不影响你使用 &lt;em&gt;jk&lt;/em&gt; 切换的到 &lt;em&gt;Normal&lt;/em&gt; 模式, 配置也非常简单&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装-zfvimim&#34;&gt;安装 ZFVimIM&lt;/h2&gt;
+&lt;h3 id=&#34;安装必要插件-使用vim-plug-安装&#34;&gt;安装必要插件 &lt;strong&gt;使用Vim Plug&lt;/strong&gt; 安装&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-vimsirpt&#34; data-lang=&#34;vimsirpt&#34;&gt;Plug &amp;#39;ZSaberLv0/ZFVimIM&amp;#39;
+Plug &amp;#39;ZSaberLv0/ZFVimJob&amp;#39; &amp;#34; 可选, 用于提升词库加载性能
+Plug &amp;#39;ZSaberLv0/ZFVimIM_openapi&amp;#39; &amp;#34;云词库
+Plug &amp;#39;ZSaberLv0/ZFVimIM_pinyin&amp;#39; &amp;#34;db文件
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;我是使用 Neovim 以下是我的配置&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-vimsirpt&#34; data-lang=&#34;vimsirpt&#34;&gt;&amp;#34; 云词库支持
+let g:ZFVimIM_openapi_enable=1
+
+&amp;#34; 使用本地 db 的配置
+function! s:zfvimim_init() abort
+  let db = ZFVimIM_dbInit({&amp;#39;name&amp;#39; : &amp;#39;中文输入法&amp;#39;})
+  call ZFVimIM_cloudRegister({
+			  \   &amp;#39;mode&amp;#39; : &amp;#39;local&amp;#39;,
+			  \   &amp;#39;dbId&amp;#39; : db[&amp;#39;dbId&amp;#39;],
+			  \   &amp;#39;repoPath&amp;#39; : expand(&amp;#39;~/.config/nvim/plugged/ZFVimIM_pinyin/misc/&amp;#39;), &amp;#34; 词库路径,就是放下面两个文件的路径
+			  \   &amp;#39;dbFile&amp;#39; : &amp;#39;pinyin.txt&amp;#39;, &amp;#34; 词库文件, 相对 repoPath 的路径
+			  \   &amp;#39;dbCountFile&amp;#39; : &amp;#39;pinyin_count.txt&amp;#39;, &amp;#34; 非必须, 词频文件, 相对 repoPath 的路径
+			  \ })
+endfunction
+
+augroup zfvim_conf
+  autocmd!
+  autocmd VimEnter * call s:zfvimim_init()
+augroup END
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;安装后使用&#34;&gt;安装后使用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;;;&lt;/code&gt; 开启或关闭输入法, &lt;code&gt;;:&lt;/code&gt; 切换词库&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&lt;/code&gt; 和 &lt;code&gt;=&lt;/code&gt; 翻页&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;空格&lt;/code&gt; 和 &lt;code&gt;0~9&lt;/code&gt; 选词或组词&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[&lt;/code&gt; 和 &lt;code&gt;]&lt;/code&gt; 快速从词组选字&lt;/li&gt;
+&lt;li&gt;输入过程中会自动组自造词, 也可以用 &lt;code&gt;;,&lt;/code&gt; 或 &lt;code&gt;:IMAdd&lt;/code&gt; 手动添加自造词,
+&lt;code&gt;;.&lt;/code&gt; 或 &lt;code&gt;:IMRemove&lt;/code&gt; 删除自造词&lt;/li&gt;
+&lt;li&gt;觉得好用, 记得给开发者&lt;a href=&#34;https://github.com/ZSaberLv0/ZSaberLv0&#34;&gt;买个煎饼&lt;/a&gt;,
+贫穷码农在线乞讨 &lt;code&gt;_(:з」∠)_&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;更多细节请到官方 &lt;a href=&#34;https://github.com/ZSaberLv0/ZFVimIM&#34;&gt;ZFVimIM&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
