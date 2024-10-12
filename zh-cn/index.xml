@@ -1180,39 +1180,6 @@ augroup END
     &lt;/div&gt;
     
     
-&lt;/div&gt;
-
-
-&lt;div style=&#34;height: 200px;margin: 1em auto;position: relative;
-        box-shadow: 0 2px 4px rgb(0 0 0 / 25%), 0 0 2px rgb(0 0 0 / 25%);
-        border-radius: 15px;padding: 23px;max-width: 780px;background: var(--entry);&#34;&gt;
-    
-    
-    &lt;div style=&#34;font-size: 22px; font-weight: 600&#34;&gt;
-        &lt;a target=&#34;_blank&#34; href=&#34;https://isouthrain.github.io/zh-cn/post/2022-03-20-telegram%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF/&#34; style=&#34;box-shadow: none&#34;&gt;Telegram 收发微信消息&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;span style=&#34;font-size: 14px; color: #999&#34;&gt;
-        日期: 2022-03-20
-        &amp;nbsp;
-        标签:
-        
-            #TelegramBot&amp;nbsp;
-        
-            #微信&amp;nbsp;
-        
-    &lt;/span&gt;
-    &lt;div style=&#34;font-size: 14px; line-height: 1.825;max-height: 75px; overflow: hidden;margin-top: 5px;&#34;&gt;
-        2022-08-30 更新 📍📍全部帐号可用, 不支持网页版的也可以使用了, 使用本教程就可以正常使用 📍📍 Telegram收发微信消息(可以不需要购买服务器，单纯手机也可以) 📍📍 在开始本教程之前，请你确认你的微信号是否支持网页端登录，如果不支持请离开 微信网页版入口 也可以试试 先登录 微信文件传输助手网页版 再去登录网页版 概述 微信浪费电是大家都知道的，但奈何亲朋好友都在用没法换，只能自己另有他寻了，所以有了本教程。使用TG的好处懂得都懂
-需要使用科学上网才能进行登录，Android用户直接挂VPN就可以，购买服务器的可以使用外国服务器，或者国内的服务器给服务器上代理就可以了 本教程声明 Android手机不需要购买服务器
-此教程没有以下功能
-没有朋友圈 没有红包 不能发语音（可以收听） 不能发位置 类似Web微信 部分文件、图片、表情等多媒体文件会被网页版微信截断，即收不到任何数据， 尤以表情为甚。因此造成的偶发现象，会提醒用户使用移动客户端查看。 目前只有Ubuntu系统能把功能都实现，所以本教程使用Ubuntu系统 需要一点点Linux知识，不会也没有关系，耐心看跟着做就好了 Android用户可以使用Termux安装一个Ubuntu系统就可以了,在Ubuntu进行配置就好了，很完美了！ 关于 Termux 可以直接去下载，完全免费，很省电，耗电量可以忽略不计 Termux安装Ubuntu 更新下软件包：
-pkg update 打开软件，输入以下代码按回车：
-pkg install wget openssl-tool proot -y &amp;amp;&amp;amp; hash -r &amp;amp;&amp;amp; wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh &amp;amp;&amp;amp; bash ubuntu.sh 输入以下代码进入Ubuntu系统：
-./start-ubuntu.sh 回到本教程，开始搭建TG收发微信消息 先更新系统软件： apt update &amp;amp;&amp;amp; apt upgrade -y 下载必要依赖： apt install ffmpeg python3-pip python3-dev python3-setuptools libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev libmagic-dev -y 安装EH转发机器人和主从通道: 安装EFB： pip3 install ehforwarderbot 安装TG机器人 pip3 install efb-telegram-master 微信端： pip3 install git+https://github.com/ehForwarderBot/efb-wechat-slave 现在做完了服务器工作，再去申请一个机器人 打开TG搜索 @botfather 发送 /newbot 创建自已的机器人 给自已的机器人取个称呼（随便取） 给自已的机器人取个用户名，必须是以 bot 结尾（例如Wechatbot）注意可能被人取了就另外再打个bot结尾的名称，必须是英文 创建后你会得到一个API（也可以称 token），复制下来 配置机器人： 输入 /setprivacy 发送，选择你的机器人，点Disable 输入 /setjoingroups 发送，选择你的机器人，点Enable 输入 /setcommands 发送，选择你的机器人，输入以下内容(全部一起发，不是一条条发)还有其他功能自己可以去摸索: link - 将会话绑定到 Telegram 群组 chat - 生成会话头 返回telegram主界面，搜索按扭🔍，搜索@get_id_bot，进入点开始会得到你的telegram id 服务器上操作或者Termux操作（Android用户一定要在Ubuntu上操作） 下载编辑软件vim： apt install vim 编辑文件： vim ~/.ehforwarderbot/profiles/default/config.yaml 进入后点一下键盘 i
- ......
-    &lt;/div&gt;
-    
-    
 &lt;/div&gt;</description>
     </item>
     <item>
