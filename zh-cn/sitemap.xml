@@ -200,11 +200,43 @@
                 href="https://isouthrain.github.io/zh-cn/about/"
                 />
   </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/archives/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://isouthrain.github.io/en/archives/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://isouthrain.github.io/zh-cn/archives/"
+                />
+  </url><url>
     <loc>https://isouthrain.github.io/zh-cn/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://isouthrain.github.io/en/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://isouthrain.github.io/zh-cn/search/"
+                />
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/support/</loc>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/life/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://isouthrain.github.io/en/life/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://isouthrain.github.io/zh-cn/life/"
+                />
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/links/</loc>
   </url>

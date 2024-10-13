@@ -14,6 +14,18 @@
                 href="https://isouthrain.github.io/en/about/"
                 />
   </url><url>
+    <loc>https://isouthrain.github.io/en/archives/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://isouthrain.github.io/zh-cn/archives/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://isouthrain.github.io/en/archives/"
+                />
+  </url><url>
     <loc>https://isouthrain.github.io/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -36,6 +48,30 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://isouthrain.github.io/en/"
+                />
+  </url><url>
+    <loc>https://isouthrain.github.io/en/life/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://isouthrain.github.io/zh-cn/life/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://isouthrain.github.io/en/life/"
+                />
+  </url><url>
+    <loc>https://isouthrain.github.io/en/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="https://isouthrain.github.io/zh-cn/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://isouthrain.github.io/en/search/"
                 />
   </url><url>
     <loc>https://isouthrain.github.io/en/tags/</loc>
