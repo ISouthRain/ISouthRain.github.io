@@ -11,8 +11,28 @@
     </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 27 Oct 2024 19:50:23 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 Nov 2024 16:53:53 +0800</lastBuildDate>
     <atom:link href="https://isouthrain.github.io/zh-cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows 系统无法启动 Docker 容器问题</title>
+      <link>https://isouthrain.github.io/zh-cn/post/20241117--windows%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8docker%E5%AE%B9%E5%99%A8%E9%97%AE%E9%A2%98--docker/</link>
+      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/zh-cn/post/20241117--windows%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8docker%E5%AE%B9%E5%99%A8%E9%97%AE%E9%A2%98--docker/</guid>
+      <description>&lt;p&gt;解决方法:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# docker run -it 其余命令&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 示例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -it --name hello -d hello-world
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;需要使用 -it 参数运行&lt;/p&gt;
+&lt;p&gt;-i: 以交互模式运行容器，通常与 -t 同时使用&lt;/p&gt;
+&lt;p&gt;-t: 为容器重新分配一个伪输入终端，通常与 -i 同时使用&lt;/p&gt;
+&lt;p&gt;最近在 Windows 系统安装了 Docker desktop, 遇到了无论如何都无法运行容器,
+一启动容器后, 容器就处于 Exited 状态, 无法正常使用..&lt;/p&gt;
+&lt;p&gt;在网上搜索了很多相关的文章, 也试过重新安装 Docker,
+排查 wsl, hyper-V 虚拟机, 内存虚拟化等等问题, 都是无法运行容器&amp;hellip;&lt;/p&gt;
+&lt;p&gt;整个人都是崩溃的, 为什么一个如此成熟的技术软件和系统, 竟然还有如此奇怪的问题..&lt;/p&gt;
+&lt;p&gt;而且网上很多相关的文章, 那么证明很多人都遇到了这问题&amp;hellip;&lt;/p&gt;
+&lt;p&gt;难以想象这究竟浪费了多少人的时间&amp;hellip;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>珠海三人组两日游</title>
       <link>https://isouthrain.github.io/zh-cn/post/20241027--%E7%8F%A0%E6%B5%B7%E4%B8%89%E4%BA%BA%E7%BB%84%E4%B8%A4%E6%97%A5%E6%B8%B8--life/</link>

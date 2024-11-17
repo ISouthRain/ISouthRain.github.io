@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 27 Oct 2024 19:50:23 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 Nov 2024 16:53:53 +0800</lastBuildDate>
     <atom:link href="https://isouthrain.github.io/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker</title>
+      <link>https://isouthrain.github.io/zh-cn/tags/docker/</link>
+      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/zh-cn/tags/docker/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Life</title>
       <link>https://isouthrain.github.io/zh-cn/tags/life/</link>

@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://isouthrain.github.io/zh-cn/categories/</loc>
-    <lastmod>2024-10-27T19:50:23+08:00</lastmod>
+    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,8 +15,11 @@
                 href="https://isouthrain.github.io/zh-cn/categories/"
                 />
   </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/tags/docker/</loc>
+    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
+  </url><url>
     <loc>https://isouthrain.github.io/zh-cn/</loc>
-    <lastmod>2024-10-27T19:50:23+08:00</lastmod>
+    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -28,14 +31,11 @@
                 href="https://isouthrain.github.io/zh-cn/"
                 />
   </url><url>
-    <loc>https://isouthrain.github.io/zh-cn/tags/life/</loc>
-    <lastmod>2024-10-27T19:50:23+08:00</lastmod>
-  </url><url>
     <loc>https://isouthrain.github.io/zh-cn/post/</loc>
-    <lastmod>2024-10-27T19:50:23+08:00</lastmod>
+    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/tags/</loc>
-    <lastmod>2024-10-27T19:50:23+08:00</lastmod>
+    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -47,6 +47,15 @@
                 href="https://isouthrain.github.io/zh-cn/tags/"
                 />
   </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/post/20241117--windows%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8docker%E5%AE%B9%E5%99%A8%E9%97%AE%E9%A2%98--docker/</loc>
+    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
+  </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
+  </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/tags/life/</loc>
+    <lastmod>2024-10-27T19:50:23+08:00</lastmod>
+  </url><url>
     <loc>https://isouthrain.github.io/zh-cn/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2024-10-27T19:50:23+08:00</lastmod>
   </url><url>
@@ -57,9 +66,6 @@
     <lastmod>2024-10-17T23:09:06+08:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/post/20241013--emacs%E6%8A%80%E5%B7%A7%E5%96%84%E7%94%A8%E7%BF%BB%E8%AF%91--emacs/</loc>
-    <lastmod>2024-10-17T23:09:06+08:00</lastmod>
-  </url><url>
-    <loc>https://isouthrain.github.io/zh-cn/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2024-10-17T23:09:06+08:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/tags/hugo/</loc>
