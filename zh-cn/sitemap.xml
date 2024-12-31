@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://isouthrain.github.io/zh-cn/post/20241231--2024%E6%80%BB%E7%BB%93%E5%AF%84%E8%AF%AD--%E6%88%90%E9%95%BF/</loc>
+    <lastmod>2024-12-31T22:53:30+08:00</lastmod>
+  </url><url>
     <loc>https://isouthrain.github.io/zh-cn/categories/</loc>
-    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
+    <lastmod>2024-12-31T22:53:30+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,11 +18,8 @@
                 href="https://isouthrain.github.io/zh-cn/categories/"
                 />
   </url><url>
-    <loc>https://isouthrain.github.io/zh-cn/tags/docker/</loc>
-    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
-  </url><url>
     <loc>https://isouthrain.github.io/zh-cn/</loc>
-    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
+    <lastmod>2024-12-31T22:53:30+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -32,10 +32,10 @@
                 />
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/post/</loc>
-    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
+    <lastmod>2024-12-31T22:53:30+08:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/tags/</loc>
-    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
+    <lastmod>2024-12-31T22:53:30+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -47,6 +47,15 @@
                 href="https://isouthrain.github.io/zh-cn/tags/"
                 />
   </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/tags/%E6%88%90%E9%95%BF/</loc>
+    <lastmod>2024-12-31T22:53:30+08:00</lastmod>
+  </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2024-12-31T22:53:30+08:00</lastmod>
+  </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/tags/docker/</loc>
+    <lastmod>2024-11-17T16:53:53+08:00</lastmod>
+  </url><url>
     <loc>https://isouthrain.github.io/zh-cn/post/20241117--windows%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8docker%E5%AE%B9%E5%99%A8%E9%97%AE%E9%A2%98--docker/</loc>
     <lastmod>2024-11-17T16:53:53+08:00</lastmod>
   </url><url>
@@ -54,9 +63,6 @@
     <lastmod>2024-11-17T16:53:53+08:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/tags/life/</loc>
-    <lastmod>2024-10-27T19:50:23+08:00</lastmod>
-  </url><url>
-    <loc>https://isouthrain.github.io/zh-cn/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2024-10-27T19:50:23+08:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/post/20241027--%E7%8F%A0%E6%B5%B7%E4%B8%89%E4%BA%BA%E7%BB%84%E4%B8%A4%E6%97%A5%E6%B8%B8--life/</loc>
@@ -88,9 +94,6 @@
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/post/20230727--%E8%AE%A9%E6%97%B6%E9%97%B4%E6%85%A2%E6%85%A2%E9%99%AA%E4%BD%A0%E5%8F%98%E5%AF%8C-%E5%AE%9A%E6%8A%95%E6%94%B9%E5%8F%98%E5%91%BD%E8%BF%90--%E6%88%90%E9%95%BF/</loc>
     <lastmod>2024-08-31T09:53:52+08:00</lastmod>
-  </url><url>
-    <loc>https://isouthrain.github.io/zh-cn/tags/%E6%88%90%E9%95%BF/</loc>
-    <lastmod>2024-08-31T10:25:38+08:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/post/20230717--opencoreinstallguide--apple/</loc>
     <lastmod>2024-08-31T10:34:26+08:00</lastmod>
