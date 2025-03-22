@@ -2,11 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://isouthrain.github.io/zh-cn/post/20250101--%E8%AF%BB%E5%8E%9F%E5%AD%90%E4%B9%A0%E6%83%AF--life/</loc>
-    <lastmod>2025-01-01T14:39:27+08:00</lastmod>
-  </url><url>
     <loc>https://isouthrain.github.io/zh-cn/categories/</loc>
-    <lastmod>2025-01-01T14:39:27+08:00</lastmod>
+    <lastmod>2025-03-22T20:55:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +16,7 @@
                 />
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/</loc>
-    <lastmod>2025-01-01T14:39:27+08:00</lastmod>
+    <lastmod>2025-03-22T20:55:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -31,11 +28,20 @@
                 href="https://isouthrain.github.io/zh-cn/"
                 />
   </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/tags/nfc/</loc>
+    <lastmod>2025-03-22T20:55:00+08:00</lastmod>
+  </url><url>
     <loc>https://isouthrain.github.io/zh-cn/post/</loc>
-    <lastmod>2025-01-01T14:39:27+08:00</lastmod>
+    <lastmod>2025-03-22T20:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/tags/st25r3916/</loc>
+    <lastmod>2025-03-22T20:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/tags/st25r3918/</loc>
+    <lastmod>2025-03-22T20:55:00+08:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/tags/</loc>
-    <lastmod>2025-01-01T14:39:27+08:00</lastmod>
+    <lastmod>2025-03-22T20:55:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -46,6 +52,18 @@
                 hreflang="zh-CN"
                 href="https://isouthrain.github.io/zh-cn/tags/"
                 />
+  </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/categories/%E5%B7%A5%E4%BD%9C/</loc>
+    <lastmod>2025-03-22T20:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/post/20250310--%E7%A7%BB%E6%A4%8Dst25r391xnfc%E8%87%B3%E4%BB%BB%E4%BD%95mcu%E8%8A%AF%E7%89%87%E6%8C%87%E5%8D%97--%E7%A1%AC%E4%BB%B6/</loc>
+    <lastmod>2025-03-22T20:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/categories/%E7%A1%AC%E4%BB%B6/</loc>
+    <lastmod>2025-03-22T20:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/post/20250101--%E8%AF%BB%E5%8E%9F%E5%AD%90%E4%B9%A0%E6%83%AF--life/</loc>
+    <lastmod>2025-01-01T14:39:27+08:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/tags/%E6%88%90%E9%95%BF/</loc>
     <lastmod>2025-01-01T14:39:27+08:00</lastmod>
