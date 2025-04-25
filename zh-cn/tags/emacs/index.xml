@@ -11,12 +11,12 @@
     </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 25 Apr 2025 19:40:20 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 25 Apr 2025 20:10:37 +0800</lastBuildDate>
     <atom:link href="https://isouthrain.github.io/zh-cn/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs 如何调试单片机(嵌入式 Embedded Debug)</title>
       <link>https://isouthrain.github.io/zh-cn/post/20250425--emacs%E5%A6%82%E4%BD%95%E8%B0%83%E8%AF%95%E7%A1%AC%E4%BB%B6%E5%B5%8C%E5%85%A5%E5%BC%8F--emacs/</link>
-      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://isouthrain.github.io/zh-cn/post/20250425--emacs%E5%A6%82%E4%BD%95%E8%B0%83%E8%AF%95%E7%A1%AC%E4%BB%B6%E5%B5%8C%E5%85%A5%E5%BC%8F--emacs/</guid>
       <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
 &lt;p&gt;本文讲述如何在 Emacs 进行嵌入式调试, 对 MCU 单片机硬件进行调试(比如: STM, HC 等芯片)&lt;/p&gt;
