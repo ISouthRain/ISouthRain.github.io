@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>单片机 on ISouthRain Blog</title>
+    <link>https://isouthrain.github.io/zh-cn/tags/%E5%8D%95%E7%89%87%E6%9C%BA/</link>
+    <description>Recent content in 单片机 on ISouthRain Blog</description>
+    <image>
+      <title>ISouthRain Blog</title>
+      <url>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 25 Apr 2025 19:40:20 +0800</lastBuildDate>
+    <atom:link href="https://isouthrain.github.io/zh-cn/tags/%E5%8D%95%E7%89%87%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs 如何调试单片机(嵌入式 Embedded Debug)</title>
+      <link>https://isouthrain.github.io/zh-cn/post/20250425--emacs%E5%A6%82%E4%BD%95%E8%B0%83%E8%AF%95%E7%A1%AC%E4%BB%B6%E5%B5%8C%E5%85%A5%E5%BC%8F--emacs/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/zh-cn/post/20250425--emacs%E5%A6%82%E4%BD%95%E8%B0%83%E8%AF%95%E7%A1%AC%E4%BB%B6%E5%B5%8C%E5%85%A5%E5%BC%8F--emacs/</guid>
+      <description>&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;本文讲述如何在 Emacs 进行嵌入式调试, 对 MCU 单片机硬件进行调试(比如: STM, HC 等芯片)&lt;/p&gt;
+&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;p&gt;大多数入门单片机调试都是从 Keil, IAR Embedded 之类的 IDE 软件.&lt;/p&gt;
+&lt;p&gt;由于 IDE 这些软件集成了 调试 功能, 导致不知道 &lt;strong&gt;编译 + 调试&lt;/strong&gt; 是如何进行的.&lt;/p&gt;
+&lt;p&gt;调试底层逻辑: gdb 进行调试.&lt;/p&gt;
+&lt;h2 id=&#34;emacs-调试单片机&#34;&gt;Emacs 调试单片机&lt;/h2&gt;
+&lt;h3 id=&#34;安装必要依赖&#34;&gt;安装必要依赖&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/svaante/dape&#34;&gt;GitHub - svaante/dape: Debug Adapter Protocol for Emacs&lt;/a&gt;
+Emacs 安装 dape, 然后根据 dape 说明再安装 &lt;strong&gt;cpptools&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.arm.com/downloads/-/gnu-rm&#34;&gt;Downloads | GNU Arm Embedded Toolchain Downloads – Arm Developer&lt;/a&gt;
+安装 Arm GCC 工具链, 该工具包含 &lt;strong&gt;arm-none-eabi-xxx&lt;/strong&gt; 等命令行工具.&lt;/p&gt;
+&lt;p&gt;检查 Arm GCC 是否安装成功, 在终端输入 &lt;strong&gt;arm-none-eabi-gdb&lt;/strong&gt; 看有没有输出.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
