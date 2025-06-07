@@ -19,7 +19,24 @@
 Emacs 调试单片机 安装必要依赖 GitHub - svaante/dape: Debug Adapter Protocol for Emacs Emacs 安装 dape, 然后根据 dape 说明再安装 cpptools
 Downloads | GNU Arm Embedded Toolchain Downloads – Arm Developer 安装 Arm GCC 工具链, 该工具包含 arm-none-eabi-xxx 等命令行工具.
 检查 Arm GCC 是否安装成功, 在终端输入 arm-none-eabi-gdb 看有没有输出.
-...</p></div><footer class=entry-footer><span title='2025-04-25 00:00:00 +0000 UTC'>2025 年 04 月 25 日</span>&nbsp;·&nbsp;231 words&nbsp;·&nbsp;ISouthRain</footer><a class=entry-link aria-label="post link to Emacs 如何调试单片机(嵌入式 Embedded Debug)" href=https://isouthrain.github.io/zh-cn/post/20250425--emacs%E5%A6%82%E4%BD%95%E8%B0%83%E8%AF%95%E7%A1%AC%E4%BB%B6%E5%B5%8C%E5%85%A5%E5%BC%8F--emacs/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>移植指南: 移植 ST25R391x(NFC) 至任何 MCU 芯片</h2></header><div class=entry-content><p>本文测试使用的芯片是: ST25R3918, 采用 I2C 进行通讯.
+...</p></div><footer class=entry-footer><span title='2025-04-25 00:00:00 +0000 UTC'>2025 年 04 月 25 日</span>&nbsp;·&nbsp;231 words&nbsp;·&nbsp;ISouthRain</footer><a class=entry-link aria-label="post link to Emacs 如何调试单片机(嵌入式 Embedded Debug)" href=https://isouthrain.github.io/zh-cn/post/20250425--emacs%E5%A6%82%E4%BD%95%E8%B0%83%E8%AF%95%E7%A1%AC%E4%BB%B6%E5%B5%8C%E5%85%A5%E5%BC%8F--emacs/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>移植指南: 移植 PN5190(NFC) 至任何 MCU 芯片</h2></header><div class=entry-content><p>NXP PN5190 是一款 NFC 前端芯片, 主要用于 NFC 交互数据使用.
+废话不多说, 直接开搞.
+PN5190 软件库说明 链接: PN5190_NFC支付前端 | NXP 半导体 ![](/attach/20250306–移植PN5190至任何MCU芯片指南–硬件.zh-cn/PN5190 Library.png)
+PN5190 官方软件库, 复制需要的文件夹内容:
+Platform >> DAL
+RTOS (根据 MCU 系统提取, 如果 MCU 没有系统, 那么就 仅仅编译 NullOS 文件夹)
+NxpNfcRdLib
+Examples >> NfcrdlibEx4_MIFAREClassic(根据自己需要的例子)
+定义 项目宏(Symbols) PH_OSAL_NULLOS (根据自己需求定义 OS)
+NXPBUILD_CUSTOMER_HEADER_INCLUDED (必须的)
+PHDRIVER_XXXXPN5190_BOARD (XXXX 芯片随便命名, 例如 PHDRIVER_EFR32PN5190_BOARD)
+文件添加(MCU)板子定义 修改文件 NfcrdlibEx4_MIFAREClassic/ph_NxpBuild_App.h 内容:
+添加宏到位置:
+#define NXPBUILD__PHHAL_HW_PN5190 // TODO 自己添加
+修改文件 Platform/DAL/cfg/BoardSelection.h 新增内容:
+#ifdef PHDRIVER_EFR32PN5190_BOARD
+#endif 新建 MCU 实现所需文件 Platform/DAL/boards/Board_EFR32Pn5190.h(主要模仿 Board_K82F_PNEV5190B.h 定义一些引脚内容)
+...</p></div><footer class=entry-footer><span title='2025-03-06 00:00:00 +0000 UTC'>2025 年 03 月 06 日</span>&nbsp;·&nbsp;215 words&nbsp;·&nbsp;ISouthRain</footer><a class=entry-link aria-label="post link to 移植指南: 移植 PN5190(NFC) 至任何 MCU 芯片" href=https://isouthrain.github.io/zh-cn/post/20250306--%E7%A7%BB%E6%A4%8Dpn5190%E8%87%B3%E4%BB%BB%E4%BD%95mcu%E8%8A%AF%E7%89%87%E6%8C%87%E5%8D%97--%E7%A1%AC%E4%BB%B6/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>移植指南: 移植 ST25R391x(NFC) 至任何 MCU 芯片</h2></header><div class=entry-content><p>本文测试使用的芯片是: ST25R3918, 采用 I2C 进行通讯.
 芯片参考链接 ST25R3918 软件支持
 软件库 ![](/attach/20250310–移植ST25R391x(NFC)至任何MCU芯片指南–硬件.zh-cn/ST25R3916 RFAL.png)
 官方示例代码 软件库手册说明 链接: https://www.st.com.cn/zh/nfc/st25r3918.html#documentation
@@ -66,23 +83,7 @@ Downloads | GNU Arm Embedded Toolchain Downloads – Arm Developer 安装 Arm GC
 因为你觉得还有人陪着你做同样的事, 此事没有什么好羞耻的, 也会触发个人的动力, `我也可以成为他那样 xxxx`
 我们不是完美的人, 长久坚持是困难的, 难以坚持时, 试着提醒自己严格遵守一条简单的规则：绝不错过两次。
 如果错过了两次, 就又是一种习惯了, 习惯了认为: 错过没有什么大不了的, 就又回到了起点
-...</p></div><footer class=entry-footer><span title='2025-01-01 00:00:00 +0000 UTC'>2025 年 01 月 01 日</span>&nbsp;·&nbsp;99 words&nbsp;·&nbsp;ISouthRain</footer><a class=entry-link aria-label="post link to (读)原子习惯" href=https://isouthrain.github.io/zh-cn/post/20250101--%E8%AF%BB%E5%8E%9F%E5%AD%90%E4%B9%A0%E6%83%AF--life/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>2024 结语, 展望 2025</h2></header><div class=entry-content><p>2024 即将过去, 崭新的 2025 在向你挥手 /(:\ 在此祝你: 新年快乐 :)
-我马上就要步入 25 岁了, 不知道我的一生还有几个 25 年, 岁月如梭, 终不似当年模样 I)
-如今回望这些年, 我终究还是认为我自己: 是幸运的.
-幸运的是每次重要转折总能遇到对的人, 在此真的谢谢你们曾经的帮助了 :) 也许你不知道你曾经对我的帮助是多么重要,
-奈何我朽木难雕, 难成大气, 可能难以回报了. 但路还长着, 谁又说的准呢?
-也许人幸运就够了, 但谁又不想更多呢? 遗憾的是我很难与他人维持紧密联系, 甚至家人(真是抱歉了), 唉 ):
-慢慢尝试吧……
-2024 对我来说真的是糟糕的一年啊, 寄望着新年的到来, 想着许许愿望有可能实现了呢, 又实在不知道许什么了 (: 也不大可能会实现
-2025 不管有没有变得更好, 但 2025 总是要做更多的事. –I–
-最后: 感谢自己陪伴了自己多年岁月, 往后希望自己能变得更好 :)
-┏━━┓┏━━┓┏━━┓┏━━┓
-┗━┓┃┃┏┓┃┗━┓┃┃┏━┛
-┏━┛┃┃┃┃┃┏━┛┃┃┗━┓
-┃┏━┛┃┃┃┃┃┏━┛┗━┓┃
-┃┗━┓┃┗┛┃┃┗━┓┏━┛┃
-┗━━┛┗━━┛┗━━┛┗━━┛
-祝愿大家生活更进一步 !!</p></div><footer class=entry-footer><span title='2024-12-31 00:00:00 +0000 UTC'>2024 年 12 月 31 日</span>&nbsp;·&nbsp;62 words&nbsp;·&nbsp;ISouthRain</footer><a class=entry-link aria-label="post link to 2024 结语, 展望 2025" href=https://isouthrain.github.io/zh-cn/post/20241231--2024%E6%80%BB%E7%BB%93%E5%AF%84%E8%AF%AD--%E6%88%90%E9%95%BF/></a></article><footer class=page-footer><nav class=pagination><a class=next href=https://isouthrain.github.io/zh-cn/post/page/2/>&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2025 <a href=https://isouthrain.github.io/zh-cn/>ISouthRain Blog</a></span> ·
+...</p></div><footer class=entry-footer><span title='2025-01-01 00:00:00 +0000 UTC'>2025 年 01 月 01 日</span>&nbsp;·&nbsp;99 words&nbsp;·&nbsp;ISouthRain</footer><a class=entry-link aria-label="post link to (读)原子习惯" href=https://isouthrain.github.io/zh-cn/post/20250101--%E8%AF%BB%E5%8E%9F%E5%AD%90%E4%B9%A0%E6%83%AF--life/></a></article><footer class=page-footer><nav class=pagination><a class=next href=https://isouthrain.github.io/zh-cn/post/page/2/>&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2025 <a href=https://isouthrain.github.io/zh-cn/>ISouthRain Blog</a></span> ·
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
         <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><div class=footer><span class=poem_sentence></span>

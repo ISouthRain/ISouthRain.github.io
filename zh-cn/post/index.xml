@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 05 May 2025 16:59:11 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Jun 2025 09:52:45 +0800</lastBuildDate>
     <atom:link href="https://isouthrain.github.io/zh-cn/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>什么是最公平的? 时间</title>
@@ -55,6 +55,61 @@ Emacs 安装 dape, 然后根据 dape 说明再安装 &lt;strong&gt;cpptools&lt;/
 &lt;p&gt;&lt;a href=&#34;https://developer.arm.com/downloads/-/gnu-rm&#34;&gt;Downloads | GNU Arm Embedded Toolchain Downloads – Arm Developer&lt;/a&gt;
 安装 Arm GCC 工具链, 该工具包含 &lt;strong&gt;arm-none-eabi-xxx&lt;/strong&gt; 等命令行工具.&lt;/p&gt;
 &lt;p&gt;检查 Arm GCC 是否安装成功, 在终端输入 &lt;strong&gt;arm-none-eabi-gdb&lt;/strong&gt; 看有没有输出.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>移植指南: 移植 PN5190(NFC) 至任何 MCU 芯片</title>
+      <link>https://isouthrain.github.io/zh-cn/post/20250306--%E7%A7%BB%E6%A4%8Dpn5190%E8%87%B3%E4%BB%BB%E4%BD%95mcu%E8%8A%AF%E7%89%87%E6%8C%87%E5%8D%97--%E7%A1%AC%E4%BB%B6/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/zh-cn/post/20250306--%E7%A7%BB%E6%A4%8Dpn5190%E8%87%B3%E4%BB%BB%E4%BD%95mcu%E8%8A%AF%E7%89%87%E6%8C%87%E5%8D%97--%E7%A1%AC%E4%BB%B6/</guid>
+      <description>&lt;p&gt;NXP PN5190 是一款 NFC 前端芯片, 主要用于 NFC 交互数据使用.&lt;/p&gt;
+&lt;p&gt;废话不多说, 直接开搞.&lt;/p&gt;
+&lt;h2 id=&#34;pn5190-软件库说明&#34;&gt;PN5190 软件库说明&lt;/h2&gt;
+&lt;p&gt;链接: &lt;a href=&#34;https://www.nxp.com.cn/products/PN5190?tab=Buy_Parametric_Tab&#34;&gt;PN5190_NFC支付前端 | NXP 半导体&lt;/a&gt;
+![](/attach/20250306&amp;ndash;移植PN5190至任何MCU芯片指南&amp;ndash;硬件.zh-cn/PN5190 Library.png)&lt;/p&gt;
+&lt;p&gt;PN5190 官方软件库, 复制需要的文件夹内容:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Platform &amp;gt;&amp;gt; DAL&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RTOS (根据 MCU 系统提取, 如果 MCU 没有系统, 那么就 &lt;strong&gt;仅仅编译 NullOS&lt;/strong&gt; 文件夹)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;NxpNfcRdLib&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Examples &amp;gt;&amp;gt; NfcrdlibEx4_MIFAREClassic(根据自己需要的例子)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;定义-项目宏--symbols&#34;&gt;定义 项目宏(Symbols)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PH_OSAL_NULLOS&lt;/strong&gt; (根据自己需求定义 OS)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;NXPBUILD_CUSTOMER_HEADER_INCLUDED&lt;/strong&gt; (必须的)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PHDRIVER_XXXXPN5190_BOARD&lt;/strong&gt; (XXXX 芯片随便命名, 例如 PHDRIVER_EFR32PN5190_BOARD)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件添加--mcu--板子定义&#34;&gt;文件添加(MCU)板子定义&lt;/h2&gt;
+&lt;p&gt;修改文件 NfcrdlibEx4_MIFAREClassic/ph_NxpBuild_App.h 内容:&lt;/p&gt;
+&lt;p&gt;添加宏到位置:&lt;/p&gt;
+&lt;p&gt;#define NXPBUILD__PHHAL_HW_PN5190 // TODO 自己添加&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20250306--%e7%a7%bb%e6%a4%8dPN5190%e8%87%b3%e4%bb%bb%e4%bd%95MCU%e8%8a%af%e7%89%87%e6%8c%87%e5%8d%97--%e7%a1%ac%e4%bb%b6.zh-cn/%e6%96%87%e4%bb%b6%e5%86%85%e5%ae%b9%e4%bf%ae%e6%94%b9%e6%b7%bb%e5%8a%a0%e5%ae%8f.png&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;p&gt;修改文件 Platform/DAL/cfg/BoardSelection.h 新增内容:&lt;/p&gt;
+&lt;p&gt;#ifdef PHDRIVER_EFR32PN5190_BOARD&lt;/p&gt;
+&lt;p&gt;#endif
+&lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20250306--%e7%a7%bb%e6%a4%8dPN5190%e8%87%b3%e4%bb%bb%e4%bd%95MCU%e8%8a%af%e7%89%87%e6%8c%87%e5%8d%97--%e7%a1%ac%e4%bb%b6.zh-cn/20250306_162731.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;新建-mcu-实现所需文件&#34;&gt;新建 MCU 实现所需文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Platform/DAL/boards/Board_EFR32Pn5190.h(主要模仿 Board_K82F_PNEV5190B.h 定义一些引脚内容)&lt;/p&gt;</description>
     </item>
     <item>
       <title>移植指南: 移植 ST25R391x(NFC) 至任何 MCU 芯片</title>

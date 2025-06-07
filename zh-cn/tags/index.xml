@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 05 May 2025 16:59:11 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Jun 2025 09:52:45 +0800</lastBuildDate>
     <atom:link href="https://isouthrain.github.io/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>成长</title>
@@ -37,8 +37,15 @@
     <item>
       <title>NFC</title>
       <link>https://isouthrain.github.io/zh-cn/tags/nfc/</link>
-      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://isouthrain.github.io/zh-cn/tags/nfc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PN5190</title>
+      <link>https://isouthrain.github.io/zh-cn/tags/pn5190/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://isouthrain.github.io/zh-cn/tags/pn5190/</guid>
       <description></description>
     </item>
     <item>
