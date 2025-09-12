@@ -17,7 +17,7 @@ PHDRIVER_XXXXPN5190_BOARD (XXXX 芯片随便命名, 例如 PHDRIVER_EFR32PN5190_
 修改文件 Platform/DAL/cfg/BoardSelection.h 新增内容:
 #ifdef PHDRIVER_EFR32PN5190_BOARD
 #endif 新建 MCU 实现所需文件 Platform/DAL/boards/Board_EFR32Pn5190.h(主要模仿 Board_K82F_PNEV5190B.h 定义一些引脚内容)
-...</p></div><footer class=entry-footer><span title='2025-03-06 00:00:00 +0000 UTC'>2025 年 03 月 06 日</span>&nbsp;·&nbsp;215 words&nbsp;·&nbsp;ISouthRain</footer><a class=entry-link aria-label="post link to 移植指南: 移植 PN5190(NFC) 至任何 MCU 芯片" href=https://isouthrain.github.io/zh-cn/post/20250306--%E7%A7%BB%E6%A4%8Dpn5190%E8%87%B3%E4%BB%BB%E4%BD%95mcu%E8%8A%AF%E7%89%87%E6%8C%87%E5%8D%97--%E7%A1%AC%E4%BB%B6/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>移植指南: 移植 ST25R391x(NFC) 至任何 MCU 芯片</h2></header><div class=entry-content><p>本文测试使用的芯片是: ST25R3918, 采用 I2C 进行通讯.
+...</p></div><footer class=entry-footer><span title='2025-03-06 00:00:00 +0000 UTC'>2025 年 03 月 06 日</span>&nbsp;·&nbsp;236 words&nbsp;·&nbsp;ISouthRain</footer><a class=entry-link aria-label="post link to 移植指南: 移植 PN5190(NFC) 至任何 MCU 芯片" href=https://isouthrain.github.io/zh-cn/post/20250306--%E7%A7%BB%E6%A4%8Dpn5190%E8%87%B3%E4%BB%BB%E4%BD%95mcu%E8%8A%AF%E7%89%87%E6%8C%87%E5%8D%97--%E7%A1%AC%E4%BB%B6/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>移植指南: 移植 ST25R391x(NFC) 至任何 MCU 芯片</h2></header><div class=entry-content><p>本文测试使用的芯片是: ST25R3918, 采用 I2C 进行通讯.
 芯片参考链接 ST25R3918 软件支持
 软件库 ![](/attach/20250310–移植ST25R391x(NFC)至任何MCU芯片指南–硬件.zh-cn/ST25R3916 RFAL.png)
 官方示例代码 软件库手册说明 链接: https://www.st.com.cn/zh/nfc/st25r3918.html#documentation
