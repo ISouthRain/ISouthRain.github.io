@@ -11,8 +11,22 @@
     </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 12 Sep 2025 20:44:58 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 09 Oct 2025 20:02:53 +0800</lastBuildDate>
     <atom:link href="https://isouthrain.github.io/zh-cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs 整理笔记有感</title>
+      <link>https://isouthrain.github.io/zh-cn/post/20251008t111736--emacs-%E6%95%B4%E7%90%86%E7%AC%94%E8%AE%B0%E6%9C%89%E6%84%9F__%E5%86%99%E4%BD%9C/</link>
+      <pubDate>Wed, 08 Oct 2025 11:17:00 +0800</pubDate>
+      <guid>https://isouthrain.github.io/zh-cn/post/20251008t111736--emacs-%E6%95%B4%E7%90%86%E7%AC%94%E8%AE%B0%E6%9C%89%E6%84%9F__%E5%86%99%E4%BD%9C/</guid>
+      <description>&lt;p&gt;自从知晓了 &lt;a href=&#34;https://www.orgroam.com/&#34;&gt;Org-roam&lt;/a&gt; 后, 我就一直都在使用 &lt;code&gt;org-roam&lt;/code&gt; 来管理个人笔记.&lt;/p&gt;
+&lt;p&gt;然而, &lt;code&gt;org-roam&lt;/code&gt; 有一个痛点, 那就是 &lt;code&gt;sync&lt;/code&gt; 同步数据性能, 每次 Emacs 启动都要等待 &lt;code&gt;Processing modified files...&lt;/code&gt; 同步, 如果笔记一旦多的时候, 那么就要等待 &lt;code&gt;几秒&lt;/code&gt; 了&amp;hellip;&lt;/p&gt;
+&lt;p&gt;所以, 我尝试了 &lt;a href=&#34;https://protesilaos.com/emacs/denote&#34;&gt;Denote (denote.el) | Protesilaos Stavrou&lt;/a&gt; &amp;hellip;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;denote&lt;/code&gt; 特点就是以 &lt;code&gt;文件命名&lt;/code&gt; 来进行归类, 并且支持 &lt;code&gt;Org&lt;/code&gt; 和 &lt;code&gt;Markdown&lt;/code&gt; 和 &lt;code&gt;txt&lt;/code&gt; 格式, 看到文件名就大概知道这个文件的内容了.&lt;/p&gt;
+&lt;p&gt;然而, &lt;code&gt;denote&lt;/code&gt; 虽然搜索 &lt;code&gt;文件名&lt;/code&gt; 方式来快速查找, 但缺点是 &lt;code&gt;无法搜索标题&lt;/code&gt; , 所以 &lt;code&gt;denote&lt;/code&gt; 大概率不适合碎片化笔记.&lt;/p&gt;
+&lt;p&gt;而且 &lt;code&gt;denote&lt;/code&gt; 笔记之间 &lt;code&gt;引用&lt;/code&gt;  或者 &lt;code&gt;反引用&lt;/code&gt; 会自创方式, 比如:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;denote:标识&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;描述&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中, 标识就是 &lt;code&gt;文件名&lt;/code&gt; 的 &lt;code&gt;日期+时间&lt;/code&gt;, 这就与 &lt;code&gt;org-roam&lt;/code&gt; 的 &lt;code&gt;ID&lt;/code&gt; 有异曲同工之妙.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Windows 系统无法自动熄屏显示器问题</title>
       <link>https://isouthrain.github.io/zh-cn/post/20250629--windows%E7%B3%BB%E7%BB%9F%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%86%84%E5%B1%8F%E6%98%BE%E7%A4%BA%E5%99%A8%E9%97%AE%E9%A2%98/</link>

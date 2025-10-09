@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://isouthrain.github.io/zh-cn/categories/</loc>
-    <lastmod>2025-09-12T20:44:58+08:00</lastmod>
+    <lastmod>2025-10-09T20:02:53+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,8 +15,14 @@
                 href="https://isouthrain.github.io/zh-cn/categories/"
                 />
   </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/tags/emacs/</loc>
+    <lastmod>2025-10-09T20:02:53+08:00</lastmod>
+  </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/post/20251008t111736--emacs-%E6%95%B4%E7%90%86%E7%AC%94%E8%AE%B0%E6%9C%89%E6%84%9F__%E5%86%99%E4%BD%9C/</loc>
+    <lastmod>2025-10-09T20:02:53+08:00</lastmod>
+  </url><url>
     <loc>https://isouthrain.github.io/zh-cn/</loc>
-    <lastmod>2025-09-12T20:44:58+08:00</lastmod>
+    <lastmod>2025-10-09T20:02:53+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -29,10 +35,10 @@
                 />
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/post/</loc>
-    <lastmod>2025-09-12T20:44:58+08:00</lastmod>
+    <lastmod>2025-10-09T20:02:53+08:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/tags/</loc>
-    <lastmod>2025-09-12T20:44:58+08:00</lastmod>
+    <lastmod>2025-10-09T20:02:53+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -43,6 +49,9 @@
                 hreflang="zh-CN"
                 href="https://isouthrain.github.io/zh-cn/tags/"
                 />
+  </url><url>
+    <loc>https://isouthrain.github.io/zh-cn/categories/%E5%86%99%E4%BD%9C/</loc>
+    <lastmod>2025-10-09T20:02:53+08:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/tags/windows/</loc>
     <lastmod>2025-06-29T17:51:39+08:00</lastmod>
@@ -61,9 +70,6 @@
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2025-05-05T16:50:05+08:00</lastmod>
-  </url><url>
-    <loc>https://isouthrain.github.io/zh-cn/tags/emacs/</loc>
-    <lastmod>2025-05-05T16:59:11+08:00</lastmod>
   </url><url>
     <loc>https://isouthrain.github.io/zh-cn/post/20250425--emacs%E5%A6%82%E4%BD%95%E8%B0%83%E8%AF%95%E7%A1%AC%E4%BB%B6%E5%B5%8C%E5%85%A5%E5%BC%8F--emacs/</loc>
     <lastmod>2025-04-25T20:10:37+08:00</lastmod>
