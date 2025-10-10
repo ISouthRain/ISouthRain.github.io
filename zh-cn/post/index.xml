@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 10 Oct 2025 22:59:38 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Oct 2025 23:35:56 +0800</lastBuildDate>
     <atom:link href="https://isouthrain.github.io/zh-cn/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VPS 服务器搭建 Calibre 网页服务(不是 calibre-web)</title>
@@ -28,6 +28,10 @@
 &lt;p&gt;Docker Calibre 占用资源大小:&lt;/p&gt;
 &lt;p&gt;硬件 &amp;gt;= 2GB&lt;/p&gt;
 &lt;p&gt;内存 &amp;gt;= 200MB&lt;/p&gt;
+&lt;h2 id=&#34;已知问题&#34;&gt;已知问题&lt;/h2&gt;
+&lt;p&gt;无法进行 &lt;strong&gt;公网远程访问&lt;/strong&gt; 只可以 &lt;strong&gt;本地IP&lt;/strong&gt; 访问, 可以使用 VPN 然后访问.&lt;/p&gt;
+&lt;p&gt;理论上是可以远程访问的.&lt;/p&gt;
+&lt;p&gt;可能是 docker 版本, 可以尝试一下搭建后进行远程访问, 可能是我的 docker 版本问题.&lt;/p&gt;
 &lt;h2 id=&#34;上传个人-calibre-library&#34;&gt;上传个人 Calibre Library&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 连接到服务器 bash&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 创建存放目录&lt;/span&gt;
@@ -53,7 +57,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;calibre-server --userdb /data/users.sqlite --manage-users
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 修改原本的启动方式, 并开启用户认证, 注意: 一定要在 容器内的 sh 更新 startup.sh 内容, 否则会导致启动容器失败.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;$d&amp;#39;&lt;/span&gt; /scripts/startup.sh &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/opt/calibre/calibre-server --userdb /data/users.sqlite --enable-auth /data/library&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; /scripts/startup.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;$d&amp;#39;&lt;/span&gt; /scripts/startup.sh &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/opt/calibre/calibre-server --userdb /data/users.sqlite --enable-auth --listen-on=&amp;#34;0.0.0.0&amp;#34; /data/library&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; /scripts/startup.sh
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 退出 容器exec&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
