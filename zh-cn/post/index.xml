@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 10 Oct 2025 22:53:12 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Oct 2025 22:59:38 +0800</lastBuildDate>
     <atom:link href="https://isouthrain.github.io/zh-cn/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VPS 服务器搭建 Calibre 网页服务(不是 calibre-web)</title>
@@ -52,7 +52,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 创建 Calibre 用户, 按照提示输入&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;calibre-server --userdb /data/users.sqlite --manage-users
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 修改原本的启动方式, 并开启用户认证&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 修改原本的启动方式, 并开启用户认证, 注意: 一定要在 容器内的 sh 更新 startup.sh 内容, 否则会导致启动容器失败.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;$d&amp;#39;&lt;/span&gt; /scripts/startup.sh &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/opt/calibre/calibre-server --userdb /data/users.sqlite --enable-auth /data/library&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; /scripts/startup.sh
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 退出 容器exec&lt;/span&gt;
