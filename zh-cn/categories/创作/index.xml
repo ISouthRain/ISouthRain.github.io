@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>创作 on ISouthRain Blog</title>
+    <link>https://isouthrain.github.io/zh-cn/categories/%E5%88%9B%E4%BD%9C/</link>
+    <description>Recent content in 创作 on ISouthRain Blog</description>
+    <image>
+      <title>ISouthRain Blog</title>
+      <url>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://isouthrain.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 10 Oct 2025 22:53:12 +0800</lastBuildDate>
+    <atom:link href="https://isouthrain.github.io/zh-cn/categories/%E5%88%9B%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VPS 服务器搭建 Calibre 网页服务(不是 calibre-web)</title>
+      <link>https://isouthrain.github.io/zh-cn/post/20251010t221455--vps%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAcalibre%E7%BD%91%E9%A1%B5%E6%9C%8D%E5%8A%A1__%E5%88%9B%E4%BD%9C/</link>
+      <pubDate>Fri, 10 Oct 2025 22:14:00 +0800</pubDate>
+      <guid>https://isouthrain.github.io/zh-cn/post/20251010t221455--vps%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAcalibre%E7%BD%91%E9%A1%B5%E6%9C%8D%E5%8A%A1__%E5%88%9B%E4%BD%9C/</guid>
+      <description>&lt;h2 id=&#34;预览&#34;&gt;预览&lt;/h2&gt;
+&lt;p&gt;与 本地桌面版 开启的 Web 相同.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://isouthrain.github.io/attach/20251010T221455--VPS%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%90%ad%e5%bb%baCalibre%e7%bd%91%e9%a1%b5%e6%9c%8d%e5%8a%a1__%e5%88%9b%e4%bd%9c.zh-cn/%e9%a2%84%e8%a7%88.png&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;必要条件&#34;&gt;必要条件&lt;/h2&gt;
+&lt;p&gt;Docker Calibre 占用资源大小:&lt;/p&gt;
+&lt;p&gt;硬件 &amp;gt;= 2GB&lt;/p&gt;
+&lt;p&gt;内存 &amp;gt;= 200MB&lt;/p&gt;
+&lt;h2 id=&#34;上传个人-calibre-library&#34;&gt;上传个人 Calibre Library&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 连接到服务器 bash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 创建存放目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p ~/Calibre
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p ~/Calibre/addbooks
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 将本地个人的 Calibre 文件夹上传上传到 ~/Calibre/library 目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 一定是名称为 library 的目录, 否则会错误&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 提示&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 建议将个人的 Calibre 文件夹压缩成 .zip 上传到服务器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 上传命令: scp -P 22 本地.zip user@xxx.xxx.xxx.xx:~/Calibre/library.zip&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 然后解压: unzip library.zip&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 解压完, 顶级目录名称一定要为 library&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置-docker-搭建&#34;&gt;配置 docker 搭建&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 拉去镜像&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d --name&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;calibre -v ~/Calibre:/data:Z -p 8080:8080 bcleonard/calibre
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 现在你可以在浏览器使用 http://yourip:8080 访问了&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 现在处于公开访问, 任何人都可以访问, 后面是进行用户认证, 不要公开访问&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 进入 容器 操作&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; -it calibre sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 创建 Calibre 用户, 按照提示输入&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;calibre-server --userdb /data/users.sqlite --manage-users
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 修改原本的启动方式, 并开启用户认证&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;$d&amp;#39;&lt;/span&gt; /scripts/startup.sh &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/opt/calibre/calibre-server --userdb /data/users.sqlite --enable-auth /data/library&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; /scripts/startup.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 退出 容器exec&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 回到了 服务器 bash 后&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker restart calibre
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 现在你可以在浏览器使用 http://yourip:8080 访问了&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 输入用户和密码&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 提示&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 只要以后  用户名  对上了, 就会 自动同步笔记.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 后面备份只需要备份 library 目录即可, 用户sqlite 不必须备份, 后面迁移后同步笔记只要 重新创建对应 用户名 就OK了&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;下面方法已废弃-web-服务器本身就有这功能-dot&#34;&gt;下面方法已废弃, Web 服务器本身就有这功能.&lt;/h2&gt;
+&lt;p&gt;有关 &lt;strong&gt;添加书籍&lt;/strong&gt; &lt;strong&gt;删除书籍&lt;/strong&gt; 等功能, 详见: &lt;a href=&#34;https://hub.docker.com/r/bcleonard/calibre&#34;&gt;https://hub.docker.com/r/bcleonard/calibre&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
